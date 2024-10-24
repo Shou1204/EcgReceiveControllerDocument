@@ -1,9 +1,0 @@
-<map id="Compare" name="Compare">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,80,64"/>
-<area shape="rect" id="Node000002" href="$namespacetesting_1_1internal.html#a5fa5e8b8d4b126616a657fbaa6b0cdf6" title=" " alt="" coords="128,29,246,72"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,48,112,48,112,53,80,53"/>
-<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="158,29,157,19,162,11,172,5,187,3,203,5,212,12,209,16,201,10,187,8,174,10,166,14,163,20,164,28"/>
-<area shape="rect" id="Node000003" href="$namespacetesting_1_1internal.html#ad2326ef3522e0ea2603ef2fc6640fe26" title=" " alt="" coords="294,29,439,72"/>
-<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="246,48,278,48,278,53,246,53"/>
-<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="332,29,331,19,336,10,349,5,367,3,386,5,398,11,395,16,385,10,367,8,350,10,340,14,336,21,337,28"/>
-</map>

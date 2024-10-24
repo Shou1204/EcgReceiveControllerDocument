@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="$_drift2_8c.html#a217590113ce2356ea513514229083a42" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="_drift2_8c.html#a217590113ce2356ea513514229083a42" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="144.5,-20 83.5,-20 83.5,0 144.5,0 144.5,-20"/>
 <text text-anchor="middle" x="114" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">t2_drift_ini</text>
 </a>

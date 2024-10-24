@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="$_as_qrs_detect1_8c.html#a4bfbc342aa0d7299478a21427ae5b691" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="_as_qrs_detect1_8c.html#a4bfbc342aa0d7299478a21427ae5b691" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="218,-58 120.25,-58 120.25,-38 218,-38 218,-58"/>
 <text text-anchor="middle" x="169.12" y="-44.5" font-family="Helvetica,sans-Serif" font-size="10.00">AsPvcDetection_1</text>
 </a>
@@ -38,7 +38,7 @@
 <!-- Node4 -->
 <g id="Node000004" class="node">
 <title>Node4</title>
-<g id="a_Node000004"><a xlink:href="$_as_qrs_detect1_8c.html#a37a99c3cddc3c90cb48284d338eceefa" xlink:title=" ">
+<g id="a_Node000004"><a xlink:href="_as_qrs_detect1_8c.html#a37a99c3cddc3c90cb48284d338eceefa" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="217.25,-20 121,-20 121,0 217.25,0 217.25,-20"/>
 <text text-anchor="middle" x="169.12" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">AsQrsDetection_1</text>
 </a>
@@ -56,7 +56,7 @@
 <!-- Node3 -->
 <g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_Node000003"><a xlink:href="$_as_qrs_detect1_8c.html#a53d2f042e7ed50b7372743b273794126" xlink:title=" ">
+<g id="a_Node000003"><a xlink:href="_as_qrs_detect1_8c.html#a53d2f042e7ed50b7372743b273794126" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="336,-58 254,-58 254,-38 336,-38 336,-58"/>
 <text text-anchor="middle" x="295" y="-44.5" font-family="Helvetica,sans-Serif" font-size="10.00">set_qrs_sensi1</text>
 </a>

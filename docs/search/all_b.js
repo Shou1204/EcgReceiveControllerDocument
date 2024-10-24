@@ -13,6 +13,7 @@ var searchData=
   ['format_5fsend_10',['FORMAT_SEND',['../handshake__receiver_8c.html#aade5f30e83cb8f870301ad138bba07cda7150631780e76ff71542ab02093ae622',1,'handshake_receiver.c']]],
   ['format_5fsize_11',['FORMAT_SIZE',['../host__out_8c.html#abb14717b3277a06062b06fc2eb583003',1,'host_out.c']]],
   ['format_5fver_12',['FORMAT_VER',['../common_8h.html#a43c3aff67454ac7cc9ad4433a4bddc7f',1,'common.h']]],
-  ['freq_5f50hz_13',['FREQ_50HZ',['../common_8h.html#a387edf440f073ba14340f29cd259a4fba83ab581acf25477919b59321bdb727e8',1,'common.h']]],
-  ['freq_5f60hz_14',['FREQ_60HZ',['../common_8h.html#a387edf440f073ba14340f29cd259a4fba89cc06d7e4fcd6c3601c7b44fe85107c',1,'common.h']]]
+  ['fqrs2_2ec_13',['fQrs2.c',['../f_qrs2_8c.html',1,'']]],
+  ['freq_5f50hz_14',['FREQ_50HZ',['../common_8h.html#a387edf440f073ba14340f29cd259a4fba83ab581acf25477919b59321bdb727e8',1,'common.h']]],
+  ['freq_5f60hz_15',['FREQ_60HZ',['../common_8h.html#a387edf440f073ba14340f29cd259a4fba89cc06d7e4fcd6c3601c7b44fe85107c',1,'common.h']]]
 ];

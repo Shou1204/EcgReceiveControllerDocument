@@ -1,9 +1,0 @@
-<map id="Generate" name="Generate">
-<area shape="rect" id="Node000001" title=" " alt="" coords="338,37,412,64"/>
-<area shape="rect" id="Node000002" href="$namespacetesting_1_1internal.html#af0e4357002b5772a92cb960ea611e80c" title=" " alt="" coords="172,29,290,72"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="322,53,291,53,291,48,322,48"/>
-<area shape="poly" id="edge4_Node000002_Node000002" title=" " alt="" coords="253,16,245,10,231,8,218,10,210,14,207,20,208,28,202,29,201,19,206,11,216,5,231,3,247,5,256,12"/>
-<area shape="rect" id="Node000003" href="$namespacetesting_1_1internal.html#a955e3f72f36c9db3a1165517010f52a3" title=" " alt="" coords="5,29,124,72"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="156,53,124,53,124,48,156,48"/>
-<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="91,16,81,10,64,8,49,10,40,14,36,20,37,28,32,29,31,19,36,11,48,5,65,3,83,5,94,11"/>
-</map>

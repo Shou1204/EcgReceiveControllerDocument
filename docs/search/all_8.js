@@ -1,10 +1,10 @@
 var searchData=
 [
   ['ch_0',['Ch',['../struct_mask.html#a7971aab5817c3bc4badce0b58960a6e5',1,'Mask']]],
-  ['ch2_5fhum_5ffilter50_1',['ch2_hum_filter50',['../filter_8h.html#a00e2bd1ed7bfda059c3b2cb01cfc33d3',1,'ch2_hum_filter50(long sts_ecg):&#160;Hum2.c'],['../_hum2_8c.html#a00e2bd1ed7bfda059c3b2cb01cfc33d3',1,'ch2_hum_filter50(long sts_ecg):&#160;Hum2.c']]],
-  ['ch2_5fhum_5ffilter60_2',['ch2_hum_filter60',['../filter_8h.html#a09b98bf1c605e68664634671c0844823',1,'ch2_hum_filter60(long sts_ecg):&#160;Hum2.c'],['../_hum2_8c.html#a09b98bf1c605e68664634671c0844823',1,'ch2_hum_filter60(long sts_ecg):&#160;Hum2.c']]],
-  ['ch2_5fhum_5ffilter_5fini_3',['ch2_hum_filter_ini',['../filter_8h.html#a78fd00e81aa7c49998ecf6a95bbb22a7',1,'ch2_hum_filter_ini(void):&#160;Hum2.c'],['../_hum2_8c.html#a78fd00e81aa7c49998ecf6a95bbb22a7',1,'ch2_hum_filter_ini(void):&#160;Hum2.c']]],
-  ['changeqrsborder_4',['ChangeQrsBorder',['../_qrs2_8c.html#ad0cbc5efd76289a55bb57b17eff1803f',1,'Qrs2.c']]],
+  ['ch2_5fhum_5ffilter50_1',['ch2_hum_filter50',['../_hum2_8c.html#a00e2bd1ed7bfda059c3b2cb01cfc33d3',1,'ch2_hum_filter50(long sts_ecg):&#160;Hum2.c'],['../filter_8h.html#a00e2bd1ed7bfda059c3b2cb01cfc33d3',1,'ch2_hum_filter50(long sts_ecg):&#160;Hum2.c']]],
+  ['ch2_5fhum_5ffilter60_2',['ch2_hum_filter60',['../_hum2_8c.html#a09b98bf1c605e68664634671c0844823',1,'ch2_hum_filter60(long sts_ecg):&#160;Hum2.c'],['../filter_8h.html#a09b98bf1c605e68664634671c0844823',1,'ch2_hum_filter60(long sts_ecg):&#160;Hum2.c']]],
+  ['ch2_5fhum_5ffilter_5fini_3',['ch2_hum_filter_ini',['../_hum2_8c.html#a78fd00e81aa7c49998ecf6a95bbb22a7',1,'ch2_hum_filter_ini(void):&#160;Hum2.c'],['../filter_8h.html#a78fd00e81aa7c49998ecf6a95bbb22a7',1,'ch2_hum_filter_ini(void):&#160;Hum2.c']]],
+  ['changeqrsborder_4',['ChangeQrsBorder',['../f_qrs2_8c.html#ad0cbc5efd76289a55bb57b17eff1803f',1,'fQrs2.c']]],
   ['channel_5',['CHANNEL',['../common_8h.html#a80e3abfdceb5f0f2ef6e0e50ab2fd1aaad9d3e3b5dc628d73e5ec4da418f2a6dd',1,'common.h']]],
   ['channel_5flength_6',['CHANNEL_LENGTH',['../host__in_8c.html#a18429ec44c22b0d671f6bd03142ab2bc',1,'host_in.c']]],
   ['check_5fetx_5for_5fnew_5finitial_7',['CHECK_ETX_OR_NEW_INITIAL',['../host__in_8c.html#abeddbc508b4b93dd7a0ccc8b7534d622aba4b9b08ad765c0d2cfa784de7b1ab86',1,'host_in.c']]],
