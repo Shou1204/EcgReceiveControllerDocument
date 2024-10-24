@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ana_5ftime_0',['ANA_TIME',['../f_qrs2_8c.html#ac0c1487b3da699cfa9009565c8068013',1,'fQrs2.c']]],
+  ['ana_5ftime_0',['ANA_TIME',['../_qrs2_8c.html#ac0c1487b3da699cfa9009565c8068013',1,'Qrs2.c']]],
   ['assert_5fparam_1',['assert_param',['../stm32l4xx__hal__conf_8h.html#a631dea7b230e600555f979c62af1de21',1,'stm32l4xx_hal_conf.h']]],
   ['auto_5fmanual_5fbetween_2',['AUTO_MANUAL_BETWEEN',['../spi__receive_8c.html#a90be9d892f7785715fb5927bd36eeb50',1,'spi_receive.c']]],
   ['auto_5fsensi01_5fdif_5f_3',['AUTO_SENSI01_DIF_',['../_as_qrs_detect1_8c.html#a6ced1eb0b483220b2b2ad98337b2595c',1,'AsQrsDetect1.c']]],
