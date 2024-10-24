@@ -1,0 +1,120 @@
+\doxysection{ecg\+\_\+data.\+c ファイル}
+\label{ecg__data_8c}\index{ecg\_data.c@{ecg\_data.c}}
+{\ttfamily \#include "{}ecg\+\_\+data.\+h"{}}\newline
+ecg\+\_\+data.\+c の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{ecg__data_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Init\+Ecg\+DataC} ()
+\item 
+void \textbf{ Init\+Current\+State} ()
+\item 
+uint16\+\_\+t \textbf{ Get\+\_\+current\+Value} (uint8\+\_\+t id)
+\item 
+void \textbf{ Set\+\_\+current\+Value} (uint8\+\_\+t id, uint32\+\_\+t value\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Setting\+Current} \textbf{ current} [\textbf{ PROPERTY\+\_\+\+NUM}]
+\begin{DoxyCompactList}\small\item\em プロパティの現在値を格納するバッファ \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\index{ecg\_data.c@{ecg\_data.c}!Get\_currentValue@{Get\_currentValue}}
+\index{Get\_currentValue@{Get\_currentValue}!ecg\_data.c@{ecg\_data.c}}
+\doxysubsubsection{Get\_currentValue()}
+{\footnotesize\ttfamily \label{ecg__data_8c_a86de475be9a0ef5efe79c2f940f55708} 
+uint16\+\_\+t Get\+\_\+current\+Value (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{id}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecg__data_8c_a86de475be9a0ef5efe79c2f940f55708_icgraph}
+\end{center}
+\end{figure}
+\index{ecg\_data.c@{ecg\_data.c}!InitCurrentState@{InitCurrentState}}
+\index{InitCurrentState@{InitCurrentState}!ecg\_data.c@{ecg\_data.c}}
+\doxysubsubsection{InitCurrentState()}
+{\footnotesize\ttfamily \label{ecg__data_8c_a8076b4cf4e7c1aad2f9b9f06853ea75e} 
+void Init\+Current\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{ecg__data_8c_a8076b4cf4e7c1aad2f9b9f06853ea75e_icgraph}
+\end{center}
+\end{figure}
+\index{ecg\_data.c@{ecg\_data.c}!InitEcgDataC@{InitEcgDataC}}
+\index{InitEcgDataC@{InitEcgDataC}!ecg\_data.c@{ecg\_data.c}}
+\doxysubsubsection{InitEcgDataC()}
+{\footnotesize\ttfamily \label{ecg__data_8c_aaa920a0f94e35ce551cf7d919e1d19ac} 
+void Init\+Ecg\+DataC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{ecg__data_8c_aaa920a0f94e35ce551cf7d919e1d19ac_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{ecg__data_8c_aaa920a0f94e35ce551cf7d919e1d19ac_icgraph}
+\end{center}
+\end{figure}
+\index{ecg\_data.c@{ecg\_data.c}!Set\_currentValue@{Set\_currentValue}}
+\index{Set\_currentValue@{Set\_currentValue}!ecg\_data.c@{ecg\_data.c}}
+\doxysubsubsection{Set\_currentValue()}
+{\footnotesize\ttfamily \label{ecg__data_8c_a5f853cb75cec822eaad692d27425dc5b} 
+void Set\+\_\+current\+Value (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{id}{, }\item[{uint32\+\_\+t}]{value\+\_\+}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecg__data_8c_a5f853cb75cec822eaad692d27425dc5b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{変数詳解}
+\index{ecg\_data.c@{ecg\_data.c}!current@{current}}
+\index{current@{current}!ecg\_data.c@{ecg\_data.c}}
+\doxysubsubsection{current}
+{\footnotesize\ttfamily \label{ecg__data_8c_aa05afd9a73730cb2bceb02477ecfeee2} 
+\textbf{ Setting\+Current} current[\textbf{ PROPERTY\+\_\+\+NUM}]}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \{\ POW\_fFREQ,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{\ HUM\_FILTER,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{\ DRIFT\_FILTER,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{\ MUS\_FILTER,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{\ MUS\_ST,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{\ QRS\_MODE,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{\ QRS\_SENSI,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{\ ECG\_SENSI,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{\ AUTO\_QRS\_ST,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{\ ANTENNA,\ 0\},}
+\DoxyCodeLine{\ \ \ \ \{\ CHANNEL,\ 0\},}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+プロパティの現在値を格納するバッファ 
+

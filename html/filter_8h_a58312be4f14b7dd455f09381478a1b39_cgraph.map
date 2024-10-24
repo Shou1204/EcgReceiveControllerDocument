@@ -1,0 +1,9 @@
+<map id="manualQrsHandler" name="manualQrsHandler">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,135,83"/>
+<area shape="rect" id="Node000002" href="$_qrs2_8c.html#a5256314c2dea4e392f6fe8c0305f8e75" title=" " alt="" coords="206,5,312,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,53,191,34,193,39,124,58"/>
+<area shape="rect" id="Node000003" href="$spi__receive_8c.html#a749d726a9c18205e684074afb8e7fb1a" title=" " alt="" coords="183,56,336,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,67,167,67,167,72,135,72"/>
+<area shape="rect" id="Node000004" href="$_qrs2_8c.html#a15dda4f2ebff3d8679d669d7dcc879ff" title=" " alt="" coords="223,107,296,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="124,81,209,104,207,109,122,86"/>
+</map>

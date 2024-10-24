@@ -1,0 +1,7 @@
+<map id="IsWriteEcg" name="IsWriteEcg">
+<area shape="rect" id="Node000001" title=" " alt="" coords="313,5,398,32"/>
+<area shape="rect" id="Node000002" href="$spi__receive_8c_a6a92765e4b344a890547fd190aeb393e.html#a6a92765e4b344a890547fd190aeb393e" title=" " alt="" coords="190,5,265,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="297,21,265,21,265,16,297,16"/>
+<area shape="rect" id="Node000003" href="$spi__receive_8c_af39d147b690c80c7947af19e81a0fe09.html#af39d147b690c80c7947af19e81a0fe09" title=" " alt="" coords="5,5,142,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="174,21,142,21,142,16,174,16"/>
+</map>

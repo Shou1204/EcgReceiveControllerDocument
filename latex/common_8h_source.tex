@@ -1,0 +1,146 @@
+\doxysection{common.\+h}
+\label{common_8h_source}\index{common.h@{common.h}}
+\textbf{ [詳解]}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ ファイルヘッダコメント\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ ファイル名:\ common.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ 説明:\ プログラム全体に関連する事柄についての定義を含むヘッダファイルです。}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ COMMON\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ COMMON\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ ヘッダ\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00010\ \textcolor{comment}{/*\ \ システム\ \ \ \ */}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ マクロ\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00016\ \textcolor{comment}{/*\ \ 定数\ \ */}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ MY\_DEBUG\ }\textcolor{comment}{//\ この行をコメントアウトすると、DEBUG\ マクロが無効になります。}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ HUM\_FILTER\_DEBUG}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{/*\ テストコード実行\ */}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ \#define\ TESTCODE}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{comment}{/*\ \ }}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ \ \ \ \#\ バージョン情報}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ \ \ \ \#\#\ 現在のバージョン}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ \ \ \ \ \ \ \ 更新年月日:\ 24/4/11}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ \ \ \ \ \ \ \ フォーマット：V0.0}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ \ \ \ \ \ \ \ ハードウェア：V0.0}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ \ \ \ \ \ ソフトウェア：V0.0}}
+\DoxyCodeLine{00031\ \textcolor{comment}{}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ \ \ \ \#\#\ バージョン履歴}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ \ \ \ \ \ \ \ ハードウェア：V0.0\ |\ \ \ \ STM32L431実験ボード}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ \ \ \ \ \ \ \ ソフトウェア：V0.0\ |\ \ \ \ 初期}}
+\DoxyCodeLine{00035\ \textcolor{comment}{}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \#\#\ バージョンの表現方法}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ \ \ \ \ バージョンは\ "{}V2.1"{}\ のように表現します}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ \ \ \ \ 内部的には"{}21"{}として表現されます}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ \ \ \ \ バージョン情報は互換性や挙動を判断するために使用します}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ \ }}
+\DoxyCodeLine{00041\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ FORMAT\_VER\ 0}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#define\ HARD\_VER\ \ \ 0}}
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ SOFT\_VER\ \ \ 0}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{/*\ 疑似bool型の定義\ */}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ TRUE\ \ 1}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ FALSE\ 0}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ typedef定義\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ enum定義\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00054\ \textcolor{comment}{/*\ モニタから受信するプロパティの一覧\ */}}
+\DoxyCodeLine{00055\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ Property\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ POW\_fFREQ,\ \ \ \ \textcolor{comment}{//\ 0:電源周波数}}
+\DoxyCodeLine{00057\ \ \ \ \ HUM\_FILTER,\ \ \ \textcolor{comment}{//\ 1:ハムフィルタ}}
+\DoxyCodeLine{00058\ \ \ \ \ DRIFT\_FILTER,\ \textcolor{comment}{//\ 2:ドリフトフィルタ（未使用）}}
+\DoxyCodeLine{00059\ \ \ \ \ MUS\_FILTER,\ \ \ \textcolor{comment}{//\ 3:筋電フィルタ}}
+\DoxyCodeLine{00060\ \ \ \ \ MUS\_ST,\ \ \ \ \ \ \ \textcolor{comment}{//\ 4:筋電フィルタ強度}}
+\DoxyCodeLine{00061\ \ \ \ \ QRS\_MODE,\ \ \ \ \ \textcolor{comment}{//\ 5:\ QRS検出モード}}
+\DoxyCodeLine{00062\ \ \ \ \ QRS\_SENSI,\ \ \ \ \textcolor{comment}{//\ 6:QRS感度（手動）}}
+\DoxyCodeLine{00063\ \ \ \ \ ECG\_SENSI,\ \ \ \ \textcolor{comment}{//\ 7:ECG感度(手動)}}
+\DoxyCodeLine{00064\ \ \ \ \ AUTO\_QRS\_ST,\ \ \textcolor{comment}{//\ 8:QRS感度（自動）}}
+\DoxyCodeLine{00065\ \ \ \ \ ANTENNA,\ \ \ \ \ \ \textcolor{comment}{//\ 9:アンテナ番号}}
+\DoxyCodeLine{00066\ \ \ \ \ CHANNEL,\ \ \ \ \ \ \textcolor{comment}{//\ 10:チャンネル番号}}
+\DoxyCodeLine{00067\ \ \ \ \ PROPERTY\_NUM\ \ \textcolor{comment}{//\ 設定項目の総数}}
+\DoxyCodeLine{00068\ \}\ Property;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{comment}{/*\ 各種プロパティの値\ */}}
+\DoxyCodeLine{00071\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ powFfreqStatus\ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{/*\ 電源周波数\ */}}
+\DoxyCodeLine{00073\ \ \ \ \ FREQ\_50HZ,}
+\DoxyCodeLine{00074\ \ \ \ \ FREQ\_60HZ,}
+\DoxyCodeLine{00075\ \}\ powFfreqStatus;}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ humFilterSts\ \{}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{comment}{/*\ ハムフィルタ\ */}}
+\DoxyCodeLine{00079\ \ \ \ \ HUM\_OFF,}
+\DoxyCodeLine{00080\ \ \ \ \ HUM\_ON,}
+\DoxyCodeLine{00081\ \}\ humFilterSts;}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ musfilterSts\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{comment}{/*\ 筋電フィルタ\ */}}
+\DoxyCodeLine{00085\ \ \ \ \ MUS\_OFF,}
+\DoxyCodeLine{00086\ \ \ \ \ MUS\_ON,}
+\DoxyCodeLine{00087\ \}\ musfilterSts;}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ musStSts\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{/*\ 筋電フィルタ強度\ */}}
+\DoxyCodeLine{00091\ \ \ \ \ MUS\_S\_LOW,}
+\DoxyCodeLine{00092\ \ \ \ \ MUS\_S\_HIGH,}
+\DoxyCodeLine{00093\ \}\ musStSts;}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ qrsModeSts\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{comment}{/*\ QRS検出モード\ */}}
+\DoxyCodeLine{00097\ \ \ \ \ QRS\_MODE\_AUTO,}
+\DoxyCodeLine{00098\ \ \ \ \ QRS\_MODE\_MANUAL,}
+\DoxyCodeLine{00099\ \ \ \ \ QRS\_MODE\_FILTER\_NONE,}
+\DoxyCodeLine{00100\ \}\ qrsModeSts;}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ qrsSensiSts\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{comment}{/*\ QRS感度（手動）*/}}
+\DoxyCodeLine{00104\ \ \ \ \ QRS\_SENSI\_LOW,}
+\DoxyCodeLine{00105\ \ \ \ \ QRS\_SENSI\_STD,}
+\DoxyCodeLine{00106\ \ \ \ \ QRS\_SENSI\_HIGH,}
+\DoxyCodeLine{00107\ \ \ \ \ QRS\_SENSI\_OVER,}
+\DoxyCodeLine{00108\ \}\ qrsSensiSts;}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ ecgSensiSts\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{comment}{/*\ ECG感度\ */}}
+\DoxyCodeLine{00112\ \ \ \ \ ECG\_SENSI\_ONE\_HALF,}
+\DoxyCodeLine{00113\ \ \ \ \ ECG\_SENSI\_ONE,}
+\DoxyCodeLine{00114\ \ \ \ \ ECG\_SENSI\_TWO,}
+\DoxyCodeLine{00115\ \ \ \ \ ECG\_SENSI\_FORE,}
+\DoxyCodeLine{00116\ \ \ \ \ ECG\_SENSI\_EIGHT,}
+\DoxyCodeLine{00117\ \}\ ecgSensiSts;}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ autoQrsStSts\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{comment}{/*\ QRS感度（自動）\ */}}
+\DoxyCodeLine{00121\ \ \ \ \ AUTO\_QRS\_ST\_LOW,}
+\DoxyCodeLine{00122\ \ \ \ \ AUTO\_QRS\_ST\_HIGH,}
+\DoxyCodeLine{00123\ \}\ autoQrsStSts;}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ struct定義\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00126\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ struct定義\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ extern変数\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00129\ \textcolor{keyword}{extern}\ uint8\_t\ output\_1;\ \textcolor{comment}{//\ debug}}
+\DoxyCodeLine{00130\ \textcolor{keyword}{extern}\ uint8\_t\ output\_2;\ \textcolor{comment}{//\ debug}}
+\DoxyCodeLine{00131\ \textcolor{keyword}{extern}\ uint8\_t\ output\_3;\ \textcolor{comment}{//\ debug}}
+\DoxyCodeLine{00132\ \textcolor{keyword}{extern}\ uint8\_t\ output\_4;\ \textcolor{comment}{//\ debug}}
+\DoxyCodeLine{00133\ \textcolor{keyword}{extern}\ uint8\_t\ output\_5;\ \textcolor{comment}{//\ debug}}
+\DoxyCodeLine{00134\ \textcolor{keyword}{extern}\ uint8\_t\ output\_6;\ \textcolor{comment}{//\ debug}}
+\DoxyCodeLine{00135\ \textcolor{keyword}{extern}\ uint8\_t\ output\_7;\ \textcolor{comment}{//\ debug}}
+\DoxyCodeLine{00136\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ プロトタイプ宣言\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \textcolor{comment}{/*\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ インライン関数\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\ */}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ COMMON\_H}}
+
+\end{DoxyCode}

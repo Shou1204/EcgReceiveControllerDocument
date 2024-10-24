@@ -1,0 +1,8 @@
+<map id="GenerateLongEcgData" name="GenerateLongEcgData">
+<area shape="rect" id="Node000001" title=" " alt="" coords="367,31,520,57"/>
+<area shape="rect" id="Node000002" href="$filter_controller_8c.html#a881cb16bbb180c7b96ee8fb4317c49ca" title=" " alt="" coords="190,5,319,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="351,34,319,30,320,25,352,29"/>
+<area shape="rect" id="Node000003" href="$spi__receive_8c.html#af39d147b690c80c7947af19e81a0fe09" title=" " alt="" coords="5,31,142,57"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="351,47,142,47,142,41,351,41"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="175,33,142,37,141,32,174,27"/>
+</map>

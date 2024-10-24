@@ -1,0 +1,124 @@
+\doxysection{synchro.\+c ファイル}
+\label{synchro_8c}\index{synchro.c@{synchro.c}}
+{\ttfamily \#include "{}synchro.\+h"{}}\newline
+synchro.\+c の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{synchro_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ TEST\+\_\+\+CNT}~5  /$\ast$ 検索フレーム数の半分 $\ast$/
+\item 
+\#define \textbf{ SYNC\+\_\+\+BUF\+\_\+\+SIZE}~30
+\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ t2\+\_\+syncro} (uint8\+\_\+t $\ast$ptr, int $\ast$m\+\_\+bytes, int $\ast$m\+\_\+bits)
+\begin{DoxyCompactList}\small\item\em バッファからの同期を検出し先頭バイトとビットを取得 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+const \textbf{ Mask} \textbf{ mask\+Set} [8]
+\begin{DoxyCompactList}\small\item\em 各種の抽出マスク \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{マクロ定義詳解}
+\index{synchro.c@{synchro.c}!SYNC\_BUF\_SIZE@{SYNC\_BUF\_SIZE}}
+\index{SYNC\_BUF\_SIZE@{SYNC\_BUF\_SIZE}!synchro.c@{synchro.c}}
+\doxysubsubsection{SYNC\_BUF\_SIZE}
+{\footnotesize\ttfamily \label{synchro_8c_a6c2148293e22364989e02b35c3af8898} 
+\#define SYNC\+\_\+\+BUF\+\_\+\+SIZE~30}
+
+\index{synchro.c@{synchro.c}!TEST\_CNT@{TEST\_CNT}}
+\index{TEST\_CNT@{TEST\_CNT}!synchro.c@{synchro.c}}
+\doxysubsubsection{TEST\_CNT}
+{\footnotesize\ttfamily \label{synchro_8c_a1b4e7d5a49bde06b88a85ffc028266ba} 
+\#define TEST\+\_\+\+CNT~5  /$\ast$ 検索フレーム数の半分 $\ast$/}
+
+
+
+\doxysubsection{関数詳解}
+\index{synchro.c@{synchro.c}!t2\_syncro@{t2\_syncro}}
+\index{t2\_syncro@{t2\_syncro}!synchro.c@{synchro.c}}
+\doxysubsubsection{t2\_syncro()}
+{\footnotesize\ttfamily \label{synchro_8c_a87de076aee503e24f5f9627a7b90fd98} 
+int t2\+\_\+syncro (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{ptr}{, }\item[{int $\ast$}]{m\+\_\+bytes}{, }\item[{int $\ast$}]{m\+\_\+bits}{}\end{DoxyParamCaption})}
+
+
+
+バッファからの同期を検出し先頭バイトとビットを取得 
+
+
+\begin{DoxyParams}{引数}
+{\em ptr} & 入力バッファの先頭ポインタ \\
+\hline
+{\em m\+\_\+bytes} & 同期が見つかった場合、バイト位置を格納するポインタ \\
+\hline
+{\em m\+\_\+bits} & 同期が見つかった場合、ビット位置を格納するポインタ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+short\+: 同期が見つかったら\+TRUE、そうでない場合は\+FALSEを返す
+\end{DoxyReturn}
+\begin{DoxyNote}{覚え書き}
+AM140 → AM150~\newline
+引数を3つ追加しています。 
+\end{DoxyNote}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{synchro_8c_a87de076aee503e24f5f9627a7b90fd98_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{変数詳解}
+\index{synchro.c@{synchro.c}!maskSet@{maskSet}}
+\index{maskSet@{maskSet}!synchro.c@{synchro.c}}
+\doxysubsubsection{maskSet}
+{\footnotesize\ttfamily \label{synchro_8c_ab16ff466bc1777b23d0188ce3691e8ae} 
+const \textbf{ Mask} mask\+Set[8]}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ }
+\DoxyCodeLine{\ \ \ \ \{\ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{0x0F,\ 0xFE,\ 0x00\},\ 9,\ \{0x01,\ 0xFF,\ 0x00\},\ 8,\ \{0xFF,\ 0xFE,\ 0x00\},\ 13,\ 0xFF,\ 0x00,\ 0x80,\ \{\ 0x1E\ ,\ 0x00\ \},\ 9,}
+\DoxyCodeLine{\ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{0x07,\ 0xFF,\ 0x00\},\ 8,\ \{0x00,\ 0xFF,\ 0x80\},\ 7,\ \{0x7F,\ 0xFF,\ 0x00\},\ 12,\ 0x7F,\ 0x80,\ 0x40,\ \{\ 0x0F\ ,\ 0x00\ \},\ 8,}
+\DoxyCodeLine{\ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{0x03,\ 0xFF,\ 0x80\},\ 7,\ \{0x00,\ 0x7F,\ 0xC0\},\ 6,\ \{0x3F,\ 0xFF,\ 0x80\},\ 11,\ 0x3F,\ 0xC0,\ 0x20,\ \{\ 0x07\ ,\ 0x80\ \},\ 7,}
+\DoxyCodeLine{\ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{0x01,\ 0xFF,\ 0xC0\},\ 6,\ \{0x00,\ 0x3F,\ 0xE0\},\ 5,\ \{0x1F,\ 0xFF,\ 0xC0\},\ 10,\ 0x1F,\ 0xE0,\ 0x10,\ \{\ 0x03\ ,\ 0xC0\ \},\ 6,}
+\DoxyCodeLine{\ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{0x00,\ 0xFF,\ 0xE0\},\ 5,\ \{0x00,\ 0x1F,\ 0xF0\},\ 4,\ \{0x0F,\ 0xFF,\ 0xE0\},\ 9,\ \ 0x0F,\ 0xF0,\ 0x08,\ \{\ 0x01\ ,\ 0xE0\ \},\ 5,}
+\DoxyCodeLine{\ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{0x00,\ 0x7F,\ 0xF0\},\ 4,\ \{0x00,\ 0x0F,\ 0xF8\},\ 3,\ \{0x07,\ 0xFF,\ 0xF0\},\ 8,\ \ 0x07,\ 0xF8,\ 0x04,\ \{\ 0x00\ ,\ 0xF0\ \},\ 4,}
+\DoxyCodeLine{\ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{0x00,\ 0x3F,\ 0xF8\},\ 3,\ \{0x00,\ 0x07,\ 0xFC\},\ 2,\ \{0x03,\ 0xFF,\ 0xF8\},\ 7,\ \ 0x03,\ 0xFC,\ 0x02,\ \{\ 0x00\ ,\ 0x78\ \},\ 3,}
+\DoxyCodeLine{\ \ \ \ \},}
+\DoxyCodeLine{\ \ \ \ \{\ \ \ }
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \{0x00,\ 0x1F,\ 0xFC\},\ 2,\ \{0x00,\ 0x03,\ 0xFE\},\ 1,\ \{0x01,\ 0xFF,\ 0xFC\},\ 6,\ \ 0x01,\ 0xFE,\ 0x01,\ \{\ 0x00\ ,\ 0x3C\ \},\ 2,}
+\DoxyCodeLine{\ \ \ \ \},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+各種の抽出マスク 
+
+indexとヘッドのbit位置が連動しています~\newline
+ヘッドが5bitずれならmask\+Set[5]のマスクを使用します 

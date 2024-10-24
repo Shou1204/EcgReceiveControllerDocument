@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EcgReceiveController: Drift2.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">EcgReceiveController
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_drift2_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle"><div class="title">Drift2.c ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="filter_8h_source.html">filter.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Drift2.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_drift2_8c__incl.svg" width="94" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:ad654ba3cd732024fe35b2ed3c048cc55" id="r_ad654ba3cd732024fe35b2ed3c048cc55"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad654ba3cd732024fe35b2ed3c048cc55">DR_FLT_SIZE__</a>&#160;&#160;&#160;512</td></tr>
+<tr class="separator:ad654ba3cd732024fe35b2ed3c048cc55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66e0c84bfcf8fce341c09b8136cc00fb" id="r_a66e0c84bfcf8fce341c09b8136cc00fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66e0c84bfcf8fce341c09b8136cc00fb">DUMMY_SIZE__</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:a66e0c84bfcf8fce341c09b8136cc00fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a217590113ce2356ea513514229083a42" id="r_a217590113ce2356ea513514229083a42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a217590113ce2356ea513514229083a42">t2_drift_ini</a> (void)</td></tr>
+<tr class="separator:a217590113ce2356ea513514229083a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1b689ae0c6ba8272f9d223d70c07918" id="r_aa1b689ae0c6ba8272f9d223d70c07918"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1b689ae0c6ba8272f9d223d70c07918">t2_high_pass_dr_long</a> (long sts_dt)</td></tr>
+<tr class="separator:aa1b689ae0c6ba8272f9d223d70c07918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a868330ca7f512bbd65ad183d8b5a9ae5" id="r_a868330ca7f512bbd65ad183d8b5a9ae5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a868330ca7f512bbd65ad183d8b5a9ae5">drift_ini</a> (short drift_filter_enable)</td></tr>
+<tr class="separator:a868330ca7f512bbd65ad183d8b5a9ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a50a5d3ec10c5f2c6ddb1386450870df3" id="r_a50a5d3ec10c5f2c6ddb1386450870df3"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50a5d3ec10c5f2c6ddb1386450870df3">RxHumDriftFilter</a></td></tr>
+<tr class="separator:a50a5d3ec10c5f2c6ddb1386450870df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="ad654ba3cd732024fe35b2ed3c048cc55" name="ad654ba3cd732024fe35b2ed3c048cc55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad654ba3cd732024fe35b2ed3c048cc55">&#9670;&#160;</a></span>DR_FLT_SIZE__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DR_FLT_SIZE__&#160;&#160;&#160;512</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>AM140 → AM150 after_deley150 を <a class="el" href="_qrs2_8c.html">Qrs2.c</a> に移動 </p>
+
+</div>
+</div>
+<a id="a66e0c84bfcf8fce341c09b8136cc00fb" name="a66e0c84bfcf8fce341c09b8136cc00fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66e0c84bfcf8fce341c09b8136cc00fb">&#9670;&#160;</a></span>DUMMY_SIZE__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DUMMY_SIZE__&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a868330ca7f512bbd65ad183d8b5a9ae5" name="a868330ca7f512bbd65ad183d8b5a9ae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a868330ca7f512bbd65ad183d8b5a9ae5">&#9670;&#160;</a></span>drift_ini()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drift_ini </td>
+          <td>(</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>drift_filter_enable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>AM140 → AM150 引数を追加 </p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_drift2_8c_a868330ca7f512bbd65ad183d8b5a9ae5_cgraph.svg" width="204" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_drift2_8c_a868330ca7f512bbd65ad183d8b5a9ae5_icgraph.svg" width="288" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a217590113ce2356ea513514229083a42" name="a217590113ce2356ea513514229083a42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a217590113ce2356ea513514229083a42">&#9670;&#160;</a></span>t2_drift_ini()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void t2_drift_ini </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_drift2_8c_a217590113ce2356ea513514229083a42_icgraph.svg" width="320" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aa1b689ae0c6ba8272f9d223d70c07918" name="aa1b689ae0c6ba8272f9d223d70c07918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1b689ae0c6ba8272f9d223d70c07918">&#9670;&#160;</a></span>t2_high_pass_dr_long()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long t2_high_pass_dr_long </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>sts_dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_drift2_8c_aa1b689ae0c6ba8272f9d223d70c07918_icgraph.svg" width="522" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a50a5d3ec10c5f2c6ddb1386450870df3" name="a50a5d3ec10c5f2c6ddb1386450870df3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50a5d3ec10c5f2c6ddb1386450870df3">&#9670;&#160;</a></span>RxHumDriftFilter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short RxHumDriftFilter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_ae8de5609f63c35c73f69a70b5aa1a0a.html">User</a></li><li class="navelem"><a class="el" href="dir_30da5e322cfece990184c7de3c6cbe0d.html">Filter</a></li><li class="navelem"><a class="el" href="_drift2_8c.html">Drift2.c</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

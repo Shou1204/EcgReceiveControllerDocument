@@ -1,0 +1,102 @@
+\doxysection{As\+Qrs\+Detect1.\+h}
+\label{_as_qrs_detect1_8h_source}\index{AsQrsDetect1.h@{AsQrsDetect1.h}}
+\textbf{ [詳解]}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/***************************************************************************}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ \ ＱＲＳ＆ＰＶＣ検出プログラム（自動感度）の使用方法}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ //\ 追記：戻り値の記述はビッグエンディアンの場合です}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ //\ \ \ \ \ \ \ リトルエンディアンのシステム(stmなど)では戻り値の順番がことなるので注意すること}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ \ 基本的に本プログラムは固定感度のＱＲＳ検出と並列に動作させることが前提}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ \ 1\ :\ 固定感度\ QrsDetInitial(引数)で変数の初期化後、AsQrsDetInitial(引数)}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *\ \ \ \ \ \ にて変数を初期化}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ 引数：検出幅、検索時間、マスク時間、検出感度、オプション}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ 通常は\ 40ms\ \ \ \ 220ms\ \ \ \ \ \ 270ms\ \ \ \ \ \ \ 無効\ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ AsQrsDetInitial(\ 40,\ 220,\ 270,\ x,\ 0\ );\ として実行する}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ \ 2\ :\ PvcDetInitial()\ で変数の初期化後、AsPvcDetInitial()で変数の初期化}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ \ 3\ :\ 割込処理毎のQrsDetection後に検出関数を実行}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ \ \ \ \ \ AsQrsDetection(\ short\ Dt,\ char\ flag\ )}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ Dt\ :\ 心電図データ}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ flag\ :\ 受信異常情報}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ \ \ \ \ \ 戻り値は\ 8bit(1)\ +\ 8bit(2)\ +\ 16bit\ の32bit}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ 8bit(1)\ :\ QRS情報}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00\ :\ QRSでは無い}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01\ :\ QRS頂点（底)を検出}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ 8bit(2)\ :\ 受信異常情報(flagと同じもの)}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ \ \ \ \ \ \ 16bit\ \ \ \ :\ 心電図データ}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ \ 4\ :\ 割込処理毎のPvcDetection後に検出関数を実行}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ *\ \ \ \ \ \ AsPvcDetection(\ long\ EcgDt\ )}}
+\DoxyCodeLine{00029\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ EcgDt\ :\ QrsDetection()からの戻り値を引数として与える}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ *\ \ \ \ \ \ 戻り値は\ 8bit(1)\ +\ 8bit(2)\ +\ 16bit\ の32bit}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ 8bit(1)\ :\ QRS情報}}
+\DoxyCodeLine{00032\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00\ :\ QRSでは無い}}
+\DoxyCodeLine{00033\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01\ :\ ノーマルQRS}}
+\DoxyCodeLine{00034\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x21\ :\ PVCと判定}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x11\ :\ PACと判定}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x81\ :\ 脱落判定(0x21や0x11と合成される)}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ 8bit(2)\ :\ 受信異常情報(flagと同じもの)}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ 16bit\ \ \ :\ 心電図データ}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ *\ \ 5\ :\ 現在の検出選択に必要なデータを使用する}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ *\ \ 6\ :\ 3から繰り返す}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ *-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ ***************************************************************************/}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{/*////////////////////////////////////////////////////////////////////////\ \ */}}
+\DoxyCodeLine{00048\ \textcolor{comment}{/*\ \ 2024/9/2}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ \ \ \ \ \ \ \ unionを廃止、構造体に変更}}
+\DoxyCodeLine{00050\ \textcolor{comment}{}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ \ \ \ \ \ 引数、戻り値ともに上記から変更なし}}
+\DoxyCodeLine{00052\ \textcolor{comment}{}}
+\DoxyCodeLine{00053\ \textcolor{comment}{/*////////////////////////////////////////////////////////////////////////\ \ */}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#ifndef\ ASQRSDETECT1\_H}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ ASQRSDETECT1\_H}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00058\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00062\ \textcolor{comment}{/*\ \ Returnデータの構造\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00063\ \textcolor{comment}{/*\ \ sAns[0]\ :\ 状態コード\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00064\ \textcolor{comment}{/*\ \ sAns[1]\ :\ 心電図データ\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00065\ \textcolor{comment}{/*\ \ cAns[0]\ :\ PVCコード\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00066\ \textcolor{comment}{/*\ \ \ \ \ \ \ \ \ \ \ \ 0x00=通常\ 0x01=QRS\ 0x20=PVC\ \ */}}
+\DoxyCodeLine{00067\ \textcolor{comment}{/*\ \ cAns[1]\ :\ 受信状態\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00068\ \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{comment}{/*////////////////////////////////////////\ \ */}}
+\DoxyCodeLine{00071\ \textcolor{comment}{/*\ \ \ \ \ \ 構造体に変更\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00072\ \textcolor{comment}{/*////////////////////////////////////////\ \ */}}
+\DoxyCodeLine{00073\ \textcolor{comment}{//\ union\ ReturnCode}}
+\DoxyCodeLine{00074\ \textcolor{comment}{//\ \{}}
+\DoxyCodeLine{00075\ \textcolor{comment}{//\ \ \ \ \ unsigned\ long\ lAns;}}
+\DoxyCodeLine{00076\ \textcolor{comment}{//\ \ \ \ \ unsigned\ short\ sAns[2];}}
+\DoxyCodeLine{00077\ \textcolor{comment}{//\ \ \ \ \ unsigned\ char\ cAns[4];}}
+\DoxyCodeLine{00078\ \textcolor{comment}{//\ \};}}
+\DoxyCodeLine{00079\ \textcolor{comment}{/*////////////////////////////////////////\ \ */}}
+\DoxyCodeLine{00088\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ qrs;\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ status;\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{short}\ ecg;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00092\ \}\ ReturnCode;}
+\DoxyCodeLine{00093\ \textcolor{comment}{/*////////////////////////////////////////\ \ */}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{long}\ AsPvcDetection\_1(\ \textcolor{keywordtype}{long}\ EcgDt\ );}
+\DoxyCodeLine{00096\ \textcolor{keywordtype}{long}\ AsQrsDetection\_1(\ \textcolor{keywordtype}{short}\ Dt,\ \textcolor{keywordtype}{short}\ sts\_flag\ );}
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{void}\ AsQrsDetInitial\_1(\ \textcolor{keywordtype}{short}\ d1,\ \textcolor{keywordtype}{short}\ d2,\ \textcolor{keywordtype}{short}\ d3,\ \textcolor{keywordtype}{short}\ d4,\ \textcolor{keywordtype}{short}\ d5\ );}
+\DoxyCodeLine{00098\ \textcolor{keywordtype}{void}\ AsPvcDetInitial\_1(\ \textcolor{keywordtype}{void}\ );}
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{void}\ AsSetOptNO1(\ \textcolor{keywordtype}{short}\ Dt\ );}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00102\ \}}
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FILTER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,270 @@
+\doxysection{host\+\_\+in.\+c ファイル}
+\label{host__in_8c}\index{host\_in.c@{host\_in.c}}
+{\ttfamily \#include "{}host\+\_\+in.\+h"{}}\newline
+host\+\_\+in.\+c の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{host__in_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ CHANNEL\+\_\+\+LENGTH}~4
+\end{DoxyCompactItemize}
+\doxysubsubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \textbf{ store\+Rx\+Frame\+Step} \textbf{ store\+Rx\+Frame\+Step}
+\item 
+typedef enum \textbf{ Input\+Uart} \textbf{ Input\+Uart}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ store\+Rx\+Frame\+Step} \{ \textbf{ WAIT\+\_\+\+FOR\+\_\+\+STX}
+, \textbf{ PROCESS\+\_\+\+CHANNEL}
+, \textbf{ PROCESS\+\_\+\+OTHER}
+, \textbf{ CHECK\+\_\+\+ETX\+\_\+\+OR\+\_\+\+NEW\+\_\+\+INITIAL}
+ \}
+\item 
+enum \textbf{ Input\+Uart} \{ \textbf{ UART\+\_\+\+INPUT\+\_\+\+NONE} = 0
+, \textbf{ UART\+\_\+\+INPUT\+\_\+\+ACTIVE} = 1
+, \textbf{ UART\+\_\+\+INPUT\+\_\+\+COMPLETE} = 0x50
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ convert\+Integer\+To\+Channel} (uint8\+\_\+t temp\+\_\+char[$\,$])
+\item 
+void \textbf{ Init\+Host\+InC} ()
+\item 
+int \textbf{ Store\+Receive\+Frame} (uint8\+\_\+t rx\+\_\+byte)
+\begin{DoxyCompactList}\small\item\em 受信バイトを処理し、フレームを格納する関数 \end{DoxyCompactList}\item 
+int \textbf{ Update\+Data} ()
+\begin{DoxyCompactList}\small\item\em データ更新プロセス \end{DoxyCompactList}\item 
+uint8\+\_\+t \textbf{ Get\+\_\+input\+Uart\+State} ()
+\item 
+void \textbf{ Set\+\_\+input\+Uart\+State} (uint8\+\_\+t val\+\_\+)
+\item 
+uint16\+\_\+t \textbf{ Get\+\_\+tmp\+Value} (uint8\+\_\+t id)
+\item 
+uint8\+\_\+t \textbf{ Get\+\_\+is\+Updated} (uint8\+\_\+t id)
+\item 
+void \textbf{ Update\+Current\+State} ()
+\begin{DoxyCompactList}\small\item\em チャンネルとアンテナの現在値を更新 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{マクロ定義詳解}
+\index{host\_in.c@{host\_in.c}!CHANNEL\_LENGTH@{CHANNEL\_LENGTH}}
+\index{CHANNEL\_LENGTH@{CHANNEL\_LENGTH}!host\_in.c@{host\_in.c}}
+\doxysubsubsection{CHANNEL\_LENGTH}
+{\footnotesize\ttfamily \label{host__in_8c_a18429ec44c22b0d671f6bd03142ab2bc} 
+\#define CHANNEL\+\_\+\+LENGTH~4}
+
+
+
+\doxysubsection{型定義詳解}
+\index{host\_in.c@{host\_in.c}!InputUart@{InputUart}}
+\index{InputUart@{InputUart}!host\_in.c@{host\_in.c}}
+\doxysubsubsection{InputUart}
+{\footnotesize\ttfamily \label{host__in_8c_a44dde209566132a4090bbc86506cc717} 
+typedef enum \textbf{ Input\+Uart} \textbf{ Input\+Uart}}
+
+\index{host\_in.c@{host\_in.c}!storeRxFrameStep@{storeRxFrameStep}}
+\index{storeRxFrameStep@{storeRxFrameStep}!host\_in.c@{host\_in.c}}
+\doxysubsubsection{storeRxFrameStep}
+{\footnotesize\ttfamily \label{host__in_8c_aad3cd0bff7e6420833a0dcca8a11c259} 
+typedef enum \textbf{ store\+Rx\+Frame\+Step} \textbf{ store\+Rx\+Frame\+Step}}
+
+
+
+\doxysubsection{列挙型詳解}
+\index{host\_in.c@{host\_in.c}!InputUart@{InputUart}}
+\index{InputUart@{InputUart}!host\_in.c@{host\_in.c}}
+\doxysubsubsection{InputUart}
+{\footnotesize\ttfamily \label{host__in_8c_ae7c62ed83985896918fcea7bdaa26b52} 
+enum \textbf{ Input\+Uart}}
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UART\_INPUT\_NONE@{UART\_INPUT\_NONE}!host\_in.c@{host\_in.c}}\index{host\_in.c@{host\_in.c}!UART\_INPUT\_NONE@{UART\_INPUT\_NONE}}}\label{host__in_8c_ae7c62ed83985896918fcea7bdaa26b52} 
+UART\+\_\+\+INPUT\+\_\+\+NONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UART\_INPUT\_ACTIVE@{UART\_INPUT\_ACTIVE}!host\_in.c@{host\_in.c}}\index{host\_in.c@{host\_in.c}!UART\_INPUT\_ACTIVE@{UART\_INPUT\_ACTIVE}}}\label{host__in_8c_ae7c62ed83985896918fcea7bdaa26b52} 
+UART\+\_\+\+INPUT\+\_\+\+ACTIVE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UART\_INPUT\_COMPLETE@{UART\_INPUT\_COMPLETE}!host\_in.c@{host\_in.c}}\index{host\_in.c@{host\_in.c}!UART\_INPUT\_COMPLETE@{UART\_INPUT\_COMPLETE}}}\label{host__in_8c_ae7c62ed83985896918fcea7bdaa26b52} 
+UART\+\_\+\+INPUT\+\_\+\+COMPLETE&\\
+\hline
+
+\end{DoxyEnumFields}
+\index{host\_in.c@{host\_in.c}!storeRxFrameStep@{storeRxFrameStep}}
+\index{storeRxFrameStep@{storeRxFrameStep}!host\_in.c@{host\_in.c}}
+\doxysubsubsection{storeRxFrameStep}
+{\footnotesize\ttfamily \label{host__in_8c_abeddbc508b4b93dd7a0ccc8b7534d622} 
+enum \textbf{ store\+Rx\+Frame\+Step}}
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WAIT\_FOR\_STX@{WAIT\_FOR\_STX}!host\_in.c@{host\_in.c}}\index{host\_in.c@{host\_in.c}!WAIT\_FOR\_STX@{WAIT\_FOR\_STX}}}\label{host__in_8c_abeddbc508b4b93dd7a0ccc8b7534d622} 
+WAIT\+\_\+\+FOR\+\_\+\+STX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROCESS\_CHANNEL@{PROCESS\_CHANNEL}!host\_in.c@{host\_in.c}}\index{host\_in.c@{host\_in.c}!PROCESS\_CHANNEL@{PROCESS\_CHANNEL}}}\label{host__in_8c_abeddbc508b4b93dd7a0ccc8b7534d622} 
+PROCESS\+\_\+\+CHANNEL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PROCESS\_OTHER@{PROCESS\_OTHER}!host\_in.c@{host\_in.c}}\index{host\_in.c@{host\_in.c}!PROCESS\_OTHER@{PROCESS\_OTHER}}}\label{host__in_8c_abeddbc508b4b93dd7a0ccc8b7534d622} 
+PROCESS\+\_\+\+OTHER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHECK\_ETX\_OR\_NEW\_INITIAL@{CHECK\_ETX\_OR\_NEW\_INITIAL}!host\_in.c@{host\_in.c}}\index{host\_in.c@{host\_in.c}!CHECK\_ETX\_OR\_NEW\_INITIAL@{CHECK\_ETX\_OR\_NEW\_INITIAL}}}\label{host__in_8c_abeddbc508b4b93dd7a0ccc8b7534d622} 
+CHECK\+\_\+\+ETX\+\_\+\+OR\+\_\+\+NEW\+\_\+\+INITIAL&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{関数詳解}
+\index{host\_in.c@{host\_in.c}!convertIntegerToChannel@{convertIntegerToChannel}}
+\index{convertIntegerToChannel@{convertIntegerToChannel}!host\_in.c@{host\_in.c}}
+\doxysubsubsection{convertIntegerToChannel()}
+{\footnotesize\ttfamily \label{host__in_8c_a36bbe16578582499fff87cc5fd0cdc59} 
+int convert\+Integer\+To\+Channel (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{temp\+\_\+char}{[$\,$]}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{host__in_8c_a36bbe16578582499fff87cc5fd0cdc59_icgraph}
+\end{center}
+\end{figure}
+\index{host\_in.c@{host\_in.c}!Get\_inputUartState@{Get\_inputUartState}}
+\index{Get\_inputUartState@{Get\_inputUartState}!host\_in.c@{host\_in.c}}
+\doxysubsubsection{Get\_inputUartState()}
+{\footnotesize\ttfamily \label{host__in_8c_a95303fcfed41e87df9d8fb299e0d9f5d} 
+uint8\+\_\+t Get\+\_\+input\+Uart\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{host\_in.c@{host\_in.c}!Get\_isUpdated@{Get\_isUpdated}}
+\index{Get\_isUpdated@{Get\_isUpdated}!host\_in.c@{host\_in.c}}
+\doxysubsubsection{Get\_isUpdated()}
+{\footnotesize\ttfamily \label{host__in_8c_a7982534a1f252104992a8a52bdc8b21e} 
+uint8\+\_\+t Get\+\_\+is\+Updated (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{id}{}\end{DoxyParamCaption})}
+
+\index{host\_in.c@{host\_in.c}!Get\_tmpValue@{Get\_tmpValue}}
+\index{Get\_tmpValue@{Get\_tmpValue}!host\_in.c@{host\_in.c}}
+\doxysubsubsection{Get\_tmpValue()}
+{\footnotesize\ttfamily \label{host__in_8c_afe005c613143dc94e368fb9c124603e6} 
+uint16\+\_\+t Get\+\_\+tmp\+Value (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{id}{}\end{DoxyParamCaption})}
+
+\index{host\_in.c@{host\_in.c}!InitHostInC@{InitHostInC}}
+\index{InitHostInC@{InitHostInC}!host\_in.c@{host\_in.c}}
+\doxysubsubsection{InitHostInC()}
+{\footnotesize\ttfamily \label{host__in_8c_a2aaec4536b9b3f353c72936e9e78c3b5} 
+void Init\+Host\+InC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+モジュールの初期化関数 被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{host__in_8c_a2aaec4536b9b3f353c72936e9e78c3b5_icgraph}
+\end{center}
+\end{figure}
+\index{host\_in.c@{host\_in.c}!Set\_inputUartState@{Set\_inputUartState}}
+\index{Set\_inputUartState@{Set\_inputUartState}!host\_in.c@{host\_in.c}}
+\doxysubsubsection{Set\_inputUartState()}
+{\footnotesize\ttfamily \label{host__in_8c_a1eaff27a143fcc8a5a8fd17e309f5ab2} 
+void Set\+\_\+input\+Uart\+State (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{val\+\_\+}{}\end{DoxyParamCaption})}
+
+\index{host\_in.c@{host\_in.c}!StoreReceiveFrame@{StoreReceiveFrame}}
+\index{StoreReceiveFrame@{StoreReceiveFrame}!host\_in.c@{host\_in.c}}
+\doxysubsubsection{StoreReceiveFrame()}
+{\footnotesize\ttfamily \label{host__in_8c_af922d94a43f84fbad0534bd1f24990d7} 
+int Store\+Receive\+Frame (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{rx\+\_\+byte}{}\end{DoxyParamCaption})}
+
+
+
+受信バイトを処理し、フレームを格納する関数 
+
+
+\begin{DoxyParams}{引数}
+{\em } & rx\+\_\+byte\+: 受信バイト \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+0\+: 入力フォーマットが完成していない場合~\newline
+1\+: 正しいフォーマットでの入力を確認
+\end{DoxyReturn}
+バッファに溜めずに1バイトずつ判断する 現在値との一致はここでは判断せず重複なく範囲内で入力があったかどうかを判断している 呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{host__in_8c_af922d94a43f84fbad0534bd1f24990d7_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{host__in_8c_af922d94a43f84fbad0534bd1f24990d7_icgraph}
+\end{center}
+\end{figure}
+\index{host\_in.c@{host\_in.c}!UpdateCurrentState@{UpdateCurrentState}}
+\index{UpdateCurrentState@{UpdateCurrentState}!host\_in.c@{host\_in.c}}
+\doxysubsubsection{UpdateCurrentState()}
+{\footnotesize\ttfamily \label{host__in_8c_a2a55a6444b571ec802eccc95d8e0f109} 
+void Update\+Current\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+チャンネルとアンテナの現在値を更新 
+
+\begin{DoxyNote}{覚え書き}
+現在値に\+UART入力値を反映させる 
+\end{DoxyNote}
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{host__in_8c_a2a55a6444b571ec802eccc95d8e0f109_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{host__in_8c_a2a55a6444b571ec802eccc95d8e0f109_icgraph}
+\end{center}
+\end{figure}
+\index{host\_in.c@{host\_in.c}!UpdateData@{UpdateData}}
+\index{UpdateData@{UpdateData}!host\_in.c@{host\_in.c}}
+\doxysubsubsection{UpdateData()}
+{\footnotesize\ttfamily \label{host__in_8c_a2ee3058f5c286b7fe99c18f1f564a45c} 
+int Update\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+データ更新プロセス 
+
+\begin{DoxyReturn}{戻り値}
+更新なし、更新あり（ハンドシェイクなし）, 更新なし（ハンドシェイクあり）を返す
+\end{DoxyReturn}
+ここでは現在値での重複を確認し、なければ\+UART入力値を現在値に反映する~\newline
+ただし、チャンネル番号とアンテナはここでは重複の確認をして、~\newline
+ハンドシェイクが必要かを判断するにとどめる また、いくつのプロパティに更新があったかを集計している 呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{host__in_8c_a2ee3058f5c286b7fe99c18f1f564a45c_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{host__in_8c_a2ee3058f5c286b7fe99c18f1f564a45c_icgraph}
+\end{center}
+\end{figure}

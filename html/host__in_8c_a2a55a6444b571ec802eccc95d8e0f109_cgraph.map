@@ -1,0 +1,5 @@
+<map id="UpdateCurrentState" name="UpdateCurrentState">
+<area shape="rect" id="Node000001" title="チャンネルとアンテナの現在値を更新" alt="" coords="5,5,143,32"/>
+<area shape="rect" id="Node000002" href="$ecg__data_8c.html#a5f853cb75cec822eaad692d27425dc5b" title=" " alt="" coords="191,5,311,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,16,175,16,175,21,143,21"/>
+</map>

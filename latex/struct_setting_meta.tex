@@ -1,0 +1,66 @@
+\doxysection{Setting\+Meta 構造体}
+\label{struct_setting_meta}\index{SettingMeta@{SettingMeta}}
+
+
+各種プロパティのメタデータ構造体  
+
+
+
+
+{\ttfamily \#include $<$host\+\_\+in.\+h$>$}
+
+
+
+Setting\+Meta 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{struct_setting_meta__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{フィールド}
+\begin{DoxyCompactItemize}
+\item 
+const uint8\+\_\+t \textbf{ property}
+\item 
+const uint8\+\_\+t \textbf{ initial}
+\item 
+const uint8\+\_\+t \textbf{ range\+Start}
+\item 
+const uint8\+\_\+t \textbf{ range\+End}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+各種プロパティのメタデータ構造体 
+
+\doxysubsection{フィールド詳解}
+\index{SettingMeta@{SettingMeta}!initial@{initial}}
+\index{initial@{initial}!SettingMeta@{SettingMeta}}
+\doxysubsubsection{initial}
+{\footnotesize\ttfamily \label{struct_setting_meta_a045c50bcd4d169c08ba483bfc93a9a44} 
+const uint8\+\_\+t initial}
+
+UART受信フォーマットの記号 \index{SettingMeta@{SettingMeta}!property@{property}}
+\index{property@{property}!SettingMeta@{SettingMeta}}
+\doxysubsubsection{property}
+{\footnotesize\ttfamily \label{struct_setting_meta_a4f6c735a0c8ad19893bbbb042d2857cb} 
+const uint8\+\_\+t property}
+
+識別コード \index{SettingMeta@{SettingMeta}!rangeEnd@{rangeEnd}}
+\index{rangeEnd@{rangeEnd}!SettingMeta@{SettingMeta}}
+\doxysubsubsection{rangeEnd}
+{\footnotesize\ttfamily \label{struct_setting_meta_ad9c1b7a42a7a288e23f90ffe00e7171d} 
+const uint8\+\_\+t range\+End}
+
+上限 \index{SettingMeta@{SettingMeta}!rangeStart@{rangeStart}}
+\index{rangeStart@{rangeStart}!SettingMeta@{SettingMeta}}
+\doxysubsubsection{rangeStart}
+{\footnotesize\ttfamily \label{struct_setting_meta_a3d0b11e3e1d08aaee7149e2e9074b913} 
+const uint8\+\_\+t range\+Start}
+
+設定値の範囲下限 
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+Core/\+User/\textbf{ host\+\_\+in.\+h}\end{DoxyCompactItemize}

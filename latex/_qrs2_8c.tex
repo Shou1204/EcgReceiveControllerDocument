@@ -1,0 +1,256 @@
+\doxysection{Qrs2.\+c ファイル}
+\label{_qrs2_8c}\index{Qrs2.c@{Qrs2.c}}
+{\ttfamily \#include "{}filter.\+h"{}}\newline
+Qrs2.\+c の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{_qrs2_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ QRS\+\_\+\+DELAY}~20  /$\ast$ ＱＲＳ遅延時間    $\ast$/
+\item 
+\#define \textbf{ MW\+\_\+\+Dlay}~21  /$\ast$21 積分幅     $\ast$/
+\item 
+\#define \textbf{ QRS\+\_\+\+WIDE}~12  /$\ast$17 積分ＱＲＳ幅   $\ast$/
+\item 
+\#define \textbf{ RR\+\_\+\+MASK}~30  /$\ast$ 30Ｒ－Ｒのマスク時間  $\ast$/
+\item 
+\#define \textbf{ ANA\+\_\+\+TIME}~50  /$\ast$ トリガー点からの経過時間 $\ast$/
+\item 
+\#define \textbf{ PACE\+\_\+\+LEV}~350 /$\ast$ ペースパルスのカットする高さ$\ast$/
+\item 
+\#define \textbf{ QRS\+\_\+\+TH\+\_\+\+\_\+}~160
+\item 
+\#define \textbf{ QRS\+\_\+\+TH\+\_\+\+INI\+\_\+\+\_\+}~500
+\item 
+\#define \textbf{ SQ\+\_\+\+LEV}~13
+\item 
+\#define \textbf{ STOP\+\_\+\+INTER\+\_\+\+\_\+}~9000
+\item 
+\#define \textbf{ ITEG\+\_\+\+BUFFS\+\_\+\+\_\+}~6
+\item 
+\#define \textbf{ TH\+\_\+\+DIV\+\_\+\+\_\+}~5
+\item 
+\#define \textbf{ TH\+\_\+\+DIV\+\_\+\+X2\+\_\+\+\_\+}~10
+\item 
+\#define \textbf{ TH\+\_\+\+AFTER\+\_\+\+\_\+}~30
+\item 
+\#define \textbf{ INTEG\+\_\+\+\_\+}~300
+\item 
+\#define \textbf{ DELEY\+\_\+150\+\_\+\+\_\+}~150
+\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+short \textbf{ after\+\_\+deley150} (short qrs, short ecg, short $\ast$sts)
+\item 
+short \textbf{ t2\+\_\+qrsrtn} (short sample)
+\item 
+void \textbf{ t2\+\_\+qrsini} (short qrs\+\_\+sensi, short ecg\+\_\+sensi)
+\item 
+void \textbf{ Set\+Ecg\+And\+Qrs\+Sensi} (short qrs\+\_\+sensi, short ecg\+\_\+sensi)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+short \textbf{ Real\+Ecg\+Sns}
+\item 
+short \textbf{ Rx\+Ecg2\+Qrs\+Sensi}
+\item 
+short \textbf{ Change\+Qrs\+Border}
+\item 
+short \textbf{ Trans\+Qrs\+Th}
+\item 
+short \textbf{ Trans\+Qrs\+Box}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{マクロ定義詳解}
+\index{Qrs2.c@{Qrs2.c}!ANA\_TIME@{ANA\_TIME}}
+\index{ANA\_TIME@{ANA\_TIME}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{ANA\_TIME}
+{\footnotesize\ttfamily \label{_qrs2_8c_ac0c1487b3da699cfa9009565c8068013} 
+\#define ANA\+\_\+\+TIME~50  /$\ast$ トリガー点からの経過時間 $\ast$/}
+
+\index{Qrs2.c@{Qrs2.c}!DELEY\_150\_\_@{DELEY\_150\_\_}}
+\index{DELEY\_150\_\_@{DELEY\_150\_\_}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{DELEY\_150\_\_}
+{\footnotesize\ttfamily \label{_qrs2_8c_adee74e51a79aec4f55fa58a525fde6bd} 
+\#define DELEY\+\_\+150\+\_\+\+\_\+~150}
+
+AM140 → AM150 \doxyref{Drift2.\+c}{p.}{_drift2_8c} から移植 \index{Qrs2.c@{Qrs2.c}!INTEG\_\_@{INTEG\_\_}}
+\index{INTEG\_\_@{INTEG\_\_}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{INTEG\_\_}
+{\footnotesize\ttfamily \label{_qrs2_8c_a90a16a79913a5968dde3af4eca8cf3c3} 
+\#define INTEG\+\_\+\+\_\+~300}
+
+\index{Qrs2.c@{Qrs2.c}!ITEG\_BUFFS\_\_@{ITEG\_BUFFS\_\_}}
+\index{ITEG\_BUFFS\_\_@{ITEG\_BUFFS\_\_}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{ITEG\_BUFFS\_\_}
+{\footnotesize\ttfamily \label{_qrs2_8c_a6aa17ad59b9064200b45c2002e18387b} 
+\#define ITEG\+\_\+\+BUFFS\+\_\+\+\_\+~6}
+
+\index{Qrs2.c@{Qrs2.c}!MW\_Dlay@{MW\_Dlay}}
+\index{MW\_Dlay@{MW\_Dlay}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{MW\_Dlay}
+{\footnotesize\ttfamily \label{_qrs2_8c_aed095c4a2551bb26033517a5e8ec2ac7} 
+\#define MW\+\_\+\+Dlay~21  /$\ast$21 積分幅     $\ast$/}
+
+\index{Qrs2.c@{Qrs2.c}!PACE\_LEV@{PACE\_LEV}}
+\index{PACE\_LEV@{PACE\_LEV}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{PACE\_LEV}
+{\footnotesize\ttfamily \label{_qrs2_8c_a20e2687e1946f6709f2a45b2fc1c60ce} 
+\#define PACE\+\_\+\+LEV~350 /$\ast$ ペースパルスのカットする高さ$\ast$/}
+
+\index{Qrs2.c@{Qrs2.c}!QRS\_DELAY@{QRS\_DELAY}}
+\index{QRS\_DELAY@{QRS\_DELAY}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{QRS\_DELAY}
+{\footnotesize\ttfamily \label{_qrs2_8c_a56253101a53cd74a69961f548ac312ed} 
+\#define QRS\+\_\+\+DELAY~20  /$\ast$ ＱＲＳ遅延時間    $\ast$/}
+
+\index{Qrs2.c@{Qrs2.c}!QRS\_TH\_\_@{QRS\_TH\_\_}}
+\index{QRS\_TH\_\_@{QRS\_TH\_\_}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{QRS\_TH\_\_}
+{\footnotesize\ttfamily \label{_qrs2_8c_a79e8040b473367d55ce0ac53661be23f} 
+\#define QRS\+\_\+\+TH\+\_\+\+\_\+~160}
+
+\index{Qrs2.c@{Qrs2.c}!QRS\_TH\_INI\_\_@{QRS\_TH\_INI\_\_}}
+\index{QRS\_TH\_INI\_\_@{QRS\_TH\_INI\_\_}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{QRS\_TH\_INI\_\_}
+{\footnotesize\ttfamily \label{_qrs2_8c_aac4e43f376a3517b279463c3c78579e6} 
+\#define QRS\+\_\+\+TH\+\_\+\+INI\+\_\+\+\_\+~500}
+
+\index{Qrs2.c@{Qrs2.c}!QRS\_WIDE@{QRS\_WIDE}}
+\index{QRS\_WIDE@{QRS\_WIDE}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{QRS\_WIDE}
+{\footnotesize\ttfamily \label{_qrs2_8c_a36d292bf60b6c531ca626f548fb1239e} 
+\#define QRS\+\_\+\+WIDE~12  /$\ast$17 積分ＱＲＳ幅   $\ast$/}
+
+\index{Qrs2.c@{Qrs2.c}!RR\_MASK@{RR\_MASK}}
+\index{RR\_MASK@{RR\_MASK}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{RR\_MASK}
+{\footnotesize\ttfamily \label{_qrs2_8c_aa44e6fb7e3180f1c6c5d28b052d20479} 
+\#define RR\+\_\+\+MASK~30  /$\ast$ 30Ｒ－Ｒのマスク時間  $\ast$/}
+
+\index{Qrs2.c@{Qrs2.c}!SQ\_LEV@{SQ\_LEV}}
+\index{SQ\_LEV@{SQ\_LEV}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{SQ\_LEV}
+{\footnotesize\ttfamily \label{_qrs2_8c_a18432d3518b75da30f9260bdf2b8fe54} 
+\#define SQ\+\_\+\+LEV~13}
+
+\index{Qrs2.c@{Qrs2.c}!STOP\_INTER\_\_@{STOP\_INTER\_\_}}
+\index{STOP\_INTER\_\_@{STOP\_INTER\_\_}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{STOP\_INTER\_\_}
+{\footnotesize\ttfamily \label{_qrs2_8c_a5ab0451b4318df8e9ca54e3ef37d2f09} 
+\#define STOP\+\_\+\+INTER\+\_\+\+\_\+~9000}
+
+\index{Qrs2.c@{Qrs2.c}!TH\_AFTER\_\_@{TH\_AFTER\_\_}}
+\index{TH\_AFTER\_\_@{TH\_AFTER\_\_}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{TH\_AFTER\_\_}
+{\footnotesize\ttfamily \label{_qrs2_8c_abf2a8f2742ddde65b9cbc7556ac47b4c} 
+\#define TH\+\_\+\+AFTER\+\_\+\+\_\+~30}
+
+\index{Qrs2.c@{Qrs2.c}!TH\_DIV\_\_@{TH\_DIV\_\_}}
+\index{TH\_DIV\_\_@{TH\_DIV\_\_}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{TH\_DIV\_\_}
+{\footnotesize\ttfamily \label{_qrs2_8c_afaa2f8987a55c5240ef250e41473039e} 
+\#define TH\+\_\+\+DIV\+\_\+\+\_\+~5}
+
+\index{Qrs2.c@{Qrs2.c}!TH\_DIV\_X2\_\_@{TH\_DIV\_X2\_\_}}
+\index{TH\_DIV\_X2\_\_@{TH\_DIV\_X2\_\_}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{TH\_DIV\_X2\_\_}
+{\footnotesize\ttfamily \label{_qrs2_8c_a2f1d7cce7a5afb3ef19d49d734133334} 
+\#define TH\+\_\+\+DIV\+\_\+\+X2\+\_\+\+\_\+~10}
+
+
+
+\doxysubsection{関数詳解}
+\index{Qrs2.c@{Qrs2.c}!after\_deley150@{after\_deley150}}
+\index{after\_deley150@{after\_deley150}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{after\_deley150()}
+{\footnotesize\ttfamily \label{_qrs2_8c_a5256314c2dea4e392f6fe8c0305f8e75} 
+short after\+\_\+deley150 (\begin{DoxyParamCaption}\item[{short}]{qrs}{, }\item[{short}]{ecg}{, }\item[{short $\ast$}]{sts}{}\end{DoxyParamCaption})}
+
+AM140 → AM150 \doxyref{Drift2.\+c}{p.}{_drift2_8c} から 移植 手動\+QRS検出を1ファイルにまとめる被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_qrs2_8c_a5256314c2dea4e392f6fe8c0305f8e75_icgraph}
+\end{center}
+\end{figure}
+\index{Qrs2.c@{Qrs2.c}!SetEcgAndQrsSensi@{SetEcgAndQrsSensi}}
+\index{SetEcgAndQrsSensi@{SetEcgAndQrsSensi}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{SetEcgAndQrsSensi()}
+{\footnotesize\ttfamily \label{_qrs2_8c_aad37f3ddf7b682e2a5f85b9a0c1976a3} 
+void Set\+Ecg\+And\+Qrs\+Sensi (\begin{DoxyParamCaption}\item[{short}]{qrs\+\_\+sensi}{, }\item[{short}]{ecg\+\_\+sensi}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_qrs2_8c_aad37f3ddf7b682e2a5f85b9a0c1976a3_icgraph}
+\end{center}
+\end{figure}
+\index{Qrs2.c@{Qrs2.c}!t2\_qrsini@{t2\_qrsini}}
+\index{t2\_qrsini@{t2\_qrsini}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{t2\_qrsini()}
+{\footnotesize\ttfamily \label{_qrs2_8c_aa17ff848fb4ab732074f13d313d3c766} 
+void t2\+\_\+qrsini (\begin{DoxyParamCaption}\item[{short}]{qrs\+\_\+sensi}{, }\item[{short}]{ecg\+\_\+sensi}{}\end{DoxyParamCaption})}
+
+AM140 → AM150 \doxyref{Drift2.\+c}{p.}{_drift2_8c} から移植被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{_qrs2_8c_aa17ff848fb4ab732074f13d313d3c766_icgraph}
+\end{center}
+\end{figure}
+\index{Qrs2.c@{Qrs2.c}!t2\_qrsrtn@{t2\_qrsrtn}}
+\index{t2\_qrsrtn@{t2\_qrsrtn}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{t2\_qrsrtn()}
+{\footnotesize\ttfamily \label{_qrs2_8c_a15dda4f2ebff3d8679d669d7dcc879ff} 
+short t2\+\_\+qrsrtn (\begin{DoxyParamCaption}\item[{short}]{sample}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_qrs2_8c_a15dda4f2ebff3d8679d669d7dcc879ff_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{変数詳解}
+\index{Qrs2.c@{Qrs2.c}!ChangeQrsBorder@{ChangeQrsBorder}}
+\index{ChangeQrsBorder@{ChangeQrsBorder}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{ChangeQrsBorder}
+{\footnotesize\ttfamily \label{_qrs2_8c_ad0cbc5efd76289a55bb57b17eff1803f} 
+short Change\+Qrs\+Border}
+
+\index{Qrs2.c@{Qrs2.c}!RealEcgSns@{RealEcgSns}}
+\index{RealEcgSns@{RealEcgSns}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{RealEcgSns}
+{\footnotesize\ttfamily \label{_qrs2_8c_a12e162c6a06874d26895fb6aebde326d} 
+short Real\+Ecg\+Sns}
+
+\index{Qrs2.c@{Qrs2.c}!RxEcg2QrsSensi@{RxEcg2QrsSensi}}
+\index{RxEcg2QrsSensi@{RxEcg2QrsSensi}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{RxEcg2QrsSensi}
+{\footnotesize\ttfamily \label{_qrs2_8c_a2f7fa5fd70a1d63e1f2c5f50f7d86f57} 
+short Rx\+Ecg2\+Qrs\+Sensi}
+
+\index{Qrs2.c@{Qrs2.c}!TransQrsBox@{TransQrsBox}}
+\index{TransQrsBox@{TransQrsBox}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{TransQrsBox}
+{\footnotesize\ttfamily \label{_qrs2_8c_a5d4d998b8c5a10649d365b4970c6b984} 
+short Trans\+Qrs\+Box}
+
+\index{Qrs2.c@{Qrs2.c}!TransQrsTh@{TransQrsTh}}
+\index{TransQrsTh@{TransQrsTh}!Qrs2.c@{Qrs2.c}}
+\doxysubsubsection{TransQrsTh}
+{\footnotesize\ttfamily \label{_qrs2_8c_ad05de5cc342f4e0927a9805b712bddb7} 
+short Trans\+Qrs\+Th}
+

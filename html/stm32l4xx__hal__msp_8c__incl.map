@@ -1,0 +1,15 @@
+<map id="stm32l4xx_hal_msp.c" name="stm32l4xx_hal_msp.c">
+<area shape="rect" id="Node000001" title="This file provides code for the MSP Initialization and de&#45;Initialization codes." alt="" coords="244,5,392,32"/>
+<area shape="rect" id="Node000002" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="288,80,348,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="321,33,321,64,316,64,316,33"/>
+<area shape="rect" id="Node000003" href="$handshake__receiver_8h.html" title=" " alt="" coords="5,155,154,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="288,106,137,152,135,147,287,101"/>
+<area shape="rect" id="Node000008" href="$host__in_8h.html" title=" " alt="" coords="178,155,253,181"/>
+<area shape="poly" id="edge3_Node000002_Node000008" title=" " alt="" coords="302,109,248,147,245,143,299,105"/>
+<area shape="rect" id="Node000010" href="$host__out_8h.html" title=" " alt="" coords="277,155,359,181"/>
+<area shape="poly" id="edge4_Node000002_Node000010" title=" " alt="" coords="321,107,321,139,316,139,316,107"/>
+<area shape="rect" id="Node000011" href="$spi__receive_8h.html" title=" " alt="" coords="384,155,482,181"/>
+<area shape="poly" id="edge5_Node000002_Node000011" title=" " alt="" coords="340,105,401,144,398,148,337,109"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="507,155,623,181"/>
+<area shape="poly" id="edge6_Node000002_Node000014" title=" " alt="" coords="350,101,508,147,506,152,348,106"/>
+</map>

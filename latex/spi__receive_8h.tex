@@ -1,0 +1,446 @@
+\doxysection{spi\+\_\+receive.\+h ファイル}
+\label{spi__receive_8h}\index{spi\_receive.h@{spi\_receive.h}}
+{\ttfamily \#include "{}ecg\+\_\+data.\+h"{}}\newline
+{\ttfamily \#include "{}filter.\+h"{}}\newline
+{\ttfamily \#include "{}synchro.\+h"{}}\newline
+spi\+\_\+receive.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{spi__receive_8h__incl}
+\end{center}
+\end{figure}
+被依存関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spi__receive_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{データ構造}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ Buf}
+\begin{DoxyCompactList}\small\item\em 最終的な\+ECGデータを管理する \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ ECGBUF\+\_\+\+SIZE}~150
+\item 
+\#define \textbf{ BASE\+\_\+\+VALUE}~2048
+\item 
+\#define \textbf{ STS\+\_\+\+SOFT\+\_\+\+ERROR}~0x02\+FF
+\item 
+\#define \textbf{ STS\+\_\+\+BROKEN\+\_\+\+DATA}~0x03ff
+\end{DoxyCompactItemize}
+\doxysubsubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \textbf{ buf\+Name} \textbf{ buf\+Name}
+\begin{DoxyCompactList}\small\item\em バッファに格納する値の種別 \end{DoxyCompactList}\item 
+typedef struct Buf \textbf{ Buf}
+\begin{DoxyCompactList}\small\item\em 最終的な\+ECGデータを管理する \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ buf\+Name} \{ \textbf{ QRS\+\_\+\+AUTO}
+, \textbf{ QRS\+\_\+\+MANUAL}
+, \textbf{ FILTER\+\_\+\+NONE}
+ \}
+\begin{DoxyCompactList}\small\item\em バッファに格納する値の種別 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ Spi\+Receive\+Process} (uint8\+\_\+t byte)
+\item 
+void \textbf{ Init\+Spi\+ReceiveC} ()
+\item 
+short \textbf{ Get\+\_\+sync\+Search\+Status} ()
+\item 
+void \textbf{ Read\+Idx\+Add} ()
+\item 
+void \textbf{ Write\+Idx\+Add} ()
+\item 
+int \textbf{ Is\+Read\+Ecg} ()
+\item 
+int \textbf{ Is\+Write\+Ecg} ()
+\item 
+void \textbf{ Store\+Ecg} (long ecg\+\_\+, long qrs\+\_\+auto, long qrs\+\_\+manual)
+\item 
+short \textbf{ Get\+Ecg\+Buf} (int qrs\+\_\+mode)
+\item 
+short \textbf{ Get\+Remain\+Ecg\+Buf} ()
+\item 
+void \textbf{ Status\+Cnt\+Reset} ()
+\item 
+long \textbf{ Generate\+Long\+Ecg\+Data} (uint16\+\_\+t sts, short ecg)
+\item 
+short \textbf{ Pick\+Ecg\+From\+Long} (long long\+\_\+data)
+\item 
+short \textbf{ Pick\+Sts\+From\+Long} (long long\+\_\+data)
+\item 
+int \textbf{ Get\+\_\+write\+Idx} ()
+\item 
+int \textbf{ Get\+\_\+read\+Idx} ()
+\item 
+uint8\+\_\+t \textbf{ Get\+\_\+pace\+Maker\+Cnt} ()
+\item 
+uint8\+\_\+t \textbf{ Get\+\_\+den\+Atu\+Cnt} ()
+\item 
+uint8\+\_\+t \textbf{ Get\+\_\+nurse\+Call\+Cnt} ()
+\item 
+uint8\+\_\+t \textbf{ Get\+\_\+read\+Error\+Cnt} ()
+\item 
+uint8\+\_\+t \textbf{ Get\+\_\+parity\+Err} ()
+\item 
+uint8\+\_\+t \textbf{ Get\+\_\+ch\+Err} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{データ構造詳解}
+\index{Buf@{Buf}}\label{struct_buf}
+\doxysubsubsection{struct Buf}
+最終的な\+ECGデータを管理する 
+
+ecgと送信機ステータスを別に管理~\newline
+idはenumのbuf\+Nameと紐づいています 
+
+Buf 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=130pt]{struct_buf__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{データフィールド}
+\mbox{\label{spi__receive_8h_abfb6657de134cfa32b3c1f5fa92bb025}} 
+uint16\_t&
+EcgBuf[\textbf{ ECGBUF\_SIZE}]&
+\\
+\hline
+
+\mbox{\label{spi__receive_8h_a9ade2046535db5503ce0e491b608becf}} 
+const uint8\_t&
+id&
+\\
+\hline
+
+\mbox{\label{spi__receive_8h_a37580959edc9d0df805ff9ef0efeef2a}} 
+uint16\_t&
+sts[\textbf{ ECGBUF\_SIZE}]&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\doxysubsection{マクロ定義詳解}
+\index{spi\_receive.h@{spi\_receive.h}!BASE\_VALUE@{BASE\_VALUE}}
+\index{BASE\_VALUE@{BASE\_VALUE}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{BASE\_VALUE}
+{\footnotesize\ttfamily \label{spi__receive_8h_ac16e51f6c599534f2cdd80d7c5f31c82} 
+\#define BASE\+\_\+\+VALUE~2048}
+
+\index{spi\_receive.h@{spi\_receive.h}!ECGBUF\_SIZE@{ECGBUF\_SIZE}}
+\index{ECGBUF\_SIZE@{ECGBUF\_SIZE}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{ECGBUF\_SIZE}
+{\footnotesize\ttfamily \label{spi__receive_8h_aba024d25962362393a3bfdb299fe6cc2} 
+\#define ECGBUF\+\_\+\+SIZE~150}
+
+\index{spi\_receive.h@{spi\_receive.h}!STS\_BROKEN\_DATA@{STS\_BROKEN\_DATA}}
+\index{STS\_BROKEN\_DATA@{STS\_BROKEN\_DATA}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{STS\_BROKEN\_DATA}
+{\footnotesize\ttfamily \label{spi__receive_8h_a0ccebfdfb698564dff33717ad455f15d} 
+\#define STS\+\_\+\+BROKEN\+\_\+\+DATA~0x03ff}
+
+\index{spi\_receive.h@{spi\_receive.h}!STS\_SOFT\_ERROR@{STS\_SOFT\_ERROR}}
+\index{STS\_SOFT\_ERROR@{STS\_SOFT\_ERROR}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{STS\_SOFT\_ERROR}
+{\footnotesize\ttfamily \label{spi__receive_8h_a5f5895f308348d10f6384e53fcc52f90} 
+\#define STS\+\_\+\+SOFT\+\_\+\+ERROR~0x02\+FF}
+
+
+
+\doxysubsection{型定義詳解}
+\index{spi\_receive.h@{spi\_receive.h}!Buf@{Buf}}
+\index{Buf@{Buf}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{Buf}
+{\footnotesize\ttfamily \label{spi__receive_8h_af346b5dde35b54465d1850bd4031906a} 
+typedef struct Buf Buf}
+
+
+
+最終的な\+ECGデータを管理する 
+
+ecgと送信機ステータスを別に管理~\newline
+idはenumのbuf\+Nameと紐づいています \index{spi\_receive.h@{spi\_receive.h}!bufName@{bufName}}
+\index{bufName@{bufName}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{bufName}
+{\footnotesize\ttfamily \label{spi__receive_8h_ad85c9b4c23e4e7d602b75af7f1c9fc8c} 
+typedef enum \textbf{ buf\+Name} \textbf{ buf\+Name}}
+
+
+
+バッファに格納する値の種別 
+
+
+
+\doxysubsection{列挙型詳解}
+\index{spi\_receive.h@{spi\_receive.h}!bufName@{bufName}}
+\index{bufName@{bufName}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{bufName}
+{\footnotesize\ttfamily \label{spi__receive_8h_aa269bfcd18f8beee611836a28f82b0fa} 
+enum \textbf{ buf\+Name}}
+
+
+
+バッファに格納する値の種別 
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QRS\_AUTO@{QRS\_AUTO}!spi\_receive.h@{spi\_receive.h}}\index{spi\_receive.h@{spi\_receive.h}!QRS\_AUTO@{QRS\_AUTO}}}\label{spi__receive_8h_aa269bfcd18f8beee611836a28f82b0fa} 
+QRS\+\_\+\+AUTO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{QRS\_MANUAL@{QRS\_MANUAL}!spi\_receive.h@{spi\_receive.h}}\index{spi\_receive.h@{spi\_receive.h}!QRS\_MANUAL@{QRS\_MANUAL}}}\label{spi__receive_8h_aa269bfcd18f8beee611836a28f82b0fa} 
+QRS\+\_\+\+MANUAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILTER\_NONE@{FILTER\_NONE}!spi\_receive.h@{spi\_receive.h}}\index{spi\_receive.h@{spi\_receive.h}!FILTER\_NONE@{FILTER\_NONE}}}\label{spi__receive_8h_aa269bfcd18f8beee611836a28f82b0fa} 
+FILTER\+\_\+\+NONE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{関数詳解}
+\index{spi\_receive.h@{spi\_receive.h}!GenerateLongEcgData@{GenerateLongEcgData}}
+\index{GenerateLongEcgData@{GenerateLongEcgData}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{GenerateLongEcgData()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a749d726a9c18205e684074afb8e7fb1a} 
+long Generate\+Long\+Ecg\+Data (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{sts}{, }\item[{short}]{ecg}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spi__receive_8h_a749d726a9c18205e684074afb8e7fb1a_icgraph}
+\end{center}
+\end{figure}
+\index{spi\_receive.h@{spi\_receive.h}!Get\_chErr@{Get\_chErr}}
+\index{Get\_chErr@{Get\_chErr}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{Get\_chErr()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a8e5f71644c10f67c3a50dcb6af877244} 
+uint8\+\_\+t Get\+\_\+ch\+Err (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{spi\_receive.h@{spi\_receive.h}!Get\_denAtuCnt@{Get\_denAtuCnt}}
+\index{Get\_denAtuCnt@{Get\_denAtuCnt}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{Get\_denAtuCnt()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a1a9568a1aa7a8f6fad829637799f7d07} 
+uint8\+\_\+t Get\+\_\+den\+Atu\+Cnt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{spi\_receive.h@{spi\_receive.h}!Get\_nurseCallCnt@{Get\_nurseCallCnt}}
+\index{Get\_nurseCallCnt@{Get\_nurseCallCnt}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{Get\_nurseCallCnt()}
+{\footnotesize\ttfamily \label{spi__receive_8h_ac3197cc17035f4f07c9bf2d21200c927} 
+uint8\+\_\+t Get\+\_\+nurse\+Call\+Cnt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{spi\_receive.h@{spi\_receive.h}!Get\_paceMakerCnt@{Get\_paceMakerCnt}}
+\index{Get\_paceMakerCnt@{Get\_paceMakerCnt}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{Get\_paceMakerCnt()}
+{\footnotesize\ttfamily \label{spi__receive_8h_ac1d35592714fedf7552e9806c89b8364} 
+uint8\+\_\+t Get\+\_\+pace\+Maker\+Cnt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{spi\_receive.h@{spi\_receive.h}!Get\_parityErr@{Get\_parityErr}}
+\index{Get\_parityErr@{Get\_parityErr}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{Get\_parityErr()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a8a6f224d4a84edb26d6aba4e4c8524c3} 
+uint8\+\_\+t Get\+\_\+parity\+Err (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{spi\_receive.h@{spi\_receive.h}!Get\_readErrorCnt@{Get\_readErrorCnt}}
+\index{Get\_readErrorCnt@{Get\_readErrorCnt}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{Get\_readErrorCnt()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a7f62612013bc7c9be1d7854c1ed8234f} 
+uint8\+\_\+t Get\+\_\+read\+Error\+Cnt (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{spi\_receive.h@{spi\_receive.h}!Get\_readIdx@{Get\_readIdx}}
+\index{Get\_readIdx@{Get\_readIdx}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{Get\_readIdx()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a058213c5c4cc8c9fb02e897a0369cdd4} 
+int Get\+\_\+read\+Idx (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{spi\_receive.h@{spi\_receive.h}!Get\_syncSearchStatus@{Get\_syncSearchStatus}}
+\index{Get\_syncSearchStatus@{Get\_syncSearchStatus}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{Get\_syncSearchStatus()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a9e0d0da6a972e1c35a82bf5b101cb5aa} 
+short Get\+\_\+sync\+Search\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{spi\_receive.h@{spi\_receive.h}!Get\_writeIdx@{Get\_writeIdx}}
+\index{Get\_writeIdx@{Get\_writeIdx}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{Get\_writeIdx()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a714605dd7ad3f5ac6ddf648e5fc87d33} 
+int Get\+\_\+write\+Idx (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{spi\_receive.h@{spi\_receive.h}!GetEcgBuf@{GetEcgBuf}}
+\index{GetEcgBuf@{GetEcgBuf}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{GetEcgBuf()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a8f44822a950d5d0fb8884c12164d3e0c} 
+short Get\+Ecg\+Buf (\begin{DoxyParamCaption}\item[{int}]{qrs\+\_\+mode}{}\end{DoxyParamCaption})}
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{spi__receive_8h_a8f44822a950d5d0fb8884c12164d3e0c_cgraph}
+\end{center}
+\end{figure}
+\index{spi\_receive.h@{spi\_receive.h}!GetRemainEcgBuf@{GetRemainEcgBuf}}
+\index{GetRemainEcgBuf@{GetRemainEcgBuf}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{GetRemainEcgBuf()}
+{\footnotesize\ttfamily \label{spi__receive_8h_ab954ff149d78c53a17e2688dd2704091} 
+short Get\+Remain\+Ecg\+Buf (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{spi\_receive.h@{spi\_receive.h}!InitSpiReceiveC@{InitSpiReceiveC}}
+\index{InitSpiReceiveC@{InitSpiReceiveC}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{InitSpiReceiveC()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a9844865e7423c151defcfe5a52c4a17c} 
+void Init\+Spi\+ReceiveC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{spi__receive_8h_a9844865e7423c151defcfe5a52c4a17c_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{spi__receive_8h_a9844865e7423c151defcfe5a52c4a17c_icgraph}
+\end{center}
+\end{figure}
+\index{spi\_receive.h@{spi\_receive.h}!IsReadEcg@{IsReadEcg}}
+\index{IsReadEcg@{IsReadEcg}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{IsReadEcg()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a70abc95e7126b14f550a3fb0f51642ea} 
+int Is\+Read\+Ecg (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{spi\_receive.h@{spi\_receive.h}!IsWriteEcg@{IsWriteEcg}}
+\index{IsWriteEcg@{IsWriteEcg}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{IsWriteEcg()}
+{\footnotesize\ttfamily \label{spi__receive_8h_acabfff9333d9323c9e7ebe327279c079} 
+int Is\+Write\+Ecg (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spi__receive_8h_acabfff9333d9323c9e7ebe327279c079_icgraph}
+\end{center}
+\end{figure}
+\index{spi\_receive.h@{spi\_receive.h}!PickEcgFromLong@{PickEcgFromLong}}
+\index{PickEcgFromLong@{PickEcgFromLong}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{PickEcgFromLong()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a31ab551a8597e2040a248eb82033bf3c} 
+short Pick\+Ecg\+From\+Long (\begin{DoxyParamCaption}\item[{long}]{long\+\_\+data}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spi__receive_8h_a31ab551a8597e2040a248eb82033bf3c_icgraph}
+\end{center}
+\end{figure}
+\index{spi\_receive.h@{spi\_receive.h}!PickStsFromLong@{PickStsFromLong}}
+\index{PickStsFromLong@{PickStsFromLong}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{PickStsFromLong()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a199673b9e258902e5f117975459e4048} 
+short Pick\+Sts\+From\+Long (\begin{DoxyParamCaption}\item[{long}]{long\+\_\+data}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spi__receive_8h_a199673b9e258902e5f117975459e4048_icgraph}
+\end{center}
+\end{figure}
+\index{spi\_receive.h@{spi\_receive.h}!ReadIdxAdd@{ReadIdxAdd}}
+\index{ReadIdxAdd@{ReadIdxAdd}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{ReadIdxAdd()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a08cdb9963e3ed6e4ea6e25c95a53f25d} 
+void Read\+Idx\+Add (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{spi__receive_8h_a08cdb9963e3ed6e4ea6e25c95a53f25d_icgraph}
+\end{center}
+\end{figure}
+\index{spi\_receive.h@{spi\_receive.h}!SpiReceiveProcess@{SpiReceiveProcess}}
+\index{SpiReceiveProcess@{SpiReceiveProcess}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{SpiReceiveProcess()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a0c878cefc06222b3734b31fbc02b0674} 
+int Spi\+Receive\+Process (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{byte}{}\end{DoxyParamCaption})}
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spi__receive_8h_a0c878cefc06222b3734b31fbc02b0674_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spi__receive_8h_a0c878cefc06222b3734b31fbc02b0674_icgraph}
+\end{center}
+\end{figure}
+\index{spi\_receive.h@{spi\_receive.h}!StatusCntReset@{StatusCntReset}}
+\index{StatusCntReset@{StatusCntReset}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{StatusCntReset()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a0928151cf559961841f5ec56d5fca371} 
+void Status\+Cnt\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spi__receive_8h_a0928151cf559961841f5ec56d5fca371_icgraph}
+\end{center}
+\end{figure}
+\index{spi\_receive.h@{spi\_receive.h}!StoreEcg@{StoreEcg}}
+\index{StoreEcg@{StoreEcg}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{StoreEcg()}
+{\footnotesize\ttfamily \label{spi__receive_8h_a944f60d67903174bf0eb3ef3d74a2c3f} 
+void Store\+Ecg (\begin{DoxyParamCaption}\item[{long}]{ecg\+\_\+}{, }\item[{long}]{qrs\+\_\+auto}{, }\item[{long}]{qrs\+\_\+manual}{}\end{DoxyParamCaption})}
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{spi__receive_8h_a944f60d67903174bf0eb3ef3d74a2c3f_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spi__receive_8h_a944f60d67903174bf0eb3ef3d74a2c3f_icgraph}
+\end{center}
+\end{figure}
+\index{spi\_receive.h@{spi\_receive.h}!WriteIdxAdd@{WriteIdxAdd}}
+\index{WriteIdxAdd@{WriteIdxAdd}!spi\_receive.h@{spi\_receive.h}}
+\doxysubsubsection{WriteIdxAdd()}
+{\footnotesize\ttfamily \label{spi__receive_8h_ae61f0034b40f114d83774abd52f91d54} 
+void Write\+Idx\+Add (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spi__receive_8h_ae61f0034b40f114d83774abd52f91d54_icgraph}
+\end{center}
+\end{figure}

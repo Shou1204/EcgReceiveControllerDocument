@@ -1,0 +1,971 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EcgReceiveController: AsQrsDetect1.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">EcgReceiveController
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('_as_qrs_detect1_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle"><div class="title">AsQrsDetect1.c ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_as_qrs_detect1_8h_source.html">AsQrsDetect1.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+AsQrsDetect1.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c__incl.svg" width="127" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:ac2eeadc7688b0dbf73e832209cb81874" id="r_ac2eeadc7688b0dbf73e832209cb81874"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2eeadc7688b0dbf73e832209cb81874">QRS_MARK</a>&#160;&#160;&#160;0x1000</td></tr>
+<tr class="separator:ac2eeadc7688b0dbf73e832209cb81874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba02e731b653668f99454e197efc5698" id="r_aba02e731b653668f99454e197efc5698"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba02e731b653668f99454e197efc5698">T_MASK_012__</a></td></tr>
+<tr class="separator:aba02e731b653668f99454e197efc5698"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ced1eb0b483220b2b2ad98337b2595c" id="r_a6ced1eb0b483220b2b2ad98337b2595c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ced1eb0b483220b2b2ad98337b2595c">AUTO_SENSI01_DIF_</a>&#160;&#160;&#160;13 /* 感度01閾値   1.0mm(0.10mV) */</td></tr>
+<tr class="separator:a6ced1eb0b483220b2b2ad98337b2595c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a208661d0bf223d75cf1d3d96b57de6c6" id="r_a208661d0bf223d75cf1d3d96b57de6c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a208661d0bf223d75cf1d3d96b57de6c6">AUTO_SENSI01_MIN_</a>&#160;&#160;&#160;53 /* 感度01最小   4.0mm(0.40mV) */</td></tr>
+<tr class="separator:a208661d0bf223d75cf1d3d96b57de6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7b77588340296e9d3a79094b9e3b5b" id="r_a7f7b77588340296e9d3a79094b9e3b5b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f7b77588340296e9d3a79094b9e3b5b">AUTO_SENSI01_MID_</a>&#160;&#160;&#160;66 /* 感度01中心   5.0mm(0.50mV) */</td></tr>
+<tr class="separator:a7f7b77588340296e9d3a79094b9e3b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a888f0599770da5ed013886e67181a7e2" id="r_a888f0599770da5ed013886e67181a7e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a888f0599770da5ed013886e67181a7e2">AUTO_SENSI01_MAX_</a>&#160;&#160;&#160;80 /* 感度01最大   6.0mm(0.60mV) */</td></tr>
+<tr class="separator:a888f0599770da5ed013886e67181a7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af48b3c225ebe93ab1f6855a2bb26da47" id="r_af48b3c225ebe93ab1f6855a2bb26da47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af48b3c225ebe93ab1f6855a2bb26da47">AUTO_SENSI02_DIF_</a>&#160;&#160;&#160;20  /* 感度02閾値   1.5mm(0.15mV) */</td></tr>
+<tr class="separator:af48b3c225ebe93ab1f6855a2bb26da47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e0d0dc793dc01d1da2123b655c5fecd" id="r_a6e0d0dc793dc01d1da2123b655c5fecd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e0d0dc793dc01d1da2123b655c5fecd">AUTO_SENSI02_MIN_</a>&#160;&#160;&#160;80  /* 感度02最小   6.0mm(0.60mV) */</td></tr>
+<tr class="separator:a6e0d0dc793dc01d1da2123b655c5fecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6bfe9c4c07dead44e531934fb8662a4" id="r_af6bfe9c4c07dead44e531934fb8662a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6bfe9c4c07dead44e531934fb8662a4">AUTO_SENSI02_MID_</a>&#160;&#160;&#160;93  /* 感度02中心   7.0mm(0.70mV) */</td></tr>
+<tr class="separator:af6bfe9c4c07dead44e531934fb8662a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab807ceb8c853186b77c846d43b5fda26" id="r_ab807ceb8c853186b77c846d43b5fda26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab807ceb8c853186b77c846d43b5fda26">AUTO_SENSI02_MAX_</a>&#160;&#160;&#160;106 /* 感度02最大   8.0mm(0.80mV) */</td></tr>
+<tr class="separator:ab807ceb8c853186b77c846d43b5fda26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88d56d7067eed8af129f2639fcd1dcae" id="r_a88d56d7067eed8af129f2639fcd1dcae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88d56d7067eed8af129f2639fcd1dcae">AUTO_SENSI03_DIF_</a>&#160;&#160;&#160;26  /* 感度03閾値   2.0mm(0.20mV) */</td></tr>
+<tr class="separator:a88d56d7067eed8af129f2639fcd1dcae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1723c504a59bf0249730366a0e4536e7" id="r_a1723c504a59bf0249730366a0e4536e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1723c504a59bf0249730366a0e4536e7">AUTO_SENSI03_MIN_</a>&#160;&#160;&#160;106 /* 感度03最小   8.0mm(0.80mV) */</td></tr>
+<tr class="separator:a1723c504a59bf0249730366a0e4536e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c4fb0ef20139252be6114106d040427" id="r_a8c4fb0ef20139252be6114106d040427"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c4fb0ef20139252be6114106d040427">AUTO_SENSI03_MID_</a>&#160;&#160;&#160;120 /* 感度03中心   9.0mm(0.90mV) */</td></tr>
+<tr class="separator:a8c4fb0ef20139252be6114106d040427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc6af751b3338f19ee713c9c81ac3c0" id="r_abbc6af751b3338f19ee713c9c81ac3c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbc6af751b3338f19ee713c9c81ac3c0">AUTO_SENSI03_MAX_</a>&#160;&#160;&#160;133 /* 感度03最大  10.0mm(1.00mV) */</td></tr>
+<tr class="separator:abbc6af751b3338f19ee713c9c81ac3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06b5fe96056934f161880bef2d049569" id="r_a06b5fe96056934f161880bef2d049569"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06b5fe96056934f161880bef2d049569">AUTO_SENSI04_DIF_</a>&#160;&#160;&#160;33  /* 感度04閾値   2.5mm(0.25mV) */</td></tr>
+<tr class="separator:a06b5fe96056934f161880bef2d049569"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0300c9fcb7d64ffdf5dce6fcf8d9af07" id="r_a0300c9fcb7d64ffdf5dce6fcf8d9af07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0300c9fcb7d64ffdf5dce6fcf8d9af07">AUTO_SENSI04_MIN_</a>&#160;&#160;&#160;133 /* 感度04最小  10.0mm(1.00mV) */</td></tr>
+<tr class="separator:a0300c9fcb7d64ffdf5dce6fcf8d9af07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45099edc7bce2d54433c8488e83fed64" id="r_a45099edc7bce2d54433c8488e83fed64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45099edc7bce2d54433c8488e83fed64">AUTO_SENSI04_MID_</a>&#160;&#160;&#160;146 /* 感度04中心  11.0mm(1.10mV) */</td></tr>
+<tr class="separator:a45099edc7bce2d54433c8488e83fed64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb972fb30f743af4c4832081cae1da47" id="r_abb972fb30f743af4c4832081cae1da47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb972fb30f743af4c4832081cae1da47">AUTO_SENSI04_MAX_</a>&#160;&#160;&#160;160 /* 感度04最大  12.0mm(1.20mV) */</td></tr>
+<tr class="separator:abb972fb30f743af4c4832081cae1da47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b5f2efb836abff44a476362f8bc524c" id="r_a6b5f2efb836abff44a476362f8bc524c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b5f2efb836abff44a476362f8bc524c">AUTO_SENSI05_DIF_</a>&#160;&#160;&#160;40  /* 感度05閾値   3.0mm(0.30mV) */</td></tr>
+<tr class="separator:a6b5f2efb836abff44a476362f8bc524c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82a0f55c427aeb526588ced92fa94914" id="r_a82a0f55c427aeb526588ced92fa94914"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82a0f55c427aeb526588ced92fa94914">AUTO_SENSI05_MIN_</a>&#160;&#160;&#160;160 /* 感度05最小  12.0mm(1.20mV) */</td></tr>
+<tr class="separator:a82a0f55c427aeb526588ced92fa94914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fc2acb41da8ac3b7302b07ac4a6a252" id="r_a2fc2acb41da8ac3b7302b07ac4a6a252"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fc2acb41da8ac3b7302b07ac4a6a252">AUTO_SENSI05_MID_</a>&#160;&#160;&#160;173 /* 感度05中心  13.0mm(1.30mV) */</td></tr>
+<tr class="separator:a2fc2acb41da8ac3b7302b07ac4a6a252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c9432f73daac45e91f661219aebd2f" id="r_a29c9432f73daac45e91f661219aebd2f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29c9432f73daac45e91f661219aebd2f">AUTO_SENSI05_MAX_</a>&#160;&#160;&#160;186 /* 感度05最大  14.0mm(1.40mV) */</td></tr>
+<tr class="separator:a29c9432f73daac45e91f661219aebd2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af13725d30453ae4533ff746efeec0387" id="r_af13725d30453ae4533ff746efeec0387"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af13725d30453ae4533ff746efeec0387">AUTO_SENSI06_DIF_</a>&#160;&#160;&#160;46  /* 感度06閾値   3.5mm(0.35mV) */</td></tr>
+<tr class="separator:af13725d30453ae4533ff746efeec0387"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e3bc8199d2d70497d1f87481943f01" id="r_a39e3bc8199d2d70497d1f87481943f01"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39e3bc8199d2d70497d1f87481943f01">AUTO_SENSI06_MIN_</a>&#160;&#160;&#160;186 /* 感度06最小  14.0mm(1.40mV) */</td></tr>
+<tr class="separator:a39e3bc8199d2d70497d1f87481943f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a916ee02adb82f77d4019166cf1f910ba" id="r_a916ee02adb82f77d4019166cf1f910ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a916ee02adb82f77d4019166cf1f910ba">AUTO_SENSI06_MID_</a>&#160;&#160;&#160;200 /* 感度06中心  15.0mm(1.50mV) */</td></tr>
+<tr class="separator:a916ee02adb82f77d4019166cf1f910ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d7d52b32ccb096f91b0024c3e00fc4" id="r_a61d7d52b32ccb096f91b0024c3e00fc4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61d7d52b32ccb096f91b0024c3e00fc4">AUTO_SENSI06_MAX_</a>&#160;&#160;&#160;213 /* 感度06最大  16.0mm(1.60mV) */</td></tr>
+<tr class="separator:a61d7d52b32ccb096f91b0024c3e00fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab98e8b230b8ff2e137cf30e33e68c094" id="r_ab98e8b230b8ff2e137cf30e33e68c094"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab98e8b230b8ff2e137cf30e33e68c094">AUTO_SENSI07_DIF_</a>&#160;&#160;&#160;53  /* 感度07閾値   4.0mm(0.40mV) */</td></tr>
+<tr class="separator:ab98e8b230b8ff2e137cf30e33e68c094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb0c21a49c45dceed2d7474ca50c8f53" id="r_adb0c21a49c45dceed2d7474ca50c8f53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb0c21a49c45dceed2d7474ca50c8f53">AUTO_SENSI07_MIN_</a>&#160;&#160;&#160;213 /* 感度07最小  16.0mm(1.60mV) */</td></tr>
+<tr class="separator:adb0c21a49c45dceed2d7474ca50c8f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86fba289255a7720f707e852670f502f" id="r_a86fba289255a7720f707e852670f502f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86fba289255a7720f707e852670f502f">AUTO_SENSI07_MID_</a>&#160;&#160;&#160;226 /* 感度07中心  17.0mm(1.70mV) */</td></tr>
+<tr class="separator:a86fba289255a7720f707e852670f502f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d627aaf6a4fed9c38add437e76745b4" id="r_a3d627aaf6a4fed9c38add437e76745b4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d627aaf6a4fed9c38add437e76745b4">AUTO_SENSI07_MAX_</a>&#160;&#160;&#160;240 /* 感度07最大  18.0mm(1.80mV) */</td></tr>
+<tr class="separator:a3d627aaf6a4fed9c38add437e76745b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a4453ea394c3c715f1bc2385950add" id="r_a91a4453ea394c3c715f1bc2385950add"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91a4453ea394c3c715f1bc2385950add">AUTO_SENSI08_DIF_</a>&#160;&#160;&#160;60  /* 感度08閾値   4.5mm(0.45mV) */</td></tr>
+<tr class="separator:a91a4453ea394c3c715f1bc2385950add"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93b6b5b6b2643d2da0f41fb002e811d8" id="r_a93b6b5b6b2643d2da0f41fb002e811d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93b6b5b6b2643d2da0f41fb002e811d8">AUTO_SENSI08_MIN_</a>&#160;&#160;&#160;240 /* 感度08最小  18.0mm(1.80mV) */</td></tr>
+<tr class="separator:a93b6b5b6b2643d2da0f41fb002e811d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf886041366e0719aaef3d47d8a9e19c" id="r_aaf886041366e0719aaef3d47d8a9e19c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf886041366e0719aaef3d47d8a9e19c">AUTO_SENSI08_MID_</a>&#160;&#160;&#160;253 /* 感度08中心  19.0mm(1.90mV) */</td></tr>
+<tr class="separator:aaf886041366e0719aaef3d47d8a9e19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93e83aa33448e349c35cf5b23a63fba0" id="r_a93e83aa33448e349c35cf5b23a63fba0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93e83aa33448e349c35cf5b23a63fba0">AUTO_SENSI08_MAX_</a>&#160;&#160;&#160;266 /* 感度08最大  20.0mm(2.00mV) */</td></tr>
+<tr class="separator:a93e83aa33448e349c35cf5b23a63fba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0d8bf75db20153384418584c67dfc39" id="r_ad0d8bf75db20153384418584c67dfc39"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0d8bf75db20153384418584c67dfc39">AUTO_SENSI09_DIF_</a>&#160;&#160;&#160;66  /* 感度09閾値   5.0mm(0.50mV) */</td></tr>
+<tr class="separator:ad0d8bf75db20153384418584c67dfc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19e41528c99ac1282b35a69e4d588b73" id="r_a19e41528c99ac1282b35a69e4d588b73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19e41528c99ac1282b35a69e4d588b73">AUTO_SENSI09_MIN_</a>&#160;&#160;&#160;266 /* 感度09最小  20.0mm(2.00mV) */</td></tr>
+<tr class="separator:a19e41528c99ac1282b35a69e4d588b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81a2f84b2fecd46aa42ec0352b9ee8f0" id="r_a81a2f84b2fecd46aa42ec0352b9ee8f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81a2f84b2fecd46aa42ec0352b9ee8f0">AUTO_SENSI09_MID_</a>&#160;&#160;&#160;280 /* 感度09中心  21.0mm(2.10mV) */</td></tr>
+<tr class="separator:a81a2f84b2fecd46aa42ec0352b9ee8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaec8670cdc3b958a3e2484c97c3bddd3" id="r_aaec8670cdc3b958a3e2484c97c3bddd3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaec8670cdc3b958a3e2484c97c3bddd3">AUTO_SENSI09_MAX_</a>&#160;&#160;&#160;293 /* 感度09最大  22.0mm(2.20mV) */</td></tr>
+<tr class="separator:aaec8670cdc3b958a3e2484c97c3bddd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a966ec510b401f76bb5a9c0288640a02c" id="r_a966ec510b401f76bb5a9c0288640a02c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a966ec510b401f76bb5a9c0288640a02c">BUF_LENGTH_</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:a966ec510b401f76bb5a9c0288640a02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a868e6a96dd37ea6e8d85829064f2bd89" id="r_a868e6a96dd37ea6e8d85829064f2bd89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a868e6a96dd37ea6e8d85829064f2bd89">IABS</a>(ix)</td></tr>
+<tr class="separator:a868e6a96dd37ea6e8d85829064f2bd89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a53d2f042e7ed50b7372743b273794126" id="r_a53d2f042e7ed50b7372743b273794126"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53d2f042e7ed50b7372743b273794126">set_qrs_sensi1</a> (short Dt)</td></tr>
+<tr class="separator:a53d2f042e7ed50b7372743b273794126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99690bb31891ce37a2a8bbaf41132312" id="r_a99690bb31891ce37a2a8bbaf41132312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99690bb31891ce37a2a8bbaf41132312">AsPvcDetInitial_1</a> (void)</td></tr>
+<tr class="separator:a99690bb31891ce37a2a8bbaf41132312"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bfbc342aa0d7299478a21427ae5b691" id="r_a4bfbc342aa0d7299478a21427ae5b691"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bfbc342aa0d7299478a21427ae5b691">AsPvcDetection_1</a> (long EcgDt)</td></tr>
+<tr class="separator:a4bfbc342aa0d7299478a21427ae5b691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2bb21b9de701a8d6ae65c3ba3c4669d" id="r_ad2bb21b9de701a8d6ae65c3ba3c4669d"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2bb21b9de701a8d6ae65c3ba3c4669d">AsGetQrsSensi_1</a> (void)</td></tr>
+<tr class="separator:ad2bb21b9de701a8d6ae65c3ba3c4669d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab093f47b8e81aa16facff6f8d0483b09" id="r_ab093f47b8e81aa16facff6f8d0483b09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab093f47b8e81aa16facff6f8d0483b09">AsSetOptNO1</a> (short Dt)</td></tr>
+<tr class="separator:ab093f47b8e81aa16facff6f8d0483b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab9afe948f58fa51a2c77ca62b847b9a" id="r_aab9afe948f58fa51a2c77ca62b847b9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab9afe948f58fa51a2c77ca62b847b9a">AsQrsDetInitial_1</a> (short d1, short d2, short d3, short d4, short d5)</td></tr>
+<tr class="separator:aab9afe948f58fa51a2c77ca62b847b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37a99c3cddc3c90cb48284d338eceefa" id="r_a37a99c3cddc3c90cb48284d338eceefa"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37a99c3cddc3c90cb48284d338eceefa">AsQrsDetection_1</a> (short Dt, short sts_flag)</td></tr>
+<tr class="separator:a37a99c3cddc3c90cb48284d338eceefa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a6ced1eb0b483220b2b2ad98337b2595c" name="a6ced1eb0b483220b2b2ad98337b2595c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ced1eb0b483220b2b2ad98337b2595c">&#9670;&#160;</a></span>AUTO_SENSI01_DIF_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI01_DIF_&#160;&#160;&#160;13 /* 感度01閾値   1.0mm(0.10mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a888f0599770da5ed013886e67181a7e2" name="a888f0599770da5ed013886e67181a7e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a888f0599770da5ed013886e67181a7e2">&#9670;&#160;</a></span>AUTO_SENSI01_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI01_MAX_&#160;&#160;&#160;80 /* 感度01最大   6.0mm(0.60mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f7b77588340296e9d3a79094b9e3b5b" name="a7f7b77588340296e9d3a79094b9e3b5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f7b77588340296e9d3a79094b9e3b5b">&#9670;&#160;</a></span>AUTO_SENSI01_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI01_MID_&#160;&#160;&#160;66 /* 感度01中心   5.0mm(0.50mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a208661d0bf223d75cf1d3d96b57de6c6" name="a208661d0bf223d75cf1d3d96b57de6c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a208661d0bf223d75cf1d3d96b57de6c6">&#9670;&#160;</a></span>AUTO_SENSI01_MIN_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI01_MIN_&#160;&#160;&#160;53 /* 感度01最小   4.0mm(0.40mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af48b3c225ebe93ab1f6855a2bb26da47" name="af48b3c225ebe93ab1f6855a2bb26da47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48b3c225ebe93ab1f6855a2bb26da47">&#9670;&#160;</a></span>AUTO_SENSI02_DIF_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI02_DIF_&#160;&#160;&#160;20  /* 感度02閾値   1.5mm(0.15mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab807ceb8c853186b77c846d43b5fda26" name="ab807ceb8c853186b77c846d43b5fda26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab807ceb8c853186b77c846d43b5fda26">&#9670;&#160;</a></span>AUTO_SENSI02_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI02_MAX_&#160;&#160;&#160;106 /* 感度02最大   8.0mm(0.80mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6bfe9c4c07dead44e531934fb8662a4" name="af6bfe9c4c07dead44e531934fb8662a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6bfe9c4c07dead44e531934fb8662a4">&#9670;&#160;</a></span>AUTO_SENSI02_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI02_MID_&#160;&#160;&#160;93  /* 感度02中心   7.0mm(0.70mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e0d0dc793dc01d1da2123b655c5fecd" name="a6e0d0dc793dc01d1da2123b655c5fecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e0d0dc793dc01d1da2123b655c5fecd">&#9670;&#160;</a></span>AUTO_SENSI02_MIN_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI02_MIN_&#160;&#160;&#160;80  /* 感度02最小   6.0mm(0.60mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88d56d7067eed8af129f2639fcd1dcae" name="a88d56d7067eed8af129f2639fcd1dcae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88d56d7067eed8af129f2639fcd1dcae">&#9670;&#160;</a></span>AUTO_SENSI03_DIF_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI03_DIF_&#160;&#160;&#160;26  /* 感度03閾値   2.0mm(0.20mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbc6af751b3338f19ee713c9c81ac3c0" name="abbc6af751b3338f19ee713c9c81ac3c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc6af751b3338f19ee713c9c81ac3c0">&#9670;&#160;</a></span>AUTO_SENSI03_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI03_MAX_&#160;&#160;&#160;133 /* 感度03最大  10.0mm(1.00mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c4fb0ef20139252be6114106d040427" name="a8c4fb0ef20139252be6114106d040427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c4fb0ef20139252be6114106d040427">&#9670;&#160;</a></span>AUTO_SENSI03_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI03_MID_&#160;&#160;&#160;120 /* 感度03中心   9.0mm(0.90mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1723c504a59bf0249730366a0e4536e7" name="a1723c504a59bf0249730366a0e4536e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1723c504a59bf0249730366a0e4536e7">&#9670;&#160;</a></span>AUTO_SENSI03_MIN_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI03_MIN_&#160;&#160;&#160;106 /* 感度03最小   8.0mm(0.80mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06b5fe96056934f161880bef2d049569" name="a06b5fe96056934f161880bef2d049569"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06b5fe96056934f161880bef2d049569">&#9670;&#160;</a></span>AUTO_SENSI04_DIF_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI04_DIF_&#160;&#160;&#160;33  /* 感度04閾値   2.5mm(0.25mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb972fb30f743af4c4832081cae1da47" name="abb972fb30f743af4c4832081cae1da47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb972fb30f743af4c4832081cae1da47">&#9670;&#160;</a></span>AUTO_SENSI04_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI04_MAX_&#160;&#160;&#160;160 /* 感度04最大  12.0mm(1.20mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a45099edc7bce2d54433c8488e83fed64" name="a45099edc7bce2d54433c8488e83fed64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45099edc7bce2d54433c8488e83fed64">&#9670;&#160;</a></span>AUTO_SENSI04_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI04_MID_&#160;&#160;&#160;146 /* 感度04中心  11.0mm(1.10mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0300c9fcb7d64ffdf5dce6fcf8d9af07" name="a0300c9fcb7d64ffdf5dce6fcf8d9af07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0300c9fcb7d64ffdf5dce6fcf8d9af07">&#9670;&#160;</a></span>AUTO_SENSI04_MIN_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI04_MIN_&#160;&#160;&#160;133 /* 感度04最小  10.0mm(1.00mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b5f2efb836abff44a476362f8bc524c" name="a6b5f2efb836abff44a476362f8bc524c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b5f2efb836abff44a476362f8bc524c">&#9670;&#160;</a></span>AUTO_SENSI05_DIF_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI05_DIF_&#160;&#160;&#160;40  /* 感度05閾値   3.0mm(0.30mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29c9432f73daac45e91f661219aebd2f" name="a29c9432f73daac45e91f661219aebd2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29c9432f73daac45e91f661219aebd2f">&#9670;&#160;</a></span>AUTO_SENSI05_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI05_MAX_&#160;&#160;&#160;186 /* 感度05最大  14.0mm(1.40mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2fc2acb41da8ac3b7302b07ac4a6a252" name="a2fc2acb41da8ac3b7302b07ac4a6a252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fc2acb41da8ac3b7302b07ac4a6a252">&#9670;&#160;</a></span>AUTO_SENSI05_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI05_MID_&#160;&#160;&#160;173 /* 感度05中心  13.0mm(1.30mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82a0f55c427aeb526588ced92fa94914" name="a82a0f55c427aeb526588ced92fa94914"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82a0f55c427aeb526588ced92fa94914">&#9670;&#160;</a></span>AUTO_SENSI05_MIN_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI05_MIN_&#160;&#160;&#160;160 /* 感度05最小  12.0mm(1.20mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af13725d30453ae4533ff746efeec0387" name="af13725d30453ae4533ff746efeec0387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af13725d30453ae4533ff746efeec0387">&#9670;&#160;</a></span>AUTO_SENSI06_DIF_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI06_DIF_&#160;&#160;&#160;46  /* 感度06閾値   3.5mm(0.35mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a61d7d52b32ccb096f91b0024c3e00fc4" name="a61d7d52b32ccb096f91b0024c3e00fc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61d7d52b32ccb096f91b0024c3e00fc4">&#9670;&#160;</a></span>AUTO_SENSI06_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI06_MAX_&#160;&#160;&#160;213 /* 感度06最大  16.0mm(1.60mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a916ee02adb82f77d4019166cf1f910ba" name="a916ee02adb82f77d4019166cf1f910ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a916ee02adb82f77d4019166cf1f910ba">&#9670;&#160;</a></span>AUTO_SENSI06_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI06_MID_&#160;&#160;&#160;200 /* 感度06中心  15.0mm(1.50mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a39e3bc8199d2d70497d1f87481943f01" name="a39e3bc8199d2d70497d1f87481943f01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39e3bc8199d2d70497d1f87481943f01">&#9670;&#160;</a></span>AUTO_SENSI06_MIN_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI06_MIN_&#160;&#160;&#160;186 /* 感度06最小  14.0mm(1.40mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab98e8b230b8ff2e137cf30e33e68c094" name="ab98e8b230b8ff2e137cf30e33e68c094"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab98e8b230b8ff2e137cf30e33e68c094">&#9670;&#160;</a></span>AUTO_SENSI07_DIF_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI07_DIF_&#160;&#160;&#160;53  /* 感度07閾値   4.0mm(0.40mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d627aaf6a4fed9c38add437e76745b4" name="a3d627aaf6a4fed9c38add437e76745b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d627aaf6a4fed9c38add437e76745b4">&#9670;&#160;</a></span>AUTO_SENSI07_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI07_MAX_&#160;&#160;&#160;240 /* 感度07最大  18.0mm(1.80mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86fba289255a7720f707e852670f502f" name="a86fba289255a7720f707e852670f502f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86fba289255a7720f707e852670f502f">&#9670;&#160;</a></span>AUTO_SENSI07_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI07_MID_&#160;&#160;&#160;226 /* 感度07中心  17.0mm(1.70mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb0c21a49c45dceed2d7474ca50c8f53" name="adb0c21a49c45dceed2d7474ca50c8f53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb0c21a49c45dceed2d7474ca50c8f53">&#9670;&#160;</a></span>AUTO_SENSI07_MIN_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI07_MIN_&#160;&#160;&#160;213 /* 感度07最小  16.0mm(1.60mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91a4453ea394c3c715f1bc2385950add" name="a91a4453ea394c3c715f1bc2385950add"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91a4453ea394c3c715f1bc2385950add">&#9670;&#160;</a></span>AUTO_SENSI08_DIF_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI08_DIF_&#160;&#160;&#160;60  /* 感度08閾値   4.5mm(0.45mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93e83aa33448e349c35cf5b23a63fba0" name="a93e83aa33448e349c35cf5b23a63fba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93e83aa33448e349c35cf5b23a63fba0">&#9670;&#160;</a></span>AUTO_SENSI08_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI08_MAX_&#160;&#160;&#160;266 /* 感度08最大  20.0mm(2.00mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf886041366e0719aaef3d47d8a9e19c" name="aaf886041366e0719aaef3d47d8a9e19c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf886041366e0719aaef3d47d8a9e19c">&#9670;&#160;</a></span>AUTO_SENSI08_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI08_MID_&#160;&#160;&#160;253 /* 感度08中心  19.0mm(1.90mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93b6b5b6b2643d2da0f41fb002e811d8" name="a93b6b5b6b2643d2da0f41fb002e811d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93b6b5b6b2643d2da0f41fb002e811d8">&#9670;&#160;</a></span>AUTO_SENSI08_MIN_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI08_MIN_&#160;&#160;&#160;240 /* 感度08最小  18.0mm(1.80mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0d8bf75db20153384418584c67dfc39" name="ad0d8bf75db20153384418584c67dfc39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0d8bf75db20153384418584c67dfc39">&#9670;&#160;</a></span>AUTO_SENSI09_DIF_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI09_DIF_&#160;&#160;&#160;66  /* 感度09閾値   5.0mm(0.50mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaec8670cdc3b958a3e2484c97c3bddd3" name="aaec8670cdc3b958a3e2484c97c3bddd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaec8670cdc3b958a3e2484c97c3bddd3">&#9670;&#160;</a></span>AUTO_SENSI09_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI09_MAX_&#160;&#160;&#160;293 /* 感度09最大  22.0mm(2.20mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81a2f84b2fecd46aa42ec0352b9ee8f0" name="a81a2f84b2fecd46aa42ec0352b9ee8f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a2f84b2fecd46aa42ec0352b9ee8f0">&#9670;&#160;</a></span>AUTO_SENSI09_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI09_MID_&#160;&#160;&#160;280 /* 感度09中心  21.0mm(2.10mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19e41528c99ac1282b35a69e4d588b73" name="a19e41528c99ac1282b35a69e4d588b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19e41528c99ac1282b35a69e4d588b73">&#9670;&#160;</a></span>AUTO_SENSI09_MIN_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI09_MIN_&#160;&#160;&#160;266 /* 感度09最小  20.0mm(2.00mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a966ec510b401f76bb5a9c0288640a02c" name="a966ec510b401f76bb5a9c0288640a02c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a966ec510b401f76bb5a9c0288640a02c">&#9670;&#160;</a></span>BUF_LENGTH_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BUF_LENGTH_&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a868e6a96dd37ea6e8d85829064f2bd89" name="a868e6a96dd37ea6e8d85829064f2bd89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a868e6a96dd37ea6e8d85829064f2bd89">&#9670;&#160;</a></span>IABS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IABS</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ix</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">( ( ix ) &lt; 0 ? ( 0 - ix ) : ( ix ) )</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac2eeadc7688b0dbf73e832209cb81874" name="ac2eeadc7688b0dbf73e832209cb81874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2eeadc7688b0dbf73e832209cb81874">&#9670;&#160;</a></span>QRS_MARK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define QRS_MARK&#160;&#160;&#160;0x1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba02e731b653668f99454e197efc5698" name="aba02e731b653668f99454e197efc5698"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba02e731b653668f99454e197efc5698">&#9670;&#160;</a></span>T_MASK_012__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T_MASK_012__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ad2bb21b9de701a8d6ae65c3ba3c4669d" name="ad2bb21b9de701a8d6ae65c3ba3c4669d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2bb21b9de701a8d6ae65c3ba3c4669d">&#9670;&#160;</a></span>AsGetQrsSensi_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short AsGetQrsSensi_1 </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4bfbc342aa0d7299478a21427ae5b691" name="a4bfbc342aa0d7299478a21427ae5b691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bfbc342aa0d7299478a21427ae5b691">&#9670;&#160;</a></span>AsPvcDetection_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long AsPvcDetection_1 </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>EcgDt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_a4bfbc342aa0d7299478a21427ae5b691_cgraph.svg" width="299" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_a4bfbc342aa0d7299478a21427ae5b691_icgraph.svg" width="486" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a99690bb31891ce37a2a8bbaf41132312" name="a99690bb31891ce37a2a8bbaf41132312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99690bb31891ce37a2a8bbaf41132312">&#9670;&#160;</a></span>AsPvcDetInitial_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AsPvcDetInitial_1 </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_a99690bb31891ce37a2a8bbaf41132312_icgraph.svg" width="351" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a37a99c3cddc3c90cb48284d338eceefa" name="a37a99c3cddc3c90cb48284d338eceefa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37a99c3cddc3c90cb48284d338eceefa">&#9670;&#160;</a></span>AsQrsDetection_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long AsQrsDetection_1 </td>
+          <td>(</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>Dt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>sts_flag</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_a37a99c3cddc3c90cb48284d338eceefa_icgraph.svg" width="484" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aab9afe948f58fa51a2c77ca62b847b9a" name="aab9afe948f58fa51a2c77ca62b847b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab9afe948f58fa51a2c77ca62b847b9a">&#9670;&#160;</a></span>AsQrsDetInitial_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AsQrsDetInitial_1 </td>
+          <td>(</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>d1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>d2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>d3</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>d4</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>d5</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_aab9afe948f58fa51a2c77ca62b847b9a_cgraph.svg" width="292" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_aab9afe948f58fa51a2c77ca62b847b9a_icgraph.svg" width="350" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab093f47b8e81aa16facff6f8d0483b09" name="ab093f47b8e81aa16facff6f8d0483b09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab093f47b8e81aa16facff6f8d0483b09">&#9670;&#160;</a></span>AsSetOptNO1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AsSetOptNO1 </td>
+          <td>(</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>Dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_ab093f47b8e81aa16facff6f8d0483b09_icgraph.svg" width="447" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a53d2f042e7ed50b7372743b273794126" name="a53d2f042e7ed50b7372743b273794126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d2f042e7ed50b7372743b273794126">&#9670;&#160;</a></span>set_qrs_sensi1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void set_qrs_sensi1 </td>
+          <td>(</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>Dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_a53d2f042e7ed50b7372743b273794126_icgraph.svg" width="459" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_ae8de5609f63c35c73f69a70b5aa1a0a.html">User</a></li><li class="navelem"><a class="el" href="dir_30da5e322cfece990184c7de3c6cbe0d.html">Filter</a></li><li class="navelem"><a class="el" href="_as_qrs_detect1_8c.html">AsQrsDetect1.c</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

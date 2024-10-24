@@ -1,0 +1,146 @@
+\doxysection{filter\+Controller.\+c ファイル}
+\label{filter_controller_8c}\index{filterController.c@{filterController.c}}
+{\ttfamily \#include "{}As\+Qrs\+Detect1.\+h"{}}\newline
+{\ttfamily \#include "{}filter.\+h"{}}\newline
+{\ttfamily \#include "{}spi\+\_\+receive.\+h"{}}\newline
+filter\+Controller.\+c の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_controller_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Init\+Filter} ()
+\begin{DoxyCompactList}\small\item\em 全フィルタの完全初期化 \end{DoxyCompactList}\item 
+void \textbf{ Filter\+Settings} ()
+\item 
+long \textbf{ filtering\+Ecg\+Handler} (long ecg\+Value)
+\item 
+long \textbf{ auto\+Qrs\+Handler} (short ecg\+\_\+val, short sts)
+\item 
+long \textbf{ manual\+Qrs\+Handler} (short ecg\+\_\+val, short sts\+\_\+)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+short \textbf{ Rx\+Freq\+Hz}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\index{filterController.c@{filterController.c}!autoQrsHandler@{autoQrsHandler}}
+\index{autoQrsHandler@{autoQrsHandler}!filterController.c@{filterController.c}}
+\doxysubsubsection{autoQrsHandler()}
+{\footnotesize\ttfamily \label{filter_controller_8c_a76758580e95080e34f69ff2c640c49e5} 
+long auto\+Qrs\+Handler (\begin{DoxyParamCaption}\item[{short}]{ecg\+\_\+val}{, }\item[{short}]{sts}{}\end{DoxyParamCaption})}
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_controller_8c_a76758580e95080e34f69ff2c640c49e5_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_controller_8c_a76758580e95080e34f69ff2c640c49e5_icgraph}
+\end{center}
+\end{figure}
+\index{filterController.c@{filterController.c}!filteringEcgHandler@{filteringEcgHandler}}
+\index{filteringEcgHandler@{filteringEcgHandler}!filterController.c@{filterController.c}}
+\doxysubsubsection{filteringEcgHandler()}
+{\footnotesize\ttfamily \label{filter_controller_8c_a8292d4d4d1d8bf873fd88c724d8a80f1} 
+long filtering\+Ecg\+Handler (\begin{DoxyParamCaption}\item[{long}]{ecg\+Value}{}\end{DoxyParamCaption})}
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{filter_controller_8c_a8292d4d4d1d8bf873fd88c724d8a80f1_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_controller_8c_a8292d4d4d1d8bf873fd88c724d8a80f1_icgraph}
+\end{center}
+\end{figure}
+\index{filterController.c@{filterController.c}!FilterSettings@{FilterSettings}}
+\index{FilterSettings@{FilterSettings}!filterController.c@{filterController.c}}
+\doxysubsubsection{FilterSettings()}
+{\footnotesize\ttfamily \label{filter_controller_8c_a01c3c4b0328f520da289d81369ec77b9} 
+void Filter\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{filter_controller_8c_a01c3c4b0328f520da289d81369ec77b9_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_controller_8c_a01c3c4b0328f520da289d81369ec77b9_icgraph}
+\end{center}
+\end{figure}
+\index{filterController.c@{filterController.c}!InitFilter@{InitFilter}}
+\index{InitFilter@{InitFilter}!filterController.c@{filterController.c}}
+\doxysubsubsection{InitFilter()}
+{\footnotesize\ttfamily \label{filter_controller_8c_a2c27f6b52850366e0b6d2831a91eb461} 
+void Init\+Filter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+全フィルタの完全初期化 
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_controller_8c_a2c27f6b52850366e0b6d2831a91eb461_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{filter_controller_8c_a2c27f6b52850366e0b6d2831a91eb461_icgraph}
+\end{center}
+\end{figure}
+\index{filterController.c@{filterController.c}!manualQrsHandler@{manualQrsHandler}}
+\index{manualQrsHandler@{manualQrsHandler}!filterController.c@{filterController.c}}
+\doxysubsubsection{manualQrsHandler()}
+{\footnotesize\ttfamily \label{filter_controller_8c_a881cb16bbb180c7b96ee8fb4317c49ca} 
+long manual\+Qrs\+Handler (\begin{DoxyParamCaption}\item[{short}]{ecg\+\_\+val}{, }\item[{short}]{sts\+\_\+}{}\end{DoxyParamCaption})}
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{filter_controller_8c_a881cb16bbb180c7b96ee8fb4317c49ca_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_controller_8c_a881cb16bbb180c7b96ee8fb4317c49ca_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{変数詳解}
+\index{filterController.c@{filterController.c}!RxFreqHz@{RxFreqHz}}
+\index{RxFreqHz@{RxFreqHz}!filterController.c@{filterController.c}}
+\doxysubsubsection{RxFreqHz}
+{\footnotesize\ttfamily \label{filter_controller_8c_a01a3da475443f610c6c40d4f0410a561} 
+short Rx\+Freq\+Hz}
+

@@ -1,0 +1,324 @@
+\doxysection{host\+\_\+in.\+h ファイル}
+\label{host__in_8h}\index{host\_in.h@{host\_in.h}}
+{\ttfamily \#include "{}ecg\+\_\+data.\+h"{}}\newline
+host\+\_\+in.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{host__in_8h__incl}
+\end{center}
+\end{figure}
+被依存関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{host__in_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{データ構造}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ Setting\+Meta}
+\begin{DoxyCompactList}\small\item\em 各種プロパティのメタデータ構造体 \end{DoxyCompactList}\item 
+struct \textbf{ Rx\+Tmp\+Status}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \textbf{ update\+Data\+Type} \textbf{ update\+Data\+Type}
+\item 
+typedef struct Setting\+Meta \textbf{ Setting\+Meta}
+\begin{DoxyCompactList}\small\item\em 各種プロパティのメタデータ構造体 \end{DoxyCompactList}\item 
+typedef struct Rx\+Tmp\+Status \textbf{ Rx\+Tmp\+Status}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{列挙型}
+\begin{DoxyCompactItemize}
+\item 
+enum \textbf{ update\+Data\+Type} \{ \textbf{ HANDSHAKE\+\_\+\+NO\+\_\+\+UPDATE} = 1
+, \textbf{ HANDSHAKE\+\_\+\+UPDATE\+\_\+\+NO\+\_\+\+REQ} = 2
+, \textbf{ HANDSHAKE\+\_\+\+REQUIRED} = 3
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Init\+Host\+OutC} ()
+\item 
+int \textbf{ Store\+Receive\+Frame} (uint8\+\_\+t rx\+\_\+byte)
+\begin{DoxyCompactList}\small\item\em 受信バイトを処理し、フレームを格納する関数 \end{DoxyCompactList}\item 
+int \textbf{ Update\+Data} ()
+\begin{DoxyCompactList}\small\item\em データ更新プロセス \end{DoxyCompactList}\item 
+void \textbf{ Init\+Host\+InC} ()
+\item 
+void \textbf{ Update\+Current\+State} ()
+\begin{DoxyCompactList}\small\item\em チャンネルとアンテナの現在値を更新 \end{DoxyCompactList}\item 
+uint16\+\_\+t \textbf{ Get\+\_\+tmp\+Value} (uint8\+\_\+t id)
+\item 
+uint8\+\_\+t \textbf{ Get\+\_\+is\+Updated} (uint8\+\_\+t id)
+\item 
+uint8\+\_\+t \textbf{ Get\+\_\+input\+Uart\+State} ()
+\item 
+void \textbf{ Set\+\_\+input\+Uart\+State} (uint8\+\_\+t val\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{データ構造詳解}
+\index{SettingMeta@{SettingMeta}}\label{struct_setting_meta}
+\doxysubsubsection{struct Setting\+Meta}
+各種プロパティのメタデータ構造体 
+
+Setting\+Meta 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{struct_setting_meta__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{データフィールド}
+\mbox{\label{host__in_8h_a045c50bcd4d169c08ba483bfc93a9a44}} 
+const uint8\_t&
+initial&
+UART受信フォーマットの記号 \\
+\hline
+
+\mbox{\label{host__in_8h_a4f6c735a0c8ad19893bbbb042d2857cb}} 
+const uint8\_t&
+property&
+識別コード \\
+\hline
+
+\mbox{\label{host__in_8h_ad9c1b7a42a7a288e23f90ffe00e7171d}} 
+const uint8\_t&
+rangeEnd&
+上限 \\
+\hline
+
+\mbox{\label{host__in_8h_a3d0b11e3e1d08aaee7149e2e9074b913}} 
+const uint8\_t&
+rangeStart&
+設定値の範囲下限 \\
+\hline
+
+\end{DoxyFields}
+\index{RxTmpStatus@{RxTmpStatus}}\label{struct_rx_tmp_status}
+\doxysubsubsection{struct Rx\+Tmp\+Status}
+
+
+Rx\+Tmp\+Status 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{struct_rx_tmp_status__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{データフィールド}
+\mbox{\label{host__in_8h_a41ddfa0c334878a3a253565c5c4c6602}} 
+uint8\_t&
+isUpdated&
+\\
+\hline
+
+\mbox{\label{host__in_8h_a4f6c735a0c8ad19893bbbb042d2857cb}} 
+const uint8\_t&
+property&
+\\
+\hline
+
+\mbox{\label{host__in_8h_a2f548c26eb6aa6e7ab494bd8ff985e6c}} 
+uint16\_t&
+tmpValue&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\doxysubsection{型定義詳解}
+\index{host\_in.h@{host\_in.h}!RxTmpStatus@{RxTmpStatus}}
+\index{RxTmpStatus@{RxTmpStatus}!host\_in.h@{host\_in.h}}
+\doxysubsubsection{RxTmpStatus}
+{\footnotesize\ttfamily \label{host__in_8h_aaa254b5d49f9de4bf5b41beab0170c83} 
+typedef struct Rx\+Tmp\+Status Rx\+Tmp\+Status}
+
+\index{host\_in.h@{host\_in.h}!SettingMeta@{SettingMeta}}
+\index{SettingMeta@{SettingMeta}!host\_in.h@{host\_in.h}}
+\doxysubsubsection{SettingMeta}
+{\footnotesize\ttfamily \label{host__in_8h_ae1a755eddbd918d99c7ec3951e365391} 
+typedef struct Setting\+Meta Setting\+Meta}
+
+
+
+各種プロパティのメタデータ構造体 
+
+\index{host\_in.h@{host\_in.h}!updateDataType@{updateDataType}}
+\index{updateDataType@{updateDataType}!host\_in.h@{host\_in.h}}
+\doxysubsubsection{updateDataType}
+{\footnotesize\ttfamily \label{host__in_8h_a261b325830f0f2efda0dcadeda3cf6a2} 
+typedef enum \textbf{ update\+Data\+Type} \textbf{ update\+Data\+Type}}
+
+
+
+\doxysubsection{列挙型詳解}
+\index{host\_in.h@{host\_in.h}!updateDataType@{updateDataType}}
+\index{updateDataType@{updateDataType}!host\_in.h@{host\_in.h}}
+\doxysubsubsection{updateDataType}
+{\footnotesize\ttfamily \label{host__in_8h_a69024b47aae81ca938d9820390e8cfbf} 
+enum \textbf{ update\+Data\+Type}}
+
+\begin{DoxyEnumFields}[2]{列挙値}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HANDSHAKE\_NO\_UPDATE@{HANDSHAKE\_NO\_UPDATE}!host\_in.h@{host\_in.h}}\index{host\_in.h@{host\_in.h}!HANDSHAKE\_NO\_UPDATE@{HANDSHAKE\_NO\_UPDATE}}}\label{host__in_8h_a69024b47aae81ca938d9820390e8cfbf} 
+HANDSHAKE\+\_\+\+NO\+\_\+\+UPDATE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HANDSHAKE\_UPDATE\_NO\_REQ@{HANDSHAKE\_UPDATE\_NO\_REQ}!host\_in.h@{host\_in.h}}\index{host\_in.h@{host\_in.h}!HANDSHAKE\_UPDATE\_NO\_REQ@{HANDSHAKE\_UPDATE\_NO\_REQ}}}\label{host__in_8h_a69024b47aae81ca938d9820390e8cfbf} 
+HANDSHAKE\+\_\+\+UPDATE\+\_\+\+NO\+\_\+\+REQ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HANDSHAKE\_REQUIRED@{HANDSHAKE\_REQUIRED}!host\_in.h@{host\_in.h}}\index{host\_in.h@{host\_in.h}!HANDSHAKE\_REQUIRED@{HANDSHAKE\_REQUIRED}}}\label{host__in_8h_a69024b47aae81ca938d9820390e8cfbf} 
+HANDSHAKE\+\_\+\+REQUIRED&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{関数詳解}
+\index{host\_in.h@{host\_in.h}!Get\_inputUartState@{Get\_inputUartState}}
+\index{Get\_inputUartState@{Get\_inputUartState}!host\_in.h@{host\_in.h}}
+\doxysubsubsection{Get\_inputUartState()}
+{\footnotesize\ttfamily \label{host__in_8h_a95303fcfed41e87df9d8fb299e0d9f5d} 
+uint8\+\_\+t Get\+\_\+input\+Uart\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\index{host\_in.h@{host\_in.h}!Get\_isUpdated@{Get\_isUpdated}}
+\index{Get\_isUpdated@{Get\_isUpdated}!host\_in.h@{host\_in.h}}
+\doxysubsubsection{Get\_isUpdated()}
+{\footnotesize\ttfamily \label{host__in_8h_a7982534a1f252104992a8a52bdc8b21e} 
+uint8\+\_\+t Get\+\_\+is\+Updated (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{id}{}\end{DoxyParamCaption})}
+
+\index{host\_in.h@{host\_in.h}!Get\_tmpValue@{Get\_tmpValue}}
+\index{Get\_tmpValue@{Get\_tmpValue}!host\_in.h@{host\_in.h}}
+\doxysubsubsection{Get\_tmpValue()}
+{\footnotesize\ttfamily \label{host__in_8h_afe005c613143dc94e368fb9c124603e6} 
+uint16\+\_\+t Get\+\_\+tmp\+Value (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{id}{}\end{DoxyParamCaption})}
+
+\index{host\_in.h@{host\_in.h}!InitHostInC@{InitHostInC}}
+\index{InitHostInC@{InitHostInC}!host\_in.h@{host\_in.h}}
+\doxysubsubsection{InitHostInC()}
+{\footnotesize\ttfamily \label{host__in_8h_a2aaec4536b9b3f353c72936e9e78c3b5} 
+void Init\+Host\+InC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+モジュールの初期化関数 被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{host__in_8h_a2aaec4536b9b3f353c72936e9e78c3b5_icgraph}
+\end{center}
+\end{figure}
+\index{host\_in.h@{host\_in.h}!InitHostOutC@{InitHostOutC}}
+\index{InitHostOutC@{InitHostOutC}!host\_in.h@{host\_in.h}}
+\doxysubsubsection{InitHostOutC()}
+{\footnotesize\ttfamily \label{host__in_8h_a7ad4fbb55caac9d8d9d4e94176b7c7dd} 
+void Init\+Host\+OutC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{host__in_8h_a7ad4fbb55caac9d8d9d4e94176b7c7dd_icgraph}
+\end{center}
+\end{figure}
+\index{host\_in.h@{host\_in.h}!Set\_inputUartState@{Set\_inputUartState}}
+\index{Set\_inputUartState@{Set\_inputUartState}!host\_in.h@{host\_in.h}}
+\doxysubsubsection{Set\_inputUartState()}
+{\footnotesize\ttfamily \label{host__in_8h_a1eaff27a143fcc8a5a8fd17e309f5ab2} 
+void Set\+\_\+input\+Uart\+State (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{val\+\_\+}{}\end{DoxyParamCaption})}
+
+\index{host\_in.h@{host\_in.h}!StoreReceiveFrame@{StoreReceiveFrame}}
+\index{StoreReceiveFrame@{StoreReceiveFrame}!host\_in.h@{host\_in.h}}
+\doxysubsubsection{StoreReceiveFrame()}
+{\footnotesize\ttfamily \label{host__in_8h_af922d94a43f84fbad0534bd1f24990d7} 
+int Store\+Receive\+Frame (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{rx\+\_\+byte}{}\end{DoxyParamCaption})}
+
+
+
+受信バイトを処理し、フレームを格納する関数 
+
+
+\begin{DoxyParams}{引数}
+{\em } & rx\+\_\+byte\+: 受信バイト \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+0\+: 入力フォーマットが完成していない場合~\newline
+1\+: 正しいフォーマットでの入力を確認
+\end{DoxyReturn}
+バッファに溜めずに1バイトずつ判断する 現在値との一致はここでは判断せず重複なく範囲内で入力があったかどうかを判断している 呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{host__in_8h_af922d94a43f84fbad0534bd1f24990d7_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{host__in_8h_af922d94a43f84fbad0534bd1f24990d7_icgraph}
+\end{center}
+\end{figure}
+\index{host\_in.h@{host\_in.h}!UpdateCurrentState@{UpdateCurrentState}}
+\index{UpdateCurrentState@{UpdateCurrentState}!host\_in.h@{host\_in.h}}
+\doxysubsubsection{UpdateCurrentState()}
+{\footnotesize\ttfamily \label{host__in_8h_a2a55a6444b571ec802eccc95d8e0f109} 
+void Update\+Current\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+チャンネルとアンテナの現在値を更新 
+
+\begin{DoxyNote}{覚え書き}
+現在値に\+UART入力値を反映させる 
+\end{DoxyNote}
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{host__in_8h_a2a55a6444b571ec802eccc95d8e0f109_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{host__in_8h_a2a55a6444b571ec802eccc95d8e0f109_icgraph}
+\end{center}
+\end{figure}
+\index{host\_in.h@{host\_in.h}!UpdateData@{UpdateData}}
+\index{UpdateData@{UpdateData}!host\_in.h@{host\_in.h}}
+\doxysubsubsection{UpdateData()}
+{\footnotesize\ttfamily \label{host__in_8h_a2ee3058f5c286b7fe99c18f1f564a45c} 
+int Update\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+データ更新プロセス 
+
+\begin{DoxyReturn}{戻り値}
+更新なし、更新あり（ハンドシェイクなし）, 更新なし（ハンドシェイクあり）を返す
+\end{DoxyReturn}
+ここでは現在値での重複を確認し、なければ\+UART入力値を現在値に反映する~\newline
+ただし、チャンネル番号とアンテナはここでは重複の確認をして、~\newline
+ハンドシェイクが必要かを判断するにとどめる また、いくつのプロパティに更新があったかを集計している 呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{host__in_8h_a2ee3058f5c286b7fe99c18f1f564a45c_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{host__in_8h_a2ee3058f5c286b7fe99c18f1f564a45c_icgraph}
+\end{center}
+\end{figure}

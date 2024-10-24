@@ -1,0 +1,355 @@
+\doxysection{filter.\+h ファイル}
+\label{filter_8h}\index{filter.h@{filter.h}}
+{\ttfamily \#include "{}common.\+h"{}}\newline
+filter.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{filter_8h__incl}
+\end{center}
+\end{figure}
+被依存関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+long \textbf{ t2\+\_\+high\+\_\+pass\+\_\+dr\+\_\+long} (long sts\+\_\+dt)
+\item 
+short \textbf{ after\+\_\+deley150} (short qrs, short ecg, short $\ast$sts)
+\item 
+void \textbf{ drift\+\_\+ini} (short drift\+\_\+filter\+\_\+enable)
+\item 
+void \textbf{ ch2\+\_\+hum\+\_\+filter\+\_\+ini} (void)
+\item 
+void \textbf{ Set\+Hum\+Filter\+Enabled} (short filter\+\_\+enable)
+\item 
+long \textbf{ ch2\+\_\+hum\+\_\+filter50} (long sts\+\_\+ecg)
+\item 
+long \textbf{ ch2\+\_\+hum\+\_\+filter60} (long sts\+\_\+ecg)
+\item 
+long \textbf{ mus\+\_\+am\+\_\+long} (long sts\+\_\+ecg)
+\item 
+void \textbf{ mus\+\_\+am\+\_\+long\+\_\+ini} (short k)
+\item 
+void \textbf{ Set\+Mus\+Filter\+Strength} (short k)
+\item 
+short \textbf{ t2\+\_\+qrsrtn} (short sample)
+\item 
+void \textbf{ t2\+\_\+qrsini} (short qrs\+\_\+sensi, short ecg\+\_\+sensi)
+\item 
+void \textbf{ Set\+Ecg\+And\+Qrs\+Sensi} (short qrs\+\_\+sensi, short ecg\+\_\+sensi)
+\item 
+long \textbf{ filtering\+Ecg\+Handler} (long ecg\+Value)
+\item 
+long \textbf{ auto\+Qrs\+Handler} (short ecg\+\_\+val, short sts)
+\item 
+long \textbf{ manual\+Qrs\+Handler} (short ecg\+\_\+val, short sts)
+\item 
+void \textbf{ Set\+Rx\+Ecg\+Mus\+Filter} (short musfilter)
+\item 
+void \textbf{ Filter\+Settings} ()
+\item 
+void \textbf{ Init\+Filter} ()
+\begin{DoxyCompactList}\small\item\em 全フィルタの完全初期化 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\index{filter.h@{filter.h}!after\_deley150@{after\_deley150}}
+\index{after\_deley150@{after\_deley150}!filter.h@{filter.h}}
+\doxysubsubsection{after\_deley150()}
+{\footnotesize\ttfamily \label{filter_8h_a5256314c2dea4e392f6fe8c0305f8e75} 
+short after\+\_\+deley150 (\begin{DoxyParamCaption}\item[{short}]{qrs}{, }\item[{short}]{ecg}{, }\item[{short $\ast$}]{sts}{}\end{DoxyParamCaption})}
+
+AM140 → AM150 \doxyref{Drift2.\+c}{p.}{_drift2_8c} から 移植 手動\+QRS検出を1ファイルにまとめる被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h_a5256314c2dea4e392f6fe8c0305f8e75_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!autoQrsHandler@{autoQrsHandler}}
+\index{autoQrsHandler@{autoQrsHandler}!filter.h@{filter.h}}
+\doxysubsubsection{autoQrsHandler()}
+{\footnotesize\ttfamily \label{filter_8h_a76758580e95080e34f69ff2c640c49e5} 
+long auto\+Qrs\+Handler (\begin{DoxyParamCaption}\item[{short}]{ecg\+\_\+val}{, }\item[{short}]{sts}{}\end{DoxyParamCaption})}
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h_a76758580e95080e34f69ff2c640c49e5_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h_a76758580e95080e34f69ff2c640c49e5_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!ch2\_hum\_filter50@{ch2\_hum\_filter50}}
+\index{ch2\_hum\_filter50@{ch2\_hum\_filter50}!filter.h@{filter.h}}
+\doxysubsubsection{ch2\_hum\_filter50()}
+{\footnotesize\ttfamily \label{filter_8h_a00e2bd1ed7bfda059c3b2cb01cfc33d3} 
+long ch2\+\_\+hum\+\_\+filter50 (\begin{DoxyParamCaption}\item[{long}]{sts\+\_\+ecg}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h_a00e2bd1ed7bfda059c3b2cb01cfc33d3_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!ch2\_hum\_filter60@{ch2\_hum\_filter60}}
+\index{ch2\_hum\_filter60@{ch2\_hum\_filter60}!filter.h@{filter.h}}
+\doxysubsubsection{ch2\_hum\_filter60()}
+{\footnotesize\ttfamily \label{filter_8h_a09b98bf1c605e68664634671c0844823} 
+long ch2\+\_\+hum\+\_\+filter60 (\begin{DoxyParamCaption}\item[{long}]{sts\+\_\+ecg}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h_a09b98bf1c605e68664634671c0844823_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!ch2\_hum\_filter\_ini@{ch2\_hum\_filter\_ini}}
+\index{ch2\_hum\_filter\_ini@{ch2\_hum\_filter\_ini}!filter.h@{filter.h}}
+\doxysubsubsection{ch2\_hum\_filter\_ini()}
+{\footnotesize\ttfamily \label{filter_8h_a78fd00e81aa7c49998ecf6a95bbb22a7} 
+void ch2\+\_\+hum\+\_\+filter\+\_\+ini (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{filter_8h_a78fd00e81aa7c49998ecf6a95bbb22a7_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!drift\_ini@{drift\_ini}}
+\index{drift\_ini@{drift\_ini}!filter.h@{filter.h}}
+\doxysubsubsection{drift\_ini()}
+{\footnotesize\ttfamily \label{filter_8h_a868330ca7f512bbd65ad183d8b5a9ae5} 
+void drift\+\_\+ini (\begin{DoxyParamCaption}\item[{short}]{drift\+\_\+filter\+\_\+enable}{}\end{DoxyParamCaption})}
+
+AM140 → AM150 引数を追加 呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{filter_8h_a868330ca7f512bbd65ad183d8b5a9ae5_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{filter_8h_a868330ca7f512bbd65ad183d8b5a9ae5_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!filteringEcgHandler@{filteringEcgHandler}}
+\index{filteringEcgHandler@{filteringEcgHandler}!filter.h@{filter.h}}
+\doxysubsubsection{filteringEcgHandler()}
+{\footnotesize\ttfamily \label{filter_8h_a8292d4d4d1d8bf873fd88c724d8a80f1} 
+long filtering\+Ecg\+Handler (\begin{DoxyParamCaption}\item[{long}]{ecg\+Value}{}\end{DoxyParamCaption})}
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{filter_8h_a8292d4d4d1d8bf873fd88c724d8a80f1_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h_a8292d4d4d1d8bf873fd88c724d8a80f1_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!FilterSettings@{FilterSettings}}
+\index{FilterSettings@{FilterSettings}!filter.h@{filter.h}}
+\doxysubsubsection{FilterSettings()}
+{\footnotesize\ttfamily \label{filter_8h_a01c3c4b0328f520da289d81369ec77b9} 
+void Filter\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{filter_8h_a01c3c4b0328f520da289d81369ec77b9_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h_a01c3c4b0328f520da289d81369ec77b9_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!InitFilter@{InitFilter}}
+\index{InitFilter@{InitFilter}!filter.h@{filter.h}}
+\doxysubsubsection{InitFilter()}
+{\footnotesize\ttfamily \label{filter_8h_a2c27f6b52850366e0b6d2831a91eb461} 
+void Init\+Filter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+全フィルタの完全初期化 
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h_a2c27f6b52850366e0b6d2831a91eb461_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{filter_8h_a2c27f6b52850366e0b6d2831a91eb461_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!manualQrsHandler@{manualQrsHandler}}
+\index{manualQrsHandler@{manualQrsHandler}!filter.h@{filter.h}}
+\doxysubsubsection{manualQrsHandler()}
+{\footnotesize\ttfamily \label{filter_8h_a58312be4f14b7dd455f09381478a1b39} 
+long manual\+Qrs\+Handler (\begin{DoxyParamCaption}\item[{short}]{ecg\+\_\+val}{, }\item[{short}]{sts}{}\end{DoxyParamCaption})}
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{filter_8h_a58312be4f14b7dd455f09381478a1b39_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h_a58312be4f14b7dd455f09381478a1b39_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!mus\_am\_long@{mus\_am\_long}}
+\index{mus\_am\_long@{mus\_am\_long}!filter.h@{filter.h}}
+\doxysubsubsection{mus\_am\_long()}
+{\footnotesize\ttfamily \label{filter_8h_a1e92060f85a38d72a03e39d58bcd9fc7} 
+long mus\+\_\+am\+\_\+long (\begin{DoxyParamCaption}\item[{long}]{sts\+\_\+ecg}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h_a1e92060f85a38d72a03e39d58bcd9fc7_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!mus\_am\_long\_ini@{mus\_am\_long\_ini}}
+\index{mus\_am\_long\_ini@{mus\_am\_long\_ini}!filter.h@{filter.h}}
+\doxysubsubsection{mus\_am\_long\_ini()}
+{\footnotesize\ttfamily \label{filter_8h_a636d3848468611c0cc6ecea2e3bc642f} 
+void mus\+\_\+am\+\_\+long\+\_\+ini (\begin{DoxyParamCaption}\item[{short}]{k}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{filter_8h_a636d3848468611c0cc6ecea2e3bc642f_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!SetEcgAndQrsSensi@{SetEcgAndQrsSensi}}
+\index{SetEcgAndQrsSensi@{SetEcgAndQrsSensi}!filter.h@{filter.h}}
+\doxysubsubsection{SetEcgAndQrsSensi()}
+{\footnotesize\ttfamily \label{filter_8h_aad37f3ddf7b682e2a5f85b9a0c1976a3} 
+void Set\+Ecg\+And\+Qrs\+Sensi (\begin{DoxyParamCaption}\item[{short}]{qrs\+\_\+sensi}{, }\item[{short}]{ecg\+\_\+sensi}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h_aad37f3ddf7b682e2a5f85b9a0c1976a3_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!SetHumFilterEnabled@{SetHumFilterEnabled}}
+\index{SetHumFilterEnabled@{SetHumFilterEnabled}!filter.h@{filter.h}}
+\doxysubsubsection{SetHumFilterEnabled()}
+{\footnotesize\ttfamily \label{filter_8h_a17d3367ff0ab78752cb46e8f676dd119} 
+void Set\+Hum\+Filter\+Enabled (\begin{DoxyParamCaption}\item[{short}]{filter\+\_\+enable}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h_a17d3367ff0ab78752cb46e8f676dd119_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!SetMusFilterStrength@{SetMusFilterStrength}}
+\index{SetMusFilterStrength@{SetMusFilterStrength}!filter.h@{filter.h}}
+\doxysubsubsection{SetMusFilterStrength()}
+{\footnotesize\ttfamily \label{filter_8h_ac1b2c5f49bdeada27e7ea0fbc2fb85e5} 
+void Set\+Mus\+Filter\+Strength (\begin{DoxyParamCaption}\item[{short}]{k}{}\end{DoxyParamCaption})}
+
+AM140 → AM150 フィルタ強度を初期化以後も変更できる関数を追加 被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h_ac1b2c5f49bdeada27e7ea0fbc2fb85e5_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!SetRxEcgMusFilter@{SetRxEcgMusFilter}}
+\index{SetRxEcgMusFilter@{SetRxEcgMusFilter}!filter.h@{filter.h}}
+\doxysubsubsection{SetRxEcgMusFilter()}
+{\footnotesize\ttfamily \label{filter_8h_a62dd60462f4eac5ce151a32e0d4329dc} 
+void Set\+Rx\+Ecg\+Mus\+Filter (\begin{DoxyParamCaption}\item[{short}]{musfilter}{}\end{DoxyParamCaption})}
+
+AM140 → AM150 フィルタのオンオフを初期化以後も変更できる関数を追加 被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h_a62dd60462f4eac5ce151a32e0d4329dc_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!t2\_high\_pass\_dr\_long@{t2\_high\_pass\_dr\_long}}
+\index{t2\_high\_pass\_dr\_long@{t2\_high\_pass\_dr\_long}!filter.h@{filter.h}}
+\doxysubsubsection{t2\_high\_pass\_dr\_long()}
+{\footnotesize\ttfamily \label{filter_8h_aa1b689ae0c6ba8272f9d223d70c07918} 
+long t2\+\_\+high\+\_\+pass\+\_\+dr\+\_\+long (\begin{DoxyParamCaption}\item[{long}]{sts\+\_\+dt}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h_aa1b689ae0c6ba8272f9d223d70c07918_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!t2\_qrsini@{t2\_qrsini}}
+\index{t2\_qrsini@{t2\_qrsini}!filter.h@{filter.h}}
+\doxysubsubsection{t2\_qrsini()}
+{\footnotesize\ttfamily \label{filter_8h_aa17ff848fb4ab732074f13d313d3c766} 
+void t2\+\_\+qrsini (\begin{DoxyParamCaption}\item[{short}]{qrs\+\_\+sensi}{, }\item[{short}]{ecg\+\_\+sensi}{}\end{DoxyParamCaption})}
+
+AM140 → AM150 \doxyref{Drift2.\+c}{p.}{_drift2_8c} から移植被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{filter_8h_aa17ff848fb4ab732074f13d313d3c766_icgraph}
+\end{center}
+\end{figure}
+\index{filter.h@{filter.h}!t2\_qrsrtn@{t2\_qrsrtn}}
+\index{t2\_qrsrtn@{t2\_qrsrtn}!filter.h@{filter.h}}
+\doxysubsubsection{t2\_qrsrtn()}
+{\footnotesize\ttfamily \label{filter_8h_a15dda4f2ebff3d8679d669d7dcc879ff} 
+short t2\+\_\+qrsrtn (\begin{DoxyParamCaption}\item[{short}]{sample}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{filter_8h_a15dda4f2ebff3d8679d669d7dcc879ff_icgraph}
+\end{center}
+\end{figure}

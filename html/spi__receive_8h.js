@@ -1,0 +1,35 @@
+var spi__receive_8h =
+[
+    [ "Buf", "struct_buf.html", "struct_buf" ],
+    [ "BASE_VALUE", "spi__receive_8h.html#ac16e51f6c599534f2cdd80d7c5f31c82", null ],
+    [ "ECGBUF_SIZE", "spi__receive_8h.html#aba024d25962362393a3bfdb299fe6cc2", null ],
+    [ "STS_BROKEN_DATA", "spi__receive_8h.html#a0ccebfdfb698564dff33717ad455f15d", null ],
+    [ "STS_SOFT_ERROR", "spi__receive_8h.html#a5f5895f308348d10f6384e53fcc52f90", null ],
+    [ "bufName", "spi__receive_8h.html#aa269bfcd18f8beee611836a28f82b0fa", [
+      [ "QRS_AUTO", "spi__receive_8h.html#aa269bfcd18f8beee611836a28f82b0faa3ccfc401ea8dbe20c27d3cb5bdc9db85", null ],
+      [ "QRS_MANUAL", "spi__receive_8h.html#aa269bfcd18f8beee611836a28f82b0faa57c26647d06a97875e6645ff5b921567", null ],
+      [ "FILTER_NONE", "spi__receive_8h.html#aa269bfcd18f8beee611836a28f82b0faa973228de893dbe6bd7a65d0747c15977", null ]
+    ] ],
+    [ "GenerateLongEcgData", "spi__receive_8h.html#a749d726a9c18205e684074afb8e7fb1a", null ],
+    [ "Get_chErr", "spi__receive_8h.html#a8e5f71644c10f67c3a50dcb6af877244", null ],
+    [ "Get_denAtuCnt", "spi__receive_8h.html#a1a9568a1aa7a8f6fad829637799f7d07", null ],
+    [ "Get_nurseCallCnt", "spi__receive_8h.html#ac3197cc17035f4f07c9bf2d21200c927", null ],
+    [ "Get_paceMakerCnt", "spi__receive_8h.html#ac1d35592714fedf7552e9806c89b8364", null ],
+    [ "Get_parityErr", "spi__receive_8h.html#a8a6f224d4a84edb26d6aba4e4c8524c3", null ],
+    [ "Get_readErrorCnt", "spi__receive_8h.html#a7f62612013bc7c9be1d7854c1ed8234f", null ],
+    [ "Get_readIdx", "spi__receive_8h.html#a058213c5c4cc8c9fb02e897a0369cdd4", null ],
+    [ "Get_syncSearchStatus", "spi__receive_8h.html#a9e0d0da6a972e1c35a82bf5b101cb5aa", null ],
+    [ "Get_writeIdx", "spi__receive_8h.html#a714605dd7ad3f5ac6ddf648e5fc87d33", null ],
+    [ "GetEcgBuf", "spi__receive_8h.html#a8f44822a950d5d0fb8884c12164d3e0c", null ],
+    [ "GetRemainEcgBuf", "spi__receive_8h.html#ab954ff149d78c53a17e2688dd2704091", null ],
+    [ "InitSpiReceiveC", "spi__receive_8h.html#a9844865e7423c151defcfe5a52c4a17c", null ],
+    [ "IsReadEcg", "spi__receive_8h.html#a70abc95e7126b14f550a3fb0f51642ea", null ],
+    [ "IsWriteEcg", "spi__receive_8h.html#acabfff9333d9323c9e7ebe327279c079", null ],
+    [ "PickEcgFromLong", "spi__receive_8h.html#a31ab551a8597e2040a248eb82033bf3c", null ],
+    [ "PickStsFromLong", "spi__receive_8h.html#a199673b9e258902e5f117975459e4048", null ],
+    [ "ReadIdxAdd", "spi__receive_8h.html#a08cdb9963e3ed6e4ea6e25c95a53f25d", null ],
+    [ "SpiReceiveProcess", "spi__receive_8h.html#a0c878cefc06222b3734b31fbc02b0674", null ],
+    [ "StatusCntReset", "spi__receive_8h.html#a0928151cf559961841f5ec56d5fca371", null ],
+    [ "StoreEcg", "spi__receive_8h.html#a944f60d67903174bf0eb3ef3d74a2c3f", null ],
+    [ "WriteIdxAdd", "spi__receive_8h.html#ae61f0034b40f114d83774abd52f91d54", null ]
+];

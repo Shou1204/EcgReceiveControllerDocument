@@ -1,0 +1,7 @@
+<map id="UpdateData" name="UpdateData">
+<area shape="rect" id="Node000001" title="データ更新プロセス" alt="" coords="5,31,97,57"/>
+<area shape="rect" id="Node000002" href="$ecg__data_8c.html#a86de475be9a0ef5efe79c2f940f55708" title=" " alt="" coords="145,5,266,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,34,129,28,130,34,97,39"/>
+<area shape="rect" id="Node000003" href="$ecg__data_8c.html#a5f853cb75cec822eaad692d27425dc5b" title=" " alt="" coords="145,56,266,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="97,49,131,54,130,60,97,54"/>
+</map>

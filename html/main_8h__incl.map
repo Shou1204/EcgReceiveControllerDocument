@@ -1,0 +1,26 @@
+<map id="main.h" name="main.h">
+<area shape="rect" id="Node000001" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="209,5,270,32"/>
+<area shape="rect" id="Node000002" href="$handshake__receiver_8h.html" title=" " alt="" coords="5,155,154,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,25,180,31,147,41,115,58,90,82,83,95,79,109,78,139,72,139,73,108,78,93,85,78,112,53,145,36,178,26,208,20"/>
+<area shape="rect" id="Node000007" href="$host__in_8h.html" title=" " alt="" coords="100,80,174,107"/>
+<area shape="poly" id="edge3_Node000001_Node000007" title=" " alt="" coords="223,35,169,73,166,68,220,30"/>
+<area shape="rect" id="Node000009" href="$host__out_8h.html" title=" " alt="" coords="198,80,281,107"/>
+<area shape="poly" id="edge6_Node000001_Node000009" title=" " alt="" coords="242,33,242,64,237,64,237,33"/>
+<area shape="rect" id="Node000010" href="$spi__receive_8h.html" title=" " alt="" coords="305,80,403,107"/>
+<area shape="poly" id="edge8_Node000001_Node000010" title=" " alt="" coords="261,30,323,69,320,74,258,35"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="428,80,544,107"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="271,26,429,73,428,78,269,32"/>
+<area shape="rect" id="Node000003" href="$common_8h.html" title=" " alt="" coords="237,229,319,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="115,179,230,221,228,226,113,184"/>
+<area shape="rect" id="Node000008" href="$ecg__data_8h.html" title=" " alt="" coords="188,155,273,181"/>
+<area shape="poly" id="edge4_Node000007_Node000008" title=" " alt="" coords="155,105,204,143,201,147,151,109"/>
+<area shape="poly" id="edge5_Node000008_Node000003" title=" " alt="" coords="241,180,264,215,259,218,236,183"/>
+<area shape="poly" id="edge7_Node000009_Node000008" title=" " alt="" coords="241,108,236,140,231,139,235,107"/>
+<area shape="poly" id="edge9_Node000010_Node000008" title=" " alt="" coords="334,110,266,149,263,144,331,105"/>
+<area shape="rect" id="Node000011" href="$filter_8h.html" title=" " alt="" coords="298,155,355,181"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="352,108,339,141,334,139,347,106"/>
+<area shape="rect" id="Node000012" href="$synchro_8h.html" title=" " alt="" coords="379,155,457,181"/>
+<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="367,105,399,141,395,145,363,109"/>
+<area shape="poly" id="edge11_Node000011_Node000003" title=" " alt="" coords="320,183,297,218,293,215,316,180"/>
+<area shape="poly" id="edge13_Node000012_Node000003" title=" " alt="" coords="395,184,318,224,315,219,393,180"/>
+</map>

@@ -1,0 +1,142 @@
+\doxysection{ecg\+\_\+data.\+h ファイル}
+\label{ecg__data_8h}\index{ecg\_data.h@{ecg\_data.h}}
+{\ttfamily \#include "{}common.\+h"{}}\newline
+ecg\+\_\+data.\+h の依存先関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{ecg__data_8h__incl}
+\end{center}
+\end{figure}
+被依存関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecg__data_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{データ構造}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ Setting\+Current}
+\begin{DoxyCompactList}\small\item\em 現在のプロパティの値を保存 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct Setting\+Current \textbf{ Setting\+Current}
+\begin{DoxyCompactList}\small\item\em 現在のプロパティの値を保存 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \textbf{ Init\+Ecg\+DataC} ()
+\item 
+void \textbf{ Init\+Current\+State} ()
+\item 
+uint16\+\_\+t \textbf{ Get\+\_\+current\+Value} (uint8\+\_\+t id)
+\item 
+void \textbf{ Set\+\_\+current\+Value} (uint8\+\_\+t id, uint32\+\_\+t value\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{データ構造詳解}
+\index{SettingCurrent@{SettingCurrent}}\label{struct_setting_current}
+\doxysubsubsection{struct Setting\+Current}
+現在のプロパティの値を保存 
+
+Setting\+Current 連携図\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{struct_setting_current__coll__graph}
+\end{center}
+\end{figure}
+\begin{DoxyFields}{データフィールド}
+\mbox{\label{ecg__data_8h_aad83077cefe6e748a8ced94f2e29c95d}} 
+const int&
+property&
+\\
+\hline
+
+\mbox{\label{ecg__data_8h_a900b69af7d674b8db3bceae754b4955a}} 
+uint16\_t&
+value&
+\\
+\hline
+
+\end{DoxyFields}
+
+
+\doxysubsection{型定義詳解}
+\index{ecg\_data.h@{ecg\_data.h}!SettingCurrent@{SettingCurrent}}
+\index{SettingCurrent@{SettingCurrent}!ecg\_data.h@{ecg\_data.h}}
+\doxysubsubsection{SettingCurrent}
+{\footnotesize\ttfamily \label{ecg__data_8h_ac9e7bee81bf9f6c9e33a8d359beb8b2e} 
+typedef struct Setting\+Current Setting\+Current}
+
+
+
+現在のプロパティの値を保存 
+
+
+
+\doxysubsection{関数詳解}
+\index{ecg\_data.h@{ecg\_data.h}!Get\_currentValue@{Get\_currentValue}}
+\index{Get\_currentValue@{Get\_currentValue}!ecg\_data.h@{ecg\_data.h}}
+\doxysubsubsection{Get\_currentValue()}
+{\footnotesize\ttfamily \label{ecg__data_8h_a86de475be9a0ef5efe79c2f940f55708} 
+uint16\+\_\+t Get\+\_\+current\+Value (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{id}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecg__data_8h_a86de475be9a0ef5efe79c2f940f55708_icgraph}
+\end{center}
+\end{figure}
+\index{ecg\_data.h@{ecg\_data.h}!InitCurrentState@{InitCurrentState}}
+\index{InitCurrentState@{InitCurrentState}!ecg\_data.h@{ecg\_data.h}}
+\doxysubsubsection{InitCurrentState()}
+{\footnotesize\ttfamily \label{ecg__data_8h_a8076b4cf4e7c1aad2f9b9f06853ea75e} 
+void Init\+Current\+State (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{ecg__data_8h_a8076b4cf4e7c1aad2f9b9f06853ea75e_icgraph}
+\end{center}
+\end{figure}
+\index{ecg\_data.h@{ecg\_data.h}!InitEcgDataC@{InitEcgDataC}}
+\index{InitEcgDataC@{InitEcgDataC}!ecg\_data.h@{ecg\_data.h}}
+\doxysubsubsection{InitEcgDataC()}
+{\footnotesize\ttfamily \label{ecg__data_8h_aaa920a0f94e35ce551cf7d919e1d19ac} 
+void Init\+Ecg\+DataC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{ecg__data_8h_aaa920a0f94e35ce551cf7d919e1d19ac_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{ecg__data_8h_aaa920a0f94e35ce551cf7d919e1d19ac_icgraph}
+\end{center}
+\end{figure}
+\index{ecg\_data.h@{ecg\_data.h}!Set\_currentValue@{Set\_currentValue}}
+\index{Set\_currentValue@{Set\_currentValue}!ecg\_data.h@{ecg\_data.h}}
+\doxysubsubsection{Set\_currentValue()}
+{\footnotesize\ttfamily \label{ecg__data_8h_a5f853cb75cec822eaad692d27425dc5b} 
+void Set\+\_\+current\+Value (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{id}{, }\item[{uint32\+\_\+t}]{value\+\_\+}{}\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ecg__data_8h_a5f853cb75cec822eaad692d27425dc5b_icgraph}
+\end{center}
+\end{figure}
