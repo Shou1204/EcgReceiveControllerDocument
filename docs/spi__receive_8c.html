@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EcgReceiveController: spi_receive.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">EcgReceiveController
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('spi__receive_8c.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle"><div class="title">spi_receive.c ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>本体へのUARTでの定期出力に関連する関数をを含むソースファイルです。  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="spi__receive_8h_source.html">spi_receive.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+spi_receive.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__receive_8c__incl.svg" width="654" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a4ee4c2da26a5a520f3dcc5260527cc14" id="r_a4ee4c2da26a5a520f3dcc5260527cc14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4ee4c2da26a5a520f3dcc5260527cc14">ERRORS_</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:a4ee4c2da26a5a520f3dcc5260527cc14"><td class="mdescLeft">&#160;</td><td class="mdescRight">連続でこの回数フレームにエラーになると再同期  <br /></td></tr>
+<tr class="separator:a4ee4c2da26a5a520f3dcc5260527cc14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c2148293e22364989e02b35c3af8898" id="r_a6c2148293e22364989e02b35c3af8898"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c2148293e22364989e02b35c3af8898">SYNC_BUF_SIZE</a>&#160;&#160;&#160;30</td></tr>
+<tr class="memdesc:a6c2148293e22364989e02b35c3af8898"><td class="mdescLeft">&#160;</td><td class="mdescRight">シンクロバッファのサイズ  <br /></td></tr>
+<tr class="separator:a6c2148293e22364989e02b35c3af8898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90be9d892f7785715fb5927bd36eeb50" id="r_a90be9d892f7785715fb5927bd36eeb50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90be9d892f7785715fb5927bd36eeb50">AUTO_MANUAL_BETWEEN</a>&#160;&#160;&#160;106</td></tr>
+<tr class="memdesc:a90be9d892f7785715fb5927bd36eeb50"><td class="mdescLeft">&#160;</td><td class="mdescRight">自動検出と手動検出の速さのズレ。切替時に同じ部分を参照する為  <br /></td></tr>
+<tr class="separator:a90be9d892f7785715fb5927bd36eeb50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:aef69abc84f2e68e1c3c754a72d56d544" id="r_aef69abc84f2e68e1c3c754a72d56d544"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef69abc84f2e68e1c3c754a72d56d544">syncSts</a> { <a class="el" href="#aef69abc84f2e68e1c3c754a72d56d544a0cb1b2c6a7db1f1084886c98909a3f36">INIT</a>
+, <a class="el" href="#aef69abc84f2e68e1c3c754a72d56d544a620ea25f370d70cec50043c7377ba33e">SYNC_FAIL</a>
+, <a class="el" href="#aef69abc84f2e68e1c3c754a72d56d544ad5a2f07e01c6d2c313ec5b39022dfcf9">HEAD_SEARCH_SUCCESS</a>
+, <a class="el" href="#aef69abc84f2e68e1c3c754a72d56d544a3754b7e0d81d0db64735990fa0bb60e0">ALREADY_SYNC</a>
+ }</td></tr>
+<tr class="memdesc:aef69abc84f2e68e1c3c754a72d56d544"><td class="mdescLeft">&#160;</td><td class="mdescRight">同期の状態を表す  <a href="#aef69abc84f2e68e1c3c754a72d56d544">[詳解]</a><br /></td></tr>
+<tr class="separator:aef69abc84f2e68e1c3c754a72d56d544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a9844865e7423c151defcfe5a52c4a17c" id="r_a9844865e7423c151defcfe5a52c4a17c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9844865e7423c151defcfe5a52c4a17c">InitSpiReceiveC</a> ()</td></tr>
+<tr class="separator:a9844865e7423c151defcfe5a52c4a17c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0928151cf559961841f5ec56d5fca371" id="r_a0928151cf559961841f5ec56d5fca371"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0928151cf559961841f5ec56d5fca371">StatusCntReset</a> ()</td></tr>
+<tr class="separator:a0928151cf559961841f5ec56d5fca371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af39d147b690c80c7947af19e81a0fe09" id="r_af39d147b690c80c7947af19e81a0fe09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af39d147b690c80c7947af19e81a0fe09">SpiReceiveProcess</a> (uint8_t rx_byte)</td></tr>
+<tr class="separator:af39d147b690c80c7947af19e81a0fe09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a92765e4b344a890547fd190aeb393e" id="r_a6a92765e4b344a890547fd190aeb393e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a92765e4b344a890547fd190aeb393e">StoreEcg</a> (long no_filter, long qrs_auto, long qrs_manual)</td></tr>
+<tr class="separator:a6a92765e4b344a890547fd190aeb393e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f44822a950d5d0fb8884c12164d3e0c" id="r_a8f44822a950d5d0fb8884c12164d3e0c"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f44822a950d5d0fb8884c12164d3e0c">GetEcgBuf</a> (int qrs_mode)</td></tr>
+<tr class="separator:a8f44822a950d5d0fb8884c12164d3e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a749d726a9c18205e684074afb8e7fb1a" id="r_a749d726a9c18205e684074afb8e7fb1a"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a749d726a9c18205e684074afb8e7fb1a">GenerateLongEcgData</a> (uint16_t sts, short ecg)</td></tr>
+<tr class="separator:a749d726a9c18205e684074afb8e7fb1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31ab551a8597e2040a248eb82033bf3c" id="r_a31ab551a8597e2040a248eb82033bf3c"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31ab551a8597e2040a248eb82033bf3c">PickEcgFromLong</a> (long long_data)</td></tr>
+<tr class="separator:a31ab551a8597e2040a248eb82033bf3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a199673b9e258902e5f117975459e4048" id="r_a199673b9e258902e5f117975459e4048"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a199673b9e258902e5f117975459e4048">PickStsFromLong</a> (long long_data)</td></tr>
+<tr class="separator:a199673b9e258902e5f117975459e4048"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08cdb9963e3ed6e4ea6e25c95a53f25d" id="r_a08cdb9963e3ed6e4ea6e25c95a53f25d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08cdb9963e3ed6e4ea6e25c95a53f25d">ReadIdxAdd</a> ()</td></tr>
+<tr class="separator:a08cdb9963e3ed6e4ea6e25c95a53f25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae61f0034b40f114d83774abd52f91d54" id="r_ae61f0034b40f114d83774abd52f91d54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae61f0034b40f114d83774abd52f91d54">WriteIdxAdd</a> ()</td></tr>
+<tr class="separator:ae61f0034b40f114d83774abd52f91d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70abc95e7126b14f550a3fb0f51642ea" id="r_a70abc95e7126b14f550a3fb0f51642ea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70abc95e7126b14f550a3fb0f51642ea">IsReadEcg</a> ()</td></tr>
+<tr class="separator:a70abc95e7126b14f550a3fb0f51642ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acabfff9333d9323c9e7ebe327279c079" id="r_acabfff9333d9323c9e7ebe327279c079"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acabfff9333d9323c9e7ebe327279c079">IsWriteEcg</a> ()</td></tr>
+<tr class="separator:acabfff9333d9323c9e7ebe327279c079"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a058213c5c4cc8c9fb02e897a0369cdd4" id="r_a058213c5c4cc8c9fb02e897a0369cdd4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a058213c5c4cc8c9fb02e897a0369cdd4">Get_readIdx</a> ()</td></tr>
+<tr class="separator:a058213c5c4cc8c9fb02e897a0369cdd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a714605dd7ad3f5ac6ddf648e5fc87d33" id="r_a714605dd7ad3f5ac6ddf648e5fc87d33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a714605dd7ad3f5ac6ddf648e5fc87d33">Get_writeIdx</a> ()</td></tr>
+<tr class="separator:a714605dd7ad3f5ac6ddf648e5fc87d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e0d0da6a972e1c35a82bf5b101cb5aa" id="r_a9e0d0da6a972e1c35a82bf5b101cb5aa"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e0d0da6a972e1c35a82bf5b101cb5aa">Get_syncSearchStatus</a> ()</td></tr>
+<tr class="separator:a9e0d0da6a972e1c35a82bf5b101cb5aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1d35592714fedf7552e9806c89b8364" id="r_ac1d35592714fedf7552e9806c89b8364"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1d35592714fedf7552e9806c89b8364">Get_paceMakerCnt</a> ()</td></tr>
+<tr class="separator:ac1d35592714fedf7552e9806c89b8364"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a9568a1aa7a8f6fad829637799f7d07" id="r_a1a9568a1aa7a8f6fad829637799f7d07"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a9568a1aa7a8f6fad829637799f7d07">Get_denAtuCnt</a> ()</td></tr>
+<tr class="separator:a1a9568a1aa7a8f6fad829637799f7d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3197cc17035f4f07c9bf2d21200c927" id="r_ac3197cc17035f4f07c9bf2d21200c927"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3197cc17035f4f07c9bf2d21200c927">Get_nurseCallCnt</a> ()</td></tr>
+<tr class="separator:ac3197cc17035f4f07c9bf2d21200c927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f62612013bc7c9be1d7854c1ed8234f" id="r_a7f62612013bc7c9be1d7854c1ed8234f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f62612013bc7c9be1d7854c1ed8234f">Get_readErrorCnt</a> ()</td></tr>
+<tr class="separator:a7f62612013bc7c9be1d7854c1ed8234f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab954ff149d78c53a17e2688dd2704091" id="r_ab954ff149d78c53a17e2688dd2704091"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab954ff149d78c53a17e2688dd2704091">GetRemainEcgBuf</a> ()</td></tr>
+<tr class="separator:ab954ff149d78c53a17e2688dd2704091"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a6f224d4a84edb26d6aba4e4c8524c3" id="r_a8a6f224d4a84edb26d6aba4e4c8524c3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a6f224d4a84edb26d6aba4e4c8524c3">Get_parityErr</a> ()</td></tr>
+<tr class="separator:a8a6f224d4a84edb26d6aba4e4c8524c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e5f71644c10f67c3a50dcb6af877244" id="r_a8e5f71644c10f67c3a50dcb6af877244"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e5f71644c10f67c3a50dcb6af877244">Get_chErr</a> ()</td></tr>
+<tr class="separator:a8e5f71644c10f67c3a50dcb6af877244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:ae955925db159f1fdf8deafb5608e43c5" id="r_ae955925db159f1fdf8deafb5608e43c5"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae955925db159f1fdf8deafb5608e43c5">writeIdx</a></td></tr>
+<tr class="separator:ae955925db159f1fdf8deafb5608e43c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39f41aa31e3090ecfd56e6d5c5fb153f" id="r_a39f41aa31e3090ecfd56e6d5c5fb153f"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39f41aa31e3090ecfd56e6d5c5fb153f">readIdx</a></td></tr>
+<tr class="separator:a39f41aa31e3090ecfd56e6d5c5fb153f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae212ce5cec18b2191cc0458399b06331" id="r_ae212ce5cec18b2191cc0458399b06331"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae212ce5cec18b2191cc0458399b06331">max</a></td></tr>
+<tr class="separator:ae212ce5cec18b2191cc0458399b06331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5884f9cc50674d886ab8841dac0f3c74" id="r_a5884f9cc50674d886ab8841dac0f3c74"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5884f9cc50674d886ab8841dac0f3c74">min</a></td></tr>
+<tr class="separator:a5884f9cc50674d886ab8841dac0f3c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a982490ed02c373fc2f64871bd67b9880" id="r_a982490ed02c373fc2f64871bd67b9880"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a982490ed02c373fc2f64871bd67b9880">deb</a></td></tr>
+<tr class="separator:a982490ed02c373fc2f64871bd67b9880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>本体へのUARTでの定期出力に関連する関数をを含むソースファイルです。 </p>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a90be9d892f7785715fb5927bd36eeb50" name="a90be9d892f7785715fb5927bd36eeb50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90be9d892f7785715fb5927bd36eeb50">&#9670;&#160;</a></span>AUTO_MANUAL_BETWEEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_MANUAL_BETWEEN&#160;&#160;&#160;106</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>自動検出と手動検出の速さのズレ。切替時に同じ部分を参照する為 </p>
+
+</div>
+</div>
+<a id="a4ee4c2da26a5a520f3dcc5260527cc14" name="a4ee4c2da26a5a520f3dcc5260527cc14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ee4c2da26a5a520f3dcc5260527cc14">&#9670;&#160;</a></span>ERRORS_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERRORS_&#160;&#160;&#160;5</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>連続でこの回数フレームにエラーになると再同期 </p>
+
+</div>
+</div>
+<a id="a6c2148293e22364989e02b35c3af8898" name="a6c2148293e22364989e02b35c3af8898"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c2148293e22364989e02b35c3af8898">&#9670;&#160;</a></span>SYNC_BUF_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SYNC_BUF_SIZE&#160;&#160;&#160;30</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>シンクロバッファのサイズ </p>
+
+</div>
+</div>
+<h2 class="groupheader">列挙型詳解</h2>
+<a id="aef69abc84f2e68e1c3c754a72d56d544" name="aef69abc84f2e68e1c3c754a72d56d544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef69abc84f2e68e1c3c754a72d56d544">&#9670;&#160;</a></span>syncSts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#aef69abc84f2e68e1c3c754a72d56d544">syncSts</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>同期の状態を表す </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="aef69abc84f2e68e1c3c754a72d56d544a0cb1b2c6a7db1f1084886c98909a3f36" name="aef69abc84f2e68e1c3c754a72d56d544a0cb1b2c6a7db1f1084886c98909a3f36"></a>INIT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aef69abc84f2e68e1c3c754a72d56d544a620ea25f370d70cec50043c7377ba33e" name="aef69abc84f2e68e1c3c754a72d56d544a620ea25f370d70cec50043c7377ba33e"></a>SYNC_FAIL&#160;</td><td class="fielddoc"><p>同期失敗 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aef69abc84f2e68e1c3c754a72d56d544ad5a2f07e01c6d2c313ec5b39022dfcf9" name="aef69abc84f2e68e1c3c754a72d56d544ad5a2f07e01c6d2c313ec5b39022dfcf9"></a>HEAD_SEARCH_SUCCESS&#160;</td><td class="fielddoc"><p>ヘッドサーチ済み </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aef69abc84f2e68e1c3c754a72d56d544a3754b7e0d81d0db64735990fa0bb60e0" name="aef69abc84f2e68e1c3c754a72d56d544a3754b7e0d81d0db64735990fa0bb60e0"></a>ALREADY_SYNC&#160;</td><td class="fielddoc"><p>同期済み </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a749d726a9c18205e684074afb8e7fb1a" name="a749d726a9c18205e684074afb8e7fb1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a749d726a9c18205e684074afb8e7fb1a">&#9670;&#160;</a></span>GenerateLongEcgData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long GenerateLongEcgData </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>sts</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>ecg</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__receive_8c_a749d726a9c18205e684074afb8e7fb1a_icgraph.svg" width="526" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a8e5f71644c10f67c3a50dcb6af877244" name="a8e5f71644c10f67c3a50dcb6af877244"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e5f71644c10f67c3a50dcb6af877244">&#9670;&#160;</a></span>Get_chErr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Get_chErr </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a9568a1aa7a8f6fad829637799f7d07" name="a1a9568a1aa7a8f6fad829637799f7d07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a9568a1aa7a8f6fad829637799f7d07">&#9670;&#160;</a></span>Get_denAtuCnt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Get_denAtuCnt </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3197cc17035f4f07c9bf2d21200c927" name="ac3197cc17035f4f07c9bf2d21200c927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3197cc17035f4f07c9bf2d21200c927">&#9670;&#160;</a></span>Get_nurseCallCnt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Get_nurseCallCnt </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac1d35592714fedf7552e9806c89b8364" name="ac1d35592714fedf7552e9806c89b8364"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1d35592714fedf7552e9806c89b8364">&#9670;&#160;</a></span>Get_paceMakerCnt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Get_paceMakerCnt </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a6f224d4a84edb26d6aba4e4c8524c3" name="a8a6f224d4a84edb26d6aba4e4c8524c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a6f224d4a84edb26d6aba4e4c8524c3">&#9670;&#160;</a></span>Get_parityErr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Get_parityErr </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f62612013bc7c9be1d7854c1ed8234f" name="a7f62612013bc7c9be1d7854c1ed8234f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f62612013bc7c9be1d7854c1ed8234f">&#9670;&#160;</a></span>Get_readErrorCnt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Get_readErrorCnt </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a058213c5c4cc8c9fb02e897a0369cdd4" name="a058213c5c4cc8c9fb02e897a0369cdd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a058213c5c4cc8c9fb02e897a0369cdd4">&#9670;&#160;</a></span>Get_readIdx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Get_readIdx </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e0d0da6a972e1c35a82bf5b101cb5aa" name="a9e0d0da6a972e1c35a82bf5b101cb5aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e0d0da6a972e1c35a82bf5b101cb5aa">&#9670;&#160;</a></span>Get_syncSearchStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Get_syncSearchStatus </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a714605dd7ad3f5ac6ddf648e5fc87d33" name="a714605dd7ad3f5ac6ddf648e5fc87d33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a714605dd7ad3f5ac6ddf648e5fc87d33">&#9670;&#160;</a></span>Get_writeIdx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Get_writeIdx </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f44822a950d5d0fb8884c12164d3e0c" name="a8f44822a950d5d0fb8884c12164d3e0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f44822a950d5d0fb8884c12164d3e0c">&#9670;&#160;</a></span>GetEcgBuf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short GetEcgBuf </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>qrs_mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__receive_8c_a8f44822a950d5d0fb8884c12164d3e0c_cgraph.svg" width="238" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab954ff149d78c53a17e2688dd2704091" name="ab954ff149d78c53a17e2688dd2704091"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab954ff149d78c53a17e2688dd2704091">&#9670;&#160;</a></span>GetRemainEcgBuf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short GetRemainEcgBuf </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9844865e7423c151defcfe5a52c4a17c" name="a9844865e7423c151defcfe5a52c4a17c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9844865e7423c151defcfe5a52c4a17c">&#9670;&#160;</a></span>InitSpiReceiveC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitSpiReceiveC </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__receive_8c_a9844865e7423c151defcfe5a52c4a17c_cgraph.svg" width="291" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__receive_8c_a9844865e7423c151defcfe5a52c4a17c_icgraph.svg" width="224" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a70abc95e7126b14f550a3fb0f51642ea" name="a70abc95e7126b14f550a3fb0f51642ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70abc95e7126b14f550a3fb0f51642ea">&#9670;&#160;</a></span>IsReadEcg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int IsReadEcg </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acabfff9333d9323c9e7ebe327279c079" name="acabfff9333d9323c9e7ebe327279c079"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acabfff9333d9323c9e7ebe327279c079">&#9670;&#160;</a></span>IsWriteEcg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int IsWriteEcg </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__receive_8c_acabfff9333d9323c9e7ebe327279c079_icgraph.svg" width="404" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a31ab551a8597e2040a248eb82033bf3c" name="a31ab551a8597e2040a248eb82033bf3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31ab551a8597e2040a248eb82033bf3c">&#9670;&#160;</a></span>PickEcgFromLong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short PickEcgFromLong </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>long_data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__receive_8c_a31ab551a8597e2040a248eb82033bf3c_icgraph.svg" width="671" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a199673b9e258902e5f117975459e4048" name="a199673b9e258902e5f117975459e4048"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a199673b9e258902e5f117975459e4048">&#9670;&#160;</a></span>PickStsFromLong()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short PickStsFromLong </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>long_data</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__receive_8c_a199673b9e258902e5f117975459e4048_icgraph.svg" width="667" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a08cdb9963e3ed6e4ea6e25c95a53f25d" name="a08cdb9963e3ed6e4ea6e25c95a53f25d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08cdb9963e3ed6e4ea6e25c95a53f25d">&#9670;&#160;</a></span>ReadIdxAdd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ReadIdxAdd </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__receive_8c_a08cdb9963e3ed6e4ea6e25c95a53f25d_icgraph.svg" width="238" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af39d147b690c80c7947af19e81a0fe09" name="af39d147b690c80c7947af19e81a0fe09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af39d147b690c80c7947af19e81a0fe09">&#9670;&#160;</a></span>SpiReceiveProcess()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SpiReceiveProcess </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>rx_byte</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__receive_8c_af39d147b690c80c7947af19e81a0fe09_cgraph.svg" width="528" height="950"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__receive_8c_af39d147b690c80c7947af19e81a0fe09_icgraph.svg" width="371" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a0928151cf559961841f5ec56d5fca371" name="a0928151cf559961841f5ec56d5fca371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0928151cf559961841f5ec56d5fca371">&#9670;&#160;</a></span>StatusCntReset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StatusCntReset </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__receive_8c_a0928151cf559961841f5ec56d5fca371_icgraph.svg" width="388" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6a92765e4b344a890547fd190aeb393e" name="a6a92765e4b344a890547fd190aeb393e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a92765e4b344a890547fd190aeb393e">&#9670;&#160;</a></span>StoreEcg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StoreEcg </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>no_filter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>qrs_auto</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>qrs_manual</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__receive_8c_a6a92765e4b344a890547fd190aeb393e_cgraph.svg" width="263" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__receive_8c_a6a92765e4b344a890547fd190aeb393e_icgraph.svg" width="494" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ae61f0034b40f114d83774abd52f91d54" name="ae61f0034b40f114d83774abd52f91d54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae61f0034b40f114d83774abd52f91d54">&#9670;&#160;</a></span>WriteIdxAdd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WriteIdxAdd </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="spi__receive_8c_ae61f0034b40f114d83774abd52f91d54_icgraph.svg" width="411" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a982490ed02c373fc2f64871bd67b9880" name="a982490ed02c373fc2f64871bd67b9880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a982490ed02c373fc2f64871bd67b9880">&#9670;&#160;</a></span>deb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int deb</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae212ce5cec18b2191cc0458399b06331" name="ae212ce5cec18b2191cc0458399b06331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae212ce5cec18b2191cc0458399b06331">&#9670;&#160;</a></span>max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short max</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5884f9cc50674d886ab8841dac0f3c74" name="a5884f9cc50674d886ab8841dac0f3c74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5884f9cc50674d886ab8841dac0f3c74">&#9670;&#160;</a></span>min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short min</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a39f41aa31e3090ecfd56e6d5c5fb153f" name="a39f41aa31e3090ecfd56e6d5c5fb153f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39f41aa31e3090ecfd56e6d5c5fb153f">&#9670;&#160;</a></span>readIdx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short readIdx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae955925db159f1fdf8deafb5608e43c5" name="ae955925db159f1fdf8deafb5608e43c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae955925db159f1fdf8deafb5608e43c5">&#9670;&#160;</a></span>writeIdx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short writeIdx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_c6310732a22f63c0c2fc5595561e68f1.html">Core</a></li><li class="navelem"><a class="el" href="dir_ae8de5609f63c35c73f69a70b5aa1a0a.html">User</a></li><li class="navelem"><a class="el" href="spi__receive_8c.html">spi_receive.c</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

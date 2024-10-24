@@ -1,0 +1,953 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>EcgReceiveController: gtest-internal.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="mystyle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">EcgReceiveController
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('gtest-internal_8h.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ構造</a> &#124;
+<a href="#namespaces">名前空間</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle"><div class="title">gtest-internal.h ファイル</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="gtest-port_8h_source.html">gtest/internal/gtest-port.h</a>&quot;</code><br />
+<code>#include &lt;ctype.h&gt;</code><br />
+<code>#include &lt;float.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;type_traits&gt;</code><br />
+<code>#include &lt;utility&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &quot;<a class="el" href="gtest-message_8h_source.html">gtest/gtest-message.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gtest-filepath_8h_source.html">gtest/internal/gtest-filepath.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gtest-string_8h_source.html">gtest/internal/gtest-string.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gtest-type-util_8h_source.html">gtest/internal/gtest-type-util.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+gtest-internal.h の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><!-- SVG 0 --></div>
+</div>
+</div>
+<p><a href="gtest-internal_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+データ構造</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtesting_1_1internal_1_1_ignored_value.html">IgnoredValue</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtesting_1_1internal_1_1_floating_point.html">FloatingPoint&lt; RawType &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtesting_1_1internal_1_1_type_id_helper.html">TypeIdHelper&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtesting_1_1internal_1_1_test_factory_base.html">TestFactoryBase</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtesting_1_1internal_1_1_test_factory_impl.html">TestFactoryImpl&lt; TestClass &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_code_location.html">CodeLocation</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_suite_api_resolver.html">SuiteApiResolver&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_default_name_generator.html">DefaultNameGenerator</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_name_generator_selector.html">NameGeneratorSelector&lt; Provided &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtesting_1_1internal_1_1_type_parameterized_test.html">TypeParameterizedTest&lt; Fixture, TestSel, Types &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtesting_1_1internal_1_1_type_parameterized_test_3_01_fixture_00_01_test_sel_00_01internal_1_1_none_01_4.html">TypeParameterizedTest&lt; Fixture, TestSel, internal::None &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtesting_1_1internal_1_1_type_parameterized_test_suite.html">TypeParameterizedTestSuite&lt; Fixture, Tests, Types &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtesting_1_1internal_1_1_type_parameterized_test_suite_3_01_fixture_00_01internal_1_1_none_00_01_types_01_4.html">TypeParameterizedTestSuite&lt; Fixture, internal::None, Types &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_const_char_ptr.html">ConstCharPtr</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_true_with_string.html">TrueWithString</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtesting_1_1internal_1_1_random.html">Random</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtesting_1_1internal_1_1_has_debug_string_and_short_debug_string.html">HasDebugStringAndShortDebugString&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_is_hash_table.html">IsHashTable&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_is_recursive_container_impl_3_01_c_00_01false_01_4.html">IsRecursiveContainerImpl&lt; C, false &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_is_recursive_container_impl_3_01_c_00_01true_01_4.html">IsRecursiveContainerImpl&lt; C, true &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_is_recursive_container.html">IsRecursiveContainer&lt; C &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_relation_to_source_reference.html">RelationToSourceReference</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_relation_to_source_copy.html">RelationToSourceCopy</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtesting_1_1internal_1_1_native_array.html">NativeArray&lt; Element &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_ignore.html">Ignore&lt; size_t &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_elem_from_list_impl_3_01std_1_1index__sequence_3_01_i_8_8_8_01_4_01_4.html">ElemFromListImpl&lt; std::index_sequence&lt; I... &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_elem_from_list.html">ElemFromList&lt; N, T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_flat_tuple_construct_tag.html">FlatTupleConstructTag</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_flat_tuple_elem_base_3_01_flat_tuple_3_01_t_8_8_8_01_4_00_01_i_01_4.html">FlatTupleElemBase&lt; FlatTuple&lt; T... &gt;, I &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtesting_1_1internal_1_1_flat_tuple_base_3_01_flat_tuple_3_01_t_8_8_8_01_4_00_01std_1_1indee8895a1424e1a9a389f580bebe9c3355.html">FlatTupleBase&lt; FlatTuple&lt; T... &gt;, std::index_sequence&lt; Idx... &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtesting_1_1internal_1_1_flat_tuple.html">FlatTuple&lt; T &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structstd_1_1tuple__size_3_01testing_1_1internal_1_1_flat_tuple_3_01_ts_8_8_8_01_4_01_4.html">tuple_size&lt; testing::internal::FlatTuple&lt; Ts... &gt; &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+名前空間</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproto2.html">proto2</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting.html">testing</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html">testing::internal</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal_1_1edit__distance.html">testing::internal::edit_distance</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacestd.html">std</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:ae3c336cbe1ae2bd1b1d019333e4428a0" id="r_ae3c336cbe1ae2bd1b1d019333e4428a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3c336cbe1ae2bd1b1d019333e4428a0">GTEST_CONCAT_TOKEN_</a>(foo,  bar)</td></tr>
+<tr class="separator:ae3c336cbe1ae2bd1b1d019333e4428a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa39fb5346d3573feebe4257cb3a01fde" id="r_aa39fb5346d3573feebe4257cb3a01fde"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa39fb5346d3573feebe4257cb3a01fde">GTEST_CONCAT_TOKEN_IMPL_</a>(foo,  bar)</td></tr>
+<tr class="separator:aa39fb5346d3573feebe4257cb3a01fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabef45c1f5071bc00793229c981855d8" id="r_aabef45c1f5071bc00793229c981855d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabef45c1f5071bc00793229c981855d8">GTEST_STRINGIFY_HELPER_</a>(name, ...)</td></tr>
+<tr class="separator:aabef45c1f5071bc00793229c981855d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa007c0351c2bbe7618989e40cc146769" id="r_aa007c0351c2bbe7618989e40cc146769"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa007c0351c2bbe7618989e40cc146769">GTEST_STRINGIFY_</a>(...)</td></tr>
+<tr class="separator:aa007c0351c2bbe7618989e40cc146769"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a874567b176266188fabfffb8393267ce" id="r_a874567b176266188fabfffb8393267ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a874567b176266188fabfffb8393267ce">GTEST_REMOVE_REFERENCE_AND_CONST_</a>(T)</td></tr>
+<tr class="separator:a874567b176266188fabfffb8393267ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d70025c45a47a493780746dfd66d565" id="r_a8d70025c45a47a493780746dfd66d565"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d70025c45a47a493780746dfd66d565">GTEST_MESSAGE_AT_</a>(file,  line,  message,  result_type)</td></tr>
+<tr class="separator:a8d70025c45a47a493780746dfd66d565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94c73d5368ec946bc354d0992ad00810" id="r_a94c73d5368ec946bc354d0992ad00810"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94c73d5368ec946bc354d0992ad00810">GTEST_MESSAGE_</a>(message,  result_type)</td></tr>
+<tr class="separator:a94c73d5368ec946bc354d0992ad00810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f9a4c3ea82cc7bf4478eaffdc168358" id="r_a0f9a4c3ea82cc7bf4478eaffdc168358"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f9a4c3ea82cc7bf4478eaffdc168358">GTEST_FATAL_FAILURE_</a>(message)</td></tr>
+<tr class="separator:a0f9a4c3ea82cc7bf4478eaffdc168358"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb7482cfa03661a91c698eb5895f642" id="r_a6cb7482cfa03661a91c698eb5895f642"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cb7482cfa03661a91c698eb5895f642">GTEST_NONFATAL_FAILURE_</a>(message)</td></tr>
+<tr class="separator:a6cb7482cfa03661a91c698eb5895f642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe012b550eb3807e8c49f7e161bd1567" id="r_abe012b550eb3807e8c49f7e161bd1567"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe012b550eb3807e8c49f7e161bd1567">GTEST_SUCCESS_</a>(message)</td></tr>
+<tr class="separator:abe012b550eb3807e8c49f7e161bd1567"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab75ed7a6cd9e466944ce680c1c07ab47" id="r_ab75ed7a6cd9e466944ce680c1c07ab47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab75ed7a6cd9e466944ce680c1c07ab47">GTEST_SKIP_</a>(message)</td></tr>
+<tr class="separator:ab75ed7a6cd9e466944ce680c1c07ab47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e66f7dfc5cb87e0fa0289f653173c69" id="r_a2e66f7dfc5cb87e0fa0289f653173c69"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e66f7dfc5cb87e0fa0289f653173c69">GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_</a>(statement)</td></tr>
+<tr class="separator:a2e66f7dfc5cb87e0fa0289f653173c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c79c1cc9a5769c48ef5e4b3aa52ce5c" id="r_a4c79c1cc9a5769c48ef5e4b3aa52ce5c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c79c1cc9a5769c48ef5e4b3aa52ce5c">GTEST_TEST_THROW_CATCH_STD_EXCEPTION_</a>(statement,  expected_exception)</td></tr>
+<tr class="separator:a4c79c1cc9a5769c48ef5e4b3aa52ce5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f71db93eaf30b0cfca9612b9ac32106" id="r_a3f71db93eaf30b0cfca9612b9ac32106"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3f71db93eaf30b0cfca9612b9ac32106">GTEST_TEST_THROW_</a>(statement,  expected_exception,  fail)</td></tr>
+<tr class="separator:a3f71db93eaf30b0cfca9612b9ac32106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a6512b6cbf915c8611d21607351add7" id="r_a9a6512b6cbf915c8611d21607351add7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a6512b6cbf915c8611d21607351add7">GTEST_TEST_NO_THROW_CATCH_STD_EXCEPTION_</a>()</td></tr>
+<tr class="separator:a9a6512b6cbf915c8611d21607351add7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a109d026b5a904646437d7570e13581" id="r_a9a109d026b5a904646437d7570e13581"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a109d026b5a904646437d7570e13581">GTEST_TEST_NO_THROW_</a>(statement,  fail)</td></tr>
+<tr class="separator:a9a109d026b5a904646437d7570e13581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af48bbd26d54d4afc5e4cef39b1c76ba3" id="r_af48bbd26d54d4afc5e4cef39b1c76ba3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af48bbd26d54d4afc5e4cef39b1c76ba3">GTEST_TEST_ANY_THROW_</a>(statement,  fail)</td></tr>
+<tr class="separator:af48bbd26d54d4afc5e4cef39b1c76ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8912365e1d00a7a2bd248268c64aa1a" id="r_ae8912365e1d00a7a2bd248268c64aa1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8912365e1d00a7a2bd248268c64aa1a">GTEST_TEST_BOOLEAN_</a>(expression,  text,  actual,  expected,  fail)</td></tr>
+<tr class="separator:ae8912365e1d00a7a2bd248268c64aa1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b37a3c446836d33040f3266a6236081" id="r_a1b37a3c446836d33040f3266a6236081"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b37a3c446836d33040f3266a6236081">GTEST_TEST_NO_FATAL_FAILURE_</a>(statement,  fail)</td></tr>
+<tr class="separator:a1b37a3c446836d33040f3266a6236081"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4bc4ec847a06e7de981e81c9bb116cf" id="r_ad4bc4ec847a06e7de981e81c9bb116cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad4bc4ec847a06e7de981e81c9bb116cf">GTEST_TEST_CLASS_NAME_</a>(test_suite_name,  test_name)</td></tr>
+<tr class="separator:ad4bc4ec847a06e7de981e81c9bb116cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab43103f7842de04474e362689f782a46" id="r_ab43103f7842de04474e362689f782a46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab43103f7842de04474e362689f782a46">GTEST_TEST_</a>(test_suite_name,  test_name,  parent_class,  parent_id)</td></tr>
+<tr class="separator:ab43103f7842de04474e362689f782a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:ac3d3419bbcf73bcb7dc93989970048cf" id="r_ac3d3419bbcf73bcb7dc93989970048cf"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classtesting_1_1internal_1_1_floating_point.html">FloatingPoint</a>&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#ac3d3419bbcf73bcb7dc93989970048cf">Float</a></td></tr>
+<tr class="separator:ac3d3419bbcf73bcb7dc93989970048cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af563307a75d69c5d5bf473780f4ca336" id="r_af563307a75d69c5d5bf473780f4ca336"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classtesting_1_1internal_1_1_floating_point.html">FloatingPoint</a>&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#af563307a75d69c5d5bf473780f4ca336">Double</a></td></tr>
+<tr class="separator:af563307a75d69c5d5bf473780f4ca336"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac535957ba2fde769ce297f9b23db057d" id="r_ac535957ba2fde769ce297f9b23db057d"><td class="memItemLeft" align="right" valign="top">typedef const void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#ac535957ba2fde769ce297f9b23db057d">TypeId</a></td></tr>
+<tr class="separator:ac535957ba2fde769ce297f9b23db057d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e8c5ade01817804b00f3372a643678e" id="r_a7e8c5ade01817804b00f3372a643678e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a7e8c5ade01817804b00f3372a643678e">SetUpTestSuiteFunc</a> = void (*)()</td></tr>
+<tr class="separator:a7e8c5ade01817804b00f3372a643678e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac06fe089a574d6d796891b980c9469b8" id="r_ac06fe089a574d6d796891b980c9469b8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#ac06fe089a574d6d796891b980c9469b8">TearDownTestSuiteFunc</a> = void (*)()</td></tr>
+<tr class="separator:ac06fe089a574d6d796891b980c9469b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc1857596c0f3d5affe5e64342b11250" id="r_acc1857596c0f3d5affe5e64342b11250"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#acc1857596c0f3d5affe5e64342b11250">SetUpTearDownSuiteFuncType</a> = void (*)()</td></tr>
+<tr class="separator:acc1857596c0f3d5affe5e64342b11250"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a501b7675703256e565a6d487b3da9b95" id="r_a501b7675703256e565a6d487b3da9b95"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a501b7675703256e565a6d487b3da9b95">TypedTestCasePState</a> = TypedTestSuitePState</td></tr>
+<tr class="separator:a501b7675703256e565a6d487b3da9b95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a352c9f642298e3ae8c7eb84e3278ba65" id="r_a352c9f642298e3ae8c7eb84e3278ba65"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a352c9f642298e3ae8c7eb84e3278ba65">IsContainer</a></td></tr>
+<tr class="separator:a352c9f642298e3ae8c7eb84e3278ba65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7702df52e064b640254945414578e90c" id="r_a7702df52e064b640254945414578e90c"><td class="memItemLeft" align="right" valign="top">typedef char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a7702df52e064b640254945414578e90c">IsNotContainer</a></td></tr>
+<tr class="separator:a7702df52e064b640254945414578e90c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:ad67c869ce85bd645cacb0ba89b993feb" id="r_ad67c869ce85bd645cacb0ba89b993feb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal_1_1edit__distance.html#ad67c869ce85bd645cacb0ba89b993feb">EditType</a> { <a class="el" href="namespacetesting_1_1internal_1_1edit__distance.html#ad67c869ce85bd645cacb0ba89b993feba01e3df29bad591c9c7e256a5090662b8">kMatch</a>
+, <a class="el" href="namespacetesting_1_1internal_1_1edit__distance.html#ad67c869ce85bd645cacb0ba89b993feba8d20f6cca2d49a8732f535cfe28812c8">kAdd</a>
+, <a class="el" href="namespacetesting_1_1internal_1_1edit__distance.html#ad67c869ce85bd645cacb0ba89b993feba7b8140e312f42dd2073bae2374136137">kRemove</a>
+, <a class="el" href="namespacetesting_1_1internal_1_1edit__distance.html#ad67c869ce85bd645cacb0ba89b993feba9219852c065abae302e91604e5d3594d">kReplace</a>
+ }</td></tr>
+<tr class="separator:ad67c869ce85bd645cacb0ba89b993feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a8fcb82321cbb24ec51b35d6e59764433" id="r_a8fcb82321cbb24ec51b35d6e59764433"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a8fcb82321cbb24ec51b35d6e59764433"><td class="memTemplItemLeft" align="right" valign="top">::std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetesting.html#a8fcb82321cbb24ec51b35d6e59764433">PrintToString</a> (const T &amp;value)</td></tr>
+<tr class="separator:a8fcb82321cbb24ec51b35d6e59764433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03976378124361dddf218c46dc500e5d" id="r_a03976378124361dddf218c46dc500e5d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gtest-port_8h.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a03976378124361dddf218c46dc500e5d">AppendUserMessage</a> (const std::string &amp;gtest_msg, const <a class="el" href="classtesting_1_1_message.html">Message</a> &amp;user_msg)</td></tr>
+<tr class="separator:a03976378124361dddf218c46dc500e5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b69c8f2b38f31e87dabf300d7e46903" id="r_a5b69c8f2b38f31e87dabf300d7e46903"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gtest-port_8h.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> std::vector&lt; <a class="el" href="namespacetesting_1_1internal_1_1edit__distance.html#ad67c869ce85bd645cacb0ba89b993feb">EditType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal_1_1edit__distance.html#a5b69c8f2b38f31e87dabf300d7e46903">CalculateOptimalEdits</a> (const std::vector&lt; size_t &gt; &amp;left, const std::vector&lt; size_t &gt; &amp;right)</td></tr>
+<tr class="separator:a5b69c8f2b38f31e87dabf300d7e46903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96065c74c4a4787a51ad9e58f13a4068" id="r_a96065c74c4a4787a51ad9e58f13a4068"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gtest-port_8h.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> std::vector&lt; <a class="el" href="namespacetesting_1_1internal_1_1edit__distance.html#ad67c869ce85bd645cacb0ba89b993feb">EditType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal_1_1edit__distance.html#a96065c74c4a4787a51ad9e58f13a4068">CalculateOptimalEdits</a> (const std::vector&lt; std::string &gt; &amp;left, const std::vector&lt; std::string &gt; &amp;right)</td></tr>
+<tr class="separator:a96065c74c4a4787a51ad9e58f13a4068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecdbfe099d02a92d9ddb0a6e229fdcd3" id="r_aecdbfe099d02a92d9ddb0a6e229fdcd3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gtest-port_8h.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal_1_1edit__distance.html#aecdbfe099d02a92d9ddb0a6e229fdcd3">CreateUnifiedDiff</a> (const std::vector&lt; std::string &gt; &amp;left, const std::vector&lt; std::string &gt; &amp;right, size_t context=2)</td></tr>
+<tr class="separator:aecdbfe099d02a92d9ddb0a6e229fdcd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ee55ad3c9c1624e5dd9f31e497a2231" id="r_a9ee55ad3c9c1624e5dd9f31e497a2231"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gtest-port_8h.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> AssertionResult&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a9ee55ad3c9c1624e5dd9f31e497a2231">EqFailure</a> (const char *expected_expression, const char *actual_expression, const std::string &amp;expected_value, const std::string &amp;actual_value, bool ignoring_case)</td></tr>
+<tr class="separator:a9ee55ad3c9c1624e5dd9f31e497a2231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1695f7d1559c009775af3911bd8370b" id="r_ae1695f7d1559c009775af3911bd8370b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gtest-port_8h.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#ae1695f7d1559c009775af3911bd8370b">GetBoolAssertionFailureMessage</a> (const AssertionResult &amp;assertion_result, const char *expression_text, const char *actual_predicate_value, const char *expected_predicate_value)</td></tr>
+<tr class="separator:ae1695f7d1559c009775af3911bd8370b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a355043c4b5e1fa83312afadc5c975c8f" id="r_a355043c4b5e1fa83312afadc5c975c8f"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a355043c4b5e1fa83312afadc5c975c8f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacetesting_1_1internal.html#ac535957ba2fde769ce297f9b23db057d">TypeId</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a355043c4b5e1fa83312afadc5c975c8f">GetTypeId</a> ()</td></tr>
+<tr class="separator:a355043c4b5e1fa83312afadc5c975c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4406515630591b54fcdf093991b14e3" id="r_af4406515630591b54fcdf093991b14e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gtest-port_8h.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> <a class="el" href="namespacetesting_1_1internal.html#ac535957ba2fde769ce297f9b23db057d">TypeId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#af4406515630591b54fcdf093991b14e3">GetTestTypeId</a> ()</td></tr>
+<tr class="separator:af4406515630591b54fcdf093991b14e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01c65336456495aafa5c552f308d6080" id="r_a01c65336456495aafa5c552f308d6080"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacetesting_1_1internal.html#acc1857596c0f3d5affe5e64342b11250">SetUpTearDownSuiteFuncType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a01c65336456495aafa5c552f308d6080">GetNotDefaultOrNull</a> (<a class="el" href="namespacetesting_1_1internal.html#acc1857596c0f3d5affe5e64342b11250">SetUpTearDownSuiteFuncType</a> a, <a class="el" href="namespacetesting_1_1internal.html#acc1857596c0f3d5affe5e64342b11250">SetUpTearDownSuiteFuncType</a> def)</td></tr>
+<tr class="separator:a01c65336456495aafa5c552f308d6080"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f2ce7a10d6b42874c7bdb5056fd7953" id="r_a2f2ce7a10d6b42874c7bdb5056fd7953"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gtest-port_8h.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> <a class="el" href="classtesting_1_1_test_info.html">TestInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a2f2ce7a10d6b42874c7bdb5056fd7953">MakeAndRegisterTestInfo</a> (std::string test_suite_name, const char *name, const char *type_param, const char *value_param, <a class="el" href="structtesting_1_1internal_1_1_code_location.html">CodeLocation</a> code_location, <a class="el" href="namespacetesting_1_1internal.html#ac535957ba2fde769ce297f9b23db057d">TypeId</a> fixture_class_id, <a class="el" href="namespacetesting_1_1internal.html#a7e8c5ade01817804b00f3372a643678e">SetUpTestSuiteFunc</a> set_up_tc, <a class="el" href="namespacetesting_1_1internal.html#ac06fe089a574d6d796891b980c9469b8">TearDownTestSuiteFunc</a> tear_down_tc, <a class="el" href="classtesting_1_1internal_1_1_test_factory_base.html">TestFactoryBase</a> *factory)</td></tr>
+<tr class="separator:a2f2ce7a10d6b42874c7bdb5056fd7953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcf66fcfdb8c336eba8636bc8b49b4aa" id="r_abcf66fcfdb8c336eba8636bc8b49b4aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gtest-port_8h.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#abcf66fcfdb8c336eba8636bc8b49b4aa">SkipPrefix</a> (const char *prefix, const char **pstr)</td></tr>
+<tr class="separator:abcf66fcfdb8c336eba8636bc8b49b4aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f32a38d8827226d6da80c733b562ee0" id="r_a7f32a38d8827226d6da80c733b562ee0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a7f32a38d8827226d6da80c733b562ee0">GTEST_DISABLE_MSC_WARNINGS_PUSH_</a> (4251) class <a class="el" href="gtest-port_8h.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> TypedTestSuitePState</td></tr>
+<tr class="separator:a7f32a38d8827226d6da80c733b562ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf64f8f4771eb1a90c96411825ea8797" id="r_aaf64f8f4771eb1a90c96411825ea8797"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#aaf64f8f4771eb1a90c96411825ea8797">SkipComma</a> (const char *str)</td></tr>
+<tr class="separator:aaf64f8f4771eb1a90c96411825ea8797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c79486cde107036f2aa8663c28d5ed7" id="r_a7c79486cde107036f2aa8663c28d5ed7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a7c79486cde107036f2aa8663c28d5ed7">GetPrefixUntilComma</a> (const char *str)</td></tr>
+<tr class="separator:a7c79486cde107036f2aa8663c28d5ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8c34e1340606a530d4637394472f191" id="r_ac8c34e1340606a530d4637394472f191"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#ac8c34e1340606a530d4637394472f191">SplitString</a> (const ::std::string &amp;str, char delimiter, ::std::vector&lt;::std::string &gt; *dest)</td></tr>
+<tr class="separator:ac8c34e1340606a530d4637394472f191"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87f5467d2eec485d517fdcfd329f2e51" id="r_a87f5467d2eec485d517fdcfd329f2e51"><td class="memTemplParams" colspan="2">template&lt;typename NameGenerator &gt; </td></tr>
+<tr class="memitem:a87f5467d2eec485d517fdcfd329f2e51"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a87f5467d2eec485d517fdcfd329f2e51">GenerateNamesRecursively</a> (<a class="el" href="structtesting_1_1internal_1_1_none.html">internal::None</a>, std::vector&lt; std::string &gt; *, int)</td></tr>
+<tr class="separator:a87f5467d2eec485d517fdcfd329f2e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed4c1b328102a9bc1b0fc3b9d4b9d765" id="r_aed4c1b328102a9bc1b0fc3b9d4b9d765"><td class="memTemplParams" colspan="2">template&lt;typename NameGenerator , typename <a class="el" href="structtesting_1_1internal_1_1_types.html">Types</a> &gt; </td></tr>
+<tr class="memitem:aed4c1b328102a9bc1b0fc3b9d4b9d765"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#aed4c1b328102a9bc1b0fc3b9d4b9d765">GenerateNamesRecursively</a> (<a class="el" href="structtesting_1_1internal_1_1_types.html">Types</a>, std::vector&lt; std::string &gt; *result, int i)</td></tr>
+<tr class="separator:aed4c1b328102a9bc1b0fc3b9d4b9d765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c1d9e9bc43804724c60153e7318c287" id="r_a7c1d9e9bc43804724c60153e7318c287"><td class="memTemplParams" colspan="2">template&lt;typename NameGenerator , typename <a class="el" href="structtesting_1_1internal_1_1_types.html">Types</a> &gt; </td></tr>
+<tr class="memitem:a7c1d9e9bc43804724c60153e7318c287"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a7c1d9e9bc43804724c60153e7318c287">GenerateNames</a> ()</td></tr>
+<tr class="separator:a7c1d9e9bc43804724c60153e7318c287"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7d185e649b31499991015ab988a26a8" id="r_ad7d185e649b31499991015ab988a26a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gtest-port_8h.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#ad7d185e649b31499991015ab988a26a8">RegisterTypeParameterizedTestSuite</a> (const char *test_suite_name, <a class="el" href="structtesting_1_1internal_1_1_code_location.html">CodeLocation</a> code_location)</td></tr>
+<tr class="separator:ad7d185e649b31499991015ab988a26a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8497a7f1f17bc60994a8c0b84a16663" id="r_ad8497a7f1f17bc60994a8c0b84a16663"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gtest-port_8h.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#ad8497a7f1f17bc60994a8c0b84a16663">RegisterTypeParameterizedTestSuiteInstantiation</a> (const char *case_name)</td></tr>
+<tr class="separator:ad8497a7f1f17bc60994a8c0b84a16663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b971b541620715daec6c59d0077e53c" id="r_a3b971b541620715daec6c59d0077e53c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gtest-port_8h.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a3b971b541620715daec6c59d0077e53c">GetCurrentOsStackTraceExceptTop</a> (int skip_count)</td></tr>
+<tr class="separator:a3b971b541620715daec6c59d0077e53c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af72a7a7eee6997f4ed9e18d9620a7b87" id="r_af72a7a7eee6997f4ed9e18d9620a7b87"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gtest-port_8h.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#af72a7a7eee6997f4ed9e18d9620a7b87">AlwaysTrue</a> ()</td></tr>
+<tr class="separator:af72a7a7eee6997f4ed9e18d9620a7b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8a8bf58ff82fd6e6989ff30d9a17932" id="r_ab8a8bf58ff82fd6e6989ff30d9a17932"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#ab8a8bf58ff82fd6e6989ff30d9a17932">AlwaysFalse</a> ()</td></tr>
+<tr class="separator:ab8a8bf58ff82fd6e6989ff30d9a17932"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a808a5c4b606857124c5cc2f18fec6f48" id="r_a808a5c4b606857124c5cc2f18fec6f48"><td class="memTemplParams" colspan="2">template&lt;class C , class Iterator  = decltype(::std::declval&lt;const C&amp;&gt;().begin()), class  = decltype(::std::declval&lt;const C&amp;&gt;().end()), class  = decltype(++::std::declval&lt;Iterator&amp;&gt;()), class  = decltype(*::std::declval&lt;Iterator&gt;()), class  = typename C::const_iterator&gt; </td></tr>
+<tr class="memitem:a808a5c4b606857124c5cc2f18fec6f48"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacetesting_1_1internal.html#a352c9f642298e3ae8c7eb84e3278ba65">IsContainer</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a808a5c4b606857124c5cc2f18fec6f48">IsContainerTest</a> (int)</td></tr>
+<tr class="separator:a808a5c4b606857124c5cc2f18fec6f48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad8180962d01380f3db3e97b3815c85f" id="r_aad8180962d01380f3db3e97b3815c85f"><td class="memTemplParams" colspan="2">template&lt;class C &gt; </td></tr>
+<tr class="memitem:aad8180962d01380f3db3e97b3815c85f"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacetesting_1_1internal.html#a7702df52e064b640254945414578e90c">IsNotContainer</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#aad8180962d01380f3db3e97b3815c85f">IsContainerTest</a> (long)</td></tr>
+<tr class="separator:aad8180962d01380f3db3e97b3815c85f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4290fdb0c0d7ce6f09d11d80ebe064e3" id="r_a4290fdb0c0d7ce6f09d11d80ebe064e3"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a4290fdb0c0d7ce6f09d11d80ebe064e3"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a4290fdb0c0d7ce6f09d11d80ebe064e3">ArrayEq</a> (const T *lhs, size_t size, const U *rhs)</td></tr>
+<tr class="separator:a4290fdb0c0d7ce6f09d11d80ebe064e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6626d726cb8b7f0a8eea4fff8aefe092" id="r_a6626d726cb8b7f0a8eea4fff8aefe092"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a6626d726cb8b7f0a8eea4fff8aefe092"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a6626d726cb8b7f0a8eea4fff8aefe092">ArrayEq</a> (const T &amp;lhs, const U &amp;rhs)</td></tr>
+<tr class="separator:a6626d726cb8b7f0a8eea4fff8aefe092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2bb7098fd66dabb47391adb54ae8a5d" id="r_af2bb7098fd66dabb47391adb54ae8a5d"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U , size_t N&gt; </td></tr>
+<tr class="memitem:af2bb7098fd66dabb47391adb54ae8a5d"><td class="memTemplItemLeft" align="right" valign="top">bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#af2bb7098fd66dabb47391adb54ae8a5d">ArrayEq</a> (const T(&amp;lhs)[N], const U(&amp;rhs)[N])</td></tr>
+<tr class="separator:af2bb7098fd66dabb47391adb54ae8a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eb45c7796d427d0a92bff88116a8bea" id="r_a9eb45c7796d427d0a92bff88116a8bea"><td class="memTemplParams" colspan="2">template&lt;typename Iter , typename Element &gt; </td></tr>
+<tr class="memitem:a9eb45c7796d427d0a92bff88116a8bea"><td class="memTemplItemLeft" align="right" valign="top">Iter&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a9eb45c7796d427d0a92bff88116a8bea">ArrayAwareFind</a> (Iter begin, Iter end, const Element &amp;elem)</td></tr>
+<tr class="separator:a9eb45c7796d427d0a92bff88116a8bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1dbf4f4a6f74c5943c1d4903bd48b72" id="r_ac1dbf4f4a6f74c5943c1d4903bd48b72"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:ac1dbf4f4a6f74c5943c1d4903bd48b72"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#ac1dbf4f4a6f74c5943c1d4903bd48b72">CopyArray</a> (const T *from, size_t size, U *to)</td></tr>
+<tr class="separator:ac1dbf4f4a6f74c5943c1d4903bd48b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c92438bef248f9b9f766676da393e25" id="r_a4c92438bef248f9b9f766676da393e25"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U &gt; </td></tr>
+<tr class="memitem:a4c92438bef248f9b9f766676da393e25"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a4c92438bef248f9b9f766676da393e25">CopyArray</a> (const T &amp;from, U *to)</td></tr>
+<tr class="separator:a4c92438bef248f9b9f766676da393e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c4a0d48db65f720e04e082a55d5303a" id="r_a0c4a0d48db65f720e04e082a55d5303a"><td class="memTemplParams" colspan="2">template&lt;typename T , typename U , size_t N&gt; </td></tr>
+<tr class="memitem:a0c4a0d48db65f720e04e082a55d5303a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a0c4a0d48db65f720e04e082a55d5303a">CopyArray</a> (const T(&amp;from)[N], U(*to)[N])</td></tr>
+<tr class="separator:a0c4a0d48db65f720e04e082a55d5303a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab697f34709661530515501e9cb1a4310" id="r_ab697f34709661530515501e9cb1a4310"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#ab697f34709661530515501e9cb1a4310">GTEST_INTERNAL_DEPRECATED</a> (&quot;INSTANTIATE_TEST_CASE_P is deprecated, please use &quot; &quot;INSTANTIATE_TEST_SUITE_P&quot;) const expr bool InstantiateTestCase_P_IsDeprecated()</td></tr>
+<tr class="separator:ab697f34709661530515501e9cb1a4310"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc818585238f4b29e5858dcfbe85d20" id="r_afbc818585238f4b29e5858dcfbe85d20"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#afbc818585238f4b29e5858dcfbe85d20">GTEST_INTERNAL_DEPRECATED</a> (&quot;TYPED_TEST_CASE_P is deprecated, please use &quot; &quot;TYPED_TEST_SUITE_P&quot;) const expr bool TypedTestCase_P_IsDeprecated()</td></tr>
+<tr class="separator:afbc818585238f4b29e5858dcfbe85d20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae2cfd2f0b3b6723758a0b3fdc8cea6c" id="r_aae2cfd2f0b3b6723758a0b3fdc8cea6c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#aae2cfd2f0b3b6723758a0b3fdc8cea6c">GTEST_INTERNAL_DEPRECATED</a> (&quot;TYPED_TEST_CASE is deprecated, please use &quot; &quot;TYPED_TEST_SUITE&quot;) const expr bool TypedTestCaseIsDeprecated()</td></tr>
+<tr class="separator:aae2cfd2f0b3b6723758a0b3fdc8cea6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e7210c5d52137e4eb0a53812443967b" id="r_a1e7210c5d52137e4eb0a53812443967b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a1e7210c5d52137e4eb0a53812443967b">GTEST_INTERNAL_DEPRECATED</a> (&quot;REGISTER_TYPED_TEST_CASE_P is deprecated, please use &quot; &quot;REGISTER_TYPED_TEST_SUITE_P&quot;) const expr bool RegisterTypedTestCase_P_IsDeprecated()</td></tr>
+<tr class="separator:a1e7210c5d52137e4eb0a53812443967b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ebba12657c276ebe1e4ee9208e1945e" id="r_a2ebba12657c276ebe1e4ee9208e1945e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a2ebba12657c276ebe1e4ee9208e1945e">GTEST_INTERNAL_DEPRECATED</a> (&quot;INSTANTIATE_TYPED_TEST_CASE_P is deprecated, please use &quot; &quot;INSTANTIATE_TYPED_TEST_SUITE_P&quot;) const expr bool InstantiateTypedTestCase_P_IsDeprecated()</td></tr>
+<tr class="separator:a2ebba12657c276ebe1e4ee9208e1945e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a92a1dda502ba568fa11548daee9815be" id="r_a92a1dda502ba568fa11548daee9815be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="gtest-port_8h.html#aa73be6f0ba4a7456180a94904ce17790">GTEST_API_</a> const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetesting_1_1internal.html#a92a1dda502ba568fa11548daee9815be">kStackTraceMarker</a> []</td></tr>
+<tr class="separator:a92a1dda502ba568fa11548daee9815be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="ae3c336cbe1ae2bd1b1d019333e4428a0" name="ae3c336cbe1ae2bd1b1d019333e4428a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3c336cbe1ae2bd1b1d019333e4428a0">&#9670;&#160;</a></span>GTEST_CONCAT_TOKEN_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_CONCAT_TOKEN_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>foo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>bar</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#aa39fb5346d3573feebe4257cb3a01fde">GTEST_CONCAT_TOKEN_IMPL_</a>(foo, bar)</div>
+<div class="ttc" id="agtest-internal_8h_html_aa39fb5346d3573feebe4257cb3a01fde"><div class="ttname"><a href="#aa39fb5346d3573feebe4257cb3a01fde">GTEST_CONCAT_TOKEN_IMPL_</a></div><div class="ttdeci">#define GTEST_CONCAT_TOKEN_IMPL_(foo, bar)</div><div class="ttdef"><b>Definition</b> gtest-internal.h:83</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa39fb5346d3573feebe4257cb3a01fde" name="aa39fb5346d3573feebe4257cb3a01fde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa39fb5346d3573feebe4257cb3a01fde">&#9670;&#160;</a></span>GTEST_CONCAT_TOKEN_IMPL_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_CONCAT_TOKEN_IMPL_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>foo</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>bar</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">foo##bar</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a0f9a4c3ea82cc7bf4478eaffdc168358" name="a0f9a4c3ea82cc7bf4478eaffdc168358"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f9a4c3ea82cc7bf4478eaffdc168358">&#9670;&#160;</a></span>GTEST_FATAL_FAILURE_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_FATAL_FAILURE_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">  <span class="keywordflow">return</span> <a class="code hl_define" href="#a94c73d5368ec946bc354d0992ad00810">GTEST_MESSAGE_</a>(message, ::testing::TestPartResult::kFatalFailure)</div>
+<div class="ttc" id="agtest-internal_8h_html_a94c73d5368ec946bc354d0992ad00810"><div class="ttname"><a href="#a94c73d5368ec946bc354d0992ad00810">GTEST_MESSAGE_</a></div><div class="ttdeci">#define GTEST_MESSAGE_(message, result_type)</div><div class="ttdef"><b>Definition</b> gtest-internal.h:1292</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a94c73d5368ec946bc354d0992ad00810" name="a94c73d5368ec946bc354d0992ad00810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94c73d5368ec946bc354d0992ad00810">&#9670;&#160;</a></span>GTEST_MESSAGE_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_MESSAGE_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>message</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>result_type</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="#a8d70025c45a47a493780746dfd66d565">GTEST_MESSAGE_AT_</a>(__FILE__, __LINE__, message, result_type)</div>
+<div class="ttc" id="agtest-internal_8h_html_a8d70025c45a47a493780746dfd66d565"><div class="ttname"><a href="#a8d70025c45a47a493780746dfd66d565">GTEST_MESSAGE_AT_</a></div><div class="ttdeci">#define GTEST_MESSAGE_AT_(file, line, message, result_type)</div><div class="ttdef"><b>Definition</b> gtest-internal.h:1288</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8d70025c45a47a493780746dfd66d565" name="a8d70025c45a47a493780746dfd66d565"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d70025c45a47a493780746dfd66d565">&#9670;&#160;</a></span>GTEST_MESSAGE_AT_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_MESSAGE_AT_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>file</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>line</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>message</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>result_type</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">  <a class="code hl_class" href="classtesting_1_1internal_1_1_assert_helper.html">::testing::internal::AssertHelper</a>(result_type, file, line, message) = \</div>
+<div class="line">      ::testing::Message()</div>
+<div class="ttc" id="aclasstesting_1_1internal_1_1_assert_helper_html"><div class="ttname"><a href="classtesting_1_1internal_1_1_assert_helper.html">testing::internal::AssertHelper</a></div><div class="ttdef"><b>Definition</b> gtest.h:1615</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6cb7482cfa03661a91c698eb5895f642" name="a6cb7482cfa03661a91c698eb5895f642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cb7482cfa03661a91c698eb5895f642">&#9670;&#160;</a></span>GTEST_NONFATAL_FAILURE_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_NONFATAL_FAILURE_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="#a94c73d5368ec946bc354d0992ad00810">GTEST_MESSAGE_</a>(message, ::testing::TestPartResult::kNonFatalFailure)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a874567b176266188fabfffb8393267ce" name="a874567b176266188fabfffb8393267ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a874567b176266188fabfffb8393267ce">&#9670;&#160;</a></span>GTEST_REMOVE_REFERENCE_AND_CONST_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_REMOVE_REFERENCE_AND_CONST_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>T</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">  <span class="keyword">typename</span> std::remove_const&lt;typename std::remove_reference&lt;T&gt;::type&gt;::type</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab75ed7a6cd9e466944ce680c1c07ab47" name="ab75ed7a6cd9e466944ce680c1c07ab47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab75ed7a6cd9e466944ce680c1c07ab47">&#9670;&#160;</a></span>GTEST_SKIP_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_SKIP_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">  <span class="keywordflow">return</span> <a class="code hl_define" href="#a94c73d5368ec946bc354d0992ad00810">GTEST_MESSAGE_</a>(message, ::testing::TestPartResult::kSkip)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa007c0351c2bbe7618989e40cc146769" name="aa007c0351c2bbe7618989e40cc146769"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa007c0351c2bbe7618989e40cc146769">&#9670;&#160;</a></span>GTEST_STRINGIFY_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_STRINGIFY_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><a class="code hl_define" href="#aabef45c1f5071bc00793229c981855d8">GTEST_STRINGIFY_HELPER_</a>(__VA_ARGS__, )</div>
+<div class="ttc" id="agtest-internal_8h_html_aabef45c1f5071bc00793229c981855d8"><div class="ttname"><a href="#aabef45c1f5071bc00793229c981855d8">GTEST_STRINGIFY_HELPER_</a></div><div class="ttdeci">#define GTEST_STRINGIFY_HELPER_(name,...)</div><div class="ttdef"><b>Definition</b> gtest-internal.h:94</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aabef45c1f5071bc00793229c981855d8" name="aabef45c1f5071bc00793229c981855d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabef45c1f5071bc00793229c981855d8">&#9670;&#160;</a></span>GTEST_STRINGIFY_HELPER_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_STRINGIFY_HELPER_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em></em></span>...&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line"><span class="preprocessor">#name</span></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abe012b550eb3807e8c49f7e161bd1567" name="abe012b550eb3807e8c49f7e161bd1567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe012b550eb3807e8c49f7e161bd1567">&#9670;&#160;</a></span>GTEST_SUCCESS_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_SUCCESS_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>message</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">  <a class="code hl_define" href="#a94c73d5368ec946bc354d0992ad00810">GTEST_MESSAGE_</a>(message, ::testing::TestPartResult::kSuccess)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2e66f7dfc5cb87e0fa0289f653173c69" name="a2e66f7dfc5cb87e0fa0289f653173c69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e66f7dfc5cb87e0fa0289f653173c69">&#9670;&#160;</a></span>GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>statement</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">  <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacetesting_1_1internal.html#af72a7a7eee6997f4ed9e18d9620a7b87">::testing::internal::AlwaysTrue</a>()) {                        \</div>
+<div class="line">    statement;                                                    \</div>
+<div class="line">  } <span class="keywordflow">else</span>                     <span class="comment">/* NOLINT */</span>                         \</div>
+<div class="line">    static_assert(<span class="keyword">true</span>, <span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="ttc" id="anamespacetesting_1_1internal_html_af72a7a7eee6997f4ed9e18d9620a7b87"><div class="ttname"><a href="namespacetesting_1_1internal.html#af72a7a7eee6997f4ed9e18d9620a7b87">testing::internal::AlwaysTrue</a></div><div class="ttdeci">GTEST_API_ bool AlwaysTrue()</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab43103f7842de04474e362689f782a46" name="ab43103f7842de04474e362689f782a46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab43103f7842de04474e362689f782a46">&#9670;&#160;</a></span>GTEST_TEST_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_TEST_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>test_suite_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>test_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>parent_class</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>parent_id</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af48bbd26d54d4afc5e4cef39b1c76ba3" name="af48bbd26d54d4afc5e4cef39b1c76ba3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af48bbd26d54d4afc5e4cef39b1c76ba3">&#9670;&#160;</a></span>GTEST_TEST_ANY_THROW_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_TEST_ANY_THROW_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>statement</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>fail</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">  GTEST_AMBIGUOUS_ELSE_BLOCKER_                                      \</div>
+<div class="line">  if (<a class="code hl_function" href="namespacetesting_1_1internal.html#af72a7a7eee6997f4ed9e18d9620a7b87">::testing::internal::AlwaysTrue</a>()) {                           \</div>
+<div class="line">    <span class="keywordtype">bool</span> gtest_caught_any = <span class="keyword">false</span>;                                   \</div>
+<div class="line">    <span class="keywordflow">try</span> {                                                            \</div>
+<div class="line">      GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_(statement);     \</div>
+<div class="line">    } <span class="keywordflow">catch</span> (...) {                                                  \</div>
+<div class="line">      gtest_caught_any = <span class="keyword">true</span>;                                       \</div>
+<div class="line">    }                                                                \</div>
+<div class="line">    if (!gtest_caught_any) {                                         \</div>
+<div class="line">      <span class="keywordflow">goto</span> <a class="code hl_define" href="#ae3c336cbe1ae2bd1b1d019333e4428a0">GTEST_CONCAT_TOKEN_</a>(gtest_label_testanythrow_, __LINE__); \</div>
+<div class="line">    }                                                                \</div>
+<div class="line">  } else                                                             \</div>
+<div class="line">    GTEST_CONCAT_TOKEN_(gtest_label_testanythrow_, __LINE__)         \</div>
+<div class="line">        : fail(<span class="stringliteral">&quot;Expected: &quot;</span> #statement                               \</div>
+<div class="line">               <span class="stringliteral">&quot; throws an exception.\n&quot;</span>                             \</div>
+<div class="line">               <span class="stringliteral">&quot;  Actual: it doesn&#39;t.&quot;</span>)</div>
+<div class="ttc" id="agtest-internal_8h_html_ae3c336cbe1ae2bd1b1d019333e4428a0"><div class="ttname"><a href="#ae3c336cbe1ae2bd1b1d019333e4428a0">GTEST_CONCAT_TOKEN_</a></div><div class="ttdeci">#define GTEST_CONCAT_TOKEN_(foo, bar)</div><div class="ttdef"><b>Definition</b> gtest-internal.h:82</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae8912365e1d00a7a2bd248268c64aa1a" name="ae8912365e1d00a7a2bd248268c64aa1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8912365e1d00a7a2bd248268c64aa1a">&#9670;&#160;</a></span>GTEST_TEST_BOOLEAN_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_TEST_BOOLEAN_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>expression</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>actual</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>expected</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>fail</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">  GTEST_AMBIGUOUS_ELSE_BLOCKER_                                       \</div>
+<div class="line">  if (const ::testing::AssertionResult gtest_ar_ =                    \</div>
+<div class="line">          ::testing::AssertionResult(expression))                     \</div>
+<div class="line">    ;                                                                 \</div>
+<div class="line">  else                                                                \</div>
+<div class="line">    fail(<a class="code hl_function" href="namespacetesting_1_1internal.html#ae1695f7d1559c009775af3911bd8370b">::testing::internal::GetBoolAssertionFailureMessage</a>(         \</div>
+<div class="line">             gtest_ar_, text, #actual, #expected)                     \</div>
+<div class="line">             .c_str())</div>
+<div class="ttc" id="anamespacetesting_1_1internal_html_ae1695f7d1559c009775af3911bd8370b"><div class="ttname"><a href="namespacetesting_1_1internal.html#ae1695f7d1559c009775af3911bd8370b">testing::internal::GetBoolAssertionFailureMessage</a></div><div class="ttdeci">GTEST_API_ std::string GetBoolAssertionFailureMessage(const AssertionResult &amp;assertion_result, const char *expression_text, const char *actual_predicate_value, const char *expected_predicate_value)</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad4bc4ec847a06e7de981e81c9bb116cf" name="ad4bc4ec847a06e7de981e81c9bb116cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4bc4ec847a06e7de981e81c9bb116cf">&#9670;&#160;</a></span>GTEST_TEST_CLASS_NAME_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_TEST_CLASS_NAME_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>test_suite_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>test_name</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">  test_suite_name##_##test_name##_Test</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1b37a3c446836d33040f3266a6236081" name="a1b37a3c446836d33040f3266a6236081"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b37a3c446836d33040f3266a6236081">&#9670;&#160;</a></span>GTEST_TEST_NO_FATAL_FAILURE_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_TEST_NO_FATAL_FAILURE_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>statement</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>fail</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">  GTEST_AMBIGUOUS_ELSE_BLOCKER_                                     \</div>
+<div class="line">  if (<a class="code hl_function" href="namespacetesting_1_1internal.html#af72a7a7eee6997f4ed9e18d9620a7b87">::testing::internal::AlwaysTrue</a>()) {                          \</div>
+<div class="line">    const ::testing::internal::HasNewFatalFailureHelper             \</div>
+<div class="line">        gtest_fatal_failure_checker;                                \</div>
+<div class="line">    GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_(statement);      \</div>
+<div class="line">    if (gtest_fatal_failure_checker.has_new_fatal_failure()) {      \</div>
+<div class="line">      <span class="keywordflow">goto</span> <a class="code hl_define" href="#ae3c336cbe1ae2bd1b1d019333e4428a0">GTEST_CONCAT_TOKEN_</a>(gtest_label_testnofatal_, __LINE__); \</div>
+<div class="line">    }                                                               \</div>
+<div class="line">  } <span class="keywordflow">else</span> <span class="comment">/* NOLINT */</span>                                               \</div>
+<div class="line">    GTEST_CONCAT_TOKEN_(gtest_label_testnofatal_, __LINE__)         \</div>
+<div class="line">        : fail(<span class="stringliteral">&quot;Expected: &quot;</span> #statement                              \</div>
+<div class="line">               <span class="stringliteral">&quot; doesn&#39;t generate new fatal &quot;</span>                       \</div>
+<div class="line">               <span class="stringliteral">&quot;failures in the current thread.\n&quot;</span>                  \</div>
+<div class="line">               <span class="stringliteral">&quot;  Actual: it does.&quot;</span>)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9a109d026b5a904646437d7570e13581" name="a9a109d026b5a904646437d7570e13581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a109d026b5a904646437d7570e13581">&#9670;&#160;</a></span>GTEST_TEST_NO_THROW_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_TEST_NO_THROW_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>statement</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>fail</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">  GTEST_AMBIGUOUS_ELSE_BLOCKER_                                          \</div>
+<div class="line">  if (<a class="code hl_struct" href="structtesting_1_1internal_1_1_true_with_string.html">::testing::internal::TrueWithString</a> gtest_msg{}) {                 \</div>
+<div class="line">    <span class="keywordflow">try</span> {                                                                \</div>
+<div class="line">      GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_(statement);         \</div>
+<div class="line">    }                                                                    \</div>
+<div class="line">    GTEST_TEST_NO_THROW_CATCH_STD_EXCEPTION_()                           \</div>
+<div class="line">    catch (...) {                                                        \</div>
+<div class="line">      gtest_msg.value = <span class="stringliteral">&quot;it throws.&quot;</span>;                                    \</div>
+<div class="line">      <span class="keywordflow">goto</span> <a class="code hl_define" href="#ae3c336cbe1ae2bd1b1d019333e4428a0">GTEST_CONCAT_TOKEN_</a>(gtest_label_testnothrow_, __LINE__);      \</div>
+<div class="line">    }                                                                    \</div>
+<div class="line">  } else                                                                 \</div>
+<div class="line">    GTEST_CONCAT_TOKEN_(gtest_label_testnothrow_, __LINE__)              \</div>
+<div class="line">        : fail((<span class="stringliteral">&quot;Expected: &quot;</span> #statement <span class="stringliteral">&quot; doesn&#39;t throw an exception.\n&quot;</span> \</div>
+<div class="line">                <span class="stringliteral">&quot;  Actual: &quot;</span> +                                           \</div>
+<div class="line">                gtest_msg.value)                                         \</div>
+<div class="line">                   .c_str())</div>
+<div class="ttc" id="astructtesting_1_1internal_1_1_true_with_string_html"><div class="ttname"><a href="structtesting_1_1internal_1_1_true_with_string.html">testing::internal::TrueWithString</a></div><div class="ttdef"><b>Definition</b> gtest-internal.h:836</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9a6512b6cbf915c8611d21607351add7" name="a9a6512b6cbf915c8611d21607351add7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a6512b6cbf915c8611d21607351add7">&#9670;&#160;</a></span>GTEST_TEST_NO_THROW_CATCH_STD_EXCEPTION_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_TEST_NO_THROW_CATCH_STD_EXCEPTION_</td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f71db93eaf30b0cfca9612b9ac32106" name="a3f71db93eaf30b0cfca9612b9ac32106"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f71db93eaf30b0cfca9612b9ac32106">&#9670;&#160;</a></span>GTEST_TEST_THROW_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_TEST_THROW_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>statement</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>expected_exception</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>fail</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>値:</b><div class="fragment"><div class="line">  GTEST_AMBIGUOUS_ELSE_BLOCKER_                                             \</div>
+<div class="line">  if (<a class="code hl_struct" href="structtesting_1_1internal_1_1_true_with_string.html">::testing::internal::TrueWithString</a> gtest_msg{}) {                    \</div>
+<div class="line">    <span class="keywordtype">bool</span> gtest_caught_expected = <span class="keyword">false</span>;                                     \</div>
+<div class="line">    <span class="keywordflow">try</span> {                                                                   \</div>
+<div class="line">      GTEST_SUPPRESS_UNREACHABLE_CODE_WARNING_BELOW_(statement);            \</div>
+<div class="line">    } <span class="keywordflow">catch</span> (expected_exception <span class="keyword">const</span>&amp;) {                                   \</div>
+<div class="line">      gtest_caught_expected = <span class="keyword">true</span>;                                         \</div>
+<div class="line">    }                                                                       \</div>
+<div class="line">    GTEST_TEST_THROW_CATCH_STD_EXCEPTION_(statement, expected_exception)    \</div>
+<div class="line">    catch (...) {                                                           \</div>
+<div class="line">      gtest_msg.value = <span class="stringliteral">&quot;Expected: &quot;</span> #statement                             \</div>
+<div class="line">                        <span class="stringliteral">&quot; throws an exception of type &quot;</span> #expected_exception \</div>
+<div class="line">                        <span class="stringliteral">&quot;.\n  Actual: it throws a different type.&quot;</span>;         \</div>
+<div class="line">      <span class="keywordflow">goto</span> <a class="code hl_define" href="#ae3c336cbe1ae2bd1b1d019333e4428a0">GTEST_CONCAT_TOKEN_</a>(gtest_label_testthrow_, __LINE__);           \</div>
+<div class="line">    }                                                                       \</div>
+<div class="line">    if (!gtest_caught_expected) {                                           \</div>
+<div class="line">      gtest_msg.value = <span class="stringliteral">&quot;Expected: &quot;</span> #statement                             \</div>
+<div class="line">                        <span class="stringliteral">&quot; throws an exception of type &quot;</span> #expected_exception \</div>
+<div class="line">                        <span class="stringliteral">&quot;.\n  Actual: it throws nothing.&quot;</span>;                  \</div>
+<div class="line">      <span class="keywordflow">goto</span> <a class="code hl_define" href="#ae3c336cbe1ae2bd1b1d019333e4428a0">GTEST_CONCAT_TOKEN_</a>(gtest_label_testthrow_, __LINE__);           \</div>
+<div class="line">    }                                                                       \</div>
+<div class="line">  } <span class="keywordflow">else</span> <span class="comment">/*NOLINT*/</span>                                                         \</div>
+<div class="line">    GTEST_CONCAT_TOKEN_(gtest_label_testthrow_, __LINE__)                   \</div>
+<div class="line">        : fail(gtest_msg.value.c_str())</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4c79c1cc9a5769c48ef5e4b3aa52ce5c" name="a4c79c1cc9a5769c48ef5e4b3aa52ce5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c79c1cc9a5769c48ef5e4b3aa52ce5c">&#9670;&#160;</a></span>GTEST_TEST_THROW_CATCH_STD_EXCEPTION_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GTEST_TEST_THROW_CATCH_STD_EXCEPTION_</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>statement</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>expected_exception</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_13e138d54eb8818da29c3992edef070a.html">test</a></li><li class="navelem"><a class="el" href="dir_efc7c3ba06338a79d38f745cf30c2996.html">googletest</a></li><li class="navelem"><a class="el" href="dir_15a130e06e53ab2d0fb265f1b9039360.html">googletest</a></li><li class="navelem"><a class="el" href="dir_1533256d93414ccee2c21249e7b472ec.html">include</a></li><li class="navelem"><a class="el" href="dir_354e6af35b98b734e000626e717d7645.html">gtest</a></li><li class="navelem"><a class="el" href="dir_78d27ade63f5b955ce1b3897a4a62855.html">internal</a></li><li class="navelem"><a class="el" href="gtest-internal_8h.html">gtest-internal.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
+</body>
+</html>

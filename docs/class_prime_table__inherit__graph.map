@@ -1,0 +1,7 @@
+<map id="PrimeTable" name="PrimeTable">
+<area shape="rect" id="Node000001" title=" " alt="" coords="107,5,222,117"/>
+<area shape="rect" id="Node000002" href="$class_on_the_fly_prime_table.html" title=" " alt="" coords="5,187,140,277"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,132,99,188,94,186,125,129"/>
+<area shape="rect" id="Node000003" href="$class_pre_calculated_prime_table.html" title=" " alt="" coords="165,165,351,299"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="205,129,224,165,220,167,200,132"/>
+</map>

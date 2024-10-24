@@ -1,0 +1,12 @@
+<map id="core_armv8mbl.h" name="core_armv8mbl.h">
+<area shape="rect" id="Node000001" title="CMSIS Armv8&#45;M Baseline Core Peripheral Access Layer Header File" alt="" coords="93,5,214,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="73,155,137,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,32,48,50,29,64,13,81,9,91,9,99,18,117,37,132,60,146,58,150,34,137,14,120,3,101,3,90,8,79,25,60,46,45,91,27"/>
+<area shape="rect" id="Node000003" href="$cmsis__version_8h.html" title="CMSIS Core(M) Version definitions" alt="" coords="23,80,139,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="143,34,106,71,102,67,139,31"/>
+<area shape="rect" id="Node000004" href="$cmsis__compiler_8h.html" title="CMSIS compiler generic header file" alt="" coords="164,80,287,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="168,31,204,67,200,71,164,34"/>
+<area shape="rect" id="Node000005" href="$mpu__armv8_8h.html" title=" " alt="" coords="311,80,411,107"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="190,30,311,72,310,77,189,35"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="206,109,141,149,138,144,203,105"/>
+</map>

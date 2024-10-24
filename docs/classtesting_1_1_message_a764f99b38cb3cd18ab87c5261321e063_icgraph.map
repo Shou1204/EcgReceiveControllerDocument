@@ -1,0 +1,12 @@
+<map id="GetString" name="GetString">
+<area shape="rect" id="Node000001" title=" " alt="" coords="480,43,556,69"/>
+<area shape="rect" id="Node000002" href="$classtesting_1_1_message.html#a88a351ea6cb0a42238744a6565ab665f" title=" " alt="" coords="329,5,404,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="464,46,403,30,405,25,465,40"/>
+<area shape="rect" id="Node000003" href="$namespacetesting.html#ae899d580f107a7756f3444213e211504" title=" " alt="" coords="301,80,432,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="466,72,424,82,422,77,464,66"/>
+<area shape="poly" id="edge5_Node000003_Node000003" title=" " alt="" coords="392,67,383,61,366,59,351,61,343,65,341,71,345,78,340,81,335,71,338,62,349,56,366,53,385,56,395,63"/>
+<area shape="rect" id="Node000004" href="$gtest-matchers_8h.html#ae9b7a8d33bcb4bbad774b324eeeb23d6" title=" " alt="" coords="5,43,253,85"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="285,86,253,82,253,77,286,81"/>
+<area shape="rect" id="Node000005" href="$classtesting_1_1_message.html#a10ed20261816a387ba7f080a973de8e2" title=" " alt="" coords="87,109,171,136"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="286,106,172,120,171,115,285,101"/>
+</map>

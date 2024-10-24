@@ -1,7 +1,0 @@
-<map id="autoQrsHandler" name="autoQrsHandler">
-<area shape="rect" id="Node000001" title=" " alt="" coords="413,5,525,32"/>
-<area shape="rect" id="Node000002" href="$spi__receive_8c_af39d147b690c80c7947af19e81a0fe09.html#af39d147b690c80c7947af19e81a0fe09" title=" " alt="" coords="229,5,365,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="398,21,365,21,365,16,398,16"/>
-<area shape="rect" id="Node000003" href="$main_8c_a3df7021fe24cf874f8b1eec5bd5f4cb3.html#a3df7021fe24cf874f8b1eec5bd5f4cb3" title=" " alt="" coords="5,5,181,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="213,21,181,21,181,16,213,16"/>
-</map>

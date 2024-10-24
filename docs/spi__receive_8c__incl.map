@@ -1,0 +1,24 @@
+<map id="spi_receive.c" name="spi_receive.c">
+<area shape="rect" id="Node000001" title="本体へのUARTでの定期出力に関連する関数をを含むソースファイルです。" alt="" coords="172,5,270,32"/>
+<area shape="rect" id="Node000002" href="$spi__receive_8h.html" title=" " alt="" coords="30,155,128,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,34,104,145,100,142,207,31"/>
+<area shape="rect" id="Node000010" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="265,80,326,107"/>
+<area shape="poly" id="edge5_Node000001_Node000010" title=" " alt="" coords="236,31,274,67,270,71,232,34"/>
+<area shape="rect" id="Node000003" href="$ecg__data_8h.html" title=" " alt="" coords="321,229,406,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="129,179,306,224,305,229,128,184"/>
+<area shape="rect" id="Node000008" href="$filter_8h.html" title=" " alt="" coords="5,229,63,256"/>
+<area shape="poly" id="edge3_Node000002_Node000008" title=" " alt="" coords="74,183,52,217,48,215,69,180"/>
+<area shape="rect" id="Node000009" href="$synchro_8h.html" title=" " alt="" coords="87,229,165,256"/>
+<area shape="poly" id="edge4_Node000002_Node000009" title=" " alt="" coords="90,180,112,215,108,218,85,183"/>
+<area shape="poly" id="edge11_Node000010_Node000002" title=" " alt="" coords="266,107,132,152,131,147,264,102"/>
+<area shape="rect" id="Node000011" href="$handshake__receiver_8h.html" title=" " alt="" coords="153,155,302,181"/>
+<area shape="poly" id="edge6_Node000010_Node000011" title=" " alt="" coords="285,109,251,145,248,141,282,105"/>
+<area shape="rect" id="Node000012" href="$host__in_8h.html" title=" " alt="" coords="326,155,400,181"/>
+<area shape="poly" id="edge7_Node000010_Node000012" title=" " alt="" coords="309,105,343,141,339,145,305,109"/>
+<area shape="rect" id="Node000013" href="$host__out_8h.html" title=" " alt="" coords="425,155,507,181"/>
+<area shape="poly" id="edge9_Node000010_Node000013" title=" " alt="" coords="326,105,423,146,421,151,324,110"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="532,155,648,181"/>
+<area shape="poly" id="edge12_Node000010_Node000014" title=" " alt="" coords="326,100,525,148,523,153,325,105"/>
+<area shape="poly" id="edge8_Node000012_Node000003" title=" " alt="" coords="366,182,366,214,361,214,361,182"/>
+<area shape="poly" id="edge10_Node000013_Node000003" title=" " alt="" coords="450,184,395,222,392,218,447,180"/>
+</map>
