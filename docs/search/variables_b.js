@@ -1,6 +1,21 @@
 var searchData=
 [
-  ['status_0',['status',['../struct_return_code.html#a724f8cf1b8ff3d96c3a9cbcd2a6957a6',1,'ReturnCode']]],
-  ['sts_1',['sts',['../struct_buf.html#a37580959edc9d0df805ff9ef0efeef2a',1,'Buf']]],
-  ['systemcoreclock_2',['SystemCoreClock',['../group___s_t_m32_l4xx___system___private___variables.html#gaa3cd3e43291e81e795d642b79b6088e6',1,'system_stm32l4xx.c']]]
+  ['old_5fmax_0',['Old_max',['../_qrs2_8c.html#a9b36dfe9efff07de3a46169caab81542',1,'Qrs2.c']]],
+  ['old_5ftime_1',['Old_time',['../_qrs2_8c.html#adcf63d7b33bbf69ed9e3d649449cacc3',1,'Qrs2.c']]],
+  ['old_5fwide_2',['Old_wide',['../_qrs2_8c.html#a0c7b9f805d96d32821990885317858e2',1,'Qrs2.c']]],
+  ['oldrr1_3',['OldRR1',['../_as_qrs_detect1_8c.html#a1996e515f5428cef37b272caaeba2002',1,'AsQrsDetect1.c']]],
+  ['oldrr2_4',['OldRR2',['../_as_qrs_detect1_8c.html#a521d38a24a240983f6ce7132171d7da9',1,'AsQrsDetect1.c']]],
+  ['oldrr3_5',['OldRR3',['../_as_qrs_detect1_8c.html#aaa61d887ab4892ecddfa77e4aebfef1e',1,'AsQrsDetect1.c']]],
+  ['oldrr4_6',['OldRR4',['../_as_qrs_detect1_8c.html#a5b0b4920bb609b38efdd490c996920cf',1,'AsQrsDetect1.c']]],
+  ['oldsum_7',['OldSum',['../_as_qrs_detect1_8c.html#a1a84fe90bf501a145697702a743da2aa',1,'AsQrsDetect1.c']]],
+  ['on_5ftime_8',['ON_time',['../_qrs2_8c.html#a2a68f48d06d8f8bbdc705d9ea2a2f040',1,'Qrs2.c']]],
+  ['optionno_9',['OptionNO',['../_as_qrs_detect1_8c.html#a1fbb3b6161067774c06da92680c54be3',1,'AsQrsDetect1.c']]],
+  ['output_5f1_10',['output_1',['../common_8c.html#a93bfaf2be6c8c991458c7f39ff00c61d',1,'output_1:&#160;common.c'],['../common_8h.html#a93bfaf2be6c8c991458c7f39ff00c61d',1,'output_1:&#160;common.c']]],
+  ['output_5f2_11',['output_2',['../common_8c.html#a8cfd5bd6ec513b5c6436f8f5c099a2af',1,'output_2:&#160;common.c'],['../common_8h.html#a8cfd5bd6ec513b5c6436f8f5c099a2af',1,'output_2:&#160;common.c']]],
+  ['output_5f3_12',['output_3',['../common_8c.html#af14607825fb62e1b8aad5eabbf67e620',1,'output_3:&#160;common.c'],['../common_8h.html#af14607825fb62e1b8aad5eabbf67e620',1,'output_3:&#160;common.c']]],
+  ['output_5f4_13',['output_4',['../common_8c.html#a24e41eccce62b3ac5933cf2a67a69359',1,'output_4:&#160;common.c'],['../common_8h.html#a24e41eccce62b3ac5933cf2a67a69359',1,'output_4:&#160;common.c']]],
+  ['output_5f5_14',['output_5',['../common_8c.html#aa24132187990770b5ca676d5d5c40780',1,'output_5:&#160;common.c'],['../common_8h.html#aa24132187990770b5ca676d5d5c40780',1,'output_5:&#160;common.c']]],
+  ['output_5f6_15',['output_6',['../common_8c.html#a40cce43545442198f6cf7060ba17e62b',1,'output_6:&#160;common.c'],['../common_8h.html#a40cce43545442198f6cf7060ba17e62b',1,'output_6:&#160;common.c']]],
+  ['output_5f7_16',['output_7',['../common_8c.html#a713e0c39859c6315274bc48331b88d1e',1,'output_7:&#160;common.c'],['../common_8h.html#a713e0c39859c6315274bc48331b88d1e',1,'output_7:&#160;common.c']]],
+  ['outputformat_17',['OutputFormat',['../host__out_8c.html#a5b552c92036c1ac8d0579f392b3f486c',1,'host_out.c']]]
 ];

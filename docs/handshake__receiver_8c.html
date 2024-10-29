@@ -100,24 +100,22 @@ $(function(){initNavTree('handshake__receiver_8c.html',''); initResizable(true);
   <div class="summary">
 <a href="#define-members">マクロ定義</a> &#124;
 <a href="#enum-members">列挙型</a> &#124;
-<a href="#func-members">関数</a>  </div>
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
   <div class="headertitle"><div class="title">handshake_receiver.c ファイル</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="handshake__receiver_8h_source.html">handshake_receiver.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="host__in_8h_source.html">host_in.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-handshake_receiver.c の依存先関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="handshake__receiver_8c__incl.svg" width="630" height="336"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 マクロ定義</h2></td></tr>
 <tr class="memitem:a77d9b7acd8e0551052d0baef1fdc9738" id="r_a77d9b7acd8e0551052d0baef1fdc9738"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77d9b7acd8e0551052d0baef1fdc9738">HANDSHAKE_TRY_LIMIT</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memdesc:a77d9b7acd8e0551052d0baef1fdc9738"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドシェイクの最大試行回数  <br /></td></tr>
 <tr class="separator:a77d9b7acd8e0551052d0baef1fdc9738"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08ba05a6f8b89bf2b83275267ac951bd" id="r_a08ba05a6f8b89bf2b83275267ac951bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a08ba05a6f8b89bf2b83275267ac951bd">SUCCESS_WAIT_TIME</a>&#160;&#160;&#160;10800</td></tr>
+<tr class="memdesc:a08ba05a6f8b89bf2b83275267ac951bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドシェイ成功シグナル待ち設定値  <br /></td></tr>
 <tr class="separator:a08ba05a6f8b89bf2b83275267ac951bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -126,16 +124,38 @@ handshake_receiver.c の依存先関係図:</div>
 , <a class="el" href="#aade5f30e83cb8f870301ad138bba07cda7150631780e76ff71542ab02093ae622">FORMAT_SEND</a>
 , <a class="el" href="#aade5f30e83cb8f870301ad138bba07cda2627b8f1aaeb77e7248311f5635c56eb">CHECK_SIGNAL</a>
  }</td></tr>
+<tr class="memdesc:aade5f30e83cb8f870301ad138bba07cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">'<a class="el" href="#a1cd7cb4dac2cac3fd0bffb657c7f0fdc" title="ハンドシェイクプロセスを実行">HandshakeProcesses()</a>'の各処理名  <a href="#aade5f30e83cb8f870301ad138bba07cd">[詳解]</a><br /></td></tr>
 <tr class="separator:aade5f30e83cb8f870301ad138bba07cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 関数</h2></td></tr>
+<tr class="memitem:ae3d68b6e6eb0a5ccbfa6ca7e01dc8547" id="r_ae3d68b6e6eb0a5ccbfa6ca7e01dc8547"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3d68b6e6eb0a5ccbfa6ca7e01dc8547">createHandShakeFormat</a> ()</td></tr>
+<tr class="separator:ae3d68b6e6eb0a5ccbfa6ca7e01dc8547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8068cf84729427eab59d284de9d73672" id="r_a8068cf84729427eab59d284de9d73672"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8068cf84729427eab59d284de9d73672">generateCheckSum</a> (uint8_t format[])</td></tr>
+<tr class="separator:a8068cf84729427eab59d284de9d73672"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cd91fd3a9608559c2a87a8ba6cba55f" id="r_a0cd91fd3a9608559c2a87a8ba6cba55f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cd91fd3a9608559c2a87a8ba6cba55f">HAL_GPIO_EXTI_Callback</a> (uint16_t GPIO_Pin)</td></tr>
+<tr class="memdesc:a0cd91fd3a9608559c2a87a8ba6cba55f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドシェイク成功シグナルの受信  <br /></td></tr>
+<tr class="separator:a0cd91fd3a9608559c2a87a8ba6cba55f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cd7cb4dac2cac3fd0bffb657c7f0fdc" id="r_a1cd7cb4dac2cac3fd0bffb657c7f0fdc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cd7cb4dac2cac3fd0bffb657c7f0fdc">HandshakeProcesses</a> ()</td></tr>
+<tr class="memdesc:a1cd7cb4dac2cac3fd0bffb657c7f0fdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドシェイクプロセスを実行  <br /></td></tr>
+<tr class="separator:a1cd7cb4dac2cac3fd0bffb657c7f0fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7d129fb6c232812b388c90470311224" id="r_aa7d129fb6c232812b388c90470311224"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7d129fb6c232812b388c90470311224">InitHandshakeReceiverC</a> ()</td></tr>
 <tr class="separator:aa7d129fb6c232812b388c90470311224"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cd7cb4dac2cac3fd0bffb657c7f0fdc" id="r_a1cd7cb4dac2cac3fd0bffb657c7f0fdc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cd7cb4dac2cac3fd0bffb657c7f0fdc">HandshakeProcesses</a> ()</td></tr>
-<tr class="separator:a1cd7cb4dac2cac3fd0bffb657c7f0fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cd91fd3a9608559c2a87a8ba6cba55f" id="r_a0cd91fd3a9608559c2a87a8ba6cba55f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cd91fd3a9608559c2a87a8ba6cba55f">HAL_GPIO_EXTI_Callback</a> (uint16_t GPIO_Pin)</td></tr>
-<tr class="separator:a0cd91fd3a9608559c2a87a8ba6cba55f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe650c2cd684266290257dbbd8fcd8e5" id="r_afe650c2cd684266290257dbbd8fcd8e5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe650c2cd684266290257dbbd8fcd8e5">SendHandshakeFormat</a> ()</td></tr>
+<tr class="separator:afe650c2cd684266290257dbbd8fcd8e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:ac7703c1f202576003020daee9ce2e918" id="r_ac7703c1f202576003020daee9ce2e918"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7703c1f202576003020daee9ce2e918">handshakeFormat</a> [10]</td></tr>
+<tr class="separator:ac7703c1f202576003020daee9ce2e918"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c64012e948de537eace3d60d80da365" id="r_a6c64012e948de537eace3d60d80da365"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c64012e948de537eace3d60d80da365">process</a></td></tr>
+<tr class="separator:a6c64012e948de537eace3d60d80da365"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a680e91ce95025f573d35d4e7d782134c" id="r_a680e91ce95025f573d35d4e7d782134c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a680e91ce95025f573d35d4e7d782134c">successHandshake</a></td></tr>
+<tr class="separator:a680e91ce95025f573d35d4e7d782134c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42cb338b0e4a146645db677e6abb1658" id="r_a42cb338b0e4a146645db677e6abb1658"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42cb338b0e4a146645db677e6abb1658">tryCnt</a></td></tr>
+<tr class="separator:a42cb338b0e4a146645db677e6abb1658"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2fc1f4a74bf38a9cabd65fa4bb8876f" id="r_ab2fc1f4a74bf38a9cabd65fa4bb8876f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2fc1f4a74bf38a9cabd65fa4bb8876f">waitCnt</a></td></tr>
+<tr class="separator:ab2fc1f4a74bf38a9cabd65fa4bb8876f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">マクロ定義詳解</h2>
 <a id="a77d9b7acd8e0551052d0baef1fdc9738" name="a77d9b7acd8e0551052d0baef1fdc9738"></a>
@@ -149,6 +169,8 @@ handshake_receiver.c の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>ハンドシェイクの最大試行回数 </p>
 
 </div>
 </div>
@@ -164,6 +186,8 @@ handshake_receiver.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
+<p>ハンドシェイ成功シグナル待ち設定値 </p>
+
 </div>
 </div>
 <h2 class="groupheader">列挙型詳解</h2>
@@ -178,55 +202,111 @@ handshake_receiver.c の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>'<a class="el" href="#a1cd7cb4dac2cac3fd0bffb657c7f0fdc" title="ハンドシェイクプロセスを実行">HandshakeProcesses()</a>'の各処理名 </p>
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="aade5f30e83cb8f870301ad138bba07cdab311fe97a10522d4f620845dc76aac2d" name="aade5f30e83cb8f870301ad138bba07cdab311fe97a10522d4f620845dc76aac2d"></a>FORMAT_GENERATE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aade5f30e83cb8f870301ad138bba07cda7150631780e76ff71542ab02093ae622" name="aade5f30e83cb8f870301ad138bba07cda7150631780e76ff71542ab02093ae622"></a>FORMAT_SEND&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="aade5f30e83cb8f870301ad138bba07cda2627b8f1aaeb77e7248311f5635c56eb" name="aade5f30e83cb8f870301ad138bba07cda2627b8f1aaeb77e7248311f5635c56eb"></a>CHECK_SIGNAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="aade5f30e83cb8f870301ad138bba07cdab311fe97a10522d4f620845dc76aac2d" name="aade5f30e83cb8f870301ad138bba07cdab311fe97a10522d4f620845dc76aac2d"></a>FORMAT_GENERATE&#160;</td><td class="fielddoc"><p>フォーマットの生成 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aade5f30e83cb8f870301ad138bba07cda7150631780e76ff71542ab02093ae622" name="aade5f30e83cb8f870301ad138bba07cda7150631780e76ff71542ab02093ae622"></a>FORMAT_SEND&#160;</td><td class="fielddoc"><p>フォーマットの出力 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aade5f30e83cb8f870301ad138bba07cda2627b8f1aaeb77e7248311f5635c56eb" name="aade5f30e83cb8f870301ad138bba07cda2627b8f1aaeb77e7248311f5635c56eb"></a>CHECK_SIGNAL&#160;</td><td class="fielddoc"><p>シグナルの確認 </p>
+</td></tr>
 </table>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a0cd91fd3a9608559c2a87a8ba6cba55f" name="a0cd91fd3a9608559c2a87a8ba6cba55f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cd91fd3a9608559c2a87a8ba6cba55f">&#9670;&#160;</a></span>HAL_GPIO_EXTI_Callback()</h2>
+<a id="ae3d68b6e6eb0a5ccbfa6ca7e01dc8547" name="ae3d68b6e6eb0a5ccbfa6ca7e01dc8547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d68b6e6eb0a5ccbfa6ca7e01dc8547">&#9670;&#160;</a></span>createHandShakeFormat()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void HAL_GPIO_EXTI_Callback </td>
-          <td>(</td>
-          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>GPIO_Pin</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1cd7cb4dac2cac3fd0bffb657c7f0fdc" name="a1cd7cb4dac2cac3fd0bffb657c7f0fdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cd7cb4dac2cac3fd0bffb657c7f0fdc">&#9670;&#160;</a></span>HandshakeProcesses()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int HandshakeProcesses </td>
+          <td class="memname">static void createHandShakeFormat </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="handshake__receiver_8c_a1cd7cb4dac2cac3fd0bffb657c7f0fdc_cgraph.svg" width="376" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="handshake__receiver_8c_ae3d68b6e6eb0a5ccbfa6ca7e01dc8547_cgraph.svg" width="362" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="handshake__receiver_8c_a1cd7cb4dac2cac3fd0bffb657c7f0fdc_icgraph.svg" width="258" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="handshake__receiver_8c_ae3d68b6e6eb0a5ccbfa6ca7e01dc8547_icgraph.svg" width="472" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a8068cf84729427eab59d284de9d73672" name="a8068cf84729427eab59d284de9d73672"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8068cf84729427eab59d284de9d73672">&#9670;&#160;</a></span>generateCheckSum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint8_t generateCheckSum </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>format</em></span>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="handshake__receiver_8c_a8068cf84729427eab59d284de9d73672_icgraph.svg" width="559" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="afe650c2cd684266290257dbbd8fcd8e5" name="afe650c2cd684266290257dbbd8fcd8e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe650c2cd684266290257dbbd8fcd8e5">&#9670;&#160;</a></span>SendHandshakeFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void SendHandshakeFormat </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="handshake__receiver_8c_afe650c2cd684266290257dbbd8fcd8e5_icgraph.svg" width="464" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -250,6 +330,179 @@ handshake_receiver.c の依存先関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="handshake__receiver_8c_aa7d129fb6c232812b388c90470311224_icgraph.svg" width="474" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
+
+</div>
+</div>
+<a id="a1cd7cb4dac2cac3fd0bffb657c7f0fdc" name="a1cd7cb4dac2cac3fd0bffb657c7f0fdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cd7cb4dac2cac3fd0bffb657c7f0fdc">&#9670;&#160;</a></span>HandshakeProcesses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int HandshakeProcesses </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ハンドシェイクプロセスを実行 </p>
+<dl class="section return"><dt>戻り値</dt><dd><ul>
+<li><code>HANDSHAKE_SUCCESS</code>: ハンドシェイク成功</li>
+<li><code>HANDSHAKE_FAILED</code> : ハンドシェイク失敗</li>
+<li><p class="startli"><code>HANDSHAKE_WORKING</code>: ハンドシェイクが進行中</p>
+<p class="startli">ハンドシェイクプロセスの進行状況に応じて、次の動作を実行します：</p>
+</li>
+<li>フォーマットの生成および送信</li>
+<li>成功シグナルの確認</li>
+<li>必要に応じたリトライ </li>
+</ul>
+</dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="handshake__receiver_8c_a1cd7cb4dac2cac3fd0bffb657c7f0fdc_cgraph.svg" width="560" height="215"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="handshake__receiver_8c_a1cd7cb4dac2cac3fd0bffb657c7f0fdc_icgraph.svg" width="258" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a0cd91fd3a9608559c2a87a8ba6cba55f" name="a0cd91fd3a9608559c2a87a8ba6cba55f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cd91fd3a9608559c2a87a8ba6cba55f">&#9670;&#160;</a></span>HAL_GPIO_EXTI_Callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HAL_GPIO_EXTI_Callback </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>GPIO_Pin</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ハンドシェイク成功シグナルの受信 </p>
+<p>GPIO入力のコールバック <br  />
+ ハンドシェイク成功のフラグをたて、この関数の割り込みを無効化する <br  />
+ その後の処理はメインループから呼び出される </p>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="ac7703c1f202576003020daee9ce2e918" name="ac7703c1f202576003020daee9ce2e918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7703c1f202576003020daee9ce2e918">&#9670;&#160;</a></span>handshakeFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t handshakeFormat[10]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a680e91ce95025f573d35d4e7d782134c" name="a680e91ce95025f573d35d4e7d782134c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a680e91ce95025f573d35d4e7d782134c">&#9670;&#160;</a></span>successHandshake</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int successHandshake</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c64012e948de537eace3d60d80da365" name="a6c64012e948de537eace3d60d80da365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c64012e948de537eace3d60d80da365">&#9670;&#160;</a></span>process</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int process</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2fc1f4a74bf38a9cabd65fa4bb8876f" name="ab2fc1f4a74bf38a9cabd65fa4bb8876f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2fc1f4a74bf38a9cabd65fa4bb8876f">&#9670;&#160;</a></span>waitCnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int waitCnt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a42cb338b0e4a146645db677e6abb1658" name="a42cb338b0e4a146645db677e6abb1658"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42cb338b0e4a146645db677e6abb1658">&#9670;&#160;</a></span>tryCnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int tryCnt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

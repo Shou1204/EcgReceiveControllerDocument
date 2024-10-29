@@ -1,0 +1,30 @@
+<map id="ecg_data.h" name="ecg_data.h">
+<area shape="rect" id="Node000001" title="現在のプロパティの設定値を管理" alt="" coords="160,5,245,32"/>
+<area shape="rect" id="Node000002" href="$ecg__data_8c.html" title=" " alt="" coords="5,80,91,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,41,76,82,74,77,161,37"/>
+<area shape="rect" id="Node000003" href="$host__in_8h.html" title="本体からのUART入力を管理または処理する" alt="" coords="115,80,189,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="187,46,163,81,159,78,183,43"/>
+<area shape="rect" id="Node000010" href="$host__out_8h.html" title="本体へのUART出力処理" alt="" coords="214,80,296,107"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="223,43,248,78,244,81,218,46"/>
+<area shape="rect" id="Node000011" href="$spi__receive_8h.html" title="送信機からのSPI通信を処理 &#160;&#160;受信からフィルタリング、出力値の作成までおこなう" alt="" coords="320,80,418,107"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="247,36,341,77,339,82,244,41"/>
+<area shape="rect" id="Node000004" href="$handshake__receiver_8c.html" title=" " alt="" coords="8,229,157,256"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="107,116,83,133,65,156,60,174,63,194,77,228,72,230,57,195,55,174,60,153,80,129,104,112"/>
+<area shape="rect" id="Node000005" href="$host__in_8c.html" title=" " alt="" coords="119,155,193,181"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="156,122,158,154,153,154,151,123"/>
+<area shape="rect" id="Node000006" href="$host__out_8c.html" title=" " alt="" coords="220,229,302,256"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="129,119,107,150,104,165,109,180,131,203,160,219,191,229,220,235,219,240,189,234,158,224,128,207,104,183,99,165,102,147,124,116"/>
+<area shape="rect" id="Node000007" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="218,155,278,181"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="182,114,233,152,230,156,179,118"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="206,190,113,231,111,226,204,186"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="256,196,262,228,256,229,250,197"/>
+<area shape="rect" id="Node000009" href="$spi__receive_8c.html" title=" " alt="" coords="354,229,452,256"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="290,186,377,226,374,231,288,191"/>
+<area shape="poly" id="edge11_Node000010_Node000006" title=" " alt="" coords="276,118,293,154,295,176,290,197,273,230,268,228,285,195,290,175,288,155,271,121"/>
+<area shape="poly" id="edge12_Node000010_Node000007" title=" " alt="" coords="255,123,252,155,246,154,249,122"/>
+<area shape="poly" id="edge15_Node000011_Node000006" title=" " alt="" coords="355,121,313,183,274,230,270,227,309,180,351,118"/>
+<area shape="poly" id="edge16_Node000011_Node000007" title=" " alt="" coords="337,117,271,156,268,152,334,113"/>
+<area shape="poly" id="edge17_Node000011_Node000009" title=" " alt="" coords="379,121,388,154,403,228,398,229,383,155,374,122"/>
+<area shape="rect" id="Node000012" href="$filter_controller_8c.html" title=" " alt="" coords="455,155,569,181"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="409,112,488,152,486,156,406,116"/>
+</map>

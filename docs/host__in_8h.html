@@ -99,27 +99,30 @@ $(function(){initNavTree('host__in_8h.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">データ構造</a> &#124;
-<a href="#enum-members">列挙型</a> &#124;
-<a href="#func-members">関数</a>  </div>
+<a href="#enum-members">列挙型</a>  </div>
   <div class="headertitle"><div class="title">host_in.h ファイル</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>本体からのUART入力を管理または処理する  
+<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="ecg__data_8h_source.html">ecg_data.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-host_in.h の依存先関係図:</div>
+被依存関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="host__in_8h__incl.svg" width="96" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="host__in_8h__dep__incl.svg" width="475" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="host__in_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 データ構造</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_setting_meta.html">SettingMeta</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">各種プロパティのメタデータ構造体  <a href="struct_setting_meta.html#details">[詳解]</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_rx_tmp_status.html">RxTmpStatus</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:struct_rx_tmp_status" id="r_struct_rx_tmp_status"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#struct_rx_tmp_status">RxTmpStatus</a></td></tr>
+<tr class="memdesc:struct_rx_tmp_status"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART入力のプロパティ設定値を管理するためのひな形  <a href="#struct_rx_tmp_status">[詳解]</a><br /></td></tr>
+<tr class="separator:struct_rx_tmp_status"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:struct_setting_meta" id="r_struct_setting_meta"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#struct_setting_meta">SettingMeta</a></td></tr>
+<tr class="memdesc:struct_setting_meta"><td class="mdescLeft">&#160;</td><td class="mdescRight">各種プロパティのバリデーションデータのひな形  <a href="#struct_setting_meta">[詳解]</a><br /></td></tr>
+<tr class="separator:struct_setting_meta"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 列挙型</h2></td></tr>
@@ -127,32 +130,96 @@ host_in.h の依存先関係図:</div>
 , <a class="el" href="#a69024b47aae81ca938d9820390e8cfbfa61f187319db7bc338bffa097e5b5aaa3">HANDSHAKE_UPDATE_NO_REQ</a> = 2
 , <a class="el" href="#a69024b47aae81ca938d9820390e8cfbfaf50eba4d1ec53e9f6a1432d74ff222b9">HANDSHAKE_REQUIRED</a> = 3
  }</td></tr>
+<tr class="memdesc:a69024b47aae81ca938d9820390e8cfbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">受信機とのハンドシェイクが必要か判別するための変数の識別コード  <a href="#a69024b47aae81ca938d9820390e8cfbf">[詳解]</a><br /></td></tr>
 <tr class="separator:a69024b47aae81ca938d9820390e8cfbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-関数</h2></td></tr>
-<tr class="memitem:a7ad4fbb55caac9d8d9d4e94176b7c7dd" id="r_a7ad4fbb55caac9d8d9d4e94176b7c7dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ad4fbb55caac9d8d9d4e94176b7c7dd">InitHostOutC</a> ()</td></tr>
-<tr class="separator:a7ad4fbb55caac9d8d9d4e94176b7c7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af922d94a43f84fbad0534bd1f24990d7" id="r_af922d94a43f84fbad0534bd1f24990d7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af922d94a43f84fbad0534bd1f24990d7">StoreReceiveFrame</a> (uint8_t rx_byte)</td></tr>
-<tr class="memdesc:af922d94a43f84fbad0534bd1f24990d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">受信バイトを処理し、フレームを格納する関数  <br /></td></tr>
-<tr class="separator:af922d94a43f84fbad0534bd1f24990d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ee3058f5c286b7fe99c18f1f564a45c" id="r_a2ee3058f5c286b7fe99c18f1f564a45c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ee3058f5c286b7fe99c18f1f564a45c">UpdateData</a> ()</td></tr>
-<tr class="memdesc:a2ee3058f5c286b7fe99c18f1f564a45c"><td class="mdescLeft">&#160;</td><td class="mdescRight">データ更新プロセス  <br /></td></tr>
-<tr class="separator:a2ee3058f5c286b7fe99c18f1f564a45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2aaec4536b9b3f353c72936e9e78c3b5" id="r_a2aaec4536b9b3f353c72936e9e78c3b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2aaec4536b9b3f353c72936e9e78c3b5">InitHostInC</a> ()</td></tr>
-<tr class="separator:a2aaec4536b9b3f353c72936e9e78c3b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a55a6444b571ec802eccc95d8e0f109" id="r_a2a55a6444b571ec802eccc95d8e0f109"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a55a6444b571ec802eccc95d8e0f109">UpdateCurrentState</a> ()</td></tr>
-<tr class="memdesc:a2a55a6444b571ec802eccc95d8e0f109"><td class="mdescLeft">&#160;</td><td class="mdescRight">チャンネルとアンテナの現在値を更新  <br /></td></tr>
-<tr class="separator:a2a55a6444b571ec802eccc95d8e0f109"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe005c613143dc94e368fb9c124603e6" id="r_afe005c613143dc94e368fb9c124603e6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe005c613143dc94e368fb9c124603e6">Get_tmpValue</a> (uint8_t id)</td></tr>
-<tr class="separator:afe005c613143dc94e368fb9c124603e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7982534a1f252104992a8a52bdc8b21e" id="r_a7982534a1f252104992a8a52bdc8b21e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7982534a1f252104992a8a52bdc8b21e">Get_isUpdated</a> (uint8_t id)</td></tr>
-<tr class="separator:a7982534a1f252104992a8a52bdc8b21e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95303fcfed41e87df9d8fb299e0d9f5d" id="r_a95303fcfed41e87df9d8fb299e0d9f5d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a95303fcfed41e87df9d8fb299e0d9f5d">Get_inputUartState</a> ()</td></tr>
-<tr class="separator:a95303fcfed41e87df9d8fb299e0d9f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1eaff27a143fcc8a5a8fd17e309f5ab2" id="r_a1eaff27a143fcc8a5a8fd17e309f5ab2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1eaff27a143fcc8a5a8fd17e309f5ab2">Set_inputUartState</a> (uint8_t val_)</td></tr>
-<tr class="separator:a1eaff27a143fcc8a5a8fd17e309f5ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>本体からのUART入力を管理または処理する </p>
+</div><hr/><h2 class="groupheader">データ構造詳解</h2>
+<a name="struct_rx_tmp_status" id="struct_rx_tmp_status"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#struct_rx_tmp_status">&#9670;&#160;</a></span>RxTmpStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct RxTmpStatus</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>UART入力のプロパティ設定値を管理するためのひな形 </p>
+<p>現在値に反映する前に一時的に保存し、 更新が必要かどうかを確認するために使用します </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">データフィールド</th></tr>
+<tr><td class="fieldtype">
+<a id="a2fe566f16f67544a89647e16d6d936b2" name="a2fe566f16f67544a89647e16d6d936b2"></a>const uint8_t</td>
+<td class="fieldname">
+property</td>
+<td class="fielddoc">
+プロパティコード </td></tr>
+<tr><td class="fieldtype">
+<a id="a002cc1f1762fe9206737d59d3377d9ba" name="a002cc1f1762fe9206737d59d3377d9ba"></a>uint16_t</td>
+<td class="fieldname">
+tmpValue</td>
+<td class="fielddoc">
+一時的なUART入力値 </td></tr>
+<tr><td class="fieldtype">
+<a id="adfc3cbf906a69845f1e65754fa3e896b" name="adfc3cbf906a69845f1e65754fa3e896b"></a>uint8_t</td>
+<td class="fieldname">
+isUpdated</td>
+<td class="fielddoc">
+更新のフラグ </td></tr>
+</table>
+
+</div>
+</div>
+<a name="struct_setting_meta" id="struct_setting_meta"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#struct_setting_meta">&#9670;&#160;</a></span>SettingMeta</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct SettingMeta</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>各種プロパティのバリデーションデータのひな形 </p>
+<p>各プロパティのUART入力値の抽出とバリデーションのために使用します </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">データフィールド</th></tr>
+<tr><td class="fieldtype">
+<a id="a52a3c125faf2fe7bc49717259b14d143" name="a52a3c125faf2fe7bc49717259b14d143"></a>const uint8_t</td>
+<td class="fieldname">
+property</td>
+<td class="fielddoc">
+<p>プロパティコード </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a id="afbbdb22bfb34f3e9fb06793649178262" name="afbbdb22bfb34f3e9fb06793649178262"></a>const uint8_t</td>
+<td class="fieldname">
+initial</td>
+<td class="fielddoc">
+<p>UART受信フォーマットの記号 </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a41bfda3d801e5fde3b863b5e95c582c4" name="a41bfda3d801e5fde3b863b5e95c582c4"></a>const uint8_t</td>
+<td class="fieldname">
+rangeStart</td>
+<td class="fielddoc">
+<p>設定値の範囲下限 </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a6d840dfa8eeae0a3d572b2f12f196b50" name="a6d840dfa8eeae0a3d572b2f12f196b50"></a>const uint8_t</td>
+<td class="fieldname">
+rangeEnd</td>
+<td class="fielddoc">
+<p>上限 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">列挙型詳解</h2>
 <a id="a69024b47aae81ca938d9820390e8cfbf" name="a69024b47aae81ca938d9820390e8cfbf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a69024b47aae81ca938d9820390e8cfbf">&#9670;&#160;</a></span>updateDataType</h2>
@@ -165,226 +232,16 @@ host_in.h の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>受信機とのハンドシェイクが必要か判別するための変数の識別コード </p>
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a69024b47aae81ca938d9820390e8cfbfa11ae34a1108a316f7655e51243747e89" name="a69024b47aae81ca938d9820390e8cfbfa11ae34a1108a316f7655e51243747e89"></a>HANDSHAKE_NO_UPDATE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a69024b47aae81ca938d9820390e8cfbfa61f187319db7bc338bffa097e5b5aaa3" name="a69024b47aae81ca938d9820390e8cfbfa61f187319db7bc338bffa097e5b5aaa3"></a>HANDSHAKE_UPDATE_NO_REQ&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a69024b47aae81ca938d9820390e8cfbfaf50eba4d1ec53e9f6a1432d74ff222b9" name="a69024b47aae81ca938d9820390e8cfbfaf50eba4d1ec53e9f6a1432d74ff222b9"></a>HANDSHAKE_REQUIRED&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a69024b47aae81ca938d9820390e8cfbfa11ae34a1108a316f7655e51243747e89" name="a69024b47aae81ca938d9820390e8cfbfa11ae34a1108a316f7655e51243747e89"></a>HANDSHAKE_NO_UPDATE&#160;</td><td class="fielddoc"><p>値の更新なし </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a69024b47aae81ca938d9820390e8cfbfa61f187319db7bc338bffa097e5b5aaa3" name="a69024b47aae81ca938d9820390e8cfbfa61f187319db7bc338bffa097e5b5aaa3"></a>HANDSHAKE_UPDATE_NO_REQ&#160;</td><td class="fielddoc"><p>値の更新あり、ハンドシェイク必要なし </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a69024b47aae81ca938d9820390e8cfbfaf50eba4d1ec53e9f6a1432d74ff222b9" name="a69024b47aae81ca938d9820390e8cfbfaf50eba4d1ec53e9f6a1432d74ff222b9"></a>HANDSHAKE_REQUIRED&#160;</td><td class="fielddoc"><p>ハンドシェイクが必要 </p>
+</td></tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">関数詳解</h2>
-<a id="a95303fcfed41e87df9d8fb299e0d9f5d" name="a95303fcfed41e87df9d8fb299e0d9f5d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95303fcfed41e87df9d8fb299e0d9f5d">&#9670;&#160;</a></span>Get_inputUartState()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t Get_inputUartState </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7982534a1f252104992a8a52bdc8b21e" name="a7982534a1f252104992a8a52bdc8b21e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7982534a1f252104992a8a52bdc8b21e">&#9670;&#160;</a></span>Get_isUpdated()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t Get_isUpdated </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="afe005c613143dc94e368fb9c124603e6" name="afe005c613143dc94e368fb9c124603e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe005c613143dc94e368fb9c124603e6">&#9670;&#160;</a></span>Get_tmpValue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t Get_tmpValue </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2aaec4536b9b3f353c72936e9e78c3b5" name="a2aaec4536b9b3f353c72936e9e78c3b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2aaec4536b9b3f353c72936e9e78c3b5">&#9670;&#160;</a></span>InitHostInC()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitHostInC </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>モジュールの初期化関数 </p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="host__in_8h_a2aaec4536b9b3f353c72936e9e78c3b5_icgraph.svg" width="522" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a7ad4fbb55caac9d8d9d4e94176b7c7dd" name="a7ad4fbb55caac9d8d9d4e94176b7c7dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ad4fbb55caac9d8d9d4e94176b7c7dd">&#9670;&#160;</a></span>InitHostOutC()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitHostOutC </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="host__in_8h_a7ad4fbb55caac9d8d9d4e94176b7c7dd_icgraph.svg" width="207" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a1eaff27a143fcc8a5a8fd17e309f5ab2" name="a1eaff27a143fcc8a5a8fd17e309f5ab2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1eaff27a143fcc8a5a8fd17e309f5ab2">&#9670;&#160;</a></span>Set_inputUartState()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Set_inputUartState </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>val_</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af922d94a43f84fbad0534bd1f24990d7" name="af922d94a43f84fbad0534bd1f24990d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af922d94a43f84fbad0534bd1f24990d7">&#9670;&#160;</a></span>StoreReceiveFrame()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int StoreReceiveFrame </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>rx_byte</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>受信バイトを処理し、フレームを格納する関数 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname"></td><td>rx_byte: 受信バイト </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>戻り値</dt><dd>0: 入力フォーマットが完成していない場合<br  />
-1: 正しいフォーマットでの入力を確認</dd></dl>
-<p>バッファに溜めずに1バイトずつ判断する 現在値との一致はここでは判断せず重複なく範囲内で入力があったかどうかを判断している </p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="host__in_8h_af922d94a43f84fbad0534bd1f24990d7_cgraph.svg" width="363" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="host__in_8h_af922d94a43f84fbad0534bd1f24990d7_icgraph.svg" width="386" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a2a55a6444b571ec802eccc95d8e0f109" name="a2a55a6444b571ec802eccc95d8e0f109"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a55a6444b571ec802eccc95d8e0f109">&#9670;&#160;</a></span>UpdateCurrentState()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void UpdateCurrentState </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>チャンネルとアンテナの現在値を更新 </p>
-<dl class="section note"><dt>覚え書き</dt><dd>現在値にUART入力値を反映させる </dd></dl>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="host__in_8h_a2a55a6444b571ec802eccc95d8e0f109_cgraph.svg" width="316" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="host__in_8h_a2a55a6444b571ec802eccc95d8e0f109_icgraph.svg" width="246" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a2ee3058f5c286b7fe99c18f1f564a45c" name="a2ee3058f5c286b7fe99c18f1f564a45c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ee3058f5c286b7fe99c18f1f564a45c">&#9670;&#160;</a></span>UpdateData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int UpdateData </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>データ更新プロセス </p>
-<dl class="section return"><dt>戻り値</dt><dd>更新なし、更新あり（ハンドシェイクなし）, 更新なし（ハンドシェイクあり）を返す</dd></dl>
-<p>ここでは現在値での重複を確認し、なければUART入力値を現在値に反映する<br  />
-ただし、チャンネル番号とアンテナはここでは重複の確認をして、<br  />
-ハンドシェイクが必要かを判断するにとどめる また、いくつのプロパティに更新があったかを集計している </p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="host__in_8h_a2ee3058f5c286b7fe99c18f1f564a45c_cgraph.svg" width="272" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="host__in_8h_a2ee3058f5c286b7fe99c18f1f564a45c_icgraph.svg" width="340" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 
 </div>
 </div>

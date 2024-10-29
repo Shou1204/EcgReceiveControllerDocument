@@ -98,132 +98,58 @@ $(function(){initNavTree('ecg__data_8h.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">データ構造</a> &#124;
-<a href="#func-members">関数</a>  </div>
+<a href="#nested-classes">データ構造</a>  </div>
   <div class="headertitle"><div class="title">ecg_data.h ファイル</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>現在のプロパティの設定値を管理  
+<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="common_8h_source.html">common.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-ecg_data.h の依存先関係図:</div>
+被依存関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="ecg__data_8h__incl.svg" width="248" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="ecg__data_8h__dep__incl.svg" width="575" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="ecg__data_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 データ構造</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_setting_current.html">SettingCurrent</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のプロパティの値を保存  <a href="struct_setting_current.html#details">[詳解]</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-関数</h2></td></tr>
-<tr class="memitem:aaa920a0f94e35ce551cf7d919e1d19ac" id="r_aaa920a0f94e35ce551cf7d919e1d19ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa920a0f94e35ce551cf7d919e1d19ac">InitEcgDataC</a> ()</td></tr>
-<tr class="separator:aaa920a0f94e35ce551cf7d919e1d19ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8076b4cf4e7c1aad2f9b9f06853ea75e" id="r_a8076b4cf4e7c1aad2f9b9f06853ea75e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8076b4cf4e7c1aad2f9b9f06853ea75e">InitCurrentState</a> ()</td></tr>
-<tr class="separator:a8076b4cf4e7c1aad2f9b9f06853ea75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86de475be9a0ef5efe79c2f940f55708" id="r_a86de475be9a0ef5efe79c2f940f55708"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86de475be9a0ef5efe79c2f940f55708">Get_currentValue</a> (uint8_t id)</td></tr>
-<tr class="separator:a86de475be9a0ef5efe79c2f940f55708"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f853cb75cec822eaad692d27425dc5b" id="r_a5f853cb75cec822eaad692d27425dc5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f853cb75cec822eaad692d27425dc5b">Set_currentValue</a> (uint8_t id, uint32_t value_)</td></tr>
-<tr class="separator:a5f853cb75cec822eaad692d27425dc5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:struct_setting_current" id="r_struct_setting_current"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#struct_setting_current">SettingCurrent</a></td></tr>
+<tr class="memdesc:struct_setting_current"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在のプロパティ設定値を保存するためのフォーマット  <a href="#struct_setting_current">[詳解]</a><br /></td></tr>
+<tr class="separator:struct_setting_current"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">関数詳解</h2>
-<a id="a86de475be9a0ef5efe79c2f940f55708" name="a86de475be9a0ef5efe79c2f940f55708"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86de475be9a0ef5efe79c2f940f55708">&#9670;&#160;</a></span>Get_currentValue()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>現在のプロパティの設定値を管理 </p>
+</div><hr/><h2 class="groupheader">データ構造詳解</h2>
+<a name="struct_setting_current" id="struct_setting_current"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#struct_setting_current">&#9670;&#160;</a></span>SettingCurrent</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t Get_currentValue </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
-          <td></td>
+          <td class="memname">struct SettingCurrent</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="ecg__data_8h_a86de475be9a0ef5efe79c2f940f55708_icgraph.svg" width="516" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a8076b4cf4e7c1aad2f9b9f06853ea75e" name="a8076b4cf4e7c1aad2f9b9f06853ea75e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8076b4cf4e7c1aad2f9b9f06853ea75e">&#9670;&#160;</a></span>InitCurrentState()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitCurrentState </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="ecg__data_8h_a8076b4cf4e7c1aad2f9b9f06853ea75e_icgraph.svg" width="370" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="aaa920a0f94e35ce551cf7d919e1d19ac" name="aaa920a0f94e35ce551cf7d919e1d19ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa920a0f94e35ce551cf7d919e1d19ac">&#9670;&#160;</a></span>InitEcgDataC()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitEcgDataC </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="ecg__data_8h_aaa920a0f94e35ce551cf7d919e1d19ac_cgraph.svg" width="272" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="ecg__data_8h_aaa920a0f94e35ce551cf7d919e1d19ac_icgraph.svg" width="208" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a5f853cb75cec822eaad692d27425dc5b" name="a5f853cb75cec822eaad692d27425dc5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5f853cb75cec822eaad692d27425dc5b">&#9670;&#160;</a></span>Set_currentValue()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Set_currentValue </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>value_</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="ecg__data_8h_a5f853cb75cec822eaad692d27425dc5b_icgraph.svg" width="554" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<div class="textblock"><p>現在のプロパティ設定値を保存するためのフォーマット </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">データフィールド</th></tr>
+<tr><td class="fieldtype">
+<a id="a765a7443e062ffa820a9af8bfe92cac0" name="a765a7443e062ffa820a9af8bfe92cac0"></a>const int</td>
+<td class="fieldname">
+property</td>
+<td class="fielddoc">
+プロパティのインデックス </td></tr>
+<tr><td class="fieldtype">
+<a id="a7d0dc49b2b5f204ec60b6c238a409049" name="a7d0dc49b2b5f204ec60b6c238a409049"></a>uint16_t</td>
+<td class="fieldname">
+value</td>
+<td class="fielddoc">
+設定値 </td></tr>
+</table>
 
 </div>
 </div>

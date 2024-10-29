@@ -104,47 +104,40 @@ $(function(){initNavTree('synchro_8c.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">synchro.c ファイル</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>受信機からのデータを同期、抽出するライブラリ  
+<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="synchro_8h_source.html">synchro.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-synchro.c の依存先関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="synchro_8c__incl.svg" width="94" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:a1b4e7d5a49bde06b88a85ffc028266ba" id="r_a1b4e7d5a49bde06b88a85ffc028266ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b4e7d5a49bde06b88a85ffc028266ba">TEST_CNT</a>&#160;&#160;&#160;5  /* 検索フレーム数の半分 */</td></tr>
+<tr class="memitem:a1b4e7d5a49bde06b88a85ffc028266ba" id="r_a1b4e7d5a49bde06b88a85ffc028266ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b4e7d5a49bde06b88a85ffc028266ba">TEST_CNT</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:a1b4e7d5a49bde06b88a85ffc028266ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">検索フレーム数の半分  <br /></td></tr>
 <tr class="separator:a1b4e7d5a49bde06b88a85ffc028266ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c2148293e22364989e02b35c3af8898" id="r_a6c2148293e22364989e02b35c3af8898"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c2148293e22364989e02b35c3af8898">SYNC_BUF_SIZE</a>&#160;&#160;&#160;30</td></tr>
-<tr class="separator:a6c2148293e22364989e02b35c3af8898"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:a87de076aee503e24f5f9627a7b90fd98" id="r_a87de076aee503e24f5f9627a7b90fd98"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87de076aee503e24f5f9627a7b90fd98">t2_syncro</a> (uint8_t *ptr, int *m_bytes, int *m_bits)</td></tr>
-<tr class="memdesc:a87de076aee503e24f5f9627a7b90fd98"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファからの同期を検出し先頭バイトとビットを取得  <br /></td></tr>
+<tr class="memdesc:a87de076aee503e24f5f9627a7b90fd98"><td class="mdescLeft">&#160;</td><td class="mdescRight">送信機からのデータバッファを渡して、ヘッド位置を返す関数  <br /></td></tr>
 <tr class="separator:a87de076aee503e24f5f9627a7b90fd98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 変数</h2></td></tr>
-<tr class="memitem:ab16ff466bc1777b23d0188ce3691e8ae" id="r_ab16ff466bc1777b23d0188ce3691e8ae"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_mask.html">Mask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab16ff466bc1777b23d0188ce3691e8ae">maskSet</a> [8]</td></tr>
+<tr class="memitem:ab16ff466bc1777b23d0188ce3691e8ae" id="r_ab16ff466bc1777b23d0188ce3691e8ae"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="synchro_8h.html#struct_mask">Mask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab16ff466bc1777b23d0188ce3691e8ae">maskSet</a> [8]</td></tr>
 <tr class="memdesc:ab16ff466bc1777b23d0188ce3691e8ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">各種の抽出マスク  <br /></td></tr>
 <tr class="separator:ab16ff466bc1777b23d0188ce3691e8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51db0b83c130ceb1290fe2176864f303" id="r_a51db0b83c130ceb1290fe2176864f303"><td class="memItemLeft" align="right" valign="top">static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51db0b83c130ceb1290fe2176864f303">MCL</a> [8] = { -1, -1, -1, -1, -1, 0x80, 0x40, 0x20 }</td></tr>
+<tr class="separator:a51db0b83c130ceb1290fe2176864f303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd4ef5a2f79ec34f6f3db505c41fcacd" id="r_acd4ef5a2f79ec34f6f3db505c41fcacd"><td class="memItemLeft" align="right" valign="top">static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd4ef5a2f79ec34f6f3db505c41fcacd">MCU</a> [8] = { 0x10, 0x08, 0x04, 0x02, 0x01, 0x00, 0x00, 0x00 }</td></tr>
+<tr class="separator:acd4ef5a2f79ec34f6f3db505c41fcacd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa710dd7de4f7d1087c31f0ef648a24a4" id="r_aa710dd7de4f7d1087c31f0ef648a24a4"><td class="memItemLeft" align="right" valign="top">static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa710dd7de4f7d1087c31f0ef648a24a4">MML</a> [8] = { -1, -1, -1, -1, -1, 0x80, 0xC0, 0xE0 }</td></tr>
+<tr class="separator:aa710dd7de4f7d1087c31f0ef648a24a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeab7ade420eb7a29043ea4e99695bfe" id="r_afeab7ade420eb7a29043ea4e99695bfe"><td class="memItemLeft" align="right" valign="top">static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afeab7ade420eb7a29043ea4e99695bfe">MMU</a> [8] = { 0x70, 0x38, 0x1C, 0x0E, 0x07, 0x03, 0x01, 0x00 }</td></tr>
+<tr class="separator:afeab7ade420eb7a29043ea4e99695bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">マクロ定義詳解</h2>
-<a id="a6c2148293e22364989e02b35c3af8898" name="a6c2148293e22364989e02b35c3af8898"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c2148293e22364989e02b35c3af8898">&#9670;&#160;</a></span>SYNC_BUF_SIZE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SYNC_BUF_SIZE&#160;&#160;&#160;30</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>受信機からのデータを同期、抽出するライブラリ </p>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
 <a id="a1b4e7d5a49bde06b88a85ffc028266ba" name="a1b4e7d5a49bde06b88a85ffc028266ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b4e7d5a49bde06b88a85ffc028266ba">&#9670;&#160;</a></span>TEST_CNT</h2>
 
@@ -152,10 +145,12 @@ synchro.c の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define TEST_CNT&#160;&#160;&#160;5  /* 検索フレーム数の半分 */</td>
+          <td class="memname">#define TEST_CNT&#160;&#160;&#160;5</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>検索フレーム数の半分 </p>
 
 </div>
 </div>
@@ -184,7 +179,7 @@ synchro.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
-<p>バッファからの同期を検出し先頭バイトとビットを取得 </p>
+<p>送信機からのデータバッファを渡して、ヘッド位置を返す関数 </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">ptr</td><td>入力バッファの先頭ポインタ </td></tr>
@@ -205,6 +200,94 @@ synchro.c の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">変数詳解</h2>
+<a id="afeab7ade420eb7a29043ea4e99695bfe" name="afeab7ade420eb7a29043ea4e99695bfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeab7ade420eb7a29043ea4e99695bfe">&#9670;&#160;</a></span>MMU</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t MMU[8] = { 0x70, 0x38, 0x1C, 0x0E, 0x07, 0x03, 0x01, 0x00 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd4ef5a2f79ec34f6f3db505c41fcacd" name="acd4ef5a2f79ec34f6f3db505c41fcacd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd4ef5a2f79ec34f6f3db505c41fcacd">&#9670;&#160;</a></span>MCU</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t MCU[8] = { 0x10, 0x08, 0x04, 0x02, 0x01, 0x00, 0x00, 0x00 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa710dd7de4f7d1087c31f0ef648a24a4" name="aa710dd7de4f7d1087c31f0ef648a24a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa710dd7de4f7d1087c31f0ef648a24a4">&#9670;&#160;</a></span>MML</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t MML[8] = { -1, -1, -1, -1, -1, 0x80, 0xC0, 0xE0 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51db0b83c130ceb1290fe2176864f303" name="a51db0b83c130ceb1290fe2176864f303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51db0b83c130ceb1290fe2176864f303">&#9670;&#160;</a></span>MCL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const uint8_t MCL[8] = { -1, -1, -1, -1, -1, 0x80, 0x40, 0x20 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab16ff466bc1777b23d0188ce3691e8ae" name="ab16ff466bc1777b23d0188ce3691e8ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab16ff466bc1777b23d0188ce3691e8ae">&#9670;&#160;</a></span>maskSet</h2>
 
@@ -212,40 +295,23 @@ synchro.c の依存先関係図:</div>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="struct_mask.html">Mask</a> maskSet[8]</td>
+          <td class="memname">const <a class="el" href="synchro_8h.html#struct_mask">Mask</a> maskSet[8]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <b>初期値:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">    </div>
-<div class="line">    {   </div>
-<div class="line">        {0x0F, 0xFE, 0x00}, 9, {0x01, 0xFF, 0x00}, 8, {0xFF, 0xFE, 0x00}, 13, 0xFF, 0x00, 0x80, { 0x1E , 0x00 }, 9,</div>
-<div class="line">    },</div>
-<div class="line">    {   </div>
-<div class="line">        {0x07, 0xFF, 0x00}, 8, {0x00, 0xFF, 0x80}, 7, {0x7F, 0xFF, 0x00}, 12, 0x7F, 0x80, 0x40, { 0x0F , 0x00 }, 8,</div>
-<div class="line">    },</div>
-<div class="line">    {   </div>
-<div class="line">        {0x03, 0xFF, 0x80}, 7, {0x00, 0x7F, 0xC0}, 6, {0x3F, 0xFF, 0x80}, 11, 0x3F, 0xC0, 0x20, { 0x07 , 0x80 }, 7,</div>
-<div class="line">    },</div>
-<div class="line">    {   </div>
-<div class="line">        {0x01, 0xFF, 0xC0}, 6, {0x00, 0x3F, 0xE0}, 5, {0x1F, 0xFF, 0xC0}, 10, 0x1F, 0xE0, 0x10, { 0x03 , 0xC0 }, 6,</div>
-<div class="line">    },</div>
-<div class="line">    {   </div>
-<div class="line">        {0x00, 0xFF, 0xE0}, 5, {0x00, 0x1F, 0xF0}, 4, {0x0F, 0xFF, 0xE0}, 9,  0x0F, 0xF0, 0x08, { 0x01 , 0xE0 }, 5,</div>
-<div class="line">    },</div>
-<div class="line">    {   </div>
-<div class="line">        {0x00, 0x7F, 0xF0}, 4, {0x00, 0x0F, 0xF8}, 3, {0x07, 0xFF, 0xF0}, 8,  0x07, 0xF8, 0x04, { 0x00 , 0xF0 }, 4,</div>
-<div class="line">    },</div>
-<div class="line">    {   </div>
-<div class="line">        {0x00, 0x3F, 0xF8}, 3, {0x00, 0x07, 0xFC}, 2, {0x03, 0xFF, 0xF8}, 7,  0x03, 0xFC, 0x02, { 0x00 , 0x78 }, 3,</div>
-<div class="line">    },</div>
-<div class="line">    {   </div>
-<div class="line">        {0x00, 0x1F, 0xFC}, 2, {0x00, 0x03, 0xFE}, 1, {0x01, 0xFF, 0xFC}, 6,  0x01, 0xFE, 0x01, { 0x00 , 0x3C }, 2,</div>
-<div class="line">    },</div>
+<div class="line">    { {0x0F, 0xFE, 0x00}, 9, {0x01, 0xFF, 0x00}, 8, {0xFF, 0xFE, 0x00}, 13, 0xFF, 0x00, 0x80, { 0x1E , 0x00 }, 9, },    </div>
+<div class="line">    { {0x07, 0xFF, 0x00}, 8, {0x00, 0xFF, 0x80}, 7, {0x7F, 0xFF, 0x00}, 12, 0x7F, 0x80, 0x40, { 0x0F , 0x00 }, 8, },    </div>
+<div class="line">    { {0x03, 0xFF, 0x80}, 7, {0x00, 0x7F, 0xC0}, 6, {0x3F, 0xFF, 0x80}, 11, 0x3F, 0xC0, 0x20, { 0x07 , 0x80 }, 7, },    </div>
+<div class="line">    { {0x01, 0xFF, 0xC0}, 6, {0x00, 0x3F, 0xE0}, 5, {0x1F, 0xFF, 0xC0}, 10, 0x1F, 0xE0, 0x10, { 0x03 , 0xC0 }, 6, },    </div>
+<div class="line">    { {0x00, 0xFF, 0xE0}, 5, {0x00, 0x1F, 0xF0}, 4, {0x0F, 0xFF, 0xE0}, 9,  0x0F, 0xF0, 0x08, { 0x01 , 0xE0 }, 5, },    </div>
+<div class="line">    { {0x00, 0x7F, 0xF0}, 4, {0x00, 0x0F, 0xF8}, 3, {0x07, 0xFF, 0xF0}, 8,  0x07, 0xF8, 0x04, { 0x00 , 0xF0 }, 4, },    </div>
+<div class="line">    { {0x00, 0x3F, 0xF8}, 3, {0x00, 0x07, 0xFC}, 2, {0x03, 0xFF, 0xF8}, 7,  0x03, 0xFC, 0x02, { 0x00 , 0x78 }, 3, },    </div>
+<div class="line">    { {0x00, 0x1F, 0xFC}, 2, {0x00, 0x03, 0xFE}, 1, {0x01, 0xFF, 0xFC}, 6,  0x01, 0xFE, 0x01, { 0x00 , 0x3C }, 2, },    </div>
 <div class="line">}</div>
 </div><!-- fragment -->
 <p>各種の抽出マスク </p>
-<p>indexとヘッドのbit位置が連動しています<br  />
+<p>indexとヘッドのbit位置が連動しています <br  />
 ヘッドが5bitずれならmaskSet[5]のマスクを使用します </p>
 
 </div>

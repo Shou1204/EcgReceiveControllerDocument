@@ -1,8 +1,22 @@
 var searchData=
 [
-  ['base_5fvalue_0',['BASE_VALUE',['../spi__receive_8h.html#ac16e51f6c599534f2cdd80d7c5f31c82',1,'spi_receive.h']]],
-  ['buf_1',['Buf',['../struct_buf.html',1,'']]],
-  ['buf_5flength_5f_2',['BUF_LENGTH_',['../_as_qrs_detect1_8c.html#a966ec510b401f76bb5a9c0288640a02c',1,'AsQrsDetect1.c']]],
-  ['bufname_3',['bufName',['../spi__receive_8h.html#aa269bfcd18f8beee611836a28f82b0fa',1,'spi_receive.h']]],
-  ['busfault_5fhandler_4',['BusFault_Handler',['../stm32l4xx__it_8h.html#a850cefb17a977292ae5eb4cafa9976c3',1,'BusFault_Handler(void):&#160;stm32l4xx_it.c'],['../stm32l4xx__it_8c.html#a850cefb17a977292ae5eb4cafa9976c3',1,'BusFault_Handler(void):&#160;stm32l4xx_it.c']]]
+  ['generatechecksum_0',['generateCheckSum',['../handshake__receiver_8c.html#a8068cf84729427eab59d284de9d73672',1,'handshake_receiver.c']]],
+  ['generatelongecgdata_1',['GenerateLongEcgData',['../spi__receive_8c.html#a749d726a9c18205e684074afb8e7fb1a',1,'spi_receive.c']]],
+  ['generatetransformat_2',['generateTransFormat',['../host__out_8c.html#a8691a8c50db7d084a008a883d8059a1a',1,'host_out.c']]],
+  ['get_5fcherr_3',['Get_chErr',['../spi__receive_8c.html#a8e5f71644c10f67c3a50dcb6af877244',1,'spi_receive.c']]],
+  ['get_5fcurrentvalue_4',['Get_currentValue',['../ecg__data_8c.html#a86de475be9a0ef5efe79c2f940f55708',1,'ecg_data.c']]],
+  ['get_5fdenatucnt_5',['Get_denAtuCnt',['../spi__receive_8c.html#a1a9568a1aa7a8f6fad829637799f7d07',1,'spi_receive.c']]],
+  ['get_5finputuartstate_6',['Get_inputUartState',['../host__in_8c.html#a95303fcfed41e87df9d8fb299e0d9f5d',1,'host_in.c']]],
+  ['get_5fisupdated_7',['Get_isUpdated',['../host__in_8c.html#a7982534a1f252104992a8a52bdc8b21e',1,'host_in.c']]],
+  ['get_5fnursecallcnt_8',['Get_nurseCallCnt',['../spi__receive_8c.html#ac3197cc17035f4f07c9bf2d21200c927',1,'spi_receive.c']]],
+  ['get_5fpacemakercnt_9',['Get_paceMakerCnt',['../spi__receive_8c.html#ac1d35592714fedf7552e9806c89b8364',1,'spi_receive.c']]],
+  ['get_5fparityerr_10',['Get_parityErr',['../spi__receive_8c.html#a8a6f224d4a84edb26d6aba4e4c8524c3',1,'spi_receive.c']]],
+  ['get_5freaderrorcnt_11',['Get_readErrorCnt',['../spi__receive_8c.html#a7f62612013bc7c9be1d7854c1ed8234f',1,'spi_receive.c']]],
+  ['get_5fstxtime_12',['Get_stxTime',['../main_8h.html#aad102e4b4697b74c8b95c68b9475106d',1,'main.h']]],
+  ['get_5fsyncsearchstatus_13',['Get_syncSearchStatus',['../spi__receive_8c.html#a9e0d0da6a972e1c35a82bf5b101cb5aa',1,'spi_receive.c']]],
+  ['get_5ftmpvalue_14',['Get_tmpValue',['../host__in_8c.html#afe005c613143dc94e368fb9c124603e6',1,'host_in.c']]],
+  ['getbtm7bits_15',['getBtm7Bits',['../host__out_8c.html#aaed984f5dd2016d651cb6bfb908eb425',1,'host_out.c']]],
+  ['getecgbuf_16',['GetEcgBuf',['../spi__receive_8c.html#a8f44822a950d5d0fb8884c12164d3e0c',1,'spi_receive.c']]],
+  ['getremainecgbuf_17',['GetRemainEcgBuf',['../spi__receive_8c.html#ab954ff149d78c53a17e2688dd2704091',1,'spi_receive.c']]],
+  ['gettop7bits_18',['getTop7Bits',['../host__out_8c.html#ac4e82979524f8f21d71ca6d50b3c0e1e',1,'host_out.c']]]
 ];

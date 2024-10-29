@@ -1,0 +1,14 @@
+<map id="handshake_receiver.h" name="handshake_receiver.h">
+<area shape="rect" id="Node000001" title="受信機へのUART出力とGPIOシグナルの確認" alt="" coords="75,5,223,32"/>
+<area shape="rect" id="Node000002" href="$handshake__receiver_8c.html" title=" " alt="" coords="5,155,154,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,47,88,155,83,153,134,45"/>
+<area shape="rect" id="Node000003" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="189,80,250,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,41,209,78,205,81,170,45"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="183,117,105,156,103,152,180,112"/>
+<area shape="rect" id="Node000004" href="$host__out_8c.html" title=" " alt="" coords="178,155,261,181"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="222,122,222,154,217,154,217,122"/>
+<area shape="rect" id="Node000005" href="$main_8c.html" title=": Main program body" alt="" coords="285,155,346,181"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="250,114,301,152,297,156,246,118"/>
+<area shape="rect" id="Node000006" href="$spi__receive_8c.html" title=" " alt="" coords="370,155,469,181"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="265,108,386,152,384,157,264,113"/>
+</map>

@@ -2,6 +2,6 @@
 <area shape="rect" id="Node000001" title=" " alt="" coords="367,5,473,32"/>
 <area shape="rect" id="Node000002" href="$filter_controller_8c.html#a881cb16bbb180c7b96ee8fb4317c49ca" title=" " alt="" coords="190,5,319,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="351,21,319,21,319,16,351,16"/>
-<area shape="rect" id="Node000003" href="$spi__receive_8c.html#af39d147b690c80c7947af19e81a0fe09" title=" " alt="" coords="5,5,142,32"/>
+<area shape="rect" id="Node000003" href="$spi__receive_8c.html#af39d147b690c80c7947af19e81a0fe09" title="SPI入力データの処理プロセス" alt="" coords="5,5,142,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="174,21,142,21,142,16,174,16"/>
 </map>

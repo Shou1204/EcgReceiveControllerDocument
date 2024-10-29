@@ -1,7 +1,7 @@
 <map id="manualQrsHandler" name="manualQrsHandler">
 <area shape="rect" id="Node000001" title=" " alt="" coords="413,5,542,32"/>
-<area shape="rect" id="Node000002" href="$spi__receive_8c.html#af39d147b690c80c7947af19e81a0fe09" title=" " alt="" coords="229,5,365,32"/>
+<area shape="rect" id="Node000002" href="$spi__receive_8c.html#af39d147b690c80c7947af19e81a0fe09" title="SPI入力データの処理プロセス" alt="" coords="229,5,365,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="397,21,365,21,365,16,397,16"/>
-<area shape="rect" id="Node000003" href="$main_8c.html#a3df7021fe24cf874f8b1eec5bd5f4cb3" title=" " alt="" coords="5,5,181,32"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a3df7021fe24cf874f8b1eec5bd5f4cb3" title="SPI1のコールバック 1バイト毎に動作 &#39;SpiReceiveProcess()&#39;を呼び出す" alt="" coords="5,5,181,32"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="213,21,181,21,181,16,213,16"/>
 </map>

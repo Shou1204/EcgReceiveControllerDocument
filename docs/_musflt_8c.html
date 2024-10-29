@@ -99,50 +99,56 @@ $(function(){initNavTree('_musflt_8c.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#define-members">マクロ定義</a> &#124;
-<a href="#func-members">関数</a>  </div>
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
   <div class="headertitle"><div class="title">Musflt.c ファイル</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>筋電フィルタ  
+<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="filter_8h_source.html">filter.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Musflt.c の依存先関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_musflt_8c__incl.svg" width="94" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:a5eea6f1f3938afafea946b775ce8a2bb" id="r_a5eea6f1f3938afafea946b775ce8a2bb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eea6f1f3938afafea946b775ce8a2bb">MUS_LEV_1</a>&#160;&#160;&#160;3</td></tr>
-<tr class="separator:a5eea6f1f3938afafea946b775ce8a2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d709c46976d387a64f9f1233f4bb602" id="r_a8d709c46976d387a64f9f1233f4bb602"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d709c46976d387a64f9f1233f4bb602">MUS_2K1_MAX_</a>&#160;&#160;&#160;11</td></tr>
 <tr class="separator:a8d709c46976d387a64f9f1233f4bb602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eea6f1f3938afafea946b775ce8a2bb" id="r_a5eea6f1f3938afafea946b775ce8a2bb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5eea6f1f3938afafea946b775ce8a2bb">MUS_LEV_1</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:a5eea6f1f3938afafea946b775ce8a2bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:ac1b2c5f49bdeada27e7ea0fbc2fb85e5" id="r_ac1b2c5f49bdeada27e7ea0fbc2fb85e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1b2c5f49bdeada27e7ea0fbc2fb85e5">SetMusFilterStrength</a> (short k)</td></tr>
-<tr class="separator:ac1b2c5f49bdeada27e7ea0fbc2fb85e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62dd60462f4eac5ce151a32e0d4329dc" id="r_a62dd60462f4eac5ce151a32e0d4329dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62dd60462f4eac5ce151a32e0d4329dc">SetRxEcgMusFilter</a> (short musfilter)</td></tr>
-<tr class="separator:a62dd60462f4eac5ce151a32e0d4329dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a636d3848468611c0cc6ecea2e3bc642f" id="r_a636d3848468611c0cc6ecea2e3bc642f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a636d3848468611c0cc6ecea2e3bc642f">mus_am_long_ini</a> (short k)</td></tr>
-<tr class="separator:a636d3848468611c0cc6ecea2e3bc642f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e92060f85a38d72a03e39d58bcd9fc7" id="r_a1e92060f85a38d72a03e39d58bcd9fc7"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e92060f85a38d72a03e39d58bcd9fc7">mus_am_long</a> (long sts_ecg)</td></tr>
 <tr class="separator:a1e92060f85a38d72a03e39d58bcd9fc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a636d3848468611c0cc6ecea2e3bc642f" id="r_a636d3848468611c0cc6ecea2e3bc642f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a636d3848468611c0cc6ecea2e3bc642f">mus_am_long_ini</a> (short k)</td></tr>
+<tr class="separator:a636d3848468611c0cc6ecea2e3bc642f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1b2c5f49bdeada27e7ea0fbc2fb85e5" id="r_ac1b2c5f49bdeada27e7ea0fbc2fb85e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1b2c5f49bdeada27e7ea0fbc2fb85e5">SetMusFilterStrength</a> (short k)</td></tr>
+<tr class="memdesc:ac1b2c5f49bdeada27e7ea0fbc2fb85e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">フィルタ強度を変更  <br /></td></tr>
+<tr class="separator:ac1b2c5f49bdeada27e7ea0fbc2fb85e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62dd60462f4eac5ce151a32e0d4329dc" id="r_a62dd60462f4eac5ce151a32e0d4329dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62dd60462f4eac5ce151a32e0d4329dc">SetRxEcgMusFilter</a> (short musfilter)</td></tr>
+<tr class="memdesc:a62dd60462f4eac5ce151a32e0d4329dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">フィルタのオンオフを変更  <br /></td></tr>
+<tr class="separator:a62dd60462f4eac5ce151a32e0d4329dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:ab7a9aeb95fcbd875e464e5aca2834c67" id="r_ab7a9aeb95fcbd875e464e5aca2834c67"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab7a9aeb95fcbd875e464e5aca2834c67">Mus3Cnt</a></td></tr>
+<tr class="separator:ab7a9aeb95fcbd875e464e5aca2834c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a229876abaf4f7db9191b5c872bc71e6b" id="r_a229876abaf4f7db9191b5c872bc71e6b"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a229876abaf4f7db9191b5c872bc71e6b">Mus3Level</a></td></tr>
+<tr class="separator:a229876abaf4f7db9191b5c872bc71e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7a87e65201b3862de1621c49e6ebdd1" id="r_ac7a87e65201b3862de1621c49e6ebdd1"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7a87e65201b3862de1621c49e6ebdd1">Mus3Sts</a> [<a class="el" href="#a8d709c46976d387a64f9f1233f4bb602">MUS_2K1_MAX_</a>]</td></tr>
+<tr class="separator:ac7a87e65201b3862de1621c49e6ebdd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac493d2095d98016af853c91c7d2cd037" id="r_ac493d2095d98016af853c91c7d2cd037"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac493d2095d98016af853c91c7d2cd037">Mus3TmpY</a></td></tr>
+<tr class="separator:ac493d2095d98016af853c91c7d2cd037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b53f165f06a72bea3c7d28c123aff12" id="r_a6b53f165f06a72bea3c7d28c123aff12"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b53f165f06a72bea3c7d28c123aff12">Mus3Y</a> [<a class="el" href="#a8d709c46976d387a64f9f1233f4bb602">MUS_2K1_MAX_</a>]</td></tr>
+<tr class="separator:a6b53f165f06a72bea3c7d28c123aff12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a591649339e433258d6078f7911f12855" id="r_a591649339e433258d6078f7911f12855"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a591649339e433258d6078f7911f12855">RxEcgMusFilter</a></td></tr>
+<tr class="separator:a591649339e433258d6078f7911f12855"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">マクロ定義詳解</h2>
-<a id="a8d709c46976d387a64f9f1233f4bb602" name="a8d709c46976d387a64f9f1233f4bb602"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d709c46976d387a64f9f1233f4bb602">&#9670;&#160;</a></span>MUS_2K1_MAX_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MUS_2K1_MAX_&#160;&#160;&#160;11</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>筋電フィルタ </p>
+<dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150<br  />
+フィルタ強度とオンオフを初期化以後も変更できる関数を追加 </dd></dl>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
 <a id="a5eea6f1f3938afafea946b775ce8a2bb" name="a5eea6f1f3938afafea946b775ce8a2bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5eea6f1f3938afafea946b775ce8a2bb">&#9670;&#160;</a></span>MUS_LEV_1</h2>
 
@@ -157,25 +163,69 @@ Musflt.c の依存先関係図:</div>
 
 </div>
 </div>
-<h2 class="groupheader">関数詳解</h2>
-<a id="a1e92060f85a38d72a03e39d58bcd9fc7" name="a1e92060f85a38d72a03e39d58bcd9fc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e92060f85a38d72a03e39d58bcd9fc7">&#9670;&#160;</a></span>mus_am_long()</h2>
+<a id="a8d709c46976d387a64f9f1233f4bb602" name="a8d709c46976d387a64f9f1233f4bb602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d709c46976d387a64f9f1233f4bb602">&#9670;&#160;</a></span>MUS_2K1_MAX_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">long mus_am_long </td>
+          <td class="memname">#define MUS_2K1_MAX_&#160;&#160;&#160;11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ac1b2c5f49bdeada27e7ea0fbc2fb85e5" name="ac1b2c5f49bdeada27e7ea0fbc2fb85e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1b2c5f49bdeada27e7ea0fbc2fb85e5">&#9670;&#160;</a></span>SetMusFilterStrength()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetMusFilterStrength </td>
           <td>(</td>
-          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>sts_ecg</em></span></td><td>)</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>k</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>フィルタ強度を変更 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150<br  />
+追加 </dd></dl>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_musflt_8c_a1e92060f85a38d72a03e39d58bcd9fc7_icgraph.svg" width="478" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_musflt_8c_ac1b2c5f49bdeada27e7ea0fbc2fb85e5_icgraph.svg" width="486" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a62dd60462f4eac5ce151a32e0d4329dc" name="a62dd60462f4eac5ce151a32e0d4329dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62dd60462f4eac5ce151a32e0d4329dc">&#9670;&#160;</a></span>SetRxEcgMusFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetRxEcgMusFilter </td>
+          <td>(</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>musfilter</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>フィルタのオンオフを変更 </p>
+<dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150<br  />
+追加 </dd></dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_musflt_8c_a62dd60462f4eac5ce151a32e0d4329dc_icgraph.svg" width="478" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -202,49 +252,160 @@ Musflt.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="ac1b2c5f49bdeada27e7ea0fbc2fb85e5" name="ac1b2c5f49bdeada27e7ea0fbc2fb85e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac1b2c5f49bdeada27e7ea0fbc2fb85e5">&#9670;&#160;</a></span>SetMusFilterStrength()</h2>
+<a id="a1e92060f85a38d72a03e39d58bcd9fc7" name="a1e92060f85a38d72a03e39d58bcd9fc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e92060f85a38d72a03e39d58bcd9fc7">&#9670;&#160;</a></span>mus_am_long()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetMusFilterStrength </td>
+          <td class="memname">long mus_am_long </td>
           <td>(</td>
-          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>k</em></span></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>sts_ecg</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>AM140 → AM150 フィルタ強度を初期化以後も変更できる関数を追加 </p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_musflt_8c_ac1b2c5f49bdeada27e7ea0fbc2fb85e5_icgraph.svg" width="486" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_musflt_8c_a1e92060f85a38d72a03e39d58bcd9fc7_icgraph.svg" width="478" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a62dd60462f4eac5ce151a32e0d4329dc" name="a62dd60462f4eac5ce151a32e0d4329dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62dd60462f4eac5ce151a32e0d4329dc">&#9670;&#160;</a></span>SetRxEcgMusFilter()</h2>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a591649339e433258d6078f7911f12855" name="a591649339e433258d6078f7911f12855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a591649339e433258d6078f7911f12855">&#9670;&#160;</a></span>RxEcgMusFilter</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void SetRxEcgMusFilter </td>
-          <td>(</td>
-          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>musfilter</em></span></td><td>)</td>
-          <td></td>
+          <td class="memname">short RxEcgMusFilter</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<p>AM140 → AM150 フィルタのオンオフを初期化以後も変更できる関数を追加 </p>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_musflt_8c_a62dd60462f4eac5ce151a32e0d4329dc_icgraph.svg" width="478" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150<br  />
+外部変数を内部でもつように変更 </dd></dl>
+
 </div>
+</div>
+<a id="a6b53f165f06a72bea3c7d28c123aff12" name="a6b53f165f06a72bea3c7d28c123aff12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b53f165f06a72bea3c7d28c123aff12">&#9670;&#160;</a></span>Mus3Y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Mus3Y[<a class="el" href="#a8d709c46976d387a64f9f1233f4bb602">MUS_2K1_MAX_</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7a87e65201b3862de1621c49e6ebdd1" name="ac7a87e65201b3862de1621c49e6ebdd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7a87e65201b3862de1621c49e6ebdd1">&#9670;&#160;</a></span>Mus3Sts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Mus3Sts[<a class="el" href="#a8d709c46976d387a64f9f1233f4bb602">MUS_2K1_MAX_</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac493d2095d98016af853c91c7d2cd037" name="ac493d2095d98016af853c91c7d2cd037"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac493d2095d98016af853c91c7d2cd037">&#9670;&#160;</a></span>Mus3TmpY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Mus3TmpY</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7a9aeb95fcbd875e464e5aca2834c67" name="ab7a9aeb95fcbd875e464e5aca2834c67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7a9aeb95fcbd875e464e5aca2834c67">&#9670;&#160;</a></span>Mus3Cnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Mus3Cnt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a229876abaf4f7db9191b5c872bc71e6b" name="a229876abaf4f7db9191b5c872bc71e6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a229876abaf4f7db9191b5c872bc71e6b">&#9670;&#160;</a></span>Mus3Level</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Mus3Level</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

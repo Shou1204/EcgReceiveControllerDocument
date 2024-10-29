@@ -1,7 +1,0 @@
-<map id="ledPattern.h" name="ledPattern.h">
-<area shape="rect" id="Node000001" title=" " alt="" coords="49,5,140,32"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,70,107"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,34,59,69,55,66,83,31"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="94,80,210,107"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="107,31,135,66,131,69,103,34"/>
-</map>

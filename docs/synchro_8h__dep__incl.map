@@ -1,0 +1,17 @@
+<map id="synchro.h" name="synchro.h">
+<area shape="rect" id="Node000001" title="受信機からのデータを同期、抽出するライブラリ" alt="" coords="207,5,285,32"/>
+<area shape="rect" id="Node000002" href="$spi__receive_8h.html" title="送信機からのSPI通信を処理 &#160;&#160;受信からフィルタリング、出力値の作成までおこなう" alt="" coords="141,80,239,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,46,202,81,198,78,225,43"/>
+<area shape="rect" id="Node000009" href="$synchro_8c.html" title="受信機からのデータを同期、抽出するライブラリ" alt="" coords="263,80,341,107"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="267,43,294,78,290,81,263,46"/>
+<area shape="rect" id="Node000003" href="$filter_controller_8c.html" title=" " alt="" coords="5,155,119,181"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="156,117,86,156,83,152,153,112"/>
+<area shape="rect" id="Node000004" href="$host__out_8c.html" title=" " alt="" coords="126,229,208,256"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="188,123,172,229,167,228,183,122"/>
+<area shape="rect" id="Node000005" href="$main_8h.html" title=": Header for main.c file. This file contains the common defines of the application." alt="" coords="194,155,255,181"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="205,120,221,153,216,155,200,122"/>
+<area shape="rect" id="Node000008" href="$spi__receive_8c.html" title=" " alt="" coords="238,229,336,256"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="228,113,250,131,270,153,279,173,285,193,290,229,284,229,280,195,274,175,265,156,247,135,225,117"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="207,195,179,231,175,227,203,192"/>
+<area shape="poly" id="edge6_Node000005_Node000008" title=" " alt="" coords="248,192,279,227,275,231,244,195"/>
+</map>

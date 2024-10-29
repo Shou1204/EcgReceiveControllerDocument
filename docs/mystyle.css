@@ -1,10 +1,9 @@
-body, table, div, p, dl {
+/* body, table, div, p, dl {
 	font-family: Consolas, 'Meiryo UI', monospace;
 	font-size: 98%;
-}
+} */
 
-/* プロジェクト名 */
-#projectname {
+プロジェクト名 #projectname {
 	font-size: 200%;
 }
 
@@ -75,7 +74,10 @@ div.line {
 }
 
 /* 引数・戻り値 */
-.params, .retval, .exception, .tparams {
+.params,
+.retval,
+.exception,
+.tparams {
 	font-family: Consolas, 'Meiryo UI', monospace;
 }
 

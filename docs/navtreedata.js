@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "EcgReceiveController", "index.html", [
-    [ "Topics", "topics.html", "topics" ],
+    [ "AM150受信ユニット", "index.html", "index" ],
     [ "データ構造", "annotated.html", [
       [ "データ構造", "annotated.html", "annotated_dup" ],
       [ "データ構造索引", "classes.html", null ],
@@ -38,8 +38,8 @@ var NAVTREE =
       [ "ファイル一覧", "files.html", "files_dup" ],
       [ "大域各種", "globals.html", [
         [ "全て", "globals.html", "globals_dup" ],
-        [ "関数", "globals_func.html", "globals_func" ],
-        [ "変数", "globals_vars.html", null ],
+        [ "関数", "globals_func.html", null ],
+        [ "変数", "globals_vars.html", "globals_vars" ],
         [ "列挙型", "globals_enum.html", null ],
         [ "列挙値", "globals_eval.html", null ],
         [ "マクロ定義", "globals_defs.html", null ]
@@ -51,8 +51,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_as_qrs_detect1_8c.html",
-"globals_h.html",
-"stm32l4xx__hal__conf_8h.html#aa9b5a3a425901e097de70092dbe31e0f"
+"_qrs2_8c.html#adcf63d7b33bbf69ed9e3d649449cacc3",
+"led_pattern_8c.html"
 ];
 
 var SYNCONMSG = 'クリックで同期表示が無効になります';

@@ -1,0 +1,7 @@
+<map id="StartSPI" name="StartSPI">
+<area shape="rect" id="Node000001" title="SPIの受信を開始する" alt="" coords="229,31,300,57"/>
+<area shape="rect" id="Node000002" href="$main_8c.html#a3df7021fe24cf874f8b1eec5bd5f4cb3" title="SPI1のコールバック 1バイト毎に動作 &#39;SpiReceiveProcess()&#39;を呼び出す" alt="" coords="5,5,181,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="213,39,181,34,181,29,213,34"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="68,56,118,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="213,54,118,68,117,63,212,49"/>
+</map>

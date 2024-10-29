@@ -104,36 +104,73 @@ $(function(){initNavTree('common_8h.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">common.h ファイル</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>プログラム全体の共有データ  
+<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
-</div><div class="textblock"><div class="dynheader">
-common.h の依存先関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="common_8h__incl.svg" width="248" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 </div>
 <p><a href="common_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:a7e7232f278193dd8684f973ee70ef3f5" id="r_a7e7232f278193dd8684f973ee70ef3f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e7232f278193dd8684f973ee70ef3f5">MY_DEBUG</a></td></tr>
-<tr class="separator:a7e7232f278193dd8684f973ee70ef3f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d6ade37fefa4e48c23b4df46a85d161" id="r_a7d6ade37fefa4e48c23b4df46a85d161"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d6ade37fefa4e48c23b4df46a85d161">HUM_FILTER_DEBUG</a></td></tr>
-<tr class="separator:a7d6ade37fefa4e48c23b4df46a85d161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa93f0eb578d23995850d61f7d61c55c1" id="r_aa93f0eb578d23995850d61f7d61c55c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:aa93f0eb578d23995850d61f7d61c55c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43c3aff67454ac7cc9ad4433a4bddc7f" id="r_a43c3aff67454ac7cc9ad4433a4bddc7f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43c3aff67454ac7cc9ad4433a4bddc7f">FORMAT_VER</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a43c3aff67454ac7cc9ad4433a4bddc7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">フォーマットバージョン  <br /></td></tr>
 <tr class="separator:a43c3aff67454ac7cc9ad4433a4bddc7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7749e64cf83922a69047622b6ea86cca" id="r_a7749e64cf83922a69047622b6ea86cca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7749e64cf83922a69047622b6ea86cca">HARD_VER</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a7749e64cf83922a69047622b6ea86cca"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハードウェアバージョン  <br /></td></tr>
 <tr class="separator:a7749e64cf83922a69047622b6ea86cca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d6ade37fefa4e48c23b4df46a85d161" id="r_a7d6ade37fefa4e48c23b4df46a85d161"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d6ade37fefa4e48c23b4df46a85d161">HUM_FILTER_DEBUG</a></td></tr>
+<tr class="separator:a7d6ade37fefa4e48c23b4df46a85d161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e7232f278193dd8684f973ee70ef3f5" id="r_a7e7232f278193dd8684f973ee70ef3f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e7232f278193dd8684f973ee70ef3f5">MY_DEBUG</a></td></tr>
+<tr class="separator:a7e7232f278193dd8684f973ee70ef3f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7688e0ff55779f76883db7d1bc722c91" id="r_a7688e0ff55779f76883db7d1bc722c91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7688e0ff55779f76883db7d1bc722c91">SOFT_VER</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:a7688e0ff55779f76883db7d1bc722c91"><td class="mdescLeft">&#160;</td><td class="mdescRight">ソフトウェアバージョン  <br /></td></tr>
 <tr class="separator:a7688e0ff55779f76883db7d1bc722c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8cecfc5c5c054d2875c03e77b7be15d" id="r_aa8cecfc5c5c054d2875c03e77b7be15d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:aa8cecfc5c5c054d2875c03e77b7be15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa93f0eb578d23995850d61f7d61c55c1" id="r_aa93f0eb578d23995850d61f7d61c55c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a>&#160;&#160;&#160;0</td></tr>
-<tr class="separator:aa93f0eb578d23995850d61f7d61c55c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 列挙型</h2></td></tr>
+<tr class="memitem:a048cc4b913c45184d9fefb91686c3a60" id="r_a048cc4b913c45184d9fefb91686c3a60"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a048cc4b913c45184d9fefb91686c3a60">autoQrsStSts</a> { <a class="el" href="#a048cc4b913c45184d9fefb91686c3a60aa7695f6a3cdb9973e68cc3f412f39b0d">AUTO_QRS_ST_LOW</a>
+, <a class="el" href="#a048cc4b913c45184d9fefb91686c3a60a4c488d4e9fa0f169d28d49822cf5abe3">AUTO_QRS_ST_HIGH</a>
+ }</td></tr>
+<tr class="memdesc:a048cc4b913c45184d9fefb91686c3a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">QRS感度（自動）の設定種別  <a href="#a048cc4b913c45184d9fefb91686c3a60">[詳解]</a><br /></td></tr>
+<tr class="separator:a048cc4b913c45184d9fefb91686c3a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e643f68609351c89867074970dc6549" id="r_a4e643f68609351c89867074970dc6549"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e643f68609351c89867074970dc6549">ecgSensiSts</a> { <br />
+&#160;&#160;<a class="el" href="#a4e643f68609351c89867074970dc6549aa4a4a9af1fe5ff7056807cd2c16160f5">ECG_SENSI_ONE_HALF</a>
+, <a class="el" href="#a4e643f68609351c89867074970dc6549a45098897faac2ea6de2db8277dd57641">ECG_SENSI_ONE</a>
+, <a class="el" href="#a4e643f68609351c89867074970dc6549a05aee2f750386262054ba6a4db007359">ECG_SENSI_TWO</a>
+, <a class="el" href="#a4e643f68609351c89867074970dc6549ae9f0decb885aaf25108c3a954d73b515">ECG_SENSI_FORE</a>
+, <br />
+&#160;&#160;<a class="el" href="#a4e643f68609351c89867074970dc6549af856fc86b7f46580aec1dedfc8417149">ECG_SENSI_EIGHT</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a4e643f68609351c89867074970dc6549"><td class="mdescLeft">&#160;</td><td class="mdescRight">ECG感度の設定種別  <a href="#a4e643f68609351c89867074970dc6549">[詳解]</a><br /></td></tr>
+<tr class="separator:a4e643f68609351c89867074970dc6549"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64b09e49914e216a4caf0c2da7d67c27" id="r_a64b09e49914e216a4caf0c2da7d67c27"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64b09e49914e216a4caf0c2da7d67c27">humFilterSts</a> { <a class="el" href="#a64b09e49914e216a4caf0c2da7d67c27a5733177da19e21d970a47b57b881a235">HUM_OFF</a>
+, <a class="el" href="#a64b09e49914e216a4caf0c2da7d67c27a05173371ef9e2fec244954eb5dfb1e46">HUM_ON</a>
+ }</td></tr>
+<tr class="memdesc:a64b09e49914e216a4caf0c2da7d67c27"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハムフィルタの設定種別  <a href="#a64b09e49914e216a4caf0c2da7d67c27">[詳解]</a><br /></td></tr>
+<tr class="separator:a64b09e49914e216a4caf0c2da7d67c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f02104d8a98df4bd933e52c9df85e0" id="r_a03f02104d8a98df4bd933e52c9df85e0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03f02104d8a98df4bd933e52c9df85e0">musfilterSts</a> { <a class="el" href="#a03f02104d8a98df4bd933e52c9df85e0af7304f23641307e030ffaba62e35702e">MUS_OFF</a>
+, <a class="el" href="#a03f02104d8a98df4bd933e52c9df85e0a565c0032afca5bc257292f82bcbee371">MUS_ON</a>
+ }</td></tr>
+<tr class="memdesc:a03f02104d8a98df4bd933e52c9df85e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">筋電フィルタの設定種別  <a href="#a03f02104d8a98df4bd933e52c9df85e0">[詳解]</a><br /></td></tr>
+<tr class="separator:a03f02104d8a98df4bd933e52c9df85e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a581d54c48e531217b631e1b7e41d8c21" id="r_a581d54c48e531217b631e1b7e41d8c21"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a581d54c48e531217b631e1b7e41d8c21">musStSts</a> { <a class="el" href="#a581d54c48e531217b631e1b7e41d8c21a7bd384bfd031ece145ed77d5028e4aab">MUS_S_LOW</a>
+, <a class="el" href="#a581d54c48e531217b631e1b7e41d8c21acbb41893f664cd7cc65660764f7c67b3">MUS_S_HIGH</a>
+ }</td></tr>
+<tr class="memdesc:a581d54c48e531217b631e1b7e41d8c21"><td class="mdescLeft">&#160;</td><td class="mdescRight">筋電フィルタ強度の設定種別  <a href="#a581d54c48e531217b631e1b7e41d8c21">[詳解]</a><br /></td></tr>
+<tr class="separator:a581d54c48e531217b631e1b7e41d8c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a387edf440f073ba14340f29cd259a4fb" id="r_a387edf440f073ba14340f29cd259a4fb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a387edf440f073ba14340f29cd259a4fb">powFfreqStatus</a> { <a class="el" href="#a387edf440f073ba14340f29cd259a4fba83ab581acf25477919b59321bdb727e8">FREQ_50HZ</a>
+, <a class="el" href="#a387edf440f073ba14340f29cd259a4fba89cc06d7e4fcd6c3601c7b44fe85107c">FREQ_60HZ</a>
+ }</td></tr>
+<tr class="memdesc:a387edf440f073ba14340f29cd259a4fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">電源周波数の設定種別  <a href="#a387edf440f073ba14340f29cd259a4fb">[詳解]</a><br /></td></tr>
+<tr class="separator:a387edf440f073ba14340f29cd259a4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80e3abfdceb5f0f2ef6e0e50ab2fd1aa" id="r_a80e3abfdceb5f0f2ef6e0e50ab2fd1aa"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a80e3abfdceb5f0f2ef6e0e50ab2fd1aa">Property</a> { <br />
 &#160;&#160;<a class="el" href="#a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa83ab9d005b1679ffd42a9c75363839c0">POW_fFREQ</a>
 , <a class="el" href="#a80e3abfdceb5f0f2ef6e0e50ab2fd1aaadeffa42ba7a193a158768127eefed51f">HUM_FILTER</a>
@@ -151,103 +188,57 @@ common.h の依存先関係図:</div>
 , <a class="el" href="#a80e3abfdceb5f0f2ef6e0e50ab2fd1aaada9bb3856401202583153db5ac7188c7">PROPERTY_NUM</a>
 <br />
  }</td></tr>
+<tr class="memdesc:a80e3abfdceb5f0f2ef6e0e50ab2fd1aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">モニタから受信するプロパティの一覧  <a href="#a80e3abfdceb5f0f2ef6e0e50ab2fd1aa">[詳解]</a><br /></td></tr>
 <tr class="separator:a80e3abfdceb5f0f2ef6e0e50ab2fd1aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a387edf440f073ba14340f29cd259a4fb" id="r_a387edf440f073ba14340f29cd259a4fb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a387edf440f073ba14340f29cd259a4fb">powFfreqStatus</a> { <a class="el" href="#a387edf440f073ba14340f29cd259a4fba83ab581acf25477919b59321bdb727e8">FREQ_50HZ</a>
-, <a class="el" href="#a387edf440f073ba14340f29cd259a4fba89cc06d7e4fcd6c3601c7b44fe85107c">FREQ_60HZ</a>
- }</td></tr>
-<tr class="separator:a387edf440f073ba14340f29cd259a4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64b09e49914e216a4caf0c2da7d67c27" id="r_a64b09e49914e216a4caf0c2da7d67c27"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64b09e49914e216a4caf0c2da7d67c27">humFilterSts</a> { <a class="el" href="#a64b09e49914e216a4caf0c2da7d67c27a5733177da19e21d970a47b57b881a235">HUM_OFF</a>
-, <a class="el" href="#a64b09e49914e216a4caf0c2da7d67c27a05173371ef9e2fec244954eb5dfb1e46">HUM_ON</a>
- }</td></tr>
-<tr class="separator:a64b09e49914e216a4caf0c2da7d67c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03f02104d8a98df4bd933e52c9df85e0" id="r_a03f02104d8a98df4bd933e52c9df85e0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03f02104d8a98df4bd933e52c9df85e0">musfilterSts</a> { <a class="el" href="#a03f02104d8a98df4bd933e52c9df85e0af7304f23641307e030ffaba62e35702e">MUS_OFF</a>
-, <a class="el" href="#a03f02104d8a98df4bd933e52c9df85e0a565c0032afca5bc257292f82bcbee371">MUS_ON</a>
- }</td></tr>
-<tr class="separator:a03f02104d8a98df4bd933e52c9df85e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a581d54c48e531217b631e1b7e41d8c21" id="r_a581d54c48e531217b631e1b7e41d8c21"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a581d54c48e531217b631e1b7e41d8c21">musStSts</a> { <a class="el" href="#a581d54c48e531217b631e1b7e41d8c21a7bd384bfd031ece145ed77d5028e4aab">MUS_S_LOW</a>
-, <a class="el" href="#a581d54c48e531217b631e1b7e41d8c21acbb41893f664cd7cc65660764f7c67b3">MUS_S_HIGH</a>
- }</td></tr>
-<tr class="separator:a581d54c48e531217b631e1b7e41d8c21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f9f2d8716090c8f3724b7698dc62183" id="r_a2f9f2d8716090c8f3724b7698dc62183"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f9f2d8716090c8f3724b7698dc62183">qrsModeSts</a> { <a class="el" href="#a2f9f2d8716090c8f3724b7698dc62183acfca0ba69b8de027bf664d57277406d6">QRS_MODE_AUTO</a>
 , <a class="el" href="#a2f9f2d8716090c8f3724b7698dc62183acfc67e21f326e0b9ed59377f4ea0ad3c">QRS_MODE_MANUAL</a>
 , <a class="el" href="#a2f9f2d8716090c8f3724b7698dc62183af86cc0ad2b5b80c4a706c6e587d6afda">QRS_MODE_FILTER_NONE</a>
  }</td></tr>
+<tr class="memdesc:a2f9f2d8716090c8f3724b7698dc62183"><td class="mdescLeft">&#160;</td><td class="mdescRight">QRS検出モードの設定種別  <a href="#a2f9f2d8716090c8f3724b7698dc62183">[詳解]</a><br /></td></tr>
 <tr class="separator:a2f9f2d8716090c8f3724b7698dc62183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31eda10c112675c1c7315e368c1ff493" id="r_a31eda10c112675c1c7315e368c1ff493"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31eda10c112675c1c7315e368c1ff493">qrsSensiSts</a> { <a class="el" href="#a31eda10c112675c1c7315e368c1ff493a632d237bef6166fc0c71743bf7d7c146">QRS_SENSI_LOW</a>
 , <a class="el" href="#a31eda10c112675c1c7315e368c1ff493a7897da654a9608dd6b454befa758cf40">QRS_SENSI_STD</a>
 , <a class="el" href="#a31eda10c112675c1c7315e368c1ff493a32693dac446e2f4f389aae6523149bee">QRS_SENSI_HIGH</a>
 , <a class="el" href="#a31eda10c112675c1c7315e368c1ff493a49a6d5e70217a309ee730f7caa0039be">QRS_SENSI_OVER</a>
  }</td></tr>
+<tr class="memdesc:a31eda10c112675c1c7315e368c1ff493"><td class="mdescLeft">&#160;</td><td class="mdescRight">QRS感度（手動）の設定種別  <a href="#a31eda10c112675c1c7315e368c1ff493">[詳解]</a><br /></td></tr>
 <tr class="separator:a31eda10c112675c1c7315e368c1ff493"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e643f68609351c89867074970dc6549" id="r_a4e643f68609351c89867074970dc6549"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e643f68609351c89867074970dc6549">ecgSensiSts</a> { <br />
-&#160;&#160;<a class="el" href="#a4e643f68609351c89867074970dc6549aa4a4a9af1fe5ff7056807cd2c16160f5">ECG_SENSI_ONE_HALF</a>
-, <a class="el" href="#a4e643f68609351c89867074970dc6549a45098897faac2ea6de2db8277dd57641">ECG_SENSI_ONE</a>
-, <a class="el" href="#a4e643f68609351c89867074970dc6549a05aee2f750386262054ba6a4db007359">ECG_SENSI_TWO</a>
-, <a class="el" href="#a4e643f68609351c89867074970dc6549ae9f0decb885aaf25108c3a954d73b515">ECG_SENSI_FORE</a>
-, <br />
-&#160;&#160;<a class="el" href="#a4e643f68609351c89867074970dc6549af856fc86b7f46580aec1dedfc8417149">ECG_SENSI_EIGHT</a>
-<br />
- }</td></tr>
-<tr class="separator:a4e643f68609351c89867074970dc6549"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a048cc4b913c45184d9fefb91686c3a60" id="r_a048cc4b913c45184d9fefb91686c3a60"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a048cc4b913c45184d9fefb91686c3a60">autoQrsStSts</a> { <a class="el" href="#a048cc4b913c45184d9fefb91686c3a60aa7695f6a3cdb9973e68cc3f412f39b0d">AUTO_QRS_ST_LOW</a>
-, <a class="el" href="#a048cc4b913c45184d9fefb91686c3a60a4c488d4e9fa0f169d28d49822cf5abe3">AUTO_QRS_ST_HIGH</a>
- }</td></tr>
-<tr class="separator:a048cc4b913c45184d9fefb91686c3a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 変数</h2></td></tr>
 <tr class="memitem:a93bfaf2be6c8c991458c7f39ff00c61d" id="r_a93bfaf2be6c8c991458c7f39ff00c61d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93bfaf2be6c8c991458c7f39ff00c61d">output_1</a></td></tr>
+<tr class="memdesc:a93bfaf2be6c8c991458c7f39ff00c61d"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ用  <br /></td></tr>
 <tr class="separator:a93bfaf2be6c8c991458c7f39ff00c61d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cfd5bd6ec513b5c6436f8f5c099a2af" id="r_a8cfd5bd6ec513b5c6436f8f5c099a2af"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cfd5bd6ec513b5c6436f8f5c099a2af">output_2</a></td></tr>
+<tr class="memdesc:a8cfd5bd6ec513b5c6436f8f5c099a2af"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ用  <br /></td></tr>
 <tr class="separator:a8cfd5bd6ec513b5c6436f8f5c099a2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af14607825fb62e1b8aad5eabbf67e620" id="r_af14607825fb62e1b8aad5eabbf67e620"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af14607825fb62e1b8aad5eabbf67e620">output_3</a></td></tr>
+<tr class="memdesc:af14607825fb62e1b8aad5eabbf67e620"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ用  <br /></td></tr>
 <tr class="separator:af14607825fb62e1b8aad5eabbf67e620"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24e41eccce62b3ac5933cf2a67a69359" id="r_a24e41eccce62b3ac5933cf2a67a69359"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24e41eccce62b3ac5933cf2a67a69359">output_4</a></td></tr>
+<tr class="memdesc:a24e41eccce62b3ac5933cf2a67a69359"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ用  <br /></td></tr>
 <tr class="separator:a24e41eccce62b3ac5933cf2a67a69359"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa24132187990770b5ca676d5d5c40780" id="r_aa24132187990770b5ca676d5d5c40780"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa24132187990770b5ca676d5d5c40780">output_5</a></td></tr>
+<tr class="memdesc:aa24132187990770b5ca676d5d5c40780"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ用  <br /></td></tr>
 <tr class="separator:aa24132187990770b5ca676d5d5c40780"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40cce43545442198f6cf7060ba17e62b" id="r_a40cce43545442198f6cf7060ba17e62b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40cce43545442198f6cf7060ba17e62b">output_6</a></td></tr>
+<tr class="memdesc:a40cce43545442198f6cf7060ba17e62b"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ用  <br /></td></tr>
 <tr class="separator:a40cce43545442198f6cf7060ba17e62b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a713e0c39859c6315274bc48331b88d1e" id="r_a713e0c39859c6315274bc48331b88d1e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a713e0c39859c6315274bc48331b88d1e">output_7</a></td></tr>
+<tr class="memdesc:a713e0c39859c6315274bc48331b88d1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">デバッグ用  <br /></td></tr>
 <tr class="separator:a713e0c39859c6315274bc48331b88d1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">マクロ定義詳解</h2>
-<a id="aa93f0eb578d23995850d61f7d61c55c1" name="aa93f0eb578d23995850d61f7d61c55c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa93f0eb578d23995850d61f7d61c55c1">&#9670;&#160;</a></span>FALSE</h2>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>プログラム全体の共有データ </p>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a7e7232f278193dd8684f973ee70ef3f5" name="a7e7232f278193dd8684f973ee70ef3f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e7232f278193dd8684f973ee70ef3f5">&#9670;&#160;</a></span>MY_DEBUG</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define FALSE&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a43c3aff67454ac7cc9ad4433a4bddc7f" name="a43c3aff67454ac7cc9ad4433a4bddc7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43c3aff67454ac7cc9ad4433a4bddc7f">&#9670;&#160;</a></span>FORMAT_VER</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define FORMAT_VER&#160;&#160;&#160;0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7749e64cf83922a69047622b6ea86cca" name="a7749e64cf83922a69047622b6ea86cca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7749e64cf83922a69047622b6ea86cca">&#9670;&#160;</a></span>HARD_VER</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define HARD_VER&#160;&#160;&#160;0</td>
+          <td class="memname">#define MY_DEBUG</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -268,17 +259,35 @@ common.h の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a7e7232f278193dd8684f973ee70ef3f5" name="a7e7232f278193dd8684f973ee70ef3f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e7232f278193dd8684f973ee70ef3f5">&#9670;&#160;</a></span>MY_DEBUG</h2>
+<a id="a43c3aff67454ac7cc9ad4433a4bddc7f" name="a43c3aff67454ac7cc9ad4433a4bddc7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43c3aff67454ac7cc9ad4433a4bddc7f">&#9670;&#160;</a></span>FORMAT_VER</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MY_DEBUG</td>
+          <td class="memname">#define FORMAT_VER&#160;&#160;&#160;0</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>フォーマットバージョン </p>
+
+</div>
+</div>
+<a id="a7749e64cf83922a69047622b6ea86cca" name="a7749e64cf83922a69047622b6ea86cca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7749e64cf83922a69047622b6ea86cca">&#9670;&#160;</a></span>HARD_VER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HARD_VER&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ハードウェアバージョン </p>
 
 </div>
 </div>
@@ -293,6 +302,8 @@ common.h の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>ソフトウェアバージョン </p>
 
 </div>
 </div>
@@ -310,96 +321,59 @@ common.h の依存先関係図:</div>
 
 </div>
 </div>
+<a id="aa93f0eb578d23995850d61f7d61c55c1" name="aa93f0eb578d23995850d61f7d61c55c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa93f0eb578d23995850d61f7d61c55c1">&#9670;&#160;</a></span>FALSE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FALSE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">列挙型詳解</h2>
-<a id="a048cc4b913c45184d9fefb91686c3a60" name="a048cc4b913c45184d9fefb91686c3a60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a048cc4b913c45184d9fefb91686c3a60">&#9670;&#160;</a></span>autoQrsStSts</h2>
+<a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aa" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80e3abfdceb5f0f2ef6e0e50ab2fd1aa">&#9670;&#160;</a></span>Property</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#a048cc4b913c45184d9fefb91686c3a60">autoQrsStSts</a></td>
+          <td class="memname">enum <a class="el" href="#a80e3abfdceb5f0f2ef6e0e50ab2fd1aa">Property</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>モニタから受信するプロパティの一覧 </p>
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a048cc4b913c45184d9fefb91686c3a60aa7695f6a3cdb9973e68cc3f412f39b0d" name="a048cc4b913c45184d9fefb91686c3a60aa7695f6a3cdb9973e68cc3f412f39b0d"></a>AUTO_QRS_ST_LOW&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a048cc4b913c45184d9fefb91686c3a60a4c488d4e9fa0f169d28d49822cf5abe3" name="a048cc4b913c45184d9fefb91686c3a60a4c488d4e9fa0f169d28d49822cf5abe3"></a>AUTO_QRS_ST_HIGH&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<a id="a4e643f68609351c89867074970dc6549" name="a4e643f68609351c89867074970dc6549"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e643f68609351c89867074970dc6549">&#9670;&#160;</a></span>ecgSensiSts</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="#a4e643f68609351c89867074970dc6549">ecgSensiSts</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a4e643f68609351c89867074970dc6549aa4a4a9af1fe5ff7056807cd2c16160f5" name="a4e643f68609351c89867074970dc6549aa4a4a9af1fe5ff7056807cd2c16160f5"></a>ECG_SENSI_ONE_HALF&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4e643f68609351c89867074970dc6549a45098897faac2ea6de2db8277dd57641" name="a4e643f68609351c89867074970dc6549a45098897faac2ea6de2db8277dd57641"></a>ECG_SENSI_ONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4e643f68609351c89867074970dc6549a05aee2f750386262054ba6a4db007359" name="a4e643f68609351c89867074970dc6549a05aee2f750386262054ba6a4db007359"></a>ECG_SENSI_TWO&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4e643f68609351c89867074970dc6549ae9f0decb885aaf25108c3a954d73b515" name="a4e643f68609351c89867074970dc6549ae9f0decb885aaf25108c3a954d73b515"></a>ECG_SENSI_FORE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a4e643f68609351c89867074970dc6549af856fc86b7f46580aec1dedfc8417149" name="a4e643f68609351c89867074970dc6549af856fc86b7f46580aec1dedfc8417149"></a>ECG_SENSI_EIGHT&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<a id="a64b09e49914e216a4caf0c2da7d67c27" name="a64b09e49914e216a4caf0c2da7d67c27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64b09e49914e216a4caf0c2da7d67c27">&#9670;&#160;</a></span>humFilterSts</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="#a64b09e49914e216a4caf0c2da7d67c27">humFilterSts</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a64b09e49914e216a4caf0c2da7d67c27a5733177da19e21d970a47b57b881a235" name="a64b09e49914e216a4caf0c2da7d67c27a5733177da19e21d970a47b57b881a235"></a>HUM_OFF&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a64b09e49914e216a4caf0c2da7d67c27a05173371ef9e2fec244954eb5dfb1e46" name="a64b09e49914e216a4caf0c2da7d67c27a05173371ef9e2fec244954eb5dfb1e46"></a>HUM_ON&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<a id="a03f02104d8a98df4bd933e52c9df85e0" name="a03f02104d8a98df4bd933e52c9df85e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03f02104d8a98df4bd933e52c9df85e0">&#9670;&#160;</a></span>musfilterSts</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="#a03f02104d8a98df4bd933e52c9df85e0">musfilterSts</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a03f02104d8a98df4bd933e52c9df85e0af7304f23641307e030ffaba62e35702e" name="a03f02104d8a98df4bd933e52c9df85e0af7304f23641307e030ffaba62e35702e"></a>MUS_OFF&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a03f02104d8a98df4bd933e52c9df85e0a565c0032afca5bc257292f82bcbee371" name="a03f02104d8a98df4bd933e52c9df85e0a565c0032afca5bc257292f82bcbee371"></a>MUS_ON&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
-<a id="a581d54c48e531217b631e1b7e41d8c21" name="a581d54c48e531217b631e1b7e41d8c21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a581d54c48e531217b631e1b7e41d8c21">&#9670;&#160;</a></span>musStSts</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="#a581d54c48e531217b631e1b7e41d8c21">musStSts</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a581d54c48e531217b631e1b7e41d8c21a7bd384bfd031ece145ed77d5028e4aab" name="a581d54c48e531217b631e1b7e41d8c21a7bd384bfd031ece145ed77d5028e4aab"></a>MUS_S_LOW&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a581d54c48e531217b631e1b7e41d8c21acbb41893f664cd7cc65660764f7c67b3" name="a581d54c48e531217b631e1b7e41d8c21acbb41893f664cd7cc65660764f7c67b3"></a>MUS_S_HIGH&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa83ab9d005b1679ffd42a9c75363839c0" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa83ab9d005b1679ffd42a9c75363839c0"></a>POW_fFREQ&#160;</td><td class="fielddoc"><p>0: 電源周波数 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaadeffa42ba7a193a158768127eefed51f" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaadeffa42ba7a193a158768127eefed51f"></a>HUM_FILTER&#160;</td><td class="fielddoc"><p>1: ハムフィルタ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa480fff4dd7dc96e0e8842b66f6d68aa0" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa480fff4dd7dc96e0e8842b66f6d68aa0"></a>DRIFT_FILTER&#160;</td><td class="fielddoc"><p>2: ドリフトフィルタ（未使用） </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa2f18ccec4198dfc8fee5e43ab489e747" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa2f18ccec4198dfc8fee5e43ab489e747"></a>MUS_FILTER&#160;</td><td class="fielddoc"><p>3: 筋電フィルタ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa81fee64b80f58729eb04738a4dd4a2bb" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa81fee64b80f58729eb04738a4dd4a2bb"></a>MUS_ST&#160;</td><td class="fielddoc"><p>4: 筋電フィルタ強度 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaafa57556158ef45a8cf7b1526aa6a1cfe" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaafa57556158ef45a8cf7b1526aa6a1cfe"></a>QRS_MODE&#160;</td><td class="fielddoc"><p>5: QRS検出モード </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaaeb15194dd203e3020eb99ceddbf8114c" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaaeb15194dd203e3020eb99ceddbf8114c"></a>QRS_SENSI&#160;</td><td class="fielddoc"><p>6: QRS感度（手動） </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa68ab174f2f0b9fa7b1a8cd4f9b546eee" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa68ab174f2f0b9fa7b1a8cd4f9b546eee"></a>ECG_SENSI&#160;</td><td class="fielddoc"><p>7: ECG感度(手動) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa66a36d1e2d2fa42aa1bf2ae3656b4966" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa66a36d1e2d2fa42aa1bf2ae3656b4966"></a>AUTO_QRS_ST&#160;</td><td class="fielddoc"><p>8: QRS感度（自動） </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa4ea7e54dbcf7940210e62765f5d3f6b4" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa4ea7e54dbcf7940210e62765f5d3f6b4"></a>ANTENNA&#160;</td><td class="fielddoc"><p>9: アンテナ番号 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaad9d3e3b5dc628d73e5ec4da418f2a6dd" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaad9d3e3b5dc628d73e5ec4da418f2a6dd"></a>CHANNEL&#160;</td><td class="fielddoc"><p>10: チャンネル番号 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaada9bb3856401202583153db5ac7188c7" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaada9bb3856401202583153db5ac7188c7"></a>PROPERTY_NUM&#160;</td><td class="fielddoc"><p>設定項目の総数 </p>
+</td></tr>
 </table>
 
 </div>
@@ -415,37 +389,79 @@ common.h の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>電源周波数の設定種別 </p>
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a387edf440f073ba14340f29cd259a4fba83ab581acf25477919b59321bdb727e8" name="a387edf440f073ba14340f29cd259a4fba83ab581acf25477919b59321bdb727e8"></a>FREQ_50HZ&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a387edf440f073ba14340f29cd259a4fba89cc06d7e4fcd6c3601c7b44fe85107c" name="a387edf440f073ba14340f29cd259a4fba89cc06d7e4fcd6c3601c7b44fe85107c"></a>FREQ_60HZ&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a387edf440f073ba14340f29cd259a4fba83ab581acf25477919b59321bdb727e8" name="a387edf440f073ba14340f29cd259a4fba83ab581acf25477919b59321bdb727e8"></a>FREQ_50HZ&#160;</td><td class="fielddoc"><p>50Hz </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a387edf440f073ba14340f29cd259a4fba89cc06d7e4fcd6c3601c7b44fe85107c" name="a387edf440f073ba14340f29cd259a4fba89cc06d7e4fcd6c3601c7b44fe85107c"></a>FREQ_60HZ&#160;</td><td class="fielddoc"><p>60Hz </p>
+</td></tr>
 </table>
 
 </div>
 </div>
-<a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aa" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80e3abfdceb5f0f2ef6e0e50ab2fd1aa">&#9670;&#160;</a></span>Property</h2>
+<a id="a64b09e49914e216a4caf0c2da7d67c27" name="a64b09e49914e216a4caf0c2da7d67c27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b09e49914e216a4caf0c2da7d67c27">&#9670;&#160;</a></span>humFilterSts</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#a80e3abfdceb5f0f2ef6e0e50ab2fd1aa">Property</a></td>
+          <td class="memname">enum <a class="el" href="#a64b09e49914e216a4caf0c2da7d67c27">humFilterSts</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>ハムフィルタの設定種別 </p>
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa83ab9d005b1679ffd42a9c75363839c0" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa83ab9d005b1679ffd42a9c75363839c0"></a>POW_fFREQ&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaadeffa42ba7a193a158768127eefed51f" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaadeffa42ba7a193a158768127eefed51f"></a>HUM_FILTER&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa480fff4dd7dc96e0e8842b66f6d68aa0" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa480fff4dd7dc96e0e8842b66f6d68aa0"></a>DRIFT_FILTER&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa2f18ccec4198dfc8fee5e43ab489e747" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa2f18ccec4198dfc8fee5e43ab489e747"></a>MUS_FILTER&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa81fee64b80f58729eb04738a4dd4a2bb" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa81fee64b80f58729eb04738a4dd4a2bb"></a>MUS_ST&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaafa57556158ef45a8cf7b1526aa6a1cfe" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaafa57556158ef45a8cf7b1526aa6a1cfe"></a>QRS_MODE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaaeb15194dd203e3020eb99ceddbf8114c" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaaeb15194dd203e3020eb99ceddbf8114c"></a>QRS_SENSI&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa68ab174f2f0b9fa7b1a8cd4f9b546eee" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa68ab174f2f0b9fa7b1a8cd4f9b546eee"></a>ECG_SENSI&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa66a36d1e2d2fa42aa1bf2ae3656b4966" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa66a36d1e2d2fa42aa1bf2ae3656b4966"></a>AUTO_QRS_ST&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa4ea7e54dbcf7940210e62765f5d3f6b4" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa4ea7e54dbcf7940210e62765f5d3f6b4"></a>ANTENNA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaad9d3e3b5dc628d73e5ec4da418f2a6dd" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaad9d3e3b5dc628d73e5ec4da418f2a6dd"></a>CHANNEL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaada9bb3856401202583153db5ac7188c7" name="a80e3abfdceb5f0f2ef6e0e50ab2fd1aaada9bb3856401202583153db5ac7188c7"></a>PROPERTY_NUM&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a64b09e49914e216a4caf0c2da7d67c27a5733177da19e21d970a47b57b881a235" name="a64b09e49914e216a4caf0c2da7d67c27a5733177da19e21d970a47b57b881a235"></a>HUM_OFF&#160;</td><td class="fielddoc"><p>オフ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a64b09e49914e216a4caf0c2da7d67c27a05173371ef9e2fec244954eb5dfb1e46" name="a64b09e49914e216a4caf0c2da7d67c27a05173371ef9e2fec244954eb5dfb1e46"></a>HUM_ON&#160;</td><td class="fielddoc"><p>オン </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a03f02104d8a98df4bd933e52c9df85e0" name="a03f02104d8a98df4bd933e52c9df85e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f02104d8a98df4bd933e52c9df85e0">&#9670;&#160;</a></span>musfilterSts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a03f02104d8a98df4bd933e52c9df85e0">musfilterSts</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>筋電フィルタの設定種別 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a03f02104d8a98df4bd933e52c9df85e0af7304f23641307e030ffaba62e35702e" name="a03f02104d8a98df4bd933e52c9df85e0af7304f23641307e030ffaba62e35702e"></a>MUS_OFF&#160;</td><td class="fielddoc"><p>オフ </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a03f02104d8a98df4bd933e52c9df85e0a565c0032afca5bc257292f82bcbee371" name="a03f02104d8a98df4bd933e52c9df85e0a565c0032afca5bc257292f82bcbee371"></a>MUS_ON&#160;</td><td class="fielddoc"><p>オン </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a581d54c48e531217b631e1b7e41d8c21" name="a581d54c48e531217b631e1b7e41d8c21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a581d54c48e531217b631e1b7e41d8c21">&#9670;&#160;</a></span>musStSts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a581d54c48e531217b631e1b7e41d8c21">musStSts</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>筋電フィルタ強度の設定種別 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a581d54c48e531217b631e1b7e41d8c21a7bd384bfd031ece145ed77d5028e4aab" name="a581d54c48e531217b631e1b7e41d8c21a7bd384bfd031ece145ed77d5028e4aab"></a>MUS_S_LOW&#160;</td><td class="fielddoc"><p>弱 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a581d54c48e531217b631e1b7e41d8c21acbb41893f664cd7cc65660764f7c67b3" name="a581d54c48e531217b631e1b7e41d8c21acbb41893f664cd7cc65660764f7c67b3"></a>MUS_S_HIGH&#160;</td><td class="fielddoc"><p>強 </p>
+</td></tr>
 </table>
 
 </div>
@@ -461,10 +477,15 @@ common.h の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>QRS検出モードの設定種別 </p>
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a2f9f2d8716090c8f3724b7698dc62183acfca0ba69b8de027bf664d57277406d6" name="a2f9f2d8716090c8f3724b7698dc62183acfca0ba69b8de027bf664d57277406d6"></a>QRS_MODE_AUTO&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a2f9f2d8716090c8f3724b7698dc62183acfc67e21f326e0b9ed59377f4ea0ad3c" name="a2f9f2d8716090c8f3724b7698dc62183acfc67e21f326e0b9ed59377f4ea0ad3c"></a>QRS_MODE_MANUAL&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a2f9f2d8716090c8f3724b7698dc62183af86cc0ad2b5b80c4a706c6e587d6afda" name="a2f9f2d8716090c8f3724b7698dc62183af86cc0ad2b5b80c4a706c6e587d6afda"></a>QRS_MODE_FILTER_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a2f9f2d8716090c8f3724b7698dc62183acfca0ba69b8de027bf664d57277406d6" name="a2f9f2d8716090c8f3724b7698dc62183acfca0ba69b8de027bf664d57277406d6"></a>QRS_MODE_AUTO&#160;</td><td class="fielddoc"><p>自動 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2f9f2d8716090c8f3724b7698dc62183acfc67e21f326e0b9ed59377f4ea0ad3c" name="a2f9f2d8716090c8f3724b7698dc62183acfc67e21f326e0b9ed59377f4ea0ad3c"></a>QRS_MODE_MANUAL&#160;</td><td class="fielddoc"><p>手動 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a2f9f2d8716090c8f3724b7698dc62183af86cc0ad2b5b80c4a706c6e587d6afda" name="a2f9f2d8716090c8f3724b7698dc62183af86cc0ad2b5b80c4a706c6e587d6afda"></a>QRS_MODE_FILTER_NONE&#160;</td><td class="fielddoc"><p>フィルタなし（デバッグ用） </p>
+</td></tr>
 </table>
 
 </div>
@@ -480,11 +501,67 @@ common.h の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>QRS感度（手動）の設定種別 </p>
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a31eda10c112675c1c7315e368c1ff493a632d237bef6166fc0c71743bf7d7c146" name="a31eda10c112675c1c7315e368c1ff493a632d237bef6166fc0c71743bf7d7c146"></a>QRS_SENSI_LOW&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a31eda10c112675c1c7315e368c1ff493a7897da654a9608dd6b454befa758cf40" name="a31eda10c112675c1c7315e368c1ff493a7897da654a9608dd6b454befa758cf40"></a>QRS_SENSI_STD&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a31eda10c112675c1c7315e368c1ff493a32693dac446e2f4f389aae6523149bee" name="a31eda10c112675c1c7315e368c1ff493a32693dac446e2f4f389aae6523149bee"></a>QRS_SENSI_HIGH&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a31eda10c112675c1c7315e368c1ff493a49a6d5e70217a309ee730f7caa0039be" name="a31eda10c112675c1c7315e368c1ff493a49a6d5e70217a309ee730f7caa0039be"></a>QRS_SENSI_OVER&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a31eda10c112675c1c7315e368c1ff493a632d237bef6166fc0c71743bf7d7c146" name="a31eda10c112675c1c7315e368c1ff493a632d237bef6166fc0c71743bf7d7c146"></a>QRS_SENSI_LOW&#160;</td><td class="fielddoc"><p>Low </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31eda10c112675c1c7315e368c1ff493a7897da654a9608dd6b454befa758cf40" name="a31eda10c112675c1c7315e368c1ff493a7897da654a9608dd6b454befa758cf40"></a>QRS_SENSI_STD&#160;</td><td class="fielddoc"><p>Standard </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31eda10c112675c1c7315e368c1ff493a32693dac446e2f4f389aae6523149bee" name="a31eda10c112675c1c7315e368c1ff493a32693dac446e2f4f389aae6523149bee"></a>QRS_SENSI_HIGH&#160;</td><td class="fielddoc"><p>High </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a31eda10c112675c1c7315e368c1ff493a49a6d5e70217a309ee730f7caa0039be" name="a31eda10c112675c1c7315e368c1ff493a49a6d5e70217a309ee730f7caa0039be"></a>QRS_SENSI_OVER&#160;</td><td class="fielddoc"><p>Over </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a4e643f68609351c89867074970dc6549" name="a4e643f68609351c89867074970dc6549"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e643f68609351c89867074970dc6549">&#9670;&#160;</a></span>ecgSensiSts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a4e643f68609351c89867074970dc6549">ecgSensiSts</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ECG感度の設定種別 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a4e643f68609351c89867074970dc6549aa4a4a9af1fe5ff7056807cd2c16160f5" name="a4e643f68609351c89867074970dc6549aa4a4a9af1fe5ff7056807cd2c16160f5"></a>ECG_SENSI_ONE_HALF&#160;</td><td class="fielddoc"><p>1/2 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4e643f68609351c89867074970dc6549a45098897faac2ea6de2db8277dd57641" name="a4e643f68609351c89867074970dc6549a45098897faac2ea6de2db8277dd57641"></a>ECG_SENSI_ONE&#160;</td><td class="fielddoc"><p>1 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4e643f68609351c89867074970dc6549a05aee2f750386262054ba6a4db007359" name="a4e643f68609351c89867074970dc6549a05aee2f750386262054ba6a4db007359"></a>ECG_SENSI_TWO&#160;</td><td class="fielddoc"><p>2 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4e643f68609351c89867074970dc6549ae9f0decb885aaf25108c3a954d73b515" name="a4e643f68609351c89867074970dc6549ae9f0decb885aaf25108c3a954d73b515"></a>ECG_SENSI_FORE&#160;</td><td class="fielddoc"><p>4 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4e643f68609351c89867074970dc6549af856fc86b7f46580aec1dedfc8417149" name="a4e643f68609351c89867074970dc6549af856fc86b7f46580aec1dedfc8417149"></a>ECG_SENSI_EIGHT&#160;</td><td class="fielddoc"><p>8 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a048cc4b913c45184d9fefb91686c3a60" name="a048cc4b913c45184d9fefb91686c3a60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a048cc4b913c45184d9fefb91686c3a60">&#9670;&#160;</a></span>autoQrsStSts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a048cc4b913c45184d9fefb91686c3a60">autoQrsStSts</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>QRS感度（自動）の設定種別 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a048cc4b913c45184d9fefb91686c3a60aa7695f6a3cdb9973e68cc3f412f39b0d" name="a048cc4b913c45184d9fefb91686c3a60aa7695f6a3cdb9973e68cc3f412f39b0d"></a>AUTO_QRS_ST_LOW&#160;</td><td class="fielddoc"><p>弱 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a048cc4b913c45184d9fefb91686c3a60a4c488d4e9fa0f169d28d49822cf5abe3" name="a048cc4b913c45184d9fefb91686c3a60a4c488d4e9fa0f169d28d49822cf5abe3"></a>AUTO_QRS_ST_HIGH&#160;</td><td class="fielddoc"><p>強 </p>
+</td></tr>
 </table>
 
 </div>
@@ -510,6 +587,8 @@ common.h の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
+<p>デバッグ用 </p>
+
 </div>
 </div>
 <a id="a8cfd5bd6ec513b5c6436f8f5c099a2af" name="a8cfd5bd6ec513b5c6436f8f5c099a2af"></a>
@@ -531,6 +610,8 @@ common.h の依存先関係図:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>デバッグ用 </p>
 
 </div>
 </div>
@@ -554,6 +635,8 @@ common.h の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
+<p>デバッグ用 </p>
+
 </div>
 </div>
 <a id="a24e41eccce62b3ac5933cf2a67a69359" name="a24e41eccce62b3ac5933cf2a67a69359"></a>
@@ -575,6 +658,8 @@ common.h の依存先関係図:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>デバッグ用 </p>
 
 </div>
 </div>
@@ -598,6 +683,8 @@ common.h の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
+<p>デバッグ用 </p>
+
 </div>
 </div>
 <a id="a40cce43545442198f6cf7060ba17e62b" name="a40cce43545442198f6cf7060ba17e62b"></a>
@@ -620,6 +707,8 @@ common.h の依存先関係図:</div>
 </table>
 </div><div class="memdoc">
 
+<p>デバッグ用 </p>
+
 </div>
 </div>
 <a id="a713e0c39859c6315274bc48331b88d1e" name="a713e0c39859c6315274bc48331b88d1e"></a>
@@ -641,6 +730,8 @@ common.h の依存先関係図:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>デバッグ用 </p>
 
 </div>
 </div>

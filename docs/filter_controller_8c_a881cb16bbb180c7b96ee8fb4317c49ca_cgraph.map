@@ -1,9 +1,21 @@
 <map id="manualQrsHandler" name="manualQrsHandler">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,135,83"/>
-<area shape="rect" id="Node000002" href="$_qrs2_8c.html#a5256314c2dea4e392f6fe8c0305f8e75" title=" " alt="" coords="206,5,312,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,53,191,34,193,39,124,58"/>
-<area shape="rect" id="Node000003" href="$spi__receive_8c.html#a749d726a9c18205e684074afb8e7fb1a" title=" " alt="" coords="183,56,336,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,67,167,67,167,72,135,72"/>
-<area shape="rect" id="Node000004" href="$_qrs2_8c.html#a15dda4f2ebff3d8679d669d7dcc879ff" title=" " alt="" coords="223,107,296,133"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="124,81,209,104,207,109,122,86"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,135,108"/>
+<area shape="rect" id="Node000002" href="$_qrs2_8c.html#a5256314c2dea4e392f6fe8c0305f8e75" title=" " alt="" coords="206,31,312,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,78,191,59,193,64,124,83"/>
+<area shape="rect" id="Node000003" href="$spi__receive_8c.html#a749d726a9c18205e684074afb8e7fb1a" title="ヘッダーとECGデータを結合してlong型データを生成する" alt="" coords="183,81,336,108"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,92,167,92,167,97,135,97"/>
+<area shape="rect" id="Node000004" href="$_qrs2_8c.html#a15dda4f2ebff3d8679d669d7dcc879ff" title=" " alt="" coords="223,132,296,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="124,106,209,129,207,134,122,111"/>
+<area shape="rect" id="Node000005" href="$_qrs2_8c.html#a26ecaa5cd6b6742886005a4215305c66" title=" " alt="" coords="384,5,500,32"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="295,136,316,129,334,118,350,100,358,82,366,62,382,42,387,38,390,42,386,46,370,65,363,84,355,103,338,122,318,134,297,141"/>
+<area shape="rect" id="Node000006" href="$_qrs2_8c.html#aac577e93ac47cf2cfd1a3aaf68bbfbcc" title=" " alt="" coords="420,56,465,83"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="295,132,335,118,383,92,404,82,406,87,385,97,337,122,297,137"/>
+<area shape="rect" id="Node000008" href="$_qrs2_8c.html#a934315516b8f52de586d3902e76a6707" title=" " alt="" coords="409,107,475,133"/>
+<area shape="poly" id="edge6_Node000004_Node000008" title=" " alt="" coords="295,138,393,124,394,129,296,143"/>
+<area shape="rect" id="Node000009" href="$_qrs2_8c.html#a8537195c7819d0baf9fee1fdbb4b2a5d" title=" " alt="" coords="404,157,481,184"/>
+<area shape="poly" id="edge7_Node000004_Node000009" title=" " alt="" coords="296,148,389,161,388,166,295,153"/>
+<area shape="rect" id="Node000010" href="$_qrs2_8c.html#a71dac6a32fda1375031e49eb6b725f36" title=" " alt="" coords="410,208,474,235"/>
+<area shape="poly" id="edge8_Node000004_Node000010" title=" " alt="" coords="295,157,397,200,395,205,293,162"/>
+<area shape="rect" id="Node000014" href="$_qrs2_8c.html#a9b176376b1e679caa51cc73e089785dc" title=" " alt="" coords="408,259,476,285"/>
+<area shape="poly" id="edge9_Node000004_Node000014" title=" " alt="" coords="277,157,323,199,385,244,396,250,393,255,383,249,320,203,273,161"/>
 </map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['busfault_5fhandler_0',['BusFault_Handler',['../stm32l4xx__it_8h.html#a850cefb17a977292ae5eb4cafa9976c3',1,'BusFault_Handler(void):&#160;stm32l4xx_it.c'],['../stm32l4xx__it_8c.html#a850cefb17a977292ae5eb4cafa9976c3',1,'BusFault_Handler(void):&#160;stm32l4xx_it.c']]]
+  ['band_5fpass_5ffilter_0',['band_pass_filter',['../_qrs2_8c.html#a26ecaa5cd6b6742886005a4215305c66',1,'Qrs2.c']]]
 ];

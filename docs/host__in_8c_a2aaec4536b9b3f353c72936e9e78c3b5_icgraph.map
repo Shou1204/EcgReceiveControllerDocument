@@ -4,6 +4,6 @@
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="412,37,336,25,337,20,413,32"/>
 <area shape="rect" id="Node000003" href="$host__in_8c.html#af922d94a43f84fbad0534bd1f24990d7" title="受信バイトを処理し、フレームを格納する関数" alt="" coords="243,56,380,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="413,56,381,61,380,56,412,51"/>
-<area shape="rect" id="Node000004" href="$main_8c.html#ae494a9643f29b87d6d81e5264e60e57b" title=" " alt="" coords="5,56,195,83"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#ae494a9643f29b87d6d81e5264e60e57b" title="UART入力のコールバック 入力データの処理から受信機への出力フラグまでのプロセス" alt="" coords="5,56,195,83"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="227,72,195,72,195,67,227,67"/>
 </map>

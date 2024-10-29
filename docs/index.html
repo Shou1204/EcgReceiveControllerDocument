@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>EcgReceiveController: 総合概要</title>
+<title>EcgReceiveController: AM150受信ユニット</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -96,10 +96,17 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">EcgReceiveController 詳解</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">AM150受信ユニット </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
+プロジェクト概要</h1>
+<p>本プログラムは受信機からAM150へデータを渡す処理を担当するモジュールです。</p>
+<p>受信機からSPI通信でデータを受取り、UARTでAM150に出力します。</p>
+<p>UARTの出力は本モジュール起動後から100ms毎に100byteのデータです。</p>
+<p>また、A150からのUART入力を受信機にUARTで出力します。 </p>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->

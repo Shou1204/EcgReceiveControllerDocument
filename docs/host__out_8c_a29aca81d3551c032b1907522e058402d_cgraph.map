@@ -1,0 +1,43 @@
+<map id="RegularOutputProcess" name="RegularOutputProcess">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,588,159,615"/>
+<area shape="rect" id="Node000002" href="$host__out_8c.html#a8691a8c50db7d084a008a883d8059a1a" title=" " alt="" coords="207,385,352,412"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,586,253,421,257,425,99,589"/>
+<area shape="rect" id="Node000019" href="$host__out_8c.html#adf46213fd85ddaa9f7ece7e7eb4865dd" title=" " alt="" coords="234,588,325,615"/>
+<area shape="poly" id="edge17_Node000001_Node000019" title=" " alt="" coords="159,599,218,599,218,604,159,604"/>
+<area shape="rect" id="Node000020" href="$host__out_8c.html#aeaa9a91783d19e5f431d714b00142fdf" title=" " alt="" coords="210,765,349,792"/>
+<area shape="poly" id="edge18_Node000001_Node000020" title=" " alt="" coords="100,613,254,753,250,757,97,617"/>
+<area shape="rect" id="Node000003" href="$host__out_8c.html#ac65d26afdeb49bc1faaa5c5955bc5cb9" title=" " alt="" coords="436,5,520,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="278,385,284,323,301,232,316,181,337,131,364,84,398,42,421,27,423,32,402,46,368,87,342,133,321,183,306,233,289,324,284,385"/>
+<area shape="rect" id="Node000004" href="$spi__receive_8c.html#a8e5f71644c10f67c3a50dcb6af877244" title=" " alt="" coords="438,56,518,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="279,384,288,331,307,253,322,210,342,168,367,128,398,93,422,78,424,83,402,97,372,131,347,170,327,212,312,254,293,332,285,385"/>
+<area shape="rect" id="Node000005" href="$ecg__data_8c.html#a86de475be9a0ef5efe79c2f940f55708" title="プロパティの現在値を取得する" alt="" coords="418,107,539,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="281,384,292,338,313,274,348,204,371,172,398,143,403,140,406,144,402,147,375,175,353,207,318,276,297,340,286,385"/>
+<area shape="rect" id="Node000006" href="$spi__receive_8c.html#a1a9568a1aa7a8f6fad829637799f7d07" title=" " alt="" coords="422,157,534,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="282,384,296,347,320,296,354,241,375,216,398,194,407,188,410,192,402,198,379,220,358,244,325,298,301,349,287,386"/>
+<area shape="rect" id="Node000007" href="$host__in_8c.html#a95303fcfed41e87df9d8fb299e0d9f5d" title=" " alt="" coords="412,208,545,235"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="286,383,327,317,360,278,398,245,406,240,409,244,402,249,364,282,332,320,290,386"/>
+<area shape="rect" id="Node000008" href="$spi__receive_8c.html#ac3197cc17035f4f07c9bf2d21200c927" title=" " alt="" coords="416,259,541,285"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="291,383,336,340,366,316,399,295,410,289,412,294,401,300,369,320,340,344,295,387"/>
+<area shape="rect" id="Node000009" href="$spi__receive_8c.html#ac1d35592714fedf7552e9806c89b8364" title=" " alt="" coords="411,309,545,336"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="310,382,399,346,417,339,419,344,401,350,312,387"/>
+<area shape="rect" id="Node000010" href="$spi__receive_8c.html#a8a6f224d4a84edb26d6aba4e4c8524c3" title=" " alt="" coords="429,360,527,387"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="352,387,413,379,414,384,353,392"/>
+<area shape="rect" id="Node000011" href="$spi__receive_8c.html#a7f62612013bc7c9be1d7854c1ed8234f" title=" " alt="" coords="416,411,540,437"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="353,405,401,412,401,417,352,411"/>
+<area shape="rect" id="Node000012" href="$spi__receive_8c.html#a9e0d0da6a972e1c35a82bf5b101cb5aa" title=" " alt="" coords="400,461,556,488"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="312,410,401,447,419,453,417,458,399,452,310,415"/>
+<area shape="rect" id="Node000013" href="$host__out_8c.html#aaed984f5dd2016d651cb6bfb908eb425" title=" " alt="" coords="432,512,525,539"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="295,410,340,453,369,477,401,498,418,506,415,510,399,502,366,481,336,457,291,414"/>
+<area shape="rect" id="Node000014" href="$spi__receive_8c.html#a8f44822a950d5d0fb8884c12164d3e0c" title="最終出力するECGデータを作成して返す" alt="" coords="436,563,521,589"/>
+<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="290,411,332,477,364,515,402,548,422,560,419,564,398,553,360,519,327,480,286,414"/>
+<area shape="rect" id="Node000016" href="$spi__receive_8c.html#ab954ff149d78c53a17e2688dd2704091" title=" " alt="" coords="413,613,543,640"/>
+<area shape="poly" id="edge14_Node000002_Node000016" title=" " alt="" coords="287,411,301,449,325,499,358,553,379,578,402,599,408,604,405,608,398,603,375,581,354,556,320,502,296,451,282,413"/>
+<area shape="rect" id="Node000017" href="$host__out_8c.html#ac4e82979524f8f21d71ca6d50b3c0e1e" title=" " alt="" coords="433,664,523,691"/>
+<area shape="poly" id="edge15_Node000002_Node000017" title=" " alt="" coords="288,411,337,536,370,605,387,632,402,650,420,662,417,666,398,654,382,635,365,608,332,538,283,413"/>
+<area shape="rect" id="Node000018" href="$spi__receive_8c.html#a70abc95e7126b14f550a3fb0f51642ea" title=" " alt="" coords="435,715,521,741"/>
+<area shape="poly" id="edge16_Node000002_Node000018" title=" " alt="" coords="289,411,355,575,365,613,370,644,380,672,402,701,422,714,419,718,398,705,375,674,365,645,360,614,349,577,284,413"/>
+<area shape="rect" id="Node000021" href="$host__in_8c.html#a1eaff27a143fcc8a5a8fd17e309f5ab2" title=" " alt="" coords="412,765,544,792"/>
+<area shape="poly" id="edge19_Node000020_Node000021" title=" " alt="" coords="349,776,397,776,397,781,349,781"/>
+<area shape="rect" id="Node000022" href="$spi__receive_8c.html#a0928151cf559961841f5ec56d5fca371" title="出力フォーマット集計値のリセット" alt="" coords="420,816,536,843"/>
+<area shape="poly" id="edge20_Node000020_Node000022" title=" " alt="" coords="335,790,409,809,408,814,334,795"/>
+</map>

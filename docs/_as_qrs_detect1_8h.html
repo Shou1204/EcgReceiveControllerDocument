@@ -104,27 +104,81 @@ $(function(){initNavTree('_as_qrs_detect1_8h.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 
+<p>QRS検出プログラム（自動）  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8h__dep__incl.svg" width="264" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
 <p><a href="_as_qrs_detect1_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 データ構造</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_return_code.html">ReturnCode</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出フィルタ後の各値を返す  <a href="struct_return_code.html#details">[詳解]</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:struct_return_code" id="r_struct_return_code"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#struct_return_code">ReturnCode</a></td></tr>
+<tr class="memdesc:struct_return_code"><td class="mdescLeft">&#160;</td><td class="mdescRight">検出フィルタ後の各値を返す  <a href="#struct_return_code">[詳解]</a><br /></td></tr>
+<tr class="separator:struct_return_code"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:a4bfbc342aa0d7299478a21427ae5b691" id="r_a4bfbc342aa0d7299478a21427ae5b691"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bfbc342aa0d7299478a21427ae5b691">AsPvcDetection_1</a> (long EcgDt)</td></tr>
 <tr class="separator:a4bfbc342aa0d7299478a21427ae5b691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99690bb31891ce37a2a8bbaf41132312" id="r_a99690bb31891ce37a2a8bbaf41132312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99690bb31891ce37a2a8bbaf41132312">AsPvcDetInitial_1</a> (void)</td></tr>
+<tr class="separator:a99690bb31891ce37a2a8bbaf41132312"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37a99c3cddc3c90cb48284d338eceefa" id="r_a37a99c3cddc3c90cb48284d338eceefa"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37a99c3cddc3c90cb48284d338eceefa">AsQrsDetection_1</a> (short Dt, short sts_flag)</td></tr>
 <tr class="separator:a37a99c3cddc3c90cb48284d338eceefa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab9afe948f58fa51a2c77ca62b847b9a" id="r_aab9afe948f58fa51a2c77ca62b847b9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab9afe948f58fa51a2c77ca62b847b9a">AsQrsDetInitial_1</a> (short d1, short d2, short d3, short d4, short d5)</td></tr>
 <tr class="separator:aab9afe948f58fa51a2c77ca62b847b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99690bb31891ce37a2a8bbaf41132312" id="r_a99690bb31891ce37a2a8bbaf41132312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99690bb31891ce37a2a8bbaf41132312">AsPvcDetInitial_1</a> (void)</td></tr>
-<tr class="separator:a99690bb31891ce37a2a8bbaf41132312"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab093f47b8e81aa16facff6f8d0483b09" id="r_ab093f47b8e81aa16facff6f8d0483b09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab093f47b8e81aa16facff6f8d0483b09">AsSetOptNO1</a> (short Dt)</td></tr>
 <tr class="separator:ab093f47b8e81aa16facff6f8d0483b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>QRS検出プログラム（自動） </p>
+<dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150: <br  />
+ReturnCodeを共用体から構造体に変更 </dd></dl>
+</div><hr/><h2 class="groupheader">データ構造詳解</h2>
+<a name="struct_return_code" id="struct_return_code"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#struct_return_code">&#9670;&#160;</a></span>ReturnCode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct ReturnCode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>検出フィルタ後の各値を返す </p>
+<dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150: <br  />
+共用体から構造体に変更 <br  />
+エンディアンの違いで値が変化するため </dd></dl>
+</div><table class="fieldtable">
+<tr><th colspan="3">データフィールド</th></tr>
+<tr><td class="fieldtype">
+<a id="a94f8b410fb7fe692c535939a4230b709" name="a94f8b410fb7fe692c535939a4230b709"></a>unsigned short</td>
+<td class="fieldname">
+qrs</td>
+<td class="fielddoc">
+QRS情報 <p>0x00=通常 0x01=QRS 0x20=PVC </p>
+</td></tr>
+<tr><td class="fieldtype">
+<a id="ac8c6b6d4f7e494b4d466db41b12bc2c0" name="ac8c6b6d4f7e494b4d466db41b12bc2c0"></a>unsigned short</td>
+<td class="fieldname">
+status</td>
+<td class="fielddoc">
+送信機ステータス（ペースメーカなど4種）と通信異常のステータス <br  />
+引数から変更はしない </td></tr>
+<tr><td class="fieldtype">
+<a id="a0535b2584f57600a85ef3d8af1eb6106" name="a0535b2584f57600a85ef3d8af1eb6106"></a>short</td>
+<td class="fieldname">
+ecg</td>
+<td class="fielddoc">
+心電図データ </td></tr>
+</table>
+
+</div>
+</div>
 <h2 class="groupheader">関数詳解</h2>
 <a id="a4bfbc342aa0d7299478a21427ae5b691" name="a4bfbc342aa0d7299478a21427ae5b691"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4bfbc342aa0d7299478a21427ae5b691">&#9670;&#160;</a></span>AsPvcDetection_1()</h2>
@@ -153,28 +207,6 @@ $(function(){initNavTree('_as_qrs_detect1_8h.html',''); initResizable(true); });
 
 </div>
 </div>
-<a id="a99690bb31891ce37a2a8bbaf41132312" name="a99690bb31891ce37a2a8bbaf41132312"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99690bb31891ce37a2a8bbaf41132312">&#9670;&#160;</a></span>AsPvcDetInitial_1()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void AsPvcDetInitial_1 </td>
-          <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8h_a99690bb31891ce37a2a8bbaf41132312_icgraph.svg" width="351" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
 <a id="a37a99c3cddc3c90cb48284d338eceefa" name="a37a99c3cddc3c90cb48284d338eceefa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a37a99c3cddc3c90cb48284d338eceefa">&#9670;&#160;</a></span>AsQrsDetection_1()</h2>
 
@@ -193,6 +225,12 @@ $(function(){initNavTree('_as_qrs_detect1_8h.html',''); initResizable(true); });
         </tr>
       </table>
 </div><div class="memdoc">
+<p>AM140 → AM150: 分岐の条件を変更 フィルタのオフはできないため、コメントも変更</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8h_a37a99c3cddc3c90cb48284d338eceefa_cgraph.svg" width="306" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -243,6 +281,28 @@ $(function(){initNavTree('_as_qrs_detect1_8h.html',''); initResizable(true); });
 被呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8h_aab9afe948f58fa51a2c77ca62b847b9a_icgraph.svg" width="350" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a99690bb31891ce37a2a8bbaf41132312" name="a99690bb31891ce37a2a8bbaf41132312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99690bb31891ce37a2a8bbaf41132312">&#9670;&#160;</a></span>AsPvcDetInitial_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AsPvcDetInitial_1 </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8h_a99690bb31891ce37a2a8bbaf41132312_icgraph.svg" width="351" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>

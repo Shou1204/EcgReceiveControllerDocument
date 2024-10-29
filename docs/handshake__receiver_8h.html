@@ -98,16 +98,18 @@ $(function(){initNavTree('handshake__receiver_8h.html',''); initResizable(true);
 
 <div class="header">
   <div class="summary">
-<a href="#enum-members">列挙型</a> &#124;
-<a href="#func-members">関数</a>  </div>
+<a href="#enum-members">列挙型</a>  </div>
   <div class="headertitle"><div class="title">handshake_receiver.h ファイル</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>受信機へのUART出力とGPIOシグナルの確認  
+<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="common_8h_source.html">common.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-handshake_receiver.h の依存先関係図:</div>
+被依存関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="handshake__receiver_8h__incl.svg" width="248" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="handshake__receiver_8h__dep__incl.svg" width="475" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="handshake__receiver_8h_source.html">[ソースコード]</a></p>
@@ -118,18 +120,12 @@ handshake_receiver.h の依存先関係図:</div>
 , <a class="el" href="#a432c89d36193d2833cff05160db08e69a08c37d77be9b35561a8a577eb58872b4">HANDSHAKE_WORKING</a> = 2
 , <a class="el" href="#a432c89d36193d2833cff05160db08e69a7cbc106ece4c0fd255f97f4c56fa84fd">HANDSHAKE_FAILED</a> = 9
  }</td></tr>
+<tr class="memdesc:a432c89d36193d2833cff05160db08e69"><td class="mdescLeft">&#160;</td><td class="mdescRight">ハンドシェイクの状態のリスト  <a href="#a432c89d36193d2833cff05160db08e69">[詳解]</a><br /></td></tr>
 <tr class="separator:a432c89d36193d2833cff05160db08e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-関数</h2></td></tr>
-<tr class="memitem:a1cd7cb4dac2cac3fd0bffb657c7f0fdc" id="r_a1cd7cb4dac2cac3fd0bffb657c7f0fdc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cd7cb4dac2cac3fd0bffb657c7f0fdc">HandshakeProcesses</a> ()</td></tr>
-<tr class="separator:a1cd7cb4dac2cac3fd0bffb657c7f0fdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7d129fb6c232812b388c90470311224" id="r_aa7d129fb6c232812b388c90470311224"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa7d129fb6c232812b388c90470311224">InitHandshakeReceiverC</a> ()</td></tr>
-<tr class="separator:aa7d129fb6c232812b388c90470311224"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cd91fd3a9608559c2a87a8ba6cba55f" id="r_a0cd91fd3a9608559c2a87a8ba6cba55f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0cd91fd3a9608559c2a87a8ba6cba55f">HAL_GPIO_EXTI_Callback</a> (uint16_t GPIO_Pin)</td></tr>
-<tr class="separator:a0cd91fd3a9608559c2a87a8ba6cba55f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">列挙型詳解</h2>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>受信機へのUART出力とGPIOシグナルの確認 </p>
+</div><h2 class="groupheader">列挙型詳解</h2>
 <a id="a432c89d36193d2833cff05160db08e69" name="a432c89d36193d2833cff05160db08e69"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a432c89d36193d2833cff05160db08e69">&#9670;&#160;</a></span>handshakeStatus</h2>
 
@@ -141,78 +137,16 @@ handshake_receiver.h の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>ハンドシェイクの状態のリスト </p>
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a432c89d36193d2833cff05160db08e69a5197b9b07251df0e43510ab427ee8158" name="a432c89d36193d2833cff05160db08e69a5197b9b07251df0e43510ab427ee8158"></a>HANDSHAKE_SUCCESS&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a432c89d36193d2833cff05160db08e69a08c37d77be9b35561a8a577eb58872b4" name="a432c89d36193d2833cff05160db08e69a08c37d77be9b35561a8a577eb58872b4"></a>HANDSHAKE_WORKING&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a432c89d36193d2833cff05160db08e69a7cbc106ece4c0fd255f97f4c56fa84fd" name="a432c89d36193d2833cff05160db08e69a7cbc106ece4c0fd255f97f4c56fa84fd"></a>HANDSHAKE_FAILED&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a432c89d36193d2833cff05160db08e69a5197b9b07251df0e43510ab427ee8158" name="a432c89d36193d2833cff05160db08e69a5197b9b07251df0e43510ab427ee8158"></a>HANDSHAKE_SUCCESS&#160;</td><td class="fielddoc"><p>ハンドシェイク成功 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a432c89d36193d2833cff05160db08e69a08c37d77be9b35561a8a577eb58872b4" name="a432c89d36193d2833cff05160db08e69a08c37d77be9b35561a8a577eb58872b4"></a>HANDSHAKE_WORKING&#160;</td><td class="fielddoc"><p>ハンドシェイクのプロセス中 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a432c89d36193d2833cff05160db08e69a7cbc106ece4c0fd255f97f4c56fa84fd" name="a432c89d36193d2833cff05160db08e69a7cbc106ece4c0fd255f97f4c56fa84fd"></a>HANDSHAKE_FAILED&#160;</td><td class="fielddoc"><p>ハンドシェイクの応答確認できず </p>
+</td></tr>
 </table>
-
-</div>
-</div>
-<h2 class="groupheader">関数詳解</h2>
-<a id="a0cd91fd3a9608559c2a87a8ba6cba55f" name="a0cd91fd3a9608559c2a87a8ba6cba55f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0cd91fd3a9608559c2a87a8ba6cba55f">&#9670;&#160;</a></span>HAL_GPIO_EXTI_Callback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void HAL_GPIO_EXTI_Callback </td>
-          <td>(</td>
-          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>GPIO_Pin</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a1cd7cb4dac2cac3fd0bffb657c7f0fdc" name="a1cd7cb4dac2cac3fd0bffb657c7f0fdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1cd7cb4dac2cac3fd0bffb657c7f0fdc">&#9670;&#160;</a></span>HandshakeProcesses()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int HandshakeProcesses </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="handshake__receiver_8h_a1cd7cb4dac2cac3fd0bffb657c7f0fdc_cgraph.svg" width="376" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="handshake__receiver_8h_a1cd7cb4dac2cac3fd0bffb657c7f0fdc_icgraph.svg" width="258" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="aa7d129fb6c232812b388c90470311224" name="aa7d129fb6c232812b388c90470311224"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7d129fb6c232812b388c90470311224">&#9670;&#160;</a></span>InitHandshakeReceiverC()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitHandshakeReceiverC </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="handshake__receiver_8h_aa7d129fb6c232812b388c90470311224_icgraph.svg" width="474" height="63"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 
 </div>
 </div>

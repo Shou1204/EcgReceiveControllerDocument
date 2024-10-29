@@ -1,5 +1,7 @@
 <map id="ReadIdxAdd" name="ReadIdxAdd">
-<area shape="rect" id="Node000001" title=" " alt="" coords="139,5,232,32"/>
-<area shape="rect" id="Node000002" href="$spi__receive_8c.html#a8f44822a950d5d0fb8884c12164d3e0c" title=" " alt="" coords="5,5,91,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="123,21,91,21,91,16,123,16"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="332,5,425,32"/>
+<area shape="rect" id="Node000002" href="$spi__receive_8c.html#a8f44822a950d5d0fb8884c12164d3e0c" title="最終出力するECGデータを作成して返す" alt="" coords="199,5,284,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="316,21,284,21,284,16,316,16"/>
+<area shape="rect" id="Node000003" href="$host__out_8c.html#a8691a8c50db7d084a008a883d8059a1a" title=" " alt="" coords="5,5,151,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="183,21,151,21,151,16,183,16"/>
 </map>

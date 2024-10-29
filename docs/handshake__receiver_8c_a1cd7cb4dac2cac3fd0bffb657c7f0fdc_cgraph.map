@@ -1,5 +1,17 @@
 <map id="HandshakeProcesses" name="HandshakeProcesses">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,155,32"/>
-<area shape="rect" id="Node000002" href="$handshake__receiver_8c.html#aa7d129fb6c232812b388c90470311224" title=" " alt="" coords="203,5,370,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,16,187,16,187,21,155,21"/>
+<area shape="rect" id="Node000001" title="ハンドシェイクプロセスを実行" alt="" coords="5,132,155,159"/>
+<area shape="rect" id="Node000002" href="$handshake__receiver_8c.html#ae3d68b6e6eb0a5ccbfa6ca7e01dc8547" title=" " alt="" coords="203,81,370,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,129,214,110,215,115,138,134"/>
+<area shape="rect" id="Node000007" href="$handshake__receiver_8c.html#aa7d129fb6c232812b388c90470311224" title=" " alt="" coords="203,132,370,159"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="155,143,187,143,187,148,155,148"/>
+<area shape="rect" id="Node000008" href="$handshake__receiver_8c.html#afe650c2cd684266290257dbbd8fcd8e5" title=" " alt="" coords="207,183,366,209"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="138,157,215,176,214,181,137,162"/>
+<area shape="rect" id="Node000003" href="$handshake__receiver_8c.html#a8068cf84729427eab59d284de9d73672" title=" " alt="" coords="418,5,554,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="322,78,417,42,433,35,435,40,419,46,324,83"/>
+<area shape="rect" id="Node000004" href="$ecg__data_8c.html#a86de475be9a0ef5efe79c2f940f55708" title="プロパティの現在値を取得する" alt="" coords="426,56,547,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="370,81,410,76,410,82,370,87"/>
+<area shape="rect" id="Node000005" href="$host__in_8c.html#a7982534a1f252104992a8a52bdc8b21e" title=" " alt="" coords="432,107,540,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="370,103,417,109,416,114,370,108"/>
+<area shape="rect" id="Node000006" href="$host__in_8c.html#afe005c613143dc94e368fb9c124603e6" title=" " alt="" coords="434,157,538,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="339,106,371,118,419,143,433,149,431,154,417,148,369,122,337,111"/>
 </map>

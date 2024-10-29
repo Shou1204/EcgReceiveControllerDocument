@@ -106,23 +106,18 @@ $(function(){initNavTree('filter_controller_8c.html',''); initResizable(true); }
 <div class="textblock"><code>#include &quot;<a class="el" href="_as_qrs_detect1_8h_source.html">AsQrsDetect1.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="filter_8h_source.html">filter.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="spi__receive_8h_source.html">spi_receive.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-filterController.c の依存先関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="filter_controller_8c__incl.svg" width="402" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 関数</h2></td></tr>
+<tr class="memitem:a76758580e95080e34f69ff2c640c49e5" id="r_a76758580e95080e34f69ff2c640c49e5"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76758580e95080e34f69ff2c640c49e5">autoQrsHandler</a> (short ecg_val, short sts)</td></tr>
+<tr class="separator:a76758580e95080e34f69ff2c640c49e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8292d4d4d1d8bf873fd88c724d8a80f1" id="r_a8292d4d4d1d8bf873fd88c724d8a80f1"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8292d4d4d1d8bf873fd88c724d8a80f1">filteringEcgHandler</a> (long ecgValue)</td></tr>
+<tr class="separator:a8292d4d4d1d8bf873fd88c724d8a80f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01c3c4b0328f520da289d81369ec77b9" id="r_a01c3c4b0328f520da289d81369ec77b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01c3c4b0328f520da289d81369ec77b9">FilterSettings</a> ()</td></tr>
+<tr class="separator:a01c3c4b0328f520da289d81369ec77b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c27f6b52850366e0b6d2831a91eb461" id="r_a2c27f6b52850366e0b6d2831a91eb461"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c27f6b52850366e0b6d2831a91eb461">InitFilter</a> ()</td></tr>
 <tr class="memdesc:a2c27f6b52850366e0b6d2831a91eb461"><td class="mdescLeft">&#160;</td><td class="mdescRight">全フィルタの完全初期化  <br /></td></tr>
 <tr class="separator:a2c27f6b52850366e0b6d2831a91eb461"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01c3c4b0328f520da289d81369ec77b9" id="r_a01c3c4b0328f520da289d81369ec77b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01c3c4b0328f520da289d81369ec77b9">FilterSettings</a> ()</td></tr>
-<tr class="separator:a01c3c4b0328f520da289d81369ec77b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8292d4d4d1d8bf873fd88c724d8a80f1" id="r_a8292d4d4d1d8bf873fd88c724d8a80f1"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8292d4d4d1d8bf873fd88c724d8a80f1">filteringEcgHandler</a> (long ecgValue)</td></tr>
-<tr class="separator:a8292d4d4d1d8bf873fd88c724d8a80f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76758580e95080e34f69ff2c640c49e5" id="r_a76758580e95080e34f69ff2c640c49e5"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76758580e95080e34f69ff2c640c49e5">autoQrsHandler</a> (short ecg_val, short sts)</td></tr>
-<tr class="separator:a76758580e95080e34f69ff2c640c49e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a881cb16bbb180c7b96ee8fb4317c49ca" id="r_a881cb16bbb180c7b96ee8fb4317c49ca"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a881cb16bbb180c7b96ee8fb4317c49ca">manualQrsHandler</a> (short ecg_val, short sts_)</td></tr>
 <tr class="separator:a881cb16bbb180c7b96ee8fb4317c49ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -132,60 +127,31 @@ filterController.c の依存先関係図:</div>
 <tr class="separator:a01a3da475443f610c6c40d4f0410a561"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a76758580e95080e34f69ff2c640c49e5" name="a76758580e95080e34f69ff2c640c49e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76758580e95080e34f69ff2c640c49e5">&#9670;&#160;</a></span>autoQrsHandler()</h2>
+<a id="a2c27f6b52850366e0b6d2831a91eb461" name="a2c27f6b52850366e0b6d2831a91eb461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c27f6b52850366e0b6d2831a91eb461">&#9670;&#160;</a></span>InitFilter()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">long autoQrsHandler </td>
+          <td class="memname">void InitFilter </td>
           <td>(</td>
-          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>ecg_val</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>sts</em></span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="filter_controller_8c_a76758580e95080e34f69ff2c640c49e5_cgraph.svg" width="459" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="filter_controller_8c_a76758580e95080e34f69ff2c640c49e5_icgraph.svg" width="531" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
-<a id="a8292d4d4d1d8bf873fd88c724d8a80f1" name="a8292d4d4d1d8bf873fd88c724d8a80f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8292d4d4d1d8bf873fd88c724d8a80f1">&#9670;&#160;</a></span>filteringEcgHandler()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">long filteringEcgHandler </td>
-          <td>(</td>
-          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>ecgValue</em></span></td><td>)</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>全フィルタの完全初期化 </p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="filter_controller_8c_a8292d4d4d1d8bf873fd88c724d8a80f1_cgraph.svg" width="338" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="filter_controller_8c_a2c27f6b52850366e0b6d2831a91eb461_cgraph.svg" width="430" height="443"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="filter_controller_8c_a8292d4d4d1d8bf873fd88c724d8a80f1_icgraph.svg" width="550" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="filter_controller_8c_a2c27f6b52850366e0b6d2831a91eb461_icgraph.svg" width="176" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -217,31 +183,60 @@ filterController.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a2c27f6b52850366e0b6d2831a91eb461" name="a2c27f6b52850366e0b6d2831a91eb461"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c27f6b52850366e0b6d2831a91eb461">&#9670;&#160;</a></span>InitFilter()</h2>
+<a id="a8292d4d4d1d8bf873fd88c724d8a80f1" name="a8292d4d4d1d8bf873fd88c724d8a80f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8292d4d4d1d8bf873fd88c724d8a80f1">&#9670;&#160;</a></span>filteringEcgHandler()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InitFilter </td>
+          <td class="memname">long filteringEcgHandler </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>ecgValue</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>全フィルタの完全初期化 </p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="filter_controller_8c_a2c27f6b52850366e0b6d2831a91eb461_cgraph.svg" width="430" height="443"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="filter_controller_8c_a8292d4d4d1d8bf873fd88c724d8a80f1_cgraph.svg" width="478" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="filter_controller_8c_a2c27f6b52850366e0b6d2831a91eb461_icgraph.svg" width="176" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="filter_controller_8c_a8292d4d4d1d8bf873fd88c724d8a80f1_icgraph.svg" width="550" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a76758580e95080e34f69ff2c640c49e5" name="a76758580e95080e34f69ff2c640c49e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76758580e95080e34f69ff2c640c49e5">&#9670;&#160;</a></span>autoQrsHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long autoQrsHandler </td>
+          <td>(</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>ecg_val</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>sts</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="filter_controller_8c_a76758580e95080e34f69ff2c640c49e5_cgraph.svg" width="468" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="filter_controller_8c_a76758580e95080e34f69ff2c640c49e5_icgraph.svg" width="531" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -267,7 +262,7 @@ filterController.c の依存先関係図:</div>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="filter_controller_8c_a881cb16bbb180c7b96ee8fb4317c49ca_cgraph.svg" width="342" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="filter_controller_8c_a881cb16bbb180c7b96ee8fb4317c49ca_cgraph.svg" width="506" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 被呼び出し関係図:</div>

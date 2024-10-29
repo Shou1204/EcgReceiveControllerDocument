@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title=" ">
+<g id="a_Node000001"><a xlink:title="SPI入力データの処理プロセス">
 <polygon fill="#999999" stroke="#666666" points="269.75,-20 167.5,-20 167.5,0 269.75,0 269.75,-20"/>
 <text text-anchor="middle" x="218.62" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">SpiReceiveProcess</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="main_8c.html#a3df7021fe24cf874f8b1eec5bd5f4cb3" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="main_8c.html#a3df7021fe24cf874f8b1eec5bd5f4cb3" target="_top" xlink:title="SPI1のコールバック 1バイト毎に動作 &#39;SpiReceiveProcess()&#39;を呼び出す">
 <polygon fill="white" stroke="#666666" points="131.5,-20 0,-20 0,0 131.5,0 131.5,-20"/>
 <text text-anchor="middle" x="65.75" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">HAL_SPI_RxCpltCallback</text>
 </a>

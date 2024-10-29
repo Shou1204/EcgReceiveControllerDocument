@@ -104,12 +104,10 @@ $(function(){initNavTree('_drift2_8c.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">Drift2.c ファイル</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>ドリフトフィルタ（ローカットフィルタ）  
+<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="filter_8h_source.html">filter.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Drift2.c の依存先関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_drift2_8c__incl.svg" width="94" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 マクロ定義</h2></td></tr>
@@ -120,19 +118,58 @@ Drift2.c の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 関数</h2></td></tr>
+<tr class="memitem:a868330ca7f512bbd65ad183d8b5a9ae5" id="r_a868330ca7f512bbd65ad183d8b5a9ae5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a868330ca7f512bbd65ad183d8b5a9ae5">drift_ini</a> (short drift_filter_enable)</td></tr>
+<tr class="separator:a868330ca7f512bbd65ad183d8b5a9ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a217590113ce2356ea513514229083a42" id="r_a217590113ce2356ea513514229083a42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a217590113ce2356ea513514229083a42">t2_drift_ini</a> (void)</td></tr>
 <tr class="separator:a217590113ce2356ea513514229083a42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1b689ae0c6ba8272f9d223d70c07918" id="r_aa1b689ae0c6ba8272f9d223d70c07918"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1b689ae0c6ba8272f9d223d70c07918">t2_high_pass_dr_long</a> (long sts_dt)</td></tr>
 <tr class="separator:aa1b689ae0c6ba8272f9d223d70c07918"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a868330ca7f512bbd65ad183d8b5a9ae5" id="r_a868330ca7f512bbd65ad183d8b5a9ae5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a868330ca7f512bbd65ad183d8b5a9ae5">drift_ini</a> (short drift_filter_enable)</td></tr>
-<tr class="separator:a868330ca7f512bbd65ad183d8b5a9ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 変数</h2></td></tr>
+<tr class="memitem:adf9f2703478f4fdccef70b9af1f68573" id="r_adf9f2703478f4fdccef70b9af1f68573"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf9f2703478f4fdccef70b9af1f68573">Dr_Flt_Com</a></td></tr>
+<tr class="separator:adf9f2703478f4fdccef70b9af1f68573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abce6200c20cc788b342989739f077cf0" id="r_abce6200c20cc788b342989739f077cf0"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abce6200c20cc788b342989739f077cf0">Dr_Flt_Len</a></td></tr>
+<tr class="separator:abce6200c20cc788b342989739f077cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe9cf36e0a078d1b7c2683d0dcb20799" id="r_afe9cf36e0a078d1b7c2683d0dcb20799"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe9cf36e0a078d1b7c2683d0dcb20799">DrBoxA</a> [<a class="el" href="#ad654ba3cd732024fe35b2ed3c048cc55">DR_FLT_SIZE__</a>]</td></tr>
+<tr class="separator:afe9cf36e0a078d1b7c2683d0dcb20799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b481089c11596dd36f5bf2beb278429" id="r_a4b481089c11596dd36f5bf2beb278429"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b481089c11596dd36f5bf2beb278429">DrBoxB</a> [<a class="el" href="#ad654ba3cd732024fe35b2ed3c048cc55">DR_FLT_SIZE__</a>]</td></tr>
+<tr class="separator:a4b481089c11596dd36f5bf2beb278429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2378b714ea24776ea6465c3830a47fc" id="r_ac2378b714ea24776ea6465c3830a47fc"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2378b714ea24776ea6465c3830a47fc">DrBoxC</a> [<a class="el" href="#ad654ba3cd732024fe35b2ed3c048cc55">DR_FLT_SIZE__</a>]</td></tr>
+<tr class="separator:ac2378b714ea24776ea6465c3830a47fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12eaf7ce96fa51352f83bade44d0f573" id="r_a12eaf7ce96fa51352f83bade44d0f573"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12eaf7ce96fa51352f83bade44d0f573">DrBoxCnt</a></td></tr>
+<tr class="separator:a12eaf7ce96fa51352f83bade44d0f573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cda6f180c22d26bdec0f29f0b87ffc6" id="r_a9cda6f180c22d26bdec0f29f0b87ffc6"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cda6f180c22d26bdec0f29f0b87ffc6">DrBoxSts</a> [<a class="el" href="#ad654ba3cd732024fe35b2ed3c048cc55">DR_FLT_SIZE__</a>]</td></tr>
+<tr class="separator:a9cda6f180c22d26bdec0f29f0b87ffc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad094468a0664bb351bfebb29d1b10275" id="r_ad094468a0664bb351bfebb29d1b10275"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad094468a0664bb351bfebb29d1b10275">DrComA_Long</a></td></tr>
+<tr class="separator:ad094468a0664bb351bfebb29d1b10275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae6900ff518ef9b177edc2a965434c7e" id="r_aae6900ff518ef9b177edc2a965434c7e"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae6900ff518ef9b177edc2a965434c7e">DrComB_Long</a></td></tr>
+<tr class="separator:aae6900ff518ef9b177edc2a965434c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a639dfc33f4fd9007f937db8f22827d28" id="r_a639dfc33f4fd9007f937db8f22827d28"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a639dfc33f4fd9007f937db8f22827d28">DrDummy</a> [<a class="el" href="#a66e0c84bfcf8fce341c09b8136cc00fb">DUMMY_SIZE__</a>]</td></tr>
+<tr class="separator:a639dfc33f4fd9007f937db8f22827d28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2dcc7e49199784e9823168147825996" id="r_af2dcc7e49199784e9823168147825996"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2dcc7e49199784e9823168147825996">DrPtrA</a></td></tr>
+<tr class="separator:af2dcc7e49199784e9823168147825996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab06977d8885977236feda443dc742bfb" id="r_ab06977d8885977236feda443dc742bfb"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab06977d8885977236feda443dc742bfb">DrPtrB</a></td></tr>
+<tr class="separator:ab06977d8885977236feda443dc742bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a611e243146a55b55b9bfcd7035541e" id="r_a5a611e243146a55b55b9bfcd7035541e"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a611e243146a55b55b9bfcd7035541e">DrPtrX</a></td></tr>
+<tr class="separator:a5a611e243146a55b55b9bfcd7035541e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade74549a90ad2ebaccf3e18911b836d1" id="r_ade74549a90ad2ebaccf3e18911b836d1"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade74549a90ad2ebaccf3e18911b836d1">Dummy_Len</a></td></tr>
+<tr class="separator:ade74549a90ad2ebaccf3e18911b836d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50a5d3ec10c5f2c6ddb1386450870df3" id="r_a50a5d3ec10c5f2c6ddb1386450870df3"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50a5d3ec10c5f2c6ddb1386450870df3">RxHumDriftFilter</a></td></tr>
 <tr class="separator:a50a5d3ec10c5f2c6ddb1386450870df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">マクロ定義詳解</h2>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>ドリフトフィルタ（ローカットフィルタ） </p>
+<p>説明： <br  />
+　サンプリング300Hzのモニター用に作成。<br  />
+　※ループバッファを256で回せば、カットオフ周波数は約1.171875Hz <br  />
+　　で波形の歪みは大きくなるが、出力遅延は少ない。 <br  />
+　※ループバッファ512で回した場合はカットオフ0.5859375Hzで波形 <br  />
+　　の歪みは抑えられるが出力遅延も多くなる。</p>
+<dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150: <br  />
+ 外部変数の削除、それに伴う変更 <br  />
+ after_deley150 と関連の変数を <a class="el" href="_qrs2_8c.html" title="QRS検出プログラム（手動）">Qrs2.c</a> に移動 </dd></dl>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
 <a id="ad654ba3cd732024fe35b2ed3c048cc55" name="ad654ba3cd732024fe35b2ed3c048cc55"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad654ba3cd732024fe35b2ed3c048cc55">&#9670;&#160;</a></span>DR_FLT_SIZE__</h2>
 
@@ -144,7 +181,6 @@ Drift2.c の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>AM140 → AM150 after_deley150 を <a class="el" href="_qrs2_8c.html">Qrs2.c</a> に移動 </p>
 
 </div>
 </div>
@@ -163,34 +199,6 @@ Drift2.c の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a868330ca7f512bbd65ad183d8b5a9ae5" name="a868330ca7f512bbd65ad183d8b5a9ae5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a868330ca7f512bbd65ad183d8b5a9ae5">&#9670;&#160;</a></span>drift_ini()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void drift_ini </td>
-          <td>(</td>
-          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>drift_filter_enable</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>AM140 → AM150 引数を追加 </p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_drift2_8c_a868330ca7f512bbd65ad183d8b5a9ae5_cgraph.svg" width="204" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_drift2_8c_a868330ca7f512bbd65ad183d8b5a9ae5_icgraph.svg" width="288" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-
-</div>
-</div>
 <a id="a217590113ce2356ea513514229083a42" name="a217590113ce2356ea513514229083a42"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a217590113ce2356ea513514229083a42">&#9670;&#160;</a></span>t2_drift_ini()</h2>
 
@@ -205,6 +213,7 @@ Drift2.c の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>AM140 → AM150: <a class="el" href="_qrs2_8c.html" title="QRS検出プログラム（手動）">Qrs2.c</a> に移動</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -235,6 +244,34 @@ Drift2.c の依存先関係図:</div>
 
 </div>
 </div>
+<a id="a868330ca7f512bbd65ad183d8b5a9ae5" name="a868330ca7f512bbd65ad183d8b5a9ae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a868330ca7f512bbd65ad183d8b5a9ae5">&#9670;&#160;</a></span>drift_ini()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void drift_ini </td>
+          <td>(</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>drift_filter_enable</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150: 引数を追加 </dd></dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_drift2_8c_a868330ca7f512bbd65ad183d8b5a9ae5_cgraph.svg" width="204" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_drift2_8c_a868330ca7f512bbd65ad183d8b5a9ae5_icgraph.svg" width="288" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
 <h2 class="groupheader">変数詳解</h2>
 <a id="a50a5d3ec10c5f2c6ddb1386450870df3" name="a50a5d3ec10c5f2c6ddb1386450870df3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50a5d3ec10c5f2c6ddb1386450870df3">&#9670;&#160;</a></span>RxHumDriftFilter</h2>
@@ -246,6 +283,315 @@ Drift2.c の依存先関係図:</div>
           <td class="memname">short RxHumDriftFilter</td>
         </tr>
       </table>
+</div><div class="memdoc">
+<p>AM140 → AM150: 外部変数から変更 </p>
+
+</div>
+</div>
+<a id="abce6200c20cc788b342989739f077cf0" name="abce6200c20cc788b342989739f077cf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abce6200c20cc788b342989739f077cf0">&#9670;&#160;</a></span>Dr_Flt_Len</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Dr_Flt_Len</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade74549a90ad2ebaccf3e18911b836d1" name="ade74549a90ad2ebaccf3e18911b836d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade74549a90ad2ebaccf3e18911b836d1">&#9670;&#160;</a></span>Dummy_Len</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Dummy_Len</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf9f2703478f4fdccef70b9af1f68573" name="adf9f2703478f4fdccef70b9af1f68573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf9f2703478f4fdccef70b9af1f68573">&#9670;&#160;</a></span>Dr_Flt_Com</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Dr_Flt_Com</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a639dfc33f4fd9007f937db8f22827d28" name="a639dfc33f4fd9007f937db8f22827d28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a639dfc33f4fd9007f937db8f22827d28">&#9670;&#160;</a></span>DrDummy</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short DrDummy[<a class="el" href="#a66e0c84bfcf8fce341c09b8136cc00fb">DUMMY_SIZE__</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5a611e243146a55b55b9bfcd7035541e" name="a5a611e243146a55b55b9bfcd7035541e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a611e243146a55b55b9bfcd7035541e">&#9670;&#160;</a></span>DrPtrX</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short DrPtrX</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe9cf36e0a078d1b7c2683d0dcb20799" name="afe9cf36e0a078d1b7c2683d0dcb20799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe9cf36e0a078d1b7c2683d0dcb20799">&#9670;&#160;</a></span>DrBoxA</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short DrBoxA[<a class="el" href="#ad654ba3cd732024fe35b2ed3c048cc55">DR_FLT_SIZE__</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b481089c11596dd36f5bf2beb278429" name="a4b481089c11596dd36f5bf2beb278429"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b481089c11596dd36f5bf2beb278429">&#9670;&#160;</a></span>DrBoxB</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short DrBoxB[<a class="el" href="#ad654ba3cd732024fe35b2ed3c048cc55">DR_FLT_SIZE__</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2378b714ea24776ea6465c3830a47fc" name="ac2378b714ea24776ea6465c3830a47fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2378b714ea24776ea6465c3830a47fc">&#9670;&#160;</a></span>DrBoxC</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short DrBoxC[<a class="el" href="#ad654ba3cd732024fe35b2ed3c048cc55">DR_FLT_SIZE__</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cda6f180c22d26bdec0f29f0b87ffc6" name="a9cda6f180c22d26bdec0f29f0b87ffc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cda6f180c22d26bdec0f29f0b87ffc6">&#9670;&#160;</a></span>DrBoxSts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short DrBoxSts[<a class="el" href="#ad654ba3cd732024fe35b2ed3c048cc55">DR_FLT_SIZE__</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad094468a0664bb351bfebb29d1b10275" name="ad094468a0664bb351bfebb29d1b10275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad094468a0664bb351bfebb29d1b10275">&#9670;&#160;</a></span>DrComA_Long</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long DrComA_Long</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae6900ff518ef9b177edc2a965434c7e" name="aae6900ff518ef9b177edc2a965434c7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae6900ff518ef9b177edc2a965434c7e">&#9670;&#160;</a></span>DrComB_Long</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long DrComB_Long</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2dcc7e49199784e9823168147825996" name="af2dcc7e49199784e9823168147825996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2dcc7e49199784e9823168147825996">&#9670;&#160;</a></span>DrPtrA</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short DrPtrA</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab06977d8885977236feda443dc742bfb" name="ab06977d8885977236feda443dc742bfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab06977d8885977236feda443dc742bfb">&#9670;&#160;</a></span>DrPtrB</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short DrPtrB</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12eaf7ce96fa51352f83bade44d0f573" name="a12eaf7ce96fa51352f83bade44d0f573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12eaf7ce96fa51352f83bade44d0f573">&#9670;&#160;</a></span>DrBoxCnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short DrBoxCnt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

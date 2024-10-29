@@ -11,7 +11,7 @@
 <!-- Node1 -->
 <g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_Node000001"><a xlink:title=" ">
+<g id="a_Node000001"><a xlink:title="初期化">
 <polygon fill="#999999" stroke="#666666" points="87.25,-20 0,-20 0,0 87.25,0 87.25,-20"/>
 <text text-anchor="middle" x="43.62" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">InitSpiReceiveC</text>
 </a>
@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="spi__receive_8c.html#a0928151cf559961841f5ec56d5fca371" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="spi__receive_8c.html#a0928151cf559961841f5ec56d5fca371" target="_top" xlink:title="出力フォーマット集計値のリセット">
 <polygon fill="white" stroke="#666666" points="209.75,-20 123.25,-20 123.25,0 209.75,0 209.75,-20"/>
 <text text-anchor="middle" x="166.5" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">StatusCntReset</text>
 </a>

@@ -104,158 +104,221 @@ $(function(){initNavTree('_qrs2_8c.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">Qrs2.c ファイル</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>QRS検出プログラム（手動）  
+<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="filter_8h_source.html">filter.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Qrs2.c の依存先関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c__incl.svg" width="94" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:a56253101a53cd74a69961f548ac312ed" id="r_a56253101a53cd74a69961f548ac312ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56253101a53cd74a69961f548ac312ed">QRS_DELAY</a>&#160;&#160;&#160;20  /*	ＱＲＳ遅延時間				*/</td></tr>
-<tr class="separator:a56253101a53cd74a69961f548ac312ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed095c4a2551bb26033517a5e8ec2ac7" id="r_aed095c4a2551bb26033517a5e8ec2ac7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed095c4a2551bb26033517a5e8ec2ac7">MW_Dlay</a>&#160;&#160;&#160;21  /*21	積分幅					*/</td></tr>
-<tr class="separator:aed095c4a2551bb26033517a5e8ec2ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36d292bf60b6c531ca626f548fb1239e" id="r_a36d292bf60b6c531ca626f548fb1239e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36d292bf60b6c531ca626f548fb1239e">QRS_WIDE</a>&#160;&#160;&#160;12  /*17	積分ＱＲＳ幅			*/</td></tr>
-<tr class="separator:a36d292bf60b6c531ca626f548fb1239e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa44e6fb7e3180f1c6c5d28b052d20479" id="r_aa44e6fb7e3180f1c6c5d28b052d20479"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa44e6fb7e3180f1c6c5d28b052d20479">RR_MASK</a>&#160;&#160;&#160;30  /*	30Ｒ－Ｒのマスク時間		*/</td></tr>
-<tr class="separator:aa44e6fb7e3180f1c6c5d28b052d20479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0c1487b3da699cfa9009565c8068013" id="r_ac0c1487b3da699cfa9009565c8068013"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0c1487b3da699cfa9009565c8068013">ANA_TIME</a>&#160;&#160;&#160;50  /*	トリガー点からの経過時間	*/</td></tr>
 <tr class="separator:ac0c1487b3da699cfa9009565c8068013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adee74e51a79aec4f55fa58a525fde6bd" id="r_adee74e51a79aec4f55fa58a525fde6bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adee74e51a79aec4f55fa58a525fde6bd">DELEY_150__</a>&#160;&#160;&#160;150</td></tr>
+<tr class="separator:adee74e51a79aec4f55fa58a525fde6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90a16a79913a5968dde3af4eca8cf3c3" id="r_a90a16a79913a5968dde3af4eca8cf3c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90a16a79913a5968dde3af4eca8cf3c3">INTEG__</a>&#160;&#160;&#160;300</td></tr>
+<tr class="separator:a90a16a79913a5968dde3af4eca8cf3c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6aa17ad59b9064200b45c2002e18387b" id="r_a6aa17ad59b9064200b45c2002e18387b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6aa17ad59b9064200b45c2002e18387b">ITEG_BUFFS__</a>&#160;&#160;&#160;6</td></tr>
+<tr class="separator:a6aa17ad59b9064200b45c2002e18387b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed095c4a2551bb26033517a5e8ec2ac7" id="r_aed095c4a2551bb26033517a5e8ec2ac7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed095c4a2551bb26033517a5e8ec2ac7">MW_Dlay</a>&#160;&#160;&#160;21  /*21	積分幅					*/</td></tr>
+<tr class="separator:aed095c4a2551bb26033517a5e8ec2ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20e2687e1946f6709f2a45b2fc1c60ce" id="r_a20e2687e1946f6709f2a45b2fc1c60ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20e2687e1946f6709f2a45b2fc1c60ce">PACE_LEV</a>&#160;&#160;&#160;350 /*	ペースパルスのカットする高さ*/</td></tr>
 <tr class="separator:a20e2687e1946f6709f2a45b2fc1c60ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56253101a53cd74a69961f548ac312ed" id="r_a56253101a53cd74a69961f548ac312ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56253101a53cd74a69961f548ac312ed">QRS_DELAY</a>&#160;&#160;&#160;20  /*	ＱＲＳ遅延時間				*/</td></tr>
+<tr class="separator:a56253101a53cd74a69961f548ac312ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79e8040b473367d55ce0ac53661be23f" id="r_a79e8040b473367d55ce0ac53661be23f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79e8040b473367d55ce0ac53661be23f">QRS_TH__</a>&#160;&#160;&#160;160</td></tr>
 <tr class="separator:a79e8040b473367d55ce0ac53661be23f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac4e43f376a3517b279463c3c78579e6" id="r_aac4e43f376a3517b279463c3c78579e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac4e43f376a3517b279463c3c78579e6">QRS_TH_INI__</a>&#160;&#160;&#160;500</td></tr>
 <tr class="separator:aac4e43f376a3517b279463c3c78579e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36d292bf60b6c531ca626f548fb1239e" id="r_a36d292bf60b6c531ca626f548fb1239e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36d292bf60b6c531ca626f548fb1239e">QRS_WIDE</a>&#160;&#160;&#160;12  /*17	積分ＱＲＳ幅			*/</td></tr>
+<tr class="separator:a36d292bf60b6c531ca626f548fb1239e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa44e6fb7e3180f1c6c5d28b052d20479" id="r_aa44e6fb7e3180f1c6c5d28b052d20479"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa44e6fb7e3180f1c6c5d28b052d20479">RR_MASK</a>&#160;&#160;&#160;30  /*	30Ｒ－Ｒのマスク時間		*/</td></tr>
+<tr class="separator:aa44e6fb7e3180f1c6c5d28b052d20479"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18432d3518b75da30f9260bdf2b8fe54" id="r_a18432d3518b75da30f9260bdf2b8fe54"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18432d3518b75da30f9260bdf2b8fe54">SQ_LEV</a>&#160;&#160;&#160;13</td></tr>
 <tr class="separator:a18432d3518b75da30f9260bdf2b8fe54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ab0451b4318df8e9ca54e3ef37d2f09" id="r_a5ab0451b4318df8e9ca54e3ef37d2f09"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ab0451b4318df8e9ca54e3ef37d2f09">STOP_INTER__</a>&#160;&#160;&#160;9000</td></tr>
 <tr class="separator:a5ab0451b4318df8e9ca54e3ef37d2f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6aa17ad59b9064200b45c2002e18387b" id="r_a6aa17ad59b9064200b45c2002e18387b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6aa17ad59b9064200b45c2002e18387b">ITEG_BUFFS__</a>&#160;&#160;&#160;6</td></tr>
-<tr class="separator:a6aa17ad59b9064200b45c2002e18387b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf2a8f2742ddde65b9cbc7556ac47b4c" id="r_abf2a8f2742ddde65b9cbc7556ac47b4c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf2a8f2742ddde65b9cbc7556ac47b4c">TH_AFTER__</a>&#160;&#160;&#160;30</td></tr>
+<tr class="separator:abf2a8f2742ddde65b9cbc7556ac47b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaa2f8987a55c5240ef250e41473039e" id="r_afaa2f8987a55c5240ef250e41473039e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afaa2f8987a55c5240ef250e41473039e">TH_DIV__</a>&#160;&#160;&#160;5</td></tr>
 <tr class="separator:afaa2f8987a55c5240ef250e41473039e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f1d7cce7a5afb3ef19d49d734133334" id="r_a2f1d7cce7a5afb3ef19d49d734133334"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f1d7cce7a5afb3ef19d49d734133334">TH_DIV_X2__</a>&#160;&#160;&#160;10</td></tr>
 <tr class="separator:a2f1d7cce7a5afb3ef19d49d734133334"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf2a8f2742ddde65b9cbc7556ac47b4c" id="r_abf2a8f2742ddde65b9cbc7556ac47b4c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf2a8f2742ddde65b9cbc7556ac47b4c">TH_AFTER__</a>&#160;&#160;&#160;30</td></tr>
-<tr class="separator:abf2a8f2742ddde65b9cbc7556ac47b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90a16a79913a5968dde3af4eca8cf3c3" id="r_a90a16a79913a5968dde3af4eca8cf3c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a90a16a79913a5968dde3af4eca8cf3c3">INTEG__</a>&#160;&#160;&#160;300</td></tr>
-<tr class="separator:a90a16a79913a5968dde3af4eca8cf3c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adee74e51a79aec4f55fa58a525fde6bd" id="r_adee74e51a79aec4f55fa58a525fde6bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adee74e51a79aec4f55fa58a525fde6bd">DELEY_150__</a>&#160;&#160;&#160;150</td></tr>
-<tr class="separator:adee74e51a79aec4f55fa58a525fde6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 関数</h2></td></tr>
 <tr class="memitem:a5256314c2dea4e392f6fe8c0305f8e75" id="r_a5256314c2dea4e392f6fe8c0305f8e75"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5256314c2dea4e392f6fe8c0305f8e75">after_deley150</a> (short qrs, short ecg, short *sts)</td></tr>
 <tr class="separator:a5256314c2dea4e392f6fe8c0305f8e75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15dda4f2ebff3d8679d669d7dcc879ff" id="r_a15dda4f2ebff3d8679d669d7dcc879ff"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15dda4f2ebff3d8679d669d7dcc879ff">t2_qrsrtn</a> (short sample)</td></tr>
-<tr class="separator:a15dda4f2ebff3d8679d669d7dcc879ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a140e24b575583e522ee0e2587f9d72d0" id="r_a140e24b575583e522ee0e2587f9d72d0"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a140e24b575583e522ee0e2587f9d72d0">ans_qrs</a> (short code)</td></tr>
+<tr class="separator:a140e24b575583e522ee0e2587f9d72d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26ecaa5cd6b6742886005a4215305c66" id="r_a26ecaa5cd6b6742886005a4215305c66"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26ecaa5cd6b6742886005a4215305c66">band_pass_filter</a> (void)</td></tr>
+<tr class="separator:a26ecaa5cd6b6742886005a4215305c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7289aa4738890b5848a16f30165d949b" id="r_a7289aa4738890b5848a16f30165d949b"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7289aa4738890b5848a16f30165d949b">custom_abs</a> (short x)</td></tr>
+<tr class="memdesc:a7289aa4738890b5848a16f30165d949b"><td class="mdescLeft">&#160;</td><td class="mdescRight">QRS感度、ECG感度を検出に反映する  <br /></td></tr>
+<tr class="separator:a7289aa4738890b5848a16f30165d949b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac577e93ac47cf2cfd1a3aaf68bbfbcc" id="r_aac577e93ac47cf2cfd1a3aaf68bbfbcc"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac577e93ac47cf2cfd1a3aaf68bbfbcc">delp</a> (short ecg)</td></tr>
+<tr class="separator:aac577e93ac47cf2cfd1a3aaf68bbfbcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a934315516b8f52de586d3902e76a6707" id="r_a934315516b8f52de586d3902e76a6707"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a934315516b8f52de586d3902e76a6707">diff_sub</a> (void)</td></tr>
+<tr class="separator:a934315516b8f52de586d3902e76a6707"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8537195c7819d0baf9fee1fdbb4b2a5d" id="r_a8537195c7819d0baf9fee1fdbb4b2a5d"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8537195c7819d0baf9fee1fdbb4b2a5d">mw_integ</a> (unsigned short cc)</td></tr>
+<tr class="separator:a8537195c7819d0baf9fee1fdbb4b2a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71dac6a32fda1375031e49eb6b725f36" id="r_a71dac6a32fda1375031e49eb6b725f36"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71dac6a32fda1375031e49eb6b725f36">qrs_det</a> (short dt)</td></tr>
+<tr class="separator:a71dac6a32fda1375031e49eb6b725f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a855ec15db5cb39e80942b0cb15cecd36" id="r_a855ec15db5cb39e80942b0cb15cecd36"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a855ec15db5cb39e80942b0cb15cecd36">qrs_sb</a> (short qrs_begin, short qrs_end, short qrs_high)</td></tr>
+<tr class="separator:a855ec15db5cb39e80942b0cb15cecd36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679f655a20f47dbff686054e0447fb0e" id="r_a679f655a20f47dbff686054e0447fb0e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a679f655a20f47dbff686054e0447fb0e">set_th</a> (void)</td></tr>
+<tr class="separator:a679f655a20f47dbff686054e0447fb0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad37f3ddf7b682e2a5f85b9a0c1976a3" id="r_aad37f3ddf7b682e2a5f85b9a0c1976a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad37f3ddf7b682e2a5f85b9a0c1976a3">SetEcgAndQrsSensi</a> (short qrs_sensi, short ecg_sensi)</td></tr>
+<tr class="memdesc:aad37f3ddf7b682e2a5f85b9a0c1976a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">QRS感度、ECG感度を検出に反映する  <br /></td></tr>
+<tr class="separator:aad37f3ddf7b682e2a5f85b9a0c1976a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b176376b1e679caa51cc73e089785dc" id="r_a9b176376b1e679caa51cc73e089785dc"><td class="memItemLeft" align="right" valign="top">static unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b176376b1e679caa51cc73e089785dc">sqr_sub</a> (void)</td></tr>
+<tr class="separator:a9b176376b1e679caa51cc73e089785dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa17ff848fb4ab732074f13d313d3c766" id="r_aa17ff848fb4ab732074f13d313d3c766"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa17ff848fb4ab732074f13d313d3c766">t2_qrsini</a> (short qrs_sensi, short ecg_sensi)</td></tr>
 <tr class="separator:aa17ff848fb4ab732074f13d313d3c766"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad37f3ddf7b682e2a5f85b9a0c1976a3" id="r_aad37f3ddf7b682e2a5f85b9a0c1976a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad37f3ddf7b682e2a5f85b9a0c1976a3">SetEcgAndQrsSensi</a> (short qrs_sensi, short ecg_sensi)</td></tr>
-<tr class="separator:aad37f3ddf7b682e2a5f85b9a0c1976a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15dda4f2ebff3d8679d669d7dcc879ff" id="r_a15dda4f2ebff3d8679d669d7dcc879ff"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15dda4f2ebff3d8679d669d7dcc879ff">t2_qrsrtn</a> (short sample)</td></tr>
+<tr class="separator:a15dda4f2ebff3d8679d669d7dcc879ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 変数</h2></td></tr>
-<tr class="memitem:a12e162c6a06874d26895fb6aebde326d" id="r_a12e162c6a06874d26895fb6aebde326d"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12e162c6a06874d26895fb6aebde326d">RealEcgSns</a></td></tr>
-<tr class="separator:a12e162c6a06874d26895fb6aebde326d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f7fa5fd70a1d63e1f2c5f50f7d86f57" id="r_a2f7fa5fd70a1d63e1f2c5f50f7d86f57"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f7fa5fd70a1d63e1f2c5f50f7d86f57">RxEcg2QrsSensi</a></td></tr>
-<tr class="separator:a2f7fa5fd70a1d63e1f2c5f50f7d86f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0cbc5efd76289a55bb57b17eff1803f" id="r_ad0cbc5efd76289a55bb57b17eff1803f"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0cbc5efd76289a55bb57b17eff1803f">ChangeQrsBorder</a></td></tr>
+<tr class="memitem:abe68b66e1208fda72ab413d3a383f08e" id="r_abe68b66e1208fda72ab413d3a383f08e"><td class="memItemLeft" align="right" valign="top">static short const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe68b66e1208fda72ab413d3a383f08e">ANA_TIME_TBL</a> [4] = { 80 , 65 , 50 , 0 }</td></tr>
+<tr class="separator:abe68b66e1208fda72ab413d3a383f08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a089f0ed685e6a442ef50d90928ca8f57" id="r_a089f0ed685e6a442ef50d90928ca8f57"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a089f0ed685e6a442ef50d90928ca8f57">AnaTime</a></td></tr>
+<tr class="separator:a089f0ed685e6a442ef50d90928ca8f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a239771a0f9e599e929c19116c0113ea3" id="r_a239771a0f9e599e929c19116c0113ea3"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a239771a0f9e599e929c19116c0113ea3">ANS_1</a></td></tr>
+<tr class="separator:a239771a0f9e599e929c19116c0113ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe57440bdea165b9a7cb14fc97b64ff8" id="r_afe57440bdea165b9a7cb14fc97b64ff8"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe57440bdea165b9a7cb14fc97b64ff8">BandPassSw</a></td></tr>
+<tr class="separator:afe57440bdea165b9a7cb14fc97b64ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0cbc5efd76289a55bb57b17eff1803f" id="r_ad0cbc5efd76289a55bb57b17eff1803f"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0cbc5efd76289a55bb57b17eff1803f">ChangeQrsBorder</a></td></tr>
 <tr class="separator:ad0cbc5efd76289a55bb57b17eff1803f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad05de5cc342f4e0927a9805b712bddb7" id="r_ad05de5cc342f4e0927a9805b712bddb7"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad05de5cc342f4e0927a9805b712bddb7">TransQrsTh</a></td></tr>
-<tr class="separator:ad05de5cc342f4e0927a9805b712bddb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4f5dc76df83125ec3499e61be0c459e" id="r_ab4f5dc76df83125ec3499e61be0c459e"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4f5dc76df83125ec3499e61be0c459e">CNT_flg</a></td></tr>
+<tr class="separator:ab4f5dc76df83125ec3499e61be0c459e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b1fde52af62b165735bacda081d5a6" id="r_a88b1fde52af62b165735bacda081d5a6"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88b1fde52af62b165735bacda081d5a6">D1</a></td></tr>
+<tr class="separator:a88b1fde52af62b165735bacda081d5a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4edf9d271f5df52be1e614728283e5c" id="r_ae4edf9d271f5df52be1e614728283e5c"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4edf9d271f5df52be1e614728283e5c">D2</a></td></tr>
+<tr class="separator:ae4edf9d271f5df52be1e614728283e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78ecb400b713b0b420eca26e683b1471" id="r_a78ecb400b713b0b420eca26e683b1471"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78ecb400b713b0b420eca26e683b1471">D3</a></td></tr>
+<tr class="separator:a78ecb400b713b0b420eca26e683b1471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa6b7bce82a57829ea243d527a28e3da" id="r_aaa6b7bce82a57829ea243d527a28e3da"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa6b7bce82a57829ea243d527a28e3da">D4</a></td></tr>
+<tr class="separator:aaa6b7bce82a57829ea243d527a28e3da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f3c7bef14bc1be61ab3c0a4781b8761" id="r_a0f3c7bef14bc1be61ab3c0a4781b8761"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f3c7bef14bc1be61ab3c0a4781b8761">D5</a></td></tr>
+<tr class="separator:a0f3c7bef14bc1be61ab3c0a4781b8761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57c11c22f62baf0bc123ed75efdaba13" id="r_a57c11c22f62baf0bc123ed75efdaba13"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57c11c22f62baf0bc123ed75efdaba13">D6</a></td></tr>
+<tr class="separator:a57c11c22f62baf0bc123ed75efdaba13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a260aa4ddf62e7e0908b5aff68368aa36" id="r_a260aa4ddf62e7e0908b5aff68368aa36"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a260aa4ddf62e7e0908b5aff68368aa36">Diff_f1_dt</a></td></tr>
+<tr class="separator:a260aa4ddf62e7e0908b5aff68368aa36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85d874dd60633ea051533f24feed85fc" id="r_a85d874dd60633ea051533f24feed85fc"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85d874dd60633ea051533f24feed85fc">Diff_f2_dt</a></td></tr>
+<tr class="separator:a85d874dd60633ea051533f24feed85fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3845bde5d55d3131bb4f90c869715be" id="r_af3845bde5d55d3131bb4f90c869715be"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3845bde5d55d3131bb4f90c869715be">Diff_nw_dt</a></td></tr>
+<tr class="separator:af3845bde5d55d3131bb4f90c869715be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bb885f46d387f45bfc0879b07b48f0a" id="r_a2bb885f46d387f45bfc0879b07b48f0a"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bb885f46d387f45bfc0879b07b48f0a">Diff_o1_dt</a></td></tr>
+<tr class="separator:a2bb885f46d387f45bfc0879b07b48f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a85fbef8bb0339452a0b738b420343b" id="r_a3a85fbef8bb0339452a0b738b420343b"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a85fbef8bb0339452a0b738b420343b">Diff_o2_dt</a></td></tr>
+<tr class="separator:a3a85fbef8bb0339452a0b738b420343b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b3899af2c3bb8e0059bf922f146dcdc" id="r_a6b3899af2c3bb8e0059bf922f146dcdc"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b3899af2c3bb8e0059bf922f146dcdc">Diff_o3_dt</a></td></tr>
+<tr class="separator:a6b3899af2c3bb8e0059bf922f146dcdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef2918fdae26c07add3ed1f808a8071b" id="r_aef2918fdae26c07add3ed1f808a8071b"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef2918fdae26c07add3ed1f808a8071b">DrEcg150Deley</a> [<a class="el" href="#adee74e51a79aec4f55fa58a525fde6bd">DELEY_150__</a>]</td></tr>
+<tr class="separator:aef2918fdae26c07add3ed1f808a8071b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adce412f1086b4aea959c4e9828ca3afc" id="r_adce412f1086b4aea959c4e9828ca3afc"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adce412f1086b4aea959c4e9828ca3afc">DrEcg150DeleyCnt</a></td></tr>
+<tr class="separator:adce412f1086b4aea959c4e9828ca3afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c6e0068afeb23493e88228c1a64bc4" id="r_ac5c6e0068afeb23493e88228c1a64bc4"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5c6e0068afeb23493e88228c1a64bc4">DrSts150Deley</a> [<a class="el" href="#adee74e51a79aec4f55fa58a525fde6bd">DELEY_150__</a>]</td></tr>
+<tr class="separator:ac5c6e0068afeb23493e88228c1a64bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13909c8f58a4fab3e9070446f797be99" id="r_a13909c8f58a4fab3e9070446f797be99"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13909c8f58a4fab3e9070446f797be99">ecg_new</a> [7]</td></tr>
+<tr class="separator:a13909c8f58a4fab3e9070446f797be99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a9c228950aaa4d030681cf8b52c842d" id="r_a7a9c228950aaa4d030681cf8b52c842d"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a9c228950aaa4d030681cf8b52c842d">ecg_org</a> [7]</td></tr>
+<tr class="separator:a7a9c228950aaa4d030681cf8b52c842d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03e8b102bc6fe5c1d2105ac748e776ad" id="r_a03e8b102bc6fe5c1d2105ac748e776ad"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a03e8b102bc6fe5c1d2105ac748e776ad">First_Cnt</a></td></tr>
+<tr class="separator:a03e8b102bc6fe5c1d2105ac748e776ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9c953eb46dc0f1c12c23d0518efc5ba" id="r_ab9c953eb46dc0f1c12c23d0518efc5ba"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9c953eb46dc0f1c12c23d0518efc5ba">ItgBuff</a> [<a class="el" href="#a6aa17ad59b9064200b45c2002e18387b">ITEG_BUFFS__</a>]</td></tr>
+<tr class="separator:ab9c953eb46dc0f1c12c23d0518efc5ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebc0932abd497cab9a42e1bbe4b9800e" id="r_aebc0932abd497cab9a42e1bbe4b9800e"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebc0932abd497cab9a42e1bbe4b9800e">ItgCheck</a> [<a class="el" href="#a6aa17ad59b9064200b45c2002e18387b">ITEG_BUFFS__</a>]</td></tr>
+<tr class="separator:aebc0932abd497cab9a42e1bbe4b9800e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af387d4bd5a6ad89ec37a92c834b7dc3e" id="r_af387d4bd5a6ad89ec37a92c834b7dc3e"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af387d4bd5a6ad89ec37a92c834b7dc3e">ItgChkTotal</a></td></tr>
+<tr class="separator:af387d4bd5a6ad89ec37a92c834b7dc3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f41797a2262016bcdf70d93e8b6675" id="r_a12f41797a2262016bcdf70d93e8b6675"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12f41797a2262016bcdf70d93e8b6675">ItgCnt</a></td></tr>
+<tr class="separator:a12f41797a2262016bcdf70d93e8b6675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ed76777dd3eab4663dd501c7b93e43a" id="r_a5ed76777dd3eab4663dd501c7b93e43a"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ed76777dd3eab4663dd501c7b93e43a">ItgMax</a></td></tr>
+<tr class="separator:a5ed76777dd3eab4663dd501c7b93e43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4b6315857c5c8071ecbce90b3e894ca" id="r_ac4b6315857c5c8071ecbce90b3e894ca"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4b6315857c5c8071ecbce90b3e894ca">L_Box_n</a></td></tr>
+<tr class="separator:ac4b6315857c5c8071ecbce90b3e894ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76f08340c4171b61d23cbb0afea4ba6" id="r_ae76f08340c4171b61d23cbb0afea4ba6"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae76f08340c4171b61d23cbb0afea4ba6">LongItgTotal</a></td></tr>
+<tr class="separator:ae76f08340c4171b61d23cbb0afea4ba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b63eb4768860aa6c6260feab1f354a0" id="r_a0b63eb4768860aa6c6260feab1f354a0"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b63eb4768860aa6c6260feab1f354a0">Low_Box_1_dt</a> [5]</td></tr>
+<tr class="separator:a0b63eb4768860aa6c6260feab1f354a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2876edc5fba2aaab9074b9f3567c6e7e" id="r_a2876edc5fba2aaab9074b9f3567c6e7e"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2876edc5fba2aaab9074b9f3567c6e7e">Low_Box_2_dt</a> [5]</td></tr>
+<tr class="separator:a2876edc5fba2aaab9074b9f3567c6e7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7161a73e4720f02aaa9090f7e7ffd6bb" id="r_a7161a73e4720f02aaa9090f7e7ffd6bb"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7161a73e4720f02aaa9090f7e7ffd6bb">Low_Box_3_dt</a></td></tr>
+<tr class="separator:a7161a73e4720f02aaa9090f7e7ffd6bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717f31a880ebf9bcc57003e71c9759f2" id="r_a717f31a880ebf9bcc57003e71c9759f2"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a717f31a880ebf9bcc57003e71c9759f2">Low_Box_4_dt</a></td></tr>
+<tr class="separator:a717f31a880ebf9bcc57003e71c9759f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f7252761c92b182a5d45198afe99c35" id="r_a8f7252761c92b182a5d45198afe99c35"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f7252761c92b182a5d45198afe99c35">MW_Cnt</a></td></tr>
+<tr class="separator:a8f7252761c92b182a5d45198afe99c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46b493959308835ef33062698542ea37" id="r_a46b493959308835ef33062698542ea37"><td class="memItemLeft" align="right" valign="top">static unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a46b493959308835ef33062698542ea37">MW_old_dt</a> [<a class="el" href="#aed095c4a2551bb26033517a5e8ec2ac7">MW_Dlay</a>]</td></tr>
+<tr class="separator:a46b493959308835ef33062698542ea37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa959546616dd8cbc7a458b1c26b9b6f3" id="r_aa959546616dd8cbc7a458b1c26b9b6f3"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa959546616dd8cbc7a458b1c26b9b6f3">MW_Sum_dt</a></td></tr>
+<tr class="separator:aa959546616dd8cbc7a458b1c26b9b6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b36dfe9efff07de3a46169caab81542" id="r_a9b36dfe9efff07de3a46169caab81542"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b36dfe9efff07de3a46169caab81542">Old_max</a></td></tr>
+<tr class="separator:a9b36dfe9efff07de3a46169caab81542"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcf63d7b33bbf69ed9e3d649449cacc3" id="r_adcf63d7b33bbf69ed9e3d649449cacc3"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcf63d7b33bbf69ed9e3d649449cacc3">Old_time</a></td></tr>
+<tr class="separator:adcf63d7b33bbf69ed9e3d649449cacc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c7b9f805d96d32821990885317858e2" id="r_a0c7b9f805d96d32821990885317858e2"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c7b9f805d96d32821990885317858e2">Old_wide</a></td></tr>
+<tr class="separator:a0c7b9f805d96d32821990885317858e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a68f48d06d8f8bbdc705d9ea2a2f040" id="r_a2a68f48d06d8f8bbdc705d9ea2a2f040"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a68f48d06d8f8bbdc705d9ea2a2f040">ON_time</a></td></tr>
+<tr class="separator:a2a68f48d06d8f8bbdc705d9ea2a2f040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cf250c9d80321e0a7c83594af0bb007" id="r_a9cf250c9d80321e0a7c83594af0bb007"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cf250c9d80321e0a7c83594af0bb007">QRS_begin_1</a></td></tr>
+<tr class="separator:a9cf250c9d80321e0a7c83594af0bb007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf31f27996b45f205ce171bda3ae2b56" id="r_abf31f27996b45f205ce171bda3ae2b56"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf31f27996b45f205ce171bda3ae2b56">QRS_begin_2</a></td></tr>
+<tr class="separator:abf31f27996b45f205ce171bda3ae2b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4935e64fb4c81d3b7fc31b6a903a3432" id="r_a4935e64fb4c81d3b7fc31b6a903a3432"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4935e64fb4c81d3b7fc31b6a903a3432">QRS_end_1</a></td></tr>
+<tr class="separator:a4935e64fb4c81d3b7fc31b6a903a3432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51a43f6af40b69900255a30256b58490" id="r_a51a43f6af40b69900255a30256b58490"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51a43f6af40b69900255a30256b58490">QRS_end_2</a></td></tr>
+<tr class="separator:a51a43f6af40b69900255a30256b58490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c5c6834416fa34de4cef1a09f4ff272" id="r_a0c5c6834416fa34de4cef1a09f4ff272"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c5c6834416fa34de4cef1a09f4ff272">QRS_inter</a></td></tr>
+<tr class="separator:a0c5c6834416fa34de4cef1a09f4ff272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a461596be0a920410680e50a770edbbed" id="r_a461596be0a920410680e50a770edbbed"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a461596be0a920410680e50a770edbbed">QRS_max</a></td></tr>
+<tr class="separator:a461596be0a920410680e50a770edbbed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa74a17fcb79a508a22ee47e1eab0f685" id="r_aa74a17fcb79a508a22ee47e1eab0f685"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa74a17fcb79a508a22ee47e1eab0f685">QRS_max_1</a></td></tr>
+<tr class="separator:aa74a17fcb79a508a22ee47e1eab0f685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d182b3af8f311ccad8be91b75434f8c" id="r_a0d182b3af8f311ccad8be91b75434f8c"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d182b3af8f311ccad8be91b75434f8c">QRS_max_2</a></td></tr>
+<tr class="separator:a0d182b3af8f311ccad8be91b75434f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace337b497a540116337ff7d081c5cc2d" id="r_ace337b497a540116337ff7d081c5cc2d"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ace337b497a540116337ff7d081c5cc2d">QRS_no</a></td></tr>
+<tr class="separator:ace337b497a540116337ff7d081c5cc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae4f73b21580049c7827cffd6b9a98c6" id="r_aae4f73b21580049c7827cffd6b9a98c6"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae4f73b21580049c7827cffd6b9a98c6">QRS_th</a></td></tr>
+<tr class="separator:aae4f73b21580049c7827cffd6b9a98c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a999c5c2913165f24fbb9f5035dbd7d8a" id="r_a999c5c2913165f24fbb9f5035dbd7d8a"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a999c5c2913165f24fbb9f5035dbd7d8a">QRS_th_s</a></td></tr>
+<tr class="separator:a999c5c2913165f24fbb9f5035dbd7d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a563385b18861039cf94b764fa332bec7" id="r_a563385b18861039cf94b764fa332bec7"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a563385b18861039cf94b764fa332bec7">QRS_th_t</a></td></tr>
+<tr class="separator:a563385b18861039cf94b764fa332bec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ba2c0de1d800857a276de9bc953324" id="r_a40ba2c0de1d800857a276de9bc953324"><td class="memItemLeft" align="right" valign="top">static short const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40ba2c0de1d800857a276de9bc953324">QRS_TH_TBL</a> [4][6]</td></tr>
+<tr class="separator:a40ba2c0de1d800857a276de9bc953324"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a944df9ae128ab579418021e8c0ef8aed" id="r_a944df9ae128ab579418021e8c0ef8aed"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a944df9ae128ab579418021e8c0ef8aed">QrsIniStep</a></td></tr>
+<tr class="separator:a944df9ae128ab579418021e8c0ef8aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bf5073466060c595bc08d6184197ff2" id="r_a8bf5073466060c595bc08d6184197ff2"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8bf5073466060c595bc08d6184197ff2">QrsInterCount</a></td></tr>
+<tr class="separator:a8bf5073466060c595bc08d6184197ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12e162c6a06874d26895fb6aebde326d" id="r_a12e162c6a06874d26895fb6aebde326d"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12e162c6a06874d26895fb6aebde326d">RealEcgSns</a></td></tr>
+<tr class="separator:a12e162c6a06874d26895fb6aebde326d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5559abf7f52f372a0fde6877f379e8a9" id="r_a5559abf7f52f372a0fde6877f379e8a9"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5559abf7f52f372a0fde6877f379e8a9">RR_125</a></td></tr>
+<tr class="separator:a5559abf7f52f372a0fde6877f379e8a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82d90cacbbda7a0fb0bec95499355302" id="r_a82d90cacbbda7a0fb0bec95499355302"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82d90cacbbda7a0fb0bec95499355302">RR_75</a></td></tr>
+<tr class="separator:a82d90cacbbda7a0fb0bec95499355302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f13b1c3783025f9e2a0da623f1724ec" id="r_a0f13b1c3783025f9e2a0da623f1724ec"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f13b1c3783025f9e2a0da623f1724ec">RR_time</a></td></tr>
+<tr class="separator:a0f13b1c3783025f9e2a0da623f1724ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f7fa5fd70a1d63e1f2c5f50f7d86f57" id="r_a2f7fa5fd70a1d63e1f2c5f50f7d86f57"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f7fa5fd70a1d63e1f2c5f50f7d86f57">RxEcg2QrsSensi</a></td></tr>
+<tr class="separator:a2f7fa5fd70a1d63e1f2c5f50f7d86f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40c26a1d9b81b87dd87fa71172b9544a" id="r_a40c26a1d9b81b87dd87fa71172b9544a"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a40c26a1d9b81b87dd87fa71172b9544a">ThAfterCount</a></td></tr>
+<tr class="separator:a40c26a1d9b81b87dd87fa71172b9544a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d4d998b8c5a10649d365b4970c6b984" id="r_a5d4d998b8c5a10649d365b4970c6b984"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d4d998b8c5a10649d365b4970c6b984">TransQrsBox</a></td></tr>
 <tr class="separator:a5d4d998b8c5a10649d365b4970c6b984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad05de5cc342f4e0927a9805b712bddb7" id="r_ad05de5cc342f4e0927a9805b712bddb7"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad05de5cc342f4e0927a9805b712bddb7">TransQrsTh</a></td></tr>
+<tr class="separator:ad05de5cc342f4e0927a9805b712bddb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bcb36c29cbb127a93f1fef3f51db6dd" id="r_a9bcb36c29cbb127a93f1fef3f51db6dd"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bcb36c29cbb127a93f1fef3f51db6dd">ValQRS_TH</a></td></tr>
+<tr class="separator:a9bcb36c29cbb127a93f1fef3f51db6dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">マクロ定義詳解</h2>
-<a id="ac0c1487b3da699cfa9009565c8068013" name="ac0c1487b3da699cfa9009565c8068013"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac0c1487b3da699cfa9009565c8068013">&#9670;&#160;</a></span>ANA_TIME</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ANA_TIME&#160;&#160;&#160;50  /*	トリガー点からの経過時間	*/</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adee74e51a79aec4f55fa58a525fde6bd" name="adee74e51a79aec4f55fa58a525fde6bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adee74e51a79aec4f55fa58a525fde6bd">&#9670;&#160;</a></span>DELEY_150__</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DELEY_150__&#160;&#160;&#160;150</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>AM140 → AM150 <a class="el" href="_drift2_8c.html">Drift2.c</a> から移植 </p>
-
-</div>
-</div>
-<a id="a90a16a79913a5968dde3af4eca8cf3c3" name="a90a16a79913a5968dde3af4eca8cf3c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90a16a79913a5968dde3af4eca8cf3c3">&#9670;&#160;</a></span>INTEG__</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define INTEG__&#160;&#160;&#160;300</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6aa17ad59b9064200b45c2002e18387b" name="a6aa17ad59b9064200b45c2002e18387b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6aa17ad59b9064200b45c2002e18387b">&#9670;&#160;</a></span>ITEG_BUFFS__</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ITEG_BUFFS__&#160;&#160;&#160;6</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aed095c4a2551bb26033517a5e8ec2ac7" name="aed095c4a2551bb26033517a5e8ec2ac7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed095c4a2551bb26033517a5e8ec2ac7">&#9670;&#160;</a></span>MW_Dlay</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MW_Dlay&#160;&#160;&#160;21  /*21	積分幅					*/</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a20e2687e1946f6709f2a45b2fc1c60ce" name="a20e2687e1946f6709f2a45b2fc1c60ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a20e2687e1946f6709f2a45b2fc1c60ce">&#9670;&#160;</a></span>PACE_LEV</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define PACE_LEV&#160;&#160;&#160;350 /*	ペースパルスのカットする高さ*/</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>QRS検出プログラム（手動） </p>
+<dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150 <br  />
+外部変数を内部変数に変更 <br  />
+感度設定を取得する関数の追加 <br  />
+関連関数をDrift2.cから移動 </dd></dl>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
 <a id="a56253101a53cd74a69961f548ac312ed" name="a56253101a53cd74a69961f548ac312ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a56253101a53cd74a69961f548ac312ed">&#9670;&#160;</a></span>QRS_DELAY</h2>
 
@@ -270,28 +333,14 @@ Qrs2.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a79e8040b473367d55ce0ac53661be23f" name="a79e8040b473367d55ce0ac53661be23f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79e8040b473367d55ce0ac53661be23f">&#9670;&#160;</a></span>QRS_TH__</h2>
+<a id="aed095c4a2551bb26033517a5e8ec2ac7" name="aed095c4a2551bb26033517a5e8ec2ac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed095c4a2551bb26033517a5e8ec2ac7">&#9670;&#160;</a></span>MW_Dlay</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define QRS_TH__&#160;&#160;&#160;160</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aac4e43f376a3517b279463c3c78579e6" name="aac4e43f376a3517b279463c3c78579e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac4e43f376a3517b279463c3c78579e6">&#9670;&#160;</a></span>QRS_TH_INI__</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define QRS_TH_INI__&#160;&#160;&#160;500</td>
+          <td class="memname">#define MW_Dlay&#160;&#160;&#160;21  /*21	積分幅					*/</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -326,6 +375,62 @@ Qrs2.c の依存先関係図:</div>
 
 </div>
 </div>
+<a id="ac0c1487b3da699cfa9009565c8068013" name="ac0c1487b3da699cfa9009565c8068013"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0c1487b3da699cfa9009565c8068013">&#9670;&#160;</a></span>ANA_TIME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ANA_TIME&#160;&#160;&#160;50  /*	トリガー点からの経過時間	*/</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20e2687e1946f6709f2a45b2fc1c60ce" name="a20e2687e1946f6709f2a45b2fc1c60ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20e2687e1946f6709f2a45b2fc1c60ce">&#9670;&#160;</a></span>PACE_LEV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PACE_LEV&#160;&#160;&#160;350 /*	ペースパルスのカットする高さ*/</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79e8040b473367d55ce0ac53661be23f" name="a79e8040b473367d55ce0ac53661be23f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79e8040b473367d55ce0ac53661be23f">&#9670;&#160;</a></span>QRS_TH__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define QRS_TH__&#160;&#160;&#160;160</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac4e43f376a3517b279463c3c78579e6" name="aac4e43f376a3517b279463c3c78579e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac4e43f376a3517b279463c3c78579e6">&#9670;&#160;</a></span>QRS_TH_INI__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define QRS_TH_INI__&#160;&#160;&#160;500</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a18432d3518b75da30f9260bdf2b8fe54" name="a18432d3518b75da30f9260bdf2b8fe54"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a18432d3518b75da30f9260bdf2b8fe54">&#9670;&#160;</a></span>SQ_LEV</h2>
 
@@ -354,14 +459,14 @@ Qrs2.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="abf2a8f2742ddde65b9cbc7556ac47b4c" name="abf2a8f2742ddde65b9cbc7556ac47b4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf2a8f2742ddde65b9cbc7556ac47b4c">&#9670;&#160;</a></span>TH_AFTER__</h2>
+<a id="a6aa17ad59b9064200b45c2002e18387b" name="a6aa17ad59b9064200b45c2002e18387b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6aa17ad59b9064200b45c2002e18387b">&#9670;&#160;</a></span>ITEG_BUFFS__</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define TH_AFTER__&#160;&#160;&#160;30</td>
+          <td class="memname">#define ITEG_BUFFS__&#160;&#160;&#160;6</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -396,7 +501,388 @@ Qrs2.c の依存先関係図:</div>
 
 </div>
 </div>
+<a id="abf2a8f2742ddde65b9cbc7556ac47b4c" name="abf2a8f2742ddde65b9cbc7556ac47b4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf2a8f2742ddde65b9cbc7556ac47b4c">&#9670;&#160;</a></span>TH_AFTER__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TH_AFTER__&#160;&#160;&#160;30</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90a16a79913a5968dde3af4eca8cf3c3" name="a90a16a79913a5968dde3af4eca8cf3c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90a16a79913a5968dde3af4eca8cf3c3">&#9670;&#160;</a></span>INTEG__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INTEG__&#160;&#160;&#160;300</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adee74e51a79aec4f55fa58a525fde6bd" name="adee74e51a79aec4f55fa58a525fde6bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adee74e51a79aec4f55fa58a525fde6bd">&#9670;&#160;</a></span>DELEY_150__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DELEY_150__&#160;&#160;&#160;150</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>AM140 → AM150: <a class="el" href="_drift2_8c.html" title="ドリフトフィルタ（ローカットフィルタ）">Drift2.c</a> から移動 </p>
+
+</div>
+</div>
 <h2 class="groupheader">関数詳解</h2>
+<a id="a7289aa4738890b5848a16f30165d949b" name="a7289aa4738890b5848a16f30165d949b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7289aa4738890b5848a16f30165d949b">&#9670;&#160;</a></span>custom_abs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static short custom_abs </td>
+          <td>(</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>x</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>QRS感度、ECG感度を検出に反映する </p>
+<dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150: 追加<br  />
+標準ライブラリと名称が重複する問題への対処 </dd></dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_a7289aa4738890b5848a16f30165d949b_icgraph.svg" width="339" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a26ecaa5cd6b6742886005a4215305c66" name="a26ecaa5cd6b6742886005a4215305c66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26ecaa5cd6b6742886005a4215305c66">&#9670;&#160;</a></span>band_pass_filter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void band_pass_filter </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_a26ecaa5cd6b6742886005a4215305c66_icgraph.svg" width="426" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a934315516b8f52de586d3902e76a6707" name="a934315516b8f52de586d3902e76a6707"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a934315516b8f52de586d3902e76a6707">&#9670;&#160;</a></span>diff_sub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void diff_sub </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_a934315516b8f52de586d3902e76a6707_icgraph.svg" width="375" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a9b176376b1e679caa51cc73e089785dc" name="a9b176376b1e679caa51cc73e089785dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b176376b1e679caa51cc73e089785dc">&#9670;&#160;</a></span>sqr_sub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static unsigned short sqr_sub </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_a9b176376b1e679caa51cc73e089785dc_cgraph.svg" width="219" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_a9b176376b1e679caa51cc73e089785dc_icgraph.svg" width="376" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a8537195c7819d0baf9fee1fdbb4b2a5d" name="a8537195c7819d0baf9fee1fdbb4b2a5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8537195c7819d0baf9fee1fdbb4b2a5d">&#9670;&#160;</a></span>mw_integ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static short mw_integ </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short</td>          <td class="paramname"><span class="paramname"><em>cc</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_a8537195c7819d0baf9fee1fdbb4b2a5d_icgraph.svg" width="386" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a679f655a20f47dbff686054e0447fb0e" name="a679f655a20f47dbff686054e0447fb0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a679f655a20f47dbff686054e0447fb0e">&#9670;&#160;</a></span>set_th()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void set_th </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_a679f655a20f47dbff686054e0447fb0e_icgraph.svg" width="292" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a855ec15db5cb39e80942b0cb15cecd36" name="a855ec15db5cb39e80942b0cb15cecd36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a855ec15db5cb39e80942b0cb15cecd36">&#9670;&#160;</a></span>qrs_sb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static short qrs_sb </td>
+          <td>(</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>qrs_begin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>qrs_end</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>qrs_high</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_a855ec15db5cb39e80942b0cb15cecd36_cgraph.svg" width="176" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_a855ec15db5cb39e80942b0cb15cecd36_icgraph.svg" width="299" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a140e24b575583e522ee0e2587f9d72d0" name="a140e24b575583e522ee0e2587f9d72d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a140e24b575583e522ee0e2587f9d72d0">&#9670;&#160;</a></span>ans_qrs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static short ans_qrs </td>
+          <td>(</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>code</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_a140e24b575583e522ee0e2587f9d72d0_cgraph.svg" width="292" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_a140e24b575583e522ee0e2587f9d72d0_icgraph.svg" width="311" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a71dac6a32fda1375031e49eb6b725f36" name="a71dac6a32fda1375031e49eb6b725f36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71dac6a32fda1375031e49eb6b725f36">&#9670;&#160;</a></span>qrs_det()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static short qrs_det </td>
+          <td>(</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_a71dac6a32fda1375031e49eb6b725f36_cgraph.svg" width="299" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_a71dac6a32fda1375031e49eb6b725f36_icgraph.svg" width="374" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aac577e93ac47cf2cfd1a3aaf68bbfbcc" name="aac577e93ac47cf2cfd1a3aaf68bbfbcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac577e93ac47cf2cfd1a3aaf68bbfbcc">&#9670;&#160;</a></span>delp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static short delp </td>
+          <td>(</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>ecg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_aac577e93ac47cf2cfd1a3aaf68bbfbcc_cgraph.svg" width="196" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_aac577e93ac47cf2cfd1a3aaf68bbfbcc_icgraph.svg" width="354" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
 <a id="a5256314c2dea4e392f6fe8c0305f8e75" name="a5256314c2dea4e392f6fe8c0305f8e75"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5256314c2dea4e392f6fe8c0305f8e75">&#9670;&#160;</a></span>after_deley150()</h2>
 
@@ -420,7 +906,7 @@ Qrs2.c の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>AM140 → AM150 <a class="el" href="_drift2_8c.html">Drift2.c</a> から 移植 手動QRS検出を1ファイルにまとめる</p>
+<dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150: <a class="el" href="_drift2_8c.html" title="ドリフトフィルタ（ローカットフィルタ）">Drift2.c</a> から移動 </dd></dl>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -429,28 +915,29 @@ Qrs2.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="aad37f3ddf7b682e2a5f85b9a0c1976a3" name="aad37f3ddf7b682e2a5f85b9a0c1976a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad37f3ddf7b682e2a5f85b9a0c1976a3">&#9670;&#160;</a></span>SetEcgAndQrsSensi()</h2>
+<a id="a15dda4f2ebff3d8679d669d7dcc879ff" name="a15dda4f2ebff3d8679d669d7dcc879ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15dda4f2ebff3d8679d669d7dcc879ff">&#9670;&#160;</a></span>t2_qrsrtn()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SetEcgAndQrsSensi </td>
+          <td class="memname">short t2_qrsrtn </td>
           <td>(</td>
-          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>qrs_sensi</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>sample</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>ecg_sensi</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_a15dda4f2ebff3d8679d669d7dcc879ff_cgraph.svg" width="388" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_aad37f3ddf7b682e2a5f85b9a0c1976a3_icgraph.svg" width="483" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_a15dda4f2ebff3d8679d669d7dcc879ff_icgraph.svg" width="446" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -473,7 +960,12 @@ Qrs2.c の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>AM140 → AM150 <a class="el" href="_drift2_8c.html">Drift2.c</a> から移植</p>
+<dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150<br  />
+引数にQRS感度とECG感度を追加<br  />
+使用していない引数を廃止 </dd></dl>
+<p>AM140 → AM150: 追加箇所</p>
+<p>AM140 → AM150: 削除</p>
+<p>AM140 → AM150: <a class="el" href="_drift2_8c.html" title="ドリフトフィルタ（ローカットフィルタ）">Drift2.c</a> から移動</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -482,54 +974,56 @@ Qrs2.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a15dda4f2ebff3d8679d669d7dcc879ff" name="a15dda4f2ebff3d8679d669d7dcc879ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15dda4f2ebff3d8679d669d7dcc879ff">&#9670;&#160;</a></span>t2_qrsrtn()</h2>
+<a id="aad37f3ddf7b682e2a5f85b9a0c1976a3" name="aad37f3ddf7b682e2a5f85b9a0c1976a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad37f3ddf7b682e2a5f85b9a0c1976a3">&#9670;&#160;</a></span>SetEcgAndQrsSensi()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">short t2_qrsrtn </td>
+          <td class="memname">void SetEcgAndQrsSensi </td>
           <td>(</td>
-          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>sample</em></span></td><td>)</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>qrs_sensi</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>ecg_sensi</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>QRS感度、ECG感度を検出に反映する </p>
+<dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150: 追加 </dd></dl>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_a15dda4f2ebff3d8679d669d7dcc879ff_icgraph.svg" width="446" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_qrs2_8c_aad37f3ddf7b682e2a5f85b9a0c1976a3_icgraph.svg" width="483" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
 <h2 class="groupheader">変数詳解</h2>
-<a id="ad0cbc5efd76289a55bb57b17eff1803f" name="ad0cbc5efd76289a55bb57b17eff1803f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0cbc5efd76289a55bb57b17eff1803f">&#9670;&#160;</a></span>ChangeQrsBorder</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">short ChangeQrsBorder</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a12e162c6a06874d26895fb6aebde326d" name="a12e162c6a06874d26895fb6aebde326d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a12e162c6a06874d26895fb6aebde326d">&#9670;&#160;</a></span>RealEcgSns</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">short RealEcgSns</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+<dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150: 外部変数から変更 </dd></dl>
 
 </div>
 </div>
@@ -538,9 +1032,123 @@ Qrs2.c の依存先関係図:</div>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">short RxEcg2QrsSensi</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0cbc5efd76289a55bb57b17eff1803f" name="ad0cbc5efd76289a55bb57b17eff1803f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0cbc5efd76289a55bb57b17eff1803f">&#9670;&#160;</a></span>ChangeQrsBorder</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short ChangeQrsBorder</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a089f0ed685e6a442ef50d90928ca8f57" name="a089f0ed685e6a442ef50d90928ca8f57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a089f0ed685e6a442ef50d90928ca8f57">&#9670;&#160;</a></span>AnaTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short AnaTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40ba2c0de1d800857a276de9bc953324" name="a40ba2c0de1d800857a276de9bc953324"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40ba2c0de1d800857a276de9bc953324">&#9670;&#160;</a></span>QRS_TH_TBL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short const QRS_TH_TBL[4][6]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">= { { 0, 19600, 13100, 2460, 750, 145 },</div>
+<div class="line">                                        { 0, 15000, 3320, 870, 185, 50 },</div>
+<div class="line">                                        { 0, 10500, 1870, 440, 85, 13 },</div>
+<div class="line">                                        { 0, 7800, 1100, 330, 58, 9 } }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abe68b66e1208fda72ab413d3a383f08e" name="abe68b66e1208fda72ab413d3a383f08e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe68b66e1208fda72ab413d3a383f08e">&#9670;&#160;</a></span>ANA_TIME_TBL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short const ANA_TIME_TBL[4] = { 80 , 65 , 50 , 0 }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad05de5cc342f4e0927a9805b712bddb7" name="ad05de5cc342f4e0927a9805b712bddb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad05de5cc342f4e0927a9805b712bddb7">&#9670;&#160;</a></span>TransQrsTh</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">short TransQrsTh</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -561,16 +1169,1278 @@ Qrs2.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="ad05de5cc342f4e0927a9805b712bddb7" name="ad05de5cc342f4e0927a9805b712bddb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad05de5cc342f4e0927a9805b712bddb7">&#9670;&#160;</a></span>TransQrsTh</h2>
+<a id="a9bcb36c29cbb127a93f1fef3f51db6dd" name="a9bcb36c29cbb127a93f1fef3f51db6dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bcb36c29cbb127a93f1fef3f51db6dd">&#9670;&#160;</a></span>ValQRS_TH</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">short TransQrsTh</td>
+          <td class="memname">short ValQRS_TH</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a944df9ae128ab579418021e8c0ef8aed" name="a944df9ae128ab579418021e8c0ef8aed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a944df9ae128ab579418021e8c0ef8aed">&#9670;&#160;</a></span>QrsIniStep</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QrsIniStep</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88b1fde52af62b165735bacda081d5a6" name="a88b1fde52af62b165735bacda081d5a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88b1fde52af62b165735bacda081d5a6">&#9670;&#160;</a></span>D1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short D1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4edf9d271f5df52be1e614728283e5c" name="ae4edf9d271f5df52be1e614728283e5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4edf9d271f5df52be1e614728283e5c">&#9670;&#160;</a></span>D2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short D2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78ecb400b713b0b420eca26e683b1471" name="a78ecb400b713b0b420eca26e683b1471"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78ecb400b713b0b420eca26e683b1471">&#9670;&#160;</a></span>D3</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short D3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa6b7bce82a57829ea243d527a28e3da" name="aaa6b7bce82a57829ea243d527a28e3da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa6b7bce82a57829ea243d527a28e3da">&#9670;&#160;</a></span>D4</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short D4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f3c7bef14bc1be61ab3c0a4781b8761" name="a0f3c7bef14bc1be61ab3c0a4781b8761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f3c7bef14bc1be61ab3c0a4781b8761">&#9670;&#160;</a></span>D5</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short D5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57c11c22f62baf0bc123ed75efdaba13" name="a57c11c22f62baf0bc123ed75efdaba13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57c11c22f62baf0bc123ed75efdaba13">&#9670;&#160;</a></span>D6</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short D6</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8bf5073466060c595bc08d6184197ff2" name="a8bf5073466060c595bc08d6184197ff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bf5073466060c595bc08d6184197ff2">&#9670;&#160;</a></span>QrsInterCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QrsInterCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af387d4bd5a6ad89ec37a92c834b7dc3e" name="af387d4bd5a6ad89ec37a92c834b7dc3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af387d4bd5a6ad89ec37a92c834b7dc3e">&#9670;&#160;</a></span>ItgChkTotal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short ItgChkTotal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebc0932abd497cab9a42e1bbe4b9800e" name="aebc0932abd497cab9a42e1bbe4b9800e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebc0932abd497cab9a42e1bbe4b9800e">&#9670;&#160;</a></span>ItgCheck</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short ItgCheck[<a class="el" href="#a6aa17ad59b9064200b45c2002e18387b">ITEG_BUFFS__</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae76f08340c4171b61d23cbb0afea4ba6" name="ae76f08340c4171b61d23cbb0afea4ba6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae76f08340c4171b61d23cbb0afea4ba6">&#9670;&#160;</a></span>LongItgTotal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long LongItgTotal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9c953eb46dc0f1c12c23d0518efc5ba" name="ab9c953eb46dc0f1c12c23d0518efc5ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9c953eb46dc0f1c12c23d0518efc5ba">&#9670;&#160;</a></span>ItgBuff</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short ItgBuff[<a class="el" href="#a6aa17ad59b9064200b45c2002e18387b">ITEG_BUFFS__</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12f41797a2262016bcdf70d93e8b6675" name="a12f41797a2262016bcdf70d93e8b6675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12f41797a2262016bcdf70d93e8b6675">&#9670;&#160;</a></span>ItgCnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short ItgCnt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ed76777dd3eab4663dd501c7b93e43a" name="a5ed76777dd3eab4663dd501c7b93e43a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ed76777dd3eab4663dd501c7b93e43a">&#9670;&#160;</a></span>ItgMax</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short ItgMax</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a40c26a1d9b81b87dd87fa71172b9544a" name="a40c26a1d9b81b87dd87fa71172b9544a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40c26a1d9b81b87dd87fa71172b9544a">&#9670;&#160;</a></span>ThAfterCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short ThAfterCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b63eb4768860aa6c6260feab1f354a0" name="a0b63eb4768860aa6c6260feab1f354a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b63eb4768860aa6c6260feab1f354a0">&#9670;&#160;</a></span>Low_Box_1_dt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Low_Box_1_dt[5]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2876edc5fba2aaab9074b9f3567c6e7e" name="a2876edc5fba2aaab9074b9f3567c6e7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2876edc5fba2aaab9074b9f3567c6e7e">&#9670;&#160;</a></span>Low_Box_2_dt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Low_Box_2_dt[5]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7161a73e4720f02aaa9090f7e7ffd6bb" name="a7161a73e4720f02aaa9090f7e7ffd6bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7161a73e4720f02aaa9090f7e7ffd6bb">&#9670;&#160;</a></span>Low_Box_3_dt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Low_Box_3_dt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a717f31a880ebf9bcc57003e71c9759f2" name="a717f31a880ebf9bcc57003e71c9759f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a717f31a880ebf9bcc57003e71c9759f2">&#9670;&#160;</a></span>Low_Box_4_dt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Low_Box_4_dt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4b6315857c5c8071ecbce90b3e894ca" name="ac4b6315857c5c8071ecbce90b3e894ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4b6315857c5c8071ecbce90b3e894ca">&#9670;&#160;</a></span>L_Box_n</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short L_Box_n</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af3845bde5d55d3131bb4f90c869715be" name="af3845bde5d55d3131bb4f90c869715be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3845bde5d55d3131bb4f90c869715be">&#9670;&#160;</a></span>Diff_nw_dt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Diff_nw_dt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a260aa4ddf62e7e0908b5aff68368aa36" name="a260aa4ddf62e7e0908b5aff68368aa36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a260aa4ddf62e7e0908b5aff68368aa36">&#9670;&#160;</a></span>Diff_f1_dt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Diff_f1_dt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85d874dd60633ea051533f24feed85fc" name="a85d874dd60633ea051533f24feed85fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85d874dd60633ea051533f24feed85fc">&#9670;&#160;</a></span>Diff_f2_dt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Diff_f2_dt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2bb885f46d387f45bfc0879b07b48f0a" name="a2bb885f46d387f45bfc0879b07b48f0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bb885f46d387f45bfc0879b07b48f0a">&#9670;&#160;</a></span>Diff_o1_dt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Diff_o1_dt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a85fbef8bb0339452a0b738b420343b" name="a3a85fbef8bb0339452a0b738b420343b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a85fbef8bb0339452a0b738b420343b">&#9670;&#160;</a></span>Diff_o2_dt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Diff_o2_dt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b3899af2c3bb8e0059bf922f146dcdc" name="a6b3899af2c3bb8e0059bf922f146dcdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b3899af2c3bb8e0059bf922f146dcdc">&#9670;&#160;</a></span>Diff_o3_dt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Diff_o3_dt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a46b493959308835ef33062698542ea37" name="a46b493959308835ef33062698542ea37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46b493959308835ef33062698542ea37">&#9670;&#160;</a></span>MW_old_dt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short MW_old_dt[<a class="el" href="#aed095c4a2551bb26033517a5e8ec2ac7">MW_Dlay</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f7252761c92b182a5d45198afe99c35" name="a8f7252761c92b182a5d45198afe99c35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f7252761c92b182a5d45198afe99c35">&#9670;&#160;</a></span>MW_Cnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short MW_Cnt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa959546616dd8cbc7a458b1c26b9b6f3" name="aa959546616dd8cbc7a458b1c26b9b6f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa959546616dd8cbc7a458b1c26b9b6f3">&#9670;&#160;</a></span>MW_Sum_dt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long MW_Sum_dt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a461596be0a920410680e50a770edbbed" name="a461596be0a920410680e50a770edbbed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a461596be0a920410680e50a770edbbed">&#9670;&#160;</a></span>QRS_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QRS_max</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b36dfe9efff07de3a46169caab81542" name="a9b36dfe9efff07de3a46169caab81542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b36dfe9efff07de3a46169caab81542">&#9670;&#160;</a></span>Old_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Old_max</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae4f73b21580049c7827cffd6b9a98c6" name="aae4f73b21580049c7827cffd6b9a98c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae4f73b21580049c7827cffd6b9a98c6">&#9670;&#160;</a></span>QRS_th</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QRS_th</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a999c5c2913165f24fbb9f5035dbd7d8a" name="a999c5c2913165f24fbb9f5035dbd7d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a999c5c2913165f24fbb9f5035dbd7d8a">&#9670;&#160;</a></span>QRS_th_s</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QRS_th_s</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a563385b18861039cf94b764fa332bec7" name="a563385b18861039cf94b764fa332bec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a563385b18861039cf94b764fa332bec7">&#9670;&#160;</a></span>QRS_th_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QRS_th_t</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c7b9f805d96d32821990885317858e2" name="a0c7b9f805d96d32821990885317858e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c7b9f805d96d32821990885317858e2">&#9670;&#160;</a></span>Old_wide</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Old_wide</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adcf63d7b33bbf69ed9e3d649449cacc3" name="adcf63d7b33bbf69ed9e3d649449cacc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcf63d7b33bbf69ed9e3d649449cacc3">&#9670;&#160;</a></span>Old_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Old_time</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82d90cacbbda7a0fb0bec95499355302" name="a82d90cacbbda7a0fb0bec95499355302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82d90cacbbda7a0fb0bec95499355302">&#9670;&#160;</a></span>RR_75</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short RR_75</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5559abf7f52f372a0fde6877f379e8a9" name="a5559abf7f52f372a0fde6877f379e8a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5559abf7f52f372a0fde6877f379e8a9">&#9670;&#160;</a></span>RR_125</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short RR_125</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f13b1c3783025f9e2a0da623f1724ec" name="a0f13b1c3783025f9e2a0da623f1724ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f13b1c3783025f9e2a0da623f1724ec">&#9670;&#160;</a></span>RR_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short RR_time</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a68f48d06d8f8bbdc705d9ea2a2f040" name="a2a68f48d06d8f8bbdc705d9ea2a2f040"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a68f48d06d8f8bbdc705d9ea2a2f040">&#9670;&#160;</a></span>ON_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short ON_time</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4f5dc76df83125ec3499e61be0c459e" name="ab4f5dc76df83125ec3499e61be0c459e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4f5dc76df83125ec3499e61be0c459e">&#9670;&#160;</a></span>CNT_flg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short CNT_flg</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c5c6834416fa34de4cef1a09f4ff272" name="a0c5c6834416fa34de4cef1a09f4ff272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c5c6834416fa34de4cef1a09f4ff272">&#9670;&#160;</a></span>QRS_inter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QRS_inter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace337b497a540116337ff7d081c5cc2d" name="ace337b497a540116337ff7d081c5cc2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace337b497a540116337ff7d081c5cc2d">&#9670;&#160;</a></span>QRS_no</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QRS_no</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cf250c9d80321e0a7c83594af0bb007" name="a9cf250c9d80321e0a7c83594af0bb007"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cf250c9d80321e0a7c83594af0bb007">&#9670;&#160;</a></span>QRS_begin_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QRS_begin_1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf31f27996b45f205ce171bda3ae2b56" name="abf31f27996b45f205ce171bda3ae2b56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf31f27996b45f205ce171bda3ae2b56">&#9670;&#160;</a></span>QRS_begin_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QRS_begin_2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4935e64fb4c81d3b7fc31b6a903a3432" name="a4935e64fb4c81d3b7fc31b6a903a3432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4935e64fb4c81d3b7fc31b6a903a3432">&#9670;&#160;</a></span>QRS_end_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QRS_end_1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a51a43f6af40b69900255a30256b58490" name="a51a43f6af40b69900255a30256b58490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51a43f6af40b69900255a30256b58490">&#9670;&#160;</a></span>QRS_end_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QRS_end_2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa74a17fcb79a508a22ee47e1eab0f685" name="aa74a17fcb79a508a22ee47e1eab0f685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa74a17fcb79a508a22ee47e1eab0f685">&#9670;&#160;</a></span>QRS_max_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QRS_max_1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d182b3af8f311ccad8be91b75434f8c" name="a0d182b3af8f311ccad8be91b75434f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d182b3af8f311ccad8be91b75434f8c">&#9670;&#160;</a></span>QRS_max_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QRS_max_2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03e8b102bc6fe5c1d2105ac748e776ad" name="a03e8b102bc6fe5c1d2105ac748e776ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03e8b102bc6fe5c1d2105ac748e776ad">&#9670;&#160;</a></span>First_Cnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short First_Cnt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a9c228950aaa4d030681cf8b52c842d" name="a7a9c228950aaa4d030681cf8b52c842d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a9c228950aaa4d030681cf8b52c842d">&#9670;&#160;</a></span>ecg_org</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short ecg_org[7]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13909c8f58a4fab3e9070446f797be99" name="a13909c8f58a4fab3e9070446f797be99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13909c8f58a4fab3e9070446f797be99">&#9670;&#160;</a></span>ecg_new</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short ecg_new[7]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a239771a0f9e599e929c19116c0113ea3" name="a239771a0f9e599e929c19116c0113ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a239771a0f9e599e929c19116c0113ea3">&#9670;&#160;</a></span>ANS_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short ANS_1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe57440bdea165b9a7cb14fc97b64ff8" name="afe57440bdea165b9a7cb14fc97b64ff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe57440bdea165b9a7cb14fc97b64ff8">&#9670;&#160;</a></span>BandPassSw</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short BandPassSw</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5c6e0068afeb23493e88228c1a64bc4" name="ac5c6e0068afeb23493e88228c1a64bc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5c6e0068afeb23493e88228c1a64bc4">&#9670;&#160;</a></span>DrSts150Deley</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short DrSts150Deley[<a class="el" href="#adee74e51a79aec4f55fa58a525fde6bd">DELEY_150__</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef2918fdae26c07add3ed1f808a8071b" name="aef2918fdae26c07add3ed1f808a8071b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef2918fdae26c07add3ed1f808a8071b">&#9670;&#160;</a></span>DrEcg150Deley</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short DrEcg150Deley[<a class="el" href="#adee74e51a79aec4f55fa58a525fde6bd">DELEY_150__</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adce412f1086b4aea959c4e9828ca3afc" name="adce412f1086b4aea959c4e9828ca3afc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adce412f1086b4aea959c4e9828ca3afc">&#9670;&#160;</a></span>DrEcg150DeleyCnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short DrEcg150DeleyCnt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_Node000002"><a xlink:href="main_8c.html#ae494a9643f29b87d6d81e5264e60e57b" target="_top" xlink:title=" ">
+<g id="a_Node000002"><a xlink:href="main_8c.html#ae494a9643f29b87d6d81e5264e60e57b" target="_top" xlink:title="UART入力のコールバック 入力データの処理から受信機への出力フラグまでのプロセス">
 <polygon fill="white" stroke="#666666" points="142,-20 0,-20 0,0 142,0 142,-20"/>
 <text text-anchor="middle" x="71" y="-6.5" font-family="Helvetica,sans-Serif" font-size="10.00">HAL_UART_RxCpltCallback</text>
 </a>

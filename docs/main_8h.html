@@ -112,9 +112,9 @@ $(function(){initNavTree('main_8h.html',''); initResizable(true); });
 <code>#include &quot;<a class="el" href="spi__receive_8h_source.html">spi_receive.h</a>&quot;</code><br />
 <code>#include &quot;stm32l4xx_hal.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-main.h の依存先関係図:</div>
+被依存関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="main_8h__incl.svg" width="550" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="main_8h__dep__incl.svg" width="475" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="main_8h_source.html">[ソースコード]</a></p>
@@ -129,16 +129,16 @@ main.h の依存先関係図:</div>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 変数</h2></td></tr>
-<tr class="memitem:a2cf715bef37f7e8ef385a30974a5f0d5" id="r_a2cf715bef37f7e8ef385a30974a5f0d5"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cf715bef37f7e8ef385a30974a5f0d5">huart1</a></td></tr>
-<tr class="separator:a2cf715bef37f7e8ef385a30974a5f0d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9479c261d65eecedd3d9582f7f0f89c" id="r_aa9479c261d65eecedd3d9582f7f0f89c"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9479c261d65eecedd3d9582f7f0f89c">huart2</a></td></tr>
-<tr class="separator:aa9479c261d65eecedd3d9582f7f0f89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1edf27130277ed840df7d21096fa3f60" id="r_a1edf27130277ed840df7d21096fa3f60"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1edf27130277ed840df7d21096fa3f60">currentTick</a></td></tr>
+<tr class="separator:a1edf27130277ed840df7d21096fa3f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c6222bae4d0328dd843ae099623b40b" id="r_a9c6222bae4d0328dd843ae099623b40b"><td class="memItemLeft" align="right" valign="top">SPI_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c6222bae4d0328dd843ae099623b40b">hspi1</a></td></tr>
 <tr class="separator:a9c6222bae4d0328dd843ae099623b40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1564492831a79fa18466467c3420c3c3" id="r_a1564492831a79fa18466467c3420c3c3"><td class="memItemLeft" align="right" valign="top">TIM_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1564492831a79fa18466467c3420c3c3">htim6</a></td></tr>
 <tr class="separator:a1564492831a79fa18466467c3420c3c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1edf27130277ed840df7d21096fa3f60" id="r_a1edf27130277ed840df7d21096fa3f60"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1edf27130277ed840df7d21096fa3f60">currentTick</a></td></tr>
-<tr class="separator:a1edf27130277ed840df7d21096fa3f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf715bef37f7e8ef385a30974a5f0d5" id="r_a2cf715bef37f7e8ef385a30974a5f0d5"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2cf715bef37f7e8ef385a30974a5f0d5">huart1</a></td></tr>
+<tr class="separator:a2cf715bef37f7e8ef385a30974a5f0d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9479c261d65eecedd3d9582f7f0f89c" id="r_aa9479c261d65eecedd3d9582f7f0f89c"><td class="memItemLeft" align="right" valign="top">UART_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9479c261d65eecedd3d9582f7f0f89c">huart2</a></td></tr>
+<tr class="separator:aa9479c261d65eecedd3d9582f7f0f89c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>: Header for <a class="el" href="main_8c.html" title=": Main program body">main.c</a> file. This file contains the common defines of the application. </p>
@@ -162,7 +162,7 @@ main.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>This function is executed in case of error occurrence. </p>
-<p>###################################################################################### </p><dl class="retval"><dt>戻り値</dt><dd>
+<dl class="retval"><dt>戻り値</dt><dd>
   <table class="retval">
     <tr><td class="paramname">None</td><td></td></tr>
   </table>
@@ -171,7 +171,7 @@ main.h の依存先関係図:</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="main_8h_a1730ffe1e560465665eb47d9264826f9_icgraph.svg" width="403" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="main_8h_a1730ffe1e560465665eb47d9264826f9_icgraph.svg" width="426" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -194,8 +194,8 @@ main.h の依存先関係図:</div>
 </div>
 </div>
 <h2 class="groupheader">変数詳解</h2>
-<a id="a1edf27130277ed840df7d21096fa3f60" name="a1edf27130277ed840df7d21096fa3f60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1edf27130277ed840df7d21096fa3f60">&#9670;&#160;</a></span>currentTick</h2>
+<a id="a2cf715bef37f7e8ef385a30974a5f0d5" name="a2cf715bef37f7e8ef385a30974a5f0d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cf715bef37f7e8ef385a30974a5f0d5">&#9670;&#160;</a></span>huart1</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,7 +204,7 @@ main.h の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t currentTick</td>
+          <td class="memname">UART_HandleTypeDef huart1</td>
         </tr>
       </table>
   </td>
@@ -213,7 +213,28 @@ main.h の依存先関係図:</div>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>###################################################################################### 変数定義 ###################################################################################### </p>
+
+</div>
+</div>
+<a id="aa9479c261d65eecedd3d9582f7f0f89c" name="aa9479c261d65eecedd3d9582f7f0f89c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9479c261d65eecedd3d9582f7f0f89c">&#9670;&#160;</a></span>huart2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UART_HandleTypeDef huart2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -261,8 +282,8 @@ main.h の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a2cf715bef37f7e8ef385a30974a5f0d5" name="a2cf715bef37f7e8ef385a30974a5f0d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2cf715bef37f7e8ef385a30974a5f0d5">&#9670;&#160;</a></span>huart1</h2>
+<a id="a1edf27130277ed840df7d21096fa3f60" name="a1edf27130277ed840df7d21096fa3f60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1edf27130277ed840df7d21096fa3f60">&#9670;&#160;</a></span>currentTick</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -271,29 +292,7 @@ main.h の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">UART_HandleTypeDef huart1</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa9479c261d65eecedd3d9582f7f0f89c" name="aa9479c261d65eecedd3d9582f7f0f89c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa9479c261d65eecedd3d9582f7f0f89c">&#9670;&#160;</a></span>huart2</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">UART_HandleTypeDef huart2</td>
+          <td class="memname">uint32_t currentTick</td>
         </tr>
       </table>
   </td>

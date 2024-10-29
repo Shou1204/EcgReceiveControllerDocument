@@ -99,80 +99,153 @@ $(function(){initNavTree('synchro_8h.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">データ構造</a> &#124;
-<a href="#func-members">関数</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
 <a href="#var-members">変数</a>  </div>
   <div class="headertitle"><div class="title">synchro.h ファイル</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>受信機からのデータを同期、抽出するライブラリ  
+<a href="#details">[詳解]</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="common_8h_source.html">common.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-synchro.h の依存先関係図:</div>
+被依存関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="synchro_8h__incl.svg" width="248" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="synchro_8h__dep__incl.svg" width="347" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="synchro_8h_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 データ構造</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_mask.html">Mask</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">送信機からのフォーマットから各値を抽出するマスクを表す  <a href="struct_mask.html#details">[詳解]</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:struct_mask" id="r_struct_mask"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#struct_mask">Mask</a></td></tr>
+<tr class="memdesc:struct_mask"><td class="mdescLeft">&#160;</td><td class="mdescRight">送信機からのフォーマットから各値を抽出するマスクを表す  <a href="#struct_mask">[詳解]</a><br /></td></tr>
+<tr class="separator:struct_mask"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-関数</h2></td></tr>
-<tr class="memitem:a87de076aee503e24f5f9627a7b90fd98" id="r_a87de076aee503e24f5f9627a7b90fd98"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87de076aee503e24f5f9627a7b90fd98">t2_syncro</a> (uint8_t *ptr, int *m_bytes, int *m_bits)</td></tr>
-<tr class="memdesc:a87de076aee503e24f5f9627a7b90fd98"><td class="mdescLeft">&#160;</td><td class="mdescRight">バッファからの同期を検出し先頭バイトとビットを取得  <br /></td></tr>
-<tr class="separator:a87de076aee503e24f5f9627a7b90fd98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a6c2148293e22364989e02b35c3af8898" id="r_a6c2148293e22364989e02b35c3af8898"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c2148293e22364989e02b35c3af8898">SYNC_BUF_SIZE</a>&#160;&#160;&#160;30</td></tr>
+<tr class="memdesc:a6c2148293e22364989e02b35c3af8898"><td class="mdescLeft">&#160;</td><td class="mdescRight">シンクロバッファのサイズ  <br /></td></tr>
+<tr class="separator:a6c2148293e22364989e02b35c3af8898"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 変数</h2></td></tr>
-<tr class="memitem:ab16ff466bc1777b23d0188ce3691e8ae" id="r_ab16ff466bc1777b23d0188ce3691e8ae"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="struct_mask.html">Mask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab16ff466bc1777b23d0188ce3691e8ae">maskSet</a> [8]</td></tr>
+<tr class="memitem:ab16ff466bc1777b23d0188ce3691e8ae" id="r_ab16ff466bc1777b23d0188ce3691e8ae"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="#struct_mask">Mask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab16ff466bc1777b23d0188ce3691e8ae">maskSet</a> [8]</td></tr>
 <tr class="memdesc:ab16ff466bc1777b23d0188ce3691e8ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">各種の抽出マスク  <br /></td></tr>
 <tr class="separator:ab16ff466bc1777b23d0188ce3691e8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">関数詳解</h2>
-<a id="a87de076aee503e24f5f9627a7b90fd98" name="a87de076aee503e24f5f9627a7b90fd98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87de076aee503e24f5f9627a7b90fd98">&#9670;&#160;</a></span>t2_syncro()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>受信機からのデータを同期、抽出するライブラリ </p>
+<p>'<a class="el" href="spi__receive_8c.html">spi_receive.c</a>' から参照される</p><ul>
+<li>ヘッダーサーチ関数の '<a class="el" href="synchro_8c.html#a87de076aee503e24f5f9627a7b90fd98" title="送信機からのデータバッファを渡して、ヘッド位置を返す関数">t2_syncro()</a>'</li>
+<li>送信機フォーマットからの抽出マスク 'maskSet' を独立させたファイルです。 </li>
+</ul>
+</div><hr/><h2 class="groupheader">データ構造詳解</h2>
+<a name="struct_mask" id="struct_mask"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#struct_mask">&#9670;&#160;</a></span>Mask</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int t2_syncro </td>
-          <td>(</td>
-          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>ptr</em></span>, </td>
+          <td class="memname">struct Mask</td>
         </tr>
+      </table>
+</div><div class="memdoc">
+<div class="textblock"><p>送信機からのフォーマットから各値を抽出するマスクを表す </p>
+<p>送信機からの1フレーム（5バイト）から各情報を抽出するマスク情報を保持します </p>
+</div><table class="fieldtable">
+<tr><th colspan="3">データフィールド</th></tr>
+<tr><td class="fieldtype">
+<a id="a09d805f6c0811773e21e2490b47215c8" name="a09d805f6c0811773e21e2490b47215c8"></a>const unsigned char</td>
+<td class="fieldname">
+Ecg1[3]</td>
+<td class="fielddoc">
+ECG1のマスク </td></tr>
+<tr><td class="fieldtype">
+<a id="a5aab660454fbec600c6db2b7f8c8ad61" name="a5aab660454fbec600c6db2b7f8c8ad61"></a>const unsigned char</td>
+<td class="fieldname">
+Ecg1Shf</td>
+<td class="fielddoc">
+ECG1のマスク後の右シフト数 </td></tr>
+<tr><td class="fieldtype">
+<a id="a0e1d3c1d1954f6ec88fef7d5b30b8ef3" name="a0e1d3c1d1954f6ec88fef7d5b30b8ef3"></a>const unsigned char</td>
+<td class="fieldname">
+Ch[3]</td>
+<td class="fielddoc">
+チャンネルコードのマスク </td></tr>
+<tr><td class="fieldtype">
+<a id="a5af53b092a14bf92ceb6be4609b2467c" name="a5af53b092a14bf92ceb6be4609b2467c"></a>const unsigned char</td>
+<td class="fieldname">
+ChShf</td>
+<td class="fielddoc">
+チャンネルコードのマスク後の右シフト数 </td></tr>
+<tr><td class="fieldtype">
+<a id="a093b09ac0a04673caff5db8ca6d0e7f9" name="a093b09ac0a04673caff5db8ca6d0e7f9"></a>const unsigned char</td>
+<td class="fieldname">
+Ecg2[3]</td>
+<td class="fielddoc">
+ECG2のマスク </td></tr>
+<tr><td class="fieldtype">
+<a id="abeaff43aae4a8946625df21fb249f2b2" name="abeaff43aae4a8946625df21fb249f2b2"></a>const unsigned char</td>
+<td class="fieldname">
+Ecg2Shf</td>
+<td class="fielddoc">
+ECG2のマスク後の右シフト数 </td></tr>
+<tr><td class="fieldtype">
+<a id="a3b352950ce4bca42491585cb9d5579f9" name="a3b352950ce4bca42491585cb9d5579f9"></a>const unsigned char</td>
+<td class="fieldname">
+ParityS</td>
+<td class="fielddoc">
+フレーム先頭バイトのマスク </td></tr>
+<tr><td class="fieldtype">
+<a id="a9a3e89965610a6ef9ef709d8451c5194" name="a9a3e89965610a6ef9ef709d8451c5194"></a>const unsigned char</td>
+<td class="fieldname">
+ParityE</td>
+<td class="fielddoc">
+フレーム末尾バイトのマスク </td></tr>
+<tr><td class="fieldtype">
+<a id="a6194d837d1fb76cfc543abe204c57140" name="a6194d837d1fb76cfc543abe204c57140"></a>const unsigned char</td>
+<td class="fieldname">
+HeadBit</td>
+<td class="fielddoc">
+先頭ビットのマスク </td></tr>
+<tr><td class="fieldtype">
+<a id="a9394f609f127f2a660612ae138d26596" name="a9394f609f127f2a660612ae138d26596"></a>const unsigned char</td>
+<td class="fieldname">
+transmitter[2]</td>
+<td class="fielddoc">
+送信機データ末尾のステータス4種のマスク <ul>
+<li>ペースメーカトリガー</li>
+<li>電源電圧低下</li>
+<li>ナースコール</li>
+<li>リードエラー </li>
+</ul>
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a89629cc7fb35874ee6809342bbb479be" name="a89629cc7fb35874ee6809342bbb479be"></a>const unsigned char</td>
+<td class="fieldname">
+transmitterShf</td>
+<td class="fielddoc">
+送信機ステータスのマスク後の右シフト数 </td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a6c2148293e22364989e02b35c3af8898" name="a6c2148293e22364989e02b35c3af8898"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c2148293e22364989e02b35c3af8898">&#9670;&#160;</a></span>SYNC_BUF_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
         <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>m_bytes</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>m_bits</em></span>&#160;)</td>
+          <td class="memname">#define SYNC_BUF_SIZE&#160;&#160;&#160;30</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>バッファからの同期を検出し先頭バイトとビットを取得 </p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ptr</td><td>入力バッファの先頭ポインタ </td></tr>
-    <tr><td class="paramname">m_bytes</td><td>同期が見つかった場合、バイト位置を格納するポインタ </td></tr>
-    <tr><td class="paramname">m_bits</td><td>同期が見つかった場合、ビット位置を格納するポインタ </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>戻り値</dt><dd>short: 同期が見つかったらTRUE、そうでない場合はFALSEを返す</dd></dl>
-<dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150<br  />
-引数を3つ追加しています。 </dd></dl>
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="synchro_8h_a87de076aee503e24f5f9627a7b90fd98_icgraph.svg" width="498" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
+<p>シンクロバッファのサイズ </p>
 
 </div>
 </div>
@@ -187,7 +260,7 @@ synchro.h の依存先関係図:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="struct_mask.html">Mask</a> maskSet[8]</td>
+          <td class="memname">const <a class="el" href="#struct_mask">Mask</a> maskSet[8]</td>
         </tr>
       </table>
   </td>
@@ -198,7 +271,7 @@ synchro.h の依存先関係図:</div>
 </div><div class="memdoc">
 
 <p>各種の抽出マスク </p>
-<p>indexとヘッドのbit位置が連動しています<br  />
+<p>indexとヘッドのbit位置が連動しています <br  />
 ヘッドが5bitずれならmaskSet[5]のマスクを使用します </p>
 
 </div>

@@ -99,118 +99,258 @@ $(function(){initNavTree('_as_qrs_detect1_8c.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#define-members">マクロ定義</a> &#124;
-<a href="#func-members">関数</a>  </div>
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
   <div class="headertitle"><div class="title">AsQrsDetect1.c ファイル</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_as_qrs_detect1_8h_source.html">AsQrsDetect1.h</a>&quot;</code><br />
-</div><div class="textblock"><div class="dynheader">
-AsQrsDetect1.c の依存先関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c__incl.svg" width="127" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 マクロ定義</h2></td></tr>
-<tr class="memitem:ac2eeadc7688b0dbf73e832209cb81874" id="r_ac2eeadc7688b0dbf73e832209cb81874"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2eeadc7688b0dbf73e832209cb81874">QRS_MARK</a>&#160;&#160;&#160;0x1000</td></tr>
-<tr class="separator:ac2eeadc7688b0dbf73e832209cb81874"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba02e731b653668f99454e197efc5698" id="r_aba02e731b653668f99454e197efc5698"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba02e731b653668f99454e197efc5698">T_MASK_012__</a></td></tr>
-<tr class="separator:aba02e731b653668f99454e197efc5698"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ced1eb0b483220b2b2ad98337b2595c" id="r_a6ced1eb0b483220b2b2ad98337b2595c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ced1eb0b483220b2b2ad98337b2595c">AUTO_SENSI01_DIF_</a>&#160;&#160;&#160;13 /* 感度01閾値   1.0mm(0.10mV) */</td></tr>
 <tr class="separator:a6ced1eb0b483220b2b2ad98337b2595c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a208661d0bf223d75cf1d3d96b57de6c6" id="r_a208661d0bf223d75cf1d3d96b57de6c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a208661d0bf223d75cf1d3d96b57de6c6">AUTO_SENSI01_MIN_</a>&#160;&#160;&#160;53 /* 感度01最小   4.0mm(0.40mV) */</td></tr>
-<tr class="separator:a208661d0bf223d75cf1d3d96b57de6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f7b77588340296e9d3a79094b9e3b5b" id="r_a7f7b77588340296e9d3a79094b9e3b5b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f7b77588340296e9d3a79094b9e3b5b">AUTO_SENSI01_MID_</a>&#160;&#160;&#160;66 /* 感度01中心   5.0mm(0.50mV) */</td></tr>
-<tr class="separator:a7f7b77588340296e9d3a79094b9e3b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a888f0599770da5ed013886e67181a7e2" id="r_a888f0599770da5ed013886e67181a7e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a888f0599770da5ed013886e67181a7e2">AUTO_SENSI01_MAX_</a>&#160;&#160;&#160;80 /* 感度01最大   6.0mm(0.60mV) */</td></tr>
 <tr class="separator:a888f0599770da5ed013886e67181a7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7b77588340296e9d3a79094b9e3b5b" id="r_a7f7b77588340296e9d3a79094b9e3b5b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f7b77588340296e9d3a79094b9e3b5b">AUTO_SENSI01_MID_</a>&#160;&#160;&#160;66 /* 感度01中心   5.0mm(0.50mV) */</td></tr>
+<tr class="separator:a7f7b77588340296e9d3a79094b9e3b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a208661d0bf223d75cf1d3d96b57de6c6" id="r_a208661d0bf223d75cf1d3d96b57de6c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a208661d0bf223d75cf1d3d96b57de6c6">AUTO_SENSI01_MIN_</a>&#160;&#160;&#160;53 /* 感度01最小   4.0mm(0.40mV) */</td></tr>
+<tr class="separator:a208661d0bf223d75cf1d3d96b57de6c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af48b3c225ebe93ab1f6855a2bb26da47" id="r_af48b3c225ebe93ab1f6855a2bb26da47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af48b3c225ebe93ab1f6855a2bb26da47">AUTO_SENSI02_DIF_</a>&#160;&#160;&#160;20  /* 感度02閾値   1.5mm(0.15mV) */</td></tr>
 <tr class="separator:af48b3c225ebe93ab1f6855a2bb26da47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e0d0dc793dc01d1da2123b655c5fecd" id="r_a6e0d0dc793dc01d1da2123b655c5fecd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e0d0dc793dc01d1da2123b655c5fecd">AUTO_SENSI02_MIN_</a>&#160;&#160;&#160;80  /* 感度02最小   6.0mm(0.60mV) */</td></tr>
-<tr class="separator:a6e0d0dc793dc01d1da2123b655c5fecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6bfe9c4c07dead44e531934fb8662a4" id="r_af6bfe9c4c07dead44e531934fb8662a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6bfe9c4c07dead44e531934fb8662a4">AUTO_SENSI02_MID_</a>&#160;&#160;&#160;93  /* 感度02中心   7.0mm(0.70mV) */</td></tr>
-<tr class="separator:af6bfe9c4c07dead44e531934fb8662a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab807ceb8c853186b77c846d43b5fda26" id="r_ab807ceb8c853186b77c846d43b5fda26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab807ceb8c853186b77c846d43b5fda26">AUTO_SENSI02_MAX_</a>&#160;&#160;&#160;106 /* 感度02最大   8.0mm(0.80mV) */</td></tr>
 <tr class="separator:ab807ceb8c853186b77c846d43b5fda26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6bfe9c4c07dead44e531934fb8662a4" id="r_af6bfe9c4c07dead44e531934fb8662a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6bfe9c4c07dead44e531934fb8662a4">AUTO_SENSI02_MID_</a>&#160;&#160;&#160;93  /* 感度02中心   7.0mm(0.70mV) */</td></tr>
+<tr class="separator:af6bfe9c4c07dead44e531934fb8662a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e0d0dc793dc01d1da2123b655c5fecd" id="r_a6e0d0dc793dc01d1da2123b655c5fecd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e0d0dc793dc01d1da2123b655c5fecd">AUTO_SENSI02_MIN_</a>&#160;&#160;&#160;80  /* 感度02最小   6.0mm(0.60mV) */</td></tr>
+<tr class="separator:a6e0d0dc793dc01d1da2123b655c5fecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88d56d7067eed8af129f2639fcd1dcae" id="r_a88d56d7067eed8af129f2639fcd1dcae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88d56d7067eed8af129f2639fcd1dcae">AUTO_SENSI03_DIF_</a>&#160;&#160;&#160;26  /* 感度03閾値   2.0mm(0.20mV) */</td></tr>
 <tr class="separator:a88d56d7067eed8af129f2639fcd1dcae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1723c504a59bf0249730366a0e4536e7" id="r_a1723c504a59bf0249730366a0e4536e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1723c504a59bf0249730366a0e4536e7">AUTO_SENSI03_MIN_</a>&#160;&#160;&#160;106 /* 感度03最小   8.0mm(0.80mV) */</td></tr>
-<tr class="separator:a1723c504a59bf0249730366a0e4536e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c4fb0ef20139252be6114106d040427" id="r_a8c4fb0ef20139252be6114106d040427"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c4fb0ef20139252be6114106d040427">AUTO_SENSI03_MID_</a>&#160;&#160;&#160;120 /* 感度03中心   9.0mm(0.90mV) */</td></tr>
-<tr class="separator:a8c4fb0ef20139252be6114106d040427"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbc6af751b3338f19ee713c9c81ac3c0" id="r_abbc6af751b3338f19ee713c9c81ac3c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbc6af751b3338f19ee713c9c81ac3c0">AUTO_SENSI03_MAX_</a>&#160;&#160;&#160;133 /* 感度03最大  10.0mm(1.00mV) */</td></tr>
 <tr class="separator:abbc6af751b3338f19ee713c9c81ac3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c4fb0ef20139252be6114106d040427" id="r_a8c4fb0ef20139252be6114106d040427"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8c4fb0ef20139252be6114106d040427">AUTO_SENSI03_MID_</a>&#160;&#160;&#160;120 /* 感度03中心   9.0mm(0.90mV) */</td></tr>
+<tr class="separator:a8c4fb0ef20139252be6114106d040427"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1723c504a59bf0249730366a0e4536e7" id="r_a1723c504a59bf0249730366a0e4536e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1723c504a59bf0249730366a0e4536e7">AUTO_SENSI03_MIN_</a>&#160;&#160;&#160;106 /* 感度03最小   8.0mm(0.80mV) */</td></tr>
+<tr class="separator:a1723c504a59bf0249730366a0e4536e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06b5fe96056934f161880bef2d049569" id="r_a06b5fe96056934f161880bef2d049569"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a06b5fe96056934f161880bef2d049569">AUTO_SENSI04_DIF_</a>&#160;&#160;&#160;33  /* 感度04閾値   2.5mm(0.25mV) */</td></tr>
 <tr class="separator:a06b5fe96056934f161880bef2d049569"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0300c9fcb7d64ffdf5dce6fcf8d9af07" id="r_a0300c9fcb7d64ffdf5dce6fcf8d9af07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0300c9fcb7d64ffdf5dce6fcf8d9af07">AUTO_SENSI04_MIN_</a>&#160;&#160;&#160;133 /* 感度04最小  10.0mm(1.00mV) */</td></tr>
-<tr class="separator:a0300c9fcb7d64ffdf5dce6fcf8d9af07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45099edc7bce2d54433c8488e83fed64" id="r_a45099edc7bce2d54433c8488e83fed64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45099edc7bce2d54433c8488e83fed64">AUTO_SENSI04_MID_</a>&#160;&#160;&#160;146 /* 感度04中心  11.0mm(1.10mV) */</td></tr>
-<tr class="separator:a45099edc7bce2d54433c8488e83fed64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb972fb30f743af4c4832081cae1da47" id="r_abb972fb30f743af4c4832081cae1da47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb972fb30f743af4c4832081cae1da47">AUTO_SENSI04_MAX_</a>&#160;&#160;&#160;160 /* 感度04最大  12.0mm(1.20mV) */</td></tr>
 <tr class="separator:abb972fb30f743af4c4832081cae1da47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45099edc7bce2d54433c8488e83fed64" id="r_a45099edc7bce2d54433c8488e83fed64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45099edc7bce2d54433c8488e83fed64">AUTO_SENSI04_MID_</a>&#160;&#160;&#160;146 /* 感度04中心  11.0mm(1.10mV) */</td></tr>
+<tr class="separator:a45099edc7bce2d54433c8488e83fed64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0300c9fcb7d64ffdf5dce6fcf8d9af07" id="r_a0300c9fcb7d64ffdf5dce6fcf8d9af07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0300c9fcb7d64ffdf5dce6fcf8d9af07">AUTO_SENSI04_MIN_</a>&#160;&#160;&#160;133 /* 感度04最小  10.0mm(1.00mV) */</td></tr>
+<tr class="separator:a0300c9fcb7d64ffdf5dce6fcf8d9af07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b5f2efb836abff44a476362f8bc524c" id="r_a6b5f2efb836abff44a476362f8bc524c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b5f2efb836abff44a476362f8bc524c">AUTO_SENSI05_DIF_</a>&#160;&#160;&#160;40  /* 感度05閾値   3.0mm(0.30mV) */</td></tr>
 <tr class="separator:a6b5f2efb836abff44a476362f8bc524c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82a0f55c427aeb526588ced92fa94914" id="r_a82a0f55c427aeb526588ced92fa94914"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82a0f55c427aeb526588ced92fa94914">AUTO_SENSI05_MIN_</a>&#160;&#160;&#160;160 /* 感度05最小  12.0mm(1.20mV) */</td></tr>
-<tr class="separator:a82a0f55c427aeb526588ced92fa94914"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fc2acb41da8ac3b7302b07ac4a6a252" id="r_a2fc2acb41da8ac3b7302b07ac4a6a252"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fc2acb41da8ac3b7302b07ac4a6a252">AUTO_SENSI05_MID_</a>&#160;&#160;&#160;173 /* 感度05中心  13.0mm(1.30mV) */</td></tr>
-<tr class="separator:a2fc2acb41da8ac3b7302b07ac4a6a252"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29c9432f73daac45e91f661219aebd2f" id="r_a29c9432f73daac45e91f661219aebd2f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29c9432f73daac45e91f661219aebd2f">AUTO_SENSI05_MAX_</a>&#160;&#160;&#160;186 /* 感度05最大  14.0mm(1.40mV) */</td></tr>
 <tr class="separator:a29c9432f73daac45e91f661219aebd2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fc2acb41da8ac3b7302b07ac4a6a252" id="r_a2fc2acb41da8ac3b7302b07ac4a6a252"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2fc2acb41da8ac3b7302b07ac4a6a252">AUTO_SENSI05_MID_</a>&#160;&#160;&#160;173 /* 感度05中心  13.0mm(1.30mV) */</td></tr>
+<tr class="separator:a2fc2acb41da8ac3b7302b07ac4a6a252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82a0f55c427aeb526588ced92fa94914" id="r_a82a0f55c427aeb526588ced92fa94914"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82a0f55c427aeb526588ced92fa94914">AUTO_SENSI05_MIN_</a>&#160;&#160;&#160;160 /* 感度05最小  12.0mm(1.20mV) */</td></tr>
+<tr class="separator:a82a0f55c427aeb526588ced92fa94914"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af13725d30453ae4533ff746efeec0387" id="r_af13725d30453ae4533ff746efeec0387"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af13725d30453ae4533ff746efeec0387">AUTO_SENSI06_DIF_</a>&#160;&#160;&#160;46  /* 感度06閾値   3.5mm(0.35mV) */</td></tr>
 <tr class="separator:af13725d30453ae4533ff746efeec0387"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39e3bc8199d2d70497d1f87481943f01" id="r_a39e3bc8199d2d70497d1f87481943f01"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39e3bc8199d2d70497d1f87481943f01">AUTO_SENSI06_MIN_</a>&#160;&#160;&#160;186 /* 感度06最小  14.0mm(1.40mV) */</td></tr>
-<tr class="separator:a39e3bc8199d2d70497d1f87481943f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a916ee02adb82f77d4019166cf1f910ba" id="r_a916ee02adb82f77d4019166cf1f910ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a916ee02adb82f77d4019166cf1f910ba">AUTO_SENSI06_MID_</a>&#160;&#160;&#160;200 /* 感度06中心  15.0mm(1.50mV) */</td></tr>
-<tr class="separator:a916ee02adb82f77d4019166cf1f910ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61d7d52b32ccb096f91b0024c3e00fc4" id="r_a61d7d52b32ccb096f91b0024c3e00fc4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61d7d52b32ccb096f91b0024c3e00fc4">AUTO_SENSI06_MAX_</a>&#160;&#160;&#160;213 /* 感度06最大  16.0mm(1.60mV) */</td></tr>
 <tr class="separator:a61d7d52b32ccb096f91b0024c3e00fc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a916ee02adb82f77d4019166cf1f910ba" id="r_a916ee02adb82f77d4019166cf1f910ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a916ee02adb82f77d4019166cf1f910ba">AUTO_SENSI06_MID_</a>&#160;&#160;&#160;200 /* 感度06中心  15.0mm(1.50mV) */</td></tr>
+<tr class="separator:a916ee02adb82f77d4019166cf1f910ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39e3bc8199d2d70497d1f87481943f01" id="r_a39e3bc8199d2d70497d1f87481943f01"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39e3bc8199d2d70497d1f87481943f01">AUTO_SENSI06_MIN_</a>&#160;&#160;&#160;186 /* 感度06最小  14.0mm(1.40mV) */</td></tr>
+<tr class="separator:a39e3bc8199d2d70497d1f87481943f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab98e8b230b8ff2e137cf30e33e68c094" id="r_ab98e8b230b8ff2e137cf30e33e68c094"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab98e8b230b8ff2e137cf30e33e68c094">AUTO_SENSI07_DIF_</a>&#160;&#160;&#160;53  /* 感度07閾値   4.0mm(0.40mV) */</td></tr>
 <tr class="separator:ab98e8b230b8ff2e137cf30e33e68c094"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb0c21a49c45dceed2d7474ca50c8f53" id="r_adb0c21a49c45dceed2d7474ca50c8f53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb0c21a49c45dceed2d7474ca50c8f53">AUTO_SENSI07_MIN_</a>&#160;&#160;&#160;213 /* 感度07最小  16.0mm(1.60mV) */</td></tr>
-<tr class="separator:adb0c21a49c45dceed2d7474ca50c8f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86fba289255a7720f707e852670f502f" id="r_a86fba289255a7720f707e852670f502f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86fba289255a7720f707e852670f502f">AUTO_SENSI07_MID_</a>&#160;&#160;&#160;226 /* 感度07中心  17.0mm(1.70mV) */</td></tr>
-<tr class="separator:a86fba289255a7720f707e852670f502f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d627aaf6a4fed9c38add437e76745b4" id="r_a3d627aaf6a4fed9c38add437e76745b4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d627aaf6a4fed9c38add437e76745b4">AUTO_SENSI07_MAX_</a>&#160;&#160;&#160;240 /* 感度07最大  18.0mm(1.80mV) */</td></tr>
 <tr class="separator:a3d627aaf6a4fed9c38add437e76745b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86fba289255a7720f707e852670f502f" id="r_a86fba289255a7720f707e852670f502f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86fba289255a7720f707e852670f502f">AUTO_SENSI07_MID_</a>&#160;&#160;&#160;226 /* 感度07中心  17.0mm(1.70mV) */</td></tr>
+<tr class="separator:a86fba289255a7720f707e852670f502f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb0c21a49c45dceed2d7474ca50c8f53" id="r_adb0c21a49c45dceed2d7474ca50c8f53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb0c21a49c45dceed2d7474ca50c8f53">AUTO_SENSI07_MIN_</a>&#160;&#160;&#160;213 /* 感度07最小  16.0mm(1.60mV) */</td></tr>
+<tr class="separator:adb0c21a49c45dceed2d7474ca50c8f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91a4453ea394c3c715f1bc2385950add" id="r_a91a4453ea394c3c715f1bc2385950add"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a91a4453ea394c3c715f1bc2385950add">AUTO_SENSI08_DIF_</a>&#160;&#160;&#160;60  /* 感度08閾値   4.5mm(0.45mV) */</td></tr>
 <tr class="separator:a91a4453ea394c3c715f1bc2385950add"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93b6b5b6b2643d2da0f41fb002e811d8" id="r_a93b6b5b6b2643d2da0f41fb002e811d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93b6b5b6b2643d2da0f41fb002e811d8">AUTO_SENSI08_MIN_</a>&#160;&#160;&#160;240 /* 感度08最小  18.0mm(1.80mV) */</td></tr>
-<tr class="separator:a93b6b5b6b2643d2da0f41fb002e811d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf886041366e0719aaef3d47d8a9e19c" id="r_aaf886041366e0719aaef3d47d8a9e19c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf886041366e0719aaef3d47d8a9e19c">AUTO_SENSI08_MID_</a>&#160;&#160;&#160;253 /* 感度08中心  19.0mm(1.90mV) */</td></tr>
-<tr class="separator:aaf886041366e0719aaef3d47d8a9e19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93e83aa33448e349c35cf5b23a63fba0" id="r_a93e83aa33448e349c35cf5b23a63fba0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93e83aa33448e349c35cf5b23a63fba0">AUTO_SENSI08_MAX_</a>&#160;&#160;&#160;266 /* 感度08最大  20.0mm(2.00mV) */</td></tr>
 <tr class="separator:a93e83aa33448e349c35cf5b23a63fba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf886041366e0719aaef3d47d8a9e19c" id="r_aaf886041366e0719aaef3d47d8a9e19c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf886041366e0719aaef3d47d8a9e19c">AUTO_SENSI08_MID_</a>&#160;&#160;&#160;253 /* 感度08中心  19.0mm(1.90mV) */</td></tr>
+<tr class="separator:aaf886041366e0719aaef3d47d8a9e19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93b6b5b6b2643d2da0f41fb002e811d8" id="r_a93b6b5b6b2643d2da0f41fb002e811d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93b6b5b6b2643d2da0f41fb002e811d8">AUTO_SENSI08_MIN_</a>&#160;&#160;&#160;240 /* 感度08最小  18.0mm(1.80mV) */</td></tr>
+<tr class="separator:a93b6b5b6b2643d2da0f41fb002e811d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0d8bf75db20153384418584c67dfc39" id="r_ad0d8bf75db20153384418584c67dfc39"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0d8bf75db20153384418584c67dfc39">AUTO_SENSI09_DIF_</a>&#160;&#160;&#160;66  /* 感度09閾値   5.0mm(0.50mV) */</td></tr>
 <tr class="separator:ad0d8bf75db20153384418584c67dfc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19e41528c99ac1282b35a69e4d588b73" id="r_a19e41528c99ac1282b35a69e4d588b73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19e41528c99ac1282b35a69e4d588b73">AUTO_SENSI09_MIN_</a>&#160;&#160;&#160;266 /* 感度09最小  20.0mm(2.00mV) */</td></tr>
-<tr class="separator:a19e41528c99ac1282b35a69e4d588b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81a2f84b2fecd46aa42ec0352b9ee8f0" id="r_a81a2f84b2fecd46aa42ec0352b9ee8f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81a2f84b2fecd46aa42ec0352b9ee8f0">AUTO_SENSI09_MID_</a>&#160;&#160;&#160;280 /* 感度09中心  21.0mm(2.10mV) */</td></tr>
-<tr class="separator:a81a2f84b2fecd46aa42ec0352b9ee8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaec8670cdc3b958a3e2484c97c3bddd3" id="r_aaec8670cdc3b958a3e2484c97c3bddd3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaec8670cdc3b958a3e2484c97c3bddd3">AUTO_SENSI09_MAX_</a>&#160;&#160;&#160;293 /* 感度09最大  22.0mm(2.20mV) */</td></tr>
 <tr class="separator:aaec8670cdc3b958a3e2484c97c3bddd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81a2f84b2fecd46aa42ec0352b9ee8f0" id="r_a81a2f84b2fecd46aa42ec0352b9ee8f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81a2f84b2fecd46aa42ec0352b9ee8f0">AUTO_SENSI09_MID_</a>&#160;&#160;&#160;280 /* 感度09中心  21.0mm(2.10mV) */</td></tr>
+<tr class="separator:a81a2f84b2fecd46aa42ec0352b9ee8f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19e41528c99ac1282b35a69e4d588b73" id="r_a19e41528c99ac1282b35a69e4d588b73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19e41528c99ac1282b35a69e4d588b73">AUTO_SENSI09_MIN_</a>&#160;&#160;&#160;266 /* 感度09最小  20.0mm(2.00mV) */</td></tr>
+<tr class="separator:a19e41528c99ac1282b35a69e4d588b73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a966ec510b401f76bb5a9c0288640a02c" id="r_a966ec510b401f76bb5a9c0288640a02c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a966ec510b401f76bb5a9c0288640a02c">BUF_LENGTH_</a>&#160;&#160;&#160;256</td></tr>
 <tr class="separator:a966ec510b401f76bb5a9c0288640a02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a868e6a96dd37ea6e8d85829064f2bd89" id="r_a868e6a96dd37ea6e8d85829064f2bd89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a868e6a96dd37ea6e8d85829064f2bd89">IABS</a>(ix)</td></tr>
 <tr class="separator:a868e6a96dd37ea6e8d85829064f2bd89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2eeadc7688b0dbf73e832209cb81874" id="r_ac2eeadc7688b0dbf73e832209cb81874"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2eeadc7688b0dbf73e832209cb81874">QRS_MARK</a>&#160;&#160;&#160;0x1000</td></tr>
+<tr class="memdesc:ac2eeadc7688b0dbf73e832209cb81874"><td class="mdescLeft">&#160;</td><td class="mdescRight">R波検出データのヘッダーステータス  <br /></td></tr>
+<tr class="separator:ac2eeadc7688b0dbf73e832209cb81874"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba02e731b653668f99454e197efc5698" id="r_aba02e731b653668f99454e197efc5698"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba02e731b653668f99454e197efc5698">T_MASK_012__</a></td></tr>
+<tr class="separator:aba02e731b653668f99454e197efc5698"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 関数</h2></td></tr>
-<tr class="memitem:a53d2f042e7ed50b7372743b273794126" id="r_a53d2f042e7ed50b7372743b273794126"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53d2f042e7ed50b7372743b273794126">set_qrs_sensi1</a> (short Dt)</td></tr>
-<tr class="separator:a53d2f042e7ed50b7372743b273794126"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99690bb31891ce37a2a8bbaf41132312" id="r_a99690bb31891ce37a2a8bbaf41132312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99690bb31891ce37a2a8bbaf41132312">AsPvcDetInitial_1</a> (void)</td></tr>
-<tr class="separator:a99690bb31891ce37a2a8bbaf41132312"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bfbc342aa0d7299478a21427ae5b691" id="r_a4bfbc342aa0d7299478a21427ae5b691"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bfbc342aa0d7299478a21427ae5b691">AsPvcDetection_1</a> (long EcgDt)</td></tr>
-<tr class="separator:a4bfbc342aa0d7299478a21427ae5b691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab20604a610886e6b2b999a71ffb393a4" id="r_ab20604a610886e6b2b999a71ffb393a4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab20604a610886e6b2b999a71ffb393a4">AsComputeQrs1</a> (short QrsTopPos)</td></tr>
+<tr class="separator:ab20604a610886e6b2b999a71ffb393a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2bb21b9de701a8d6ae65c3ba3c4669d" id="r_ad2bb21b9de701a8d6ae65c3ba3c4669d"><td class="memItemLeft" align="right" valign="top">short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad2bb21b9de701a8d6ae65c3ba3c4669d">AsGetQrsSensi_1</a> (void)</td></tr>
 <tr class="separator:ad2bb21b9de701a8d6ae65c3ba3c4669d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab093f47b8e81aa16facff6f8d0483b09" id="r_ab093f47b8e81aa16facff6f8d0483b09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab093f47b8e81aa16facff6f8d0483b09">AsSetOptNO1</a> (short Dt)</td></tr>
-<tr class="separator:ab093f47b8e81aa16facff6f8d0483b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab9afe948f58fa51a2c77ca62b847b9a" id="r_aab9afe948f58fa51a2c77ca62b847b9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab9afe948f58fa51a2c77ca62b847b9a">AsQrsDetInitial_1</a> (short d1, short d2, short d3, short d4, short d5)</td></tr>
-<tr class="separator:aab9afe948f58fa51a2c77ca62b847b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bfbc342aa0d7299478a21427ae5b691" id="r_a4bfbc342aa0d7299478a21427ae5b691"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bfbc342aa0d7299478a21427ae5b691">AsPvcDetection_1</a> (long EcgDt)</td></tr>
+<tr class="separator:a4bfbc342aa0d7299478a21427ae5b691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99690bb31891ce37a2a8bbaf41132312" id="r_a99690bb31891ce37a2a8bbaf41132312"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99690bb31891ce37a2a8bbaf41132312">AsPvcDetInitial_1</a> (void)</td></tr>
+<tr class="separator:a99690bb31891ce37a2a8bbaf41132312"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37a99c3cddc3c90cb48284d338eceefa" id="r_a37a99c3cddc3c90cb48284d338eceefa"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37a99c3cddc3c90cb48284d338eceefa">AsQrsDetection_1</a> (short Dt, short sts_flag)</td></tr>
 <tr class="separator:a37a99c3cddc3c90cb48284d338eceefa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab9afe948f58fa51a2c77ca62b847b9a" id="r_aab9afe948f58fa51a2c77ca62b847b9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aab9afe948f58fa51a2c77ca62b847b9a">AsQrsDetInitial_1</a> (short d1, short d2, short d3, short d4, short d5)</td></tr>
+<tr class="separator:aab9afe948f58fa51a2c77ca62b847b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab093f47b8e81aa16facff6f8d0483b09" id="r_ab093f47b8e81aa16facff6f8d0483b09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab093f47b8e81aa16facff6f8d0483b09">AsSetOptNO1</a> (short Dt)</td></tr>
+<tr class="separator:ab093f47b8e81aa16facff6f8d0483b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d2f042e7ed50b7372743b273794126" id="r_a53d2f042e7ed50b7372743b273794126"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53d2f042e7ed50b7372743b273794126">set_qrs_sensi1</a> (short Dt)</td></tr>
+<tr class="separator:a53d2f042e7ed50b7372743b273794126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a529886a3fe97b8627b15a651bd31760e" id="r_a529886a3fe97b8627b15a651bd31760e"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a529886a3fe97b8627b15a651bd31760e">AutoSensiFlag</a></td></tr>
+<tr class="separator:a529886a3fe97b8627b15a651bd31760e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a766e7c923729a9ef4291ffb1c6e99b88" id="r_a766e7c923729a9ef4291ffb1c6e99b88"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a766e7c923729a9ef4291ffb1c6e99b88">BlockCnt</a></td></tr>
+<tr class="separator:a766e7c923729a9ef4291ffb1c6e99b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20c8ce034fc7a40675a73022618811e1" id="r_a20c8ce034fc7a40675a73022618811e1"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20c8ce034fc7a40675a73022618811e1">DifLevel</a></td></tr>
+<tr class="separator:a20c8ce034fc7a40675a73022618811e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2d2a72fc0036108ac4baab3e2013fe" id="r_a6f2d2a72fc0036108ac4baab3e2013fe"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f2d2a72fc0036108ac4baab3e2013fe">DifN</a></td></tr>
+<tr class="separator:a6f2d2a72fc0036108ac4baab3e2013fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f1ac016678824eeab7056a28402da0a" id="r_a6f1ac016678824eeab7056a28402da0a"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f1ac016678824eeab7056a28402da0a">DifP</a></td></tr>
+<tr class="separator:a6f1ac016678824eeab7056a28402da0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e65d001fd1d1bda38ad019a4ca158d3" id="r_a1e65d001fd1d1bda38ad019a4ca158d3"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e65d001fd1d1bda38ad019a4ca158d3">EcgLoopBuf</a> [<a class="el" href="#a966ec510b401f76bb5a9c0288640a02c">BUF_LENGTH_</a>]</td></tr>
+<tr class="separator:a1e65d001fd1d1bda38ad019a4ca158d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11a8e0cd01828f9cee43e4b08de78e9e" id="r_a11a8e0cd01828f9cee43e4b08de78e9e"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11a8e0cd01828f9cee43e4b08de78e9e">iPos1</a></td></tr>
+<tr class="separator:a11a8e0cd01828f9cee43e4b08de78e9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5ddd90a10d160701b3f66e5852932ac" id="r_ab5ddd90a10d160701b3f66e5852932ac"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5ddd90a10d160701b3f66e5852932ac">iPos2</a></td></tr>
+<tr class="separator:ab5ddd90a10d160701b3f66e5852932ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6619eccd2d0a00680225c387f282fb64" id="r_a6619eccd2d0a00680225c387f282fb64"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6619eccd2d0a00680225c387f282fb64">iPos3</a></td></tr>
+<tr class="separator:a6619eccd2d0a00680225c387f282fb64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a7c670c586395f5f1720b7fd9e97782" id="r_a2a7c670c586395f5f1720b7fd9e97782"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2a7c670c586395f5f1720b7fd9e97782">iPosA</a></td></tr>
+<tr class="separator:a2a7c670c586395f5f1720b7fd9e97782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac74749656b3c87ce62e6af69a1feca3f" id="r_ac74749656b3c87ce62e6af69a1feca3f"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac74749656b3c87ce62e6af69a1feca3f">iPosB</a></td></tr>
+<tr class="separator:ac74749656b3c87ce62e6af69a1feca3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaacca1bb4eb246e915a35ce295d006bb" id="r_aaacca1bb4eb246e915a35ce295d006bb"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaacca1bb4eb246e915a35ce295d006bb">iPosIO</a></td></tr>
+<tr class="separator:aaacca1bb4eb246e915a35ce295d006bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3f8dcb1a791702dc1bc396cd3226c9" id="r_a0a3f8dcb1a791702dc1bc396cd3226c9"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a3f8dcb1a791702dc1bc396cd3226c9">iPosN13</a></td></tr>
+<tr class="separator:a0a3f8dcb1a791702dc1bc396cd3226c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47d1dc85275df080608a477e982cec51" id="r_a47d1dc85275df080608a477e982cec51"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47d1dc85275df080608a477e982cec51">iPosN20</a></td></tr>
+<tr class="separator:a47d1dc85275df080608a477e982cec51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01484be4e813d7ae3ec8a7191533d4b3" id="r_a01484be4e813d7ae3ec8a7191533d4b3"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01484be4e813d7ae3ec8a7191533d4b3">iPosN60</a></td></tr>
+<tr class="separator:a01484be4e813d7ae3ec8a7191533d4b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a35cf66ee5db6370d7b1a41b095d0d6" id="r_a7a35cf66ee5db6370d7b1a41b095d0d6"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a35cf66ee5db6370d7b1a41b095d0d6">iPosN80</a></td></tr>
+<tr class="separator:a7a35cf66ee5db6370d7b1a41b095d0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd7b029676a7eea0cc459a52f09245dc" id="r_afd7b029676a7eea0cc459a52f09245dc"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd7b029676a7eea0cc459a52f09245dc">iPosP13</a></td></tr>
+<tr class="separator:afd7b029676a7eea0cc459a52f09245dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62fdb53e2f7da6226826cd0cc547997b" id="r_a62fdb53e2f7da6226826cd0cc547997b"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62fdb53e2f7da6226826cd0cc547997b">iPosP20</a></td></tr>
+<tr class="separator:a62fdb53e2f7da6226826cd0cc547997b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ccc120ef32ac9cb61383c66871bdac7" id="r_a5ccc120ef32ac9cb61383c66871bdac7"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ccc120ef32ac9cb61383c66871bdac7">iPosP60</a></td></tr>
+<tr class="separator:a5ccc120ef32ac9cb61383c66871bdac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a5c8658ddf1f71a478c11ec1a08e59" id="r_ad0a5c8658ddf1f71a478c11ec1a08e59"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad0a5c8658ddf1f71a478c11ec1a08e59">iPosP80</a></td></tr>
+<tr class="separator:ad0a5c8658ddf1f71a478c11ec1a08e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a685956557126b5114622427744c46d5c" id="r_a685956557126b5114622427744c46d5c"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a685956557126b5114622427744c46d5c">LevData</a></td></tr>
+<tr class="separator:a685956557126b5114622427744c46d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22ecd9dbd47183da82e28eee246d05b" id="r_ab22ecd9dbd47183da82e28eee246d05b"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab22ecd9dbd47183da82e28eee246d05b">MaskPos</a></td></tr>
+<tr class="separator:ab22ecd9dbd47183da82e28eee246d05b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c32ca750026a6c1f09eec055653642b" id="r_a2c32ca750026a6c1f09eec055653642b"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c32ca750026a6c1f09eec055653642b">MaskTime</a></td></tr>
+<tr class="separator:a2c32ca750026a6c1f09eec055653642b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4ad74ff600a7269cd96d509ad8fb4f5" id="r_af4ad74ff600a7269cd96d509ad8fb4f5"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4ad74ff600a7269cd96d509ad8fb4f5">NoQrsCnt</a></td></tr>
+<tr class="separator:af4ad74ff600a7269cd96d509ad8fb4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c15906b3f7f6f173724e815a84b3132" id="r_a4c15906b3f7f6f173724e815a84b3132"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c15906b3f7f6f173724e815a84b3132">NowSum</a></td></tr>
+<tr class="separator:a4c15906b3f7f6f173724e815a84b3132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1996e515f5428cef37b272caaeba2002" id="r_a1996e515f5428cef37b272caaeba2002"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1996e515f5428cef37b272caaeba2002">OldRR1</a></td></tr>
+<tr class="separator:a1996e515f5428cef37b272caaeba2002"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a521d38a24a240983f6ce7132171d7da9" id="r_a521d38a24a240983f6ce7132171d7da9"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a521d38a24a240983f6ce7132171d7da9">OldRR2</a></td></tr>
+<tr class="separator:a521d38a24a240983f6ce7132171d7da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa61d887ab4892ecddfa77e4aebfef1e" id="r_aaa61d887ab4892ecddfa77e4aebfef1e"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa61d887ab4892ecddfa77e4aebfef1e">OldRR3</a></td></tr>
+<tr class="separator:aaa61d887ab4892ecddfa77e4aebfef1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b0b4920bb609b38efdd490c996920cf" id="r_a5b0b4920bb609b38efdd490c996920cf"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b0b4920bb609b38efdd490c996920cf">OldRR4</a></td></tr>
+<tr class="separator:a5b0b4920bb609b38efdd490c996920cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a84fe90bf501a145697702a743da2aa" id="r_a1a84fe90bf501a145697702a743da2aa"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a84fe90bf501a145697702a743da2aa">OldSum</a></td></tr>
+<tr class="separator:a1a84fe90bf501a145697702a743da2aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fbb3b6161067774c06da92680c54be3" id="r_a1fbb3b6161067774c06da92680c54be3"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fbb3b6161067774c06da92680c54be3">OptionNO</a></td></tr>
+<tr class="separator:a1fbb3b6161067774c06da92680c54be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a933bd9b95e35c110aa2cc69a0333cb3d" id="r_a933bd9b95e35c110aa2cc69a0333cb3d"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a933bd9b95e35c110aa2cc69a0333cb3d">PastQrsCnt</a></td></tr>
+<tr class="separator:a933bd9b95e35c110aa2cc69a0333cb3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e47d5222c66ec666727997b39f37c76" id="r_a5e47d5222c66ec666727997b39f37c76"><td class="memItemLeft" align="right" valign="top">static char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e47d5222c66ec666727997b39f37c76">PastQrsFlg</a> [8]</td></tr>
+<tr class="separator:a5e47d5222c66ec666727997b39f37c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf69069b6898c00fc48c66b6f3386c73" id="r_aaf69069b6898c00fc48c66b6f3386c73"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf69069b6898c00fc48c66b6f3386c73">PastQrsLev</a> [8]</td></tr>
+<tr class="separator:aaf69069b6898c00fc48c66b6f3386c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76c158b38dfe1b1f1ea21a1f0b781d3d" id="r_a76c158b38dfe1b1f1ea21a1f0b781d3d"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76c158b38dfe1b1f1ea21a1f0b781d3d">PreRR</a></td></tr>
+<tr class="separator:a76c158b38dfe1b1f1ea21a1f0b781d3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6abd3c1807259762dbee4e0dae555acc" id="r_a6abd3c1807259762dbee4e0dae555acc"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6abd3c1807259762dbee4e0dae555acc">QRSDetWide</a></td></tr>
+<tr class="separator:a6abd3c1807259762dbee4e0dae555acc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a340ba6133af9624abd9b4f193162cb4a" id="r_a340ba6133af9624abd9b4f193162cb4a"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a340ba6133af9624abd9b4f193162cb4a">QrsLoopFlag</a> [<a class="el" href="#a966ec510b401f76bb5a9c0288640a02c">BUF_LENGTH_</a>]</td></tr>
+<tr class="separator:a340ba6133af9624abd9b4f193162cb4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dbc153a50845c322544fd653c3c885f" id="r_a2dbc153a50845c322544fd653c3c885f"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2dbc153a50845c322544fd653c3c885f">QRSMaskTime</a></td></tr>
+<tr class="separator:a2dbc153a50845c322544fd653c3c885f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a120a6eebddcefc34783cd9b667196b14" id="r_a120a6eebddcefc34783cd9b667196b14"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a120a6eebddcefc34783cd9b667196b14">QRSSearchTime</a></td></tr>
+<tr class="separator:a120a6eebddcefc34783cd9b667196b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a578704866655b311e4ed5ac2309fded9" id="r_a578704866655b311e4ed5ac2309fded9"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a578704866655b311e4ed5ac2309fded9">QRSsensi</a></td></tr>
+<tr class="separator:a578704866655b311e4ed5ac2309fded9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb185c37e0e0de9c694cb1377192ee0f" id="r_aeb185c37e0e0de9c694cb1377192ee0f"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb185c37e0e0de9c694cb1377192ee0f">RepCount</a></td></tr>
+<tr class="separator:aeb185c37e0e0de9c694cb1377192ee0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af95005d582685a400838dbaea972b44a" id="r_af95005d582685a400838dbaea972b44a"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af95005d582685a400838dbaea972b44a">RRbuf</a> [16]</td></tr>
+<tr class="separator:af95005d582685a400838dbaea972b44a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3449fd00923c6313b22abe642f940b23" id="r_a3449fd00923c6313b22abe642f940b23"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3449fd00923c6313b22abe642f940b23">RRbufCnt</a></td></tr>
+<tr class="separator:a3449fd00923c6313b22abe642f940b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b6aafacf7b2db8404daf2323df8003e" id="r_a6b6aafacf7b2db8404daf2323df8003e"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b6aafacf7b2db8404daf2323df8003e">SEARCH_WIDTH</a></td></tr>
+<tr class="separator:a6b6aafacf7b2db8404daf2323df8003e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa064bd6bbdb64cfb6f48b4c349cd4a7f" id="r_aa064bd6bbdb64cfb6f48b4c349cd4a7f"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa064bd6bbdb64cfb6f48b4c349cd4a7f">SearchTime</a></td></tr>
+<tr class="separator:aa064bd6bbdb64cfb6f48b4c349cd4a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9965a4520d44938254585e6d7f8f81a0" id="r_a9965a4520d44938254585e6d7f8f81a0"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9965a4520d44938254585e6d7f8f81a0">TelStatus</a> [<a class="el" href="#a966ec510b401f76bb5a9c0288640a02c">BUF_LENGTH_</a>]</td></tr>
+<tr class="separator:a9965a4520d44938254585e6d7f8f81a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ea25adbe8c64ad6854cf7bbfc86e4da" id="r_a3ea25adbe8c64ad6854cf7bbfc86e4da"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ea25adbe8c64ad6854cf7bbfc86e4da">TopLevN</a></td></tr>
+<tr class="separator:a3ea25adbe8c64ad6854cf7bbfc86e4da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac512a3053e1e14ee5e5780eaf1a5db30" id="r_ac512a3053e1e14ee5e5780eaf1a5db30"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac512a3053e1e14ee5e5780eaf1a5db30">TopLevP</a></td></tr>
+<tr class="separator:ac512a3053e1e14ee5e5780eaf1a5db30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8c882c13204c46b1651fe9e65b2cef9" id="r_af8c882c13204c46b1651fe9e65b2cef9"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8c882c13204c46b1651fe9e65b2cef9">TopPosN</a></td></tr>
+<tr class="separator:af8c882c13204c46b1651fe9e65b2cef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa014f51d06bb9d50f7343ad0875a9dae" id="r_aa014f51d06bb9d50f7343ad0875a9dae"><td class="memItemLeft" align="right" valign="top">static long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa014f51d06bb9d50f7343ad0875a9dae">TopPosP</a></td></tr>
+<tr class="separator:aa014f51d06bb9d50f7343ad0875a9dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec45f01fe3807c718292ef1e5bf1cc79" id="r_aec45f01fe3807c718292ef1e5bf1cc79"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec45f01fe3807c718292ef1e5bf1cc79">Wide_L</a></td></tr>
+<tr class="separator:aec45f01fe3807c718292ef1e5bf1cc79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cd71be8831c7e4e107b552ac6bc338b" id="r_a7cd71be8831c7e4e107b552ac6bc338b"><td class="memItemLeft" align="right" valign="top">static short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7cd71be8831c7e4e107b552ac6bc338b">Wide_N</a></td></tr>
+<tr class="separator:a7cd71be8831c7e4e107b552ac6bc338b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">マクロ定義詳解</h2>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150: <br  />
+共用体から構造体への変更に関連した変更 </dd></dl>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="ac2eeadc7688b0dbf73e832209cb81874" name="ac2eeadc7688b0dbf73e832209cb81874"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2eeadc7688b0dbf73e832209cb81874">&#9670;&#160;</a></span>QRS_MARK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define QRS_MARK&#160;&#160;&#160;0x1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>R波検出データのヘッダーステータス </p>
+<dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150: 追加 </dd></dl>
+
+</div>
+</div>
+<a id="aba02e731b653668f99454e197efc5698" name="aba02e731b653668f99454e197efc5698"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba02e731b653668f99454e197efc5698">&#9670;&#160;</a></span>T_MASK_012__</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define T_MASK_012__</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6ced1eb0b483220b2b2ad98337b2595c" name="a6ced1eb0b483220b2b2ad98337b2595c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ced1eb0b483220b2b2ad98337b2595c">&#9670;&#160;</a></span>AUTO_SENSI01_DIF_</h2>
 
@@ -219,34 +359,6 @@ AsQrsDetect1.c の依存先関係図:</div>
       <table class="memname">
         <tr>
           <td class="memname">#define AUTO_SENSI01_DIF_&#160;&#160;&#160;13 /* 感度01閾値   1.0mm(0.10mV) */</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a888f0599770da5ed013886e67181a7e2" name="a888f0599770da5ed013886e67181a7e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a888f0599770da5ed013886e67181a7e2">&#9670;&#160;</a></span>AUTO_SENSI01_MAX_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AUTO_SENSI01_MAX_&#160;&#160;&#160;80 /* 感度01最大   6.0mm(0.60mV) */</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7f7b77588340296e9d3a79094b9e3b5b" name="a7f7b77588340296e9d3a79094b9e3b5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f7b77588340296e9d3a79094b9e3b5b">&#9670;&#160;</a></span>AUTO_SENSI01_MID_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AUTO_SENSI01_MID_&#160;&#160;&#160;66 /* 感度01中心   5.0mm(0.50mV) */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -267,6 +379,34 @@ AsQrsDetect1.c の依存先関係図:</div>
 
 </div>
 </div>
+<a id="a7f7b77588340296e9d3a79094b9e3b5b" name="a7f7b77588340296e9d3a79094b9e3b5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f7b77588340296e9d3a79094b9e3b5b">&#9670;&#160;</a></span>AUTO_SENSI01_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI01_MID_&#160;&#160;&#160;66 /* 感度01中心   5.0mm(0.50mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a888f0599770da5ed013886e67181a7e2" name="a888f0599770da5ed013886e67181a7e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a888f0599770da5ed013886e67181a7e2">&#9670;&#160;</a></span>AUTO_SENSI01_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI01_MAX_&#160;&#160;&#160;80 /* 感度01最大   6.0mm(0.60mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af48b3c225ebe93ab1f6855a2bb26da47" name="af48b3c225ebe93ab1f6855a2bb26da47"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af48b3c225ebe93ab1f6855a2bb26da47">&#9670;&#160;</a></span>AUTO_SENSI02_DIF_</h2>
 
@@ -275,34 +415,6 @@ AsQrsDetect1.c の依存先関係図:</div>
       <table class="memname">
         <tr>
           <td class="memname">#define AUTO_SENSI02_DIF_&#160;&#160;&#160;20  /* 感度02閾値   1.5mm(0.15mV) */</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ab807ceb8c853186b77c846d43b5fda26" name="ab807ceb8c853186b77c846d43b5fda26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab807ceb8c853186b77c846d43b5fda26">&#9670;&#160;</a></span>AUTO_SENSI02_MAX_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AUTO_SENSI02_MAX_&#160;&#160;&#160;106 /* 感度02最大   8.0mm(0.80mV) */</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af6bfe9c4c07dead44e531934fb8662a4" name="af6bfe9c4c07dead44e531934fb8662a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6bfe9c4c07dead44e531934fb8662a4">&#9670;&#160;</a></span>AUTO_SENSI02_MID_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AUTO_SENSI02_MID_&#160;&#160;&#160;93  /* 感度02中心   7.0mm(0.70mV) */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -323,6 +435,34 @@ AsQrsDetect1.c の依存先関係図:</div>
 
 </div>
 </div>
+<a id="af6bfe9c4c07dead44e531934fb8662a4" name="af6bfe9c4c07dead44e531934fb8662a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6bfe9c4c07dead44e531934fb8662a4">&#9670;&#160;</a></span>AUTO_SENSI02_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI02_MID_&#160;&#160;&#160;93  /* 感度02中心   7.0mm(0.70mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab807ceb8c853186b77c846d43b5fda26" name="ab807ceb8c853186b77c846d43b5fda26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab807ceb8c853186b77c846d43b5fda26">&#9670;&#160;</a></span>AUTO_SENSI02_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI02_MAX_&#160;&#160;&#160;106 /* 感度02最大   8.0mm(0.80mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a88d56d7067eed8af129f2639fcd1dcae" name="a88d56d7067eed8af129f2639fcd1dcae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a88d56d7067eed8af129f2639fcd1dcae">&#9670;&#160;</a></span>AUTO_SENSI03_DIF_</h2>
 
@@ -331,34 +471,6 @@ AsQrsDetect1.c の依存先関係図:</div>
       <table class="memname">
         <tr>
           <td class="memname">#define AUTO_SENSI03_DIF_&#160;&#160;&#160;26  /* 感度03閾値   2.0mm(0.20mV) */</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abbc6af751b3338f19ee713c9c81ac3c0" name="abbc6af751b3338f19ee713c9c81ac3c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbc6af751b3338f19ee713c9c81ac3c0">&#9670;&#160;</a></span>AUTO_SENSI03_MAX_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AUTO_SENSI03_MAX_&#160;&#160;&#160;133 /* 感度03最大  10.0mm(1.00mV) */</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a8c4fb0ef20139252be6114106d040427" name="a8c4fb0ef20139252be6114106d040427"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c4fb0ef20139252be6114106d040427">&#9670;&#160;</a></span>AUTO_SENSI03_MID_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AUTO_SENSI03_MID_&#160;&#160;&#160;120 /* 感度03中心   9.0mm(0.90mV) */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -379,6 +491,34 @@ AsQrsDetect1.c の依存先関係図:</div>
 
 </div>
 </div>
+<a id="a8c4fb0ef20139252be6114106d040427" name="a8c4fb0ef20139252be6114106d040427"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c4fb0ef20139252be6114106d040427">&#9670;&#160;</a></span>AUTO_SENSI03_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI03_MID_&#160;&#160;&#160;120 /* 感度03中心   9.0mm(0.90mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abbc6af751b3338f19ee713c9c81ac3c0" name="abbc6af751b3338f19ee713c9c81ac3c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc6af751b3338f19ee713c9c81ac3c0">&#9670;&#160;</a></span>AUTO_SENSI03_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI03_MAX_&#160;&#160;&#160;133 /* 感度03最大  10.0mm(1.00mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a06b5fe96056934f161880bef2d049569" name="a06b5fe96056934f161880bef2d049569"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a06b5fe96056934f161880bef2d049569">&#9670;&#160;</a></span>AUTO_SENSI04_DIF_</h2>
 
@@ -387,34 +527,6 @@ AsQrsDetect1.c の依存先関係図:</div>
       <table class="memname">
         <tr>
           <td class="memname">#define AUTO_SENSI04_DIF_&#160;&#160;&#160;33  /* 感度04閾値   2.5mm(0.25mV) */</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abb972fb30f743af4c4832081cae1da47" name="abb972fb30f743af4c4832081cae1da47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb972fb30f743af4c4832081cae1da47">&#9670;&#160;</a></span>AUTO_SENSI04_MAX_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AUTO_SENSI04_MAX_&#160;&#160;&#160;160 /* 感度04最大  12.0mm(1.20mV) */</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a45099edc7bce2d54433c8488e83fed64" name="a45099edc7bce2d54433c8488e83fed64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45099edc7bce2d54433c8488e83fed64">&#9670;&#160;</a></span>AUTO_SENSI04_MID_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AUTO_SENSI04_MID_&#160;&#160;&#160;146 /* 感度04中心  11.0mm(1.10mV) */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -435,6 +547,34 @@ AsQrsDetect1.c の依存先関係図:</div>
 
 </div>
 </div>
+<a id="a45099edc7bce2d54433c8488e83fed64" name="a45099edc7bce2d54433c8488e83fed64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45099edc7bce2d54433c8488e83fed64">&#9670;&#160;</a></span>AUTO_SENSI04_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI04_MID_&#160;&#160;&#160;146 /* 感度04中心  11.0mm(1.10mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb972fb30f743af4c4832081cae1da47" name="abb972fb30f743af4c4832081cae1da47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb972fb30f743af4c4832081cae1da47">&#9670;&#160;</a></span>AUTO_SENSI04_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI04_MAX_&#160;&#160;&#160;160 /* 感度04最大  12.0mm(1.20mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6b5f2efb836abff44a476362f8bc524c" name="a6b5f2efb836abff44a476362f8bc524c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b5f2efb836abff44a476362f8bc524c">&#9670;&#160;</a></span>AUTO_SENSI05_DIF_</h2>
 
@@ -443,34 +583,6 @@ AsQrsDetect1.c の依存先関係図:</div>
       <table class="memname">
         <tr>
           <td class="memname">#define AUTO_SENSI05_DIF_&#160;&#160;&#160;40  /* 感度05閾値   3.0mm(0.30mV) */</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a29c9432f73daac45e91f661219aebd2f" name="a29c9432f73daac45e91f661219aebd2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29c9432f73daac45e91f661219aebd2f">&#9670;&#160;</a></span>AUTO_SENSI05_MAX_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AUTO_SENSI05_MAX_&#160;&#160;&#160;186 /* 感度05最大  14.0mm(1.40mV) */</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2fc2acb41da8ac3b7302b07ac4a6a252" name="a2fc2acb41da8ac3b7302b07ac4a6a252"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2fc2acb41da8ac3b7302b07ac4a6a252">&#9670;&#160;</a></span>AUTO_SENSI05_MID_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AUTO_SENSI05_MID_&#160;&#160;&#160;173 /* 感度05中心  13.0mm(1.30mV) */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -491,6 +603,34 @@ AsQrsDetect1.c の依存先関係図:</div>
 
 </div>
 </div>
+<a id="a2fc2acb41da8ac3b7302b07ac4a6a252" name="a2fc2acb41da8ac3b7302b07ac4a6a252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fc2acb41da8ac3b7302b07ac4a6a252">&#9670;&#160;</a></span>AUTO_SENSI05_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI05_MID_&#160;&#160;&#160;173 /* 感度05中心  13.0mm(1.30mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29c9432f73daac45e91f661219aebd2f" name="a29c9432f73daac45e91f661219aebd2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29c9432f73daac45e91f661219aebd2f">&#9670;&#160;</a></span>AUTO_SENSI05_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI05_MAX_&#160;&#160;&#160;186 /* 感度05最大  14.0mm(1.40mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af13725d30453ae4533ff746efeec0387" name="af13725d30453ae4533ff746efeec0387"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af13725d30453ae4533ff746efeec0387">&#9670;&#160;</a></span>AUTO_SENSI06_DIF_</h2>
 
@@ -499,34 +639,6 @@ AsQrsDetect1.c の依存先関係図:</div>
       <table class="memname">
         <tr>
           <td class="memname">#define AUTO_SENSI06_DIF_&#160;&#160;&#160;46  /* 感度06閾値   3.5mm(0.35mV) */</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a61d7d52b32ccb096f91b0024c3e00fc4" name="a61d7d52b32ccb096f91b0024c3e00fc4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61d7d52b32ccb096f91b0024c3e00fc4">&#9670;&#160;</a></span>AUTO_SENSI06_MAX_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AUTO_SENSI06_MAX_&#160;&#160;&#160;213 /* 感度06最大  16.0mm(1.60mV) */</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a916ee02adb82f77d4019166cf1f910ba" name="a916ee02adb82f77d4019166cf1f910ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a916ee02adb82f77d4019166cf1f910ba">&#9670;&#160;</a></span>AUTO_SENSI06_MID_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AUTO_SENSI06_MID_&#160;&#160;&#160;200 /* 感度06中心  15.0mm(1.50mV) */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -547,6 +659,34 @@ AsQrsDetect1.c の依存先関係図:</div>
 
 </div>
 </div>
+<a id="a916ee02adb82f77d4019166cf1f910ba" name="a916ee02adb82f77d4019166cf1f910ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a916ee02adb82f77d4019166cf1f910ba">&#9670;&#160;</a></span>AUTO_SENSI06_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI06_MID_&#160;&#160;&#160;200 /* 感度06中心  15.0mm(1.50mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a61d7d52b32ccb096f91b0024c3e00fc4" name="a61d7d52b32ccb096f91b0024c3e00fc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61d7d52b32ccb096f91b0024c3e00fc4">&#9670;&#160;</a></span>AUTO_SENSI06_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI06_MAX_&#160;&#160;&#160;213 /* 感度06最大  16.0mm(1.60mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab98e8b230b8ff2e137cf30e33e68c094" name="ab98e8b230b8ff2e137cf30e33e68c094"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab98e8b230b8ff2e137cf30e33e68c094">&#9670;&#160;</a></span>AUTO_SENSI07_DIF_</h2>
 
@@ -555,34 +695,6 @@ AsQrsDetect1.c の依存先関係図:</div>
       <table class="memname">
         <tr>
           <td class="memname">#define AUTO_SENSI07_DIF_&#160;&#160;&#160;53  /* 感度07閾値   4.0mm(0.40mV) */</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3d627aaf6a4fed9c38add437e76745b4" name="a3d627aaf6a4fed9c38add437e76745b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3d627aaf6a4fed9c38add437e76745b4">&#9670;&#160;</a></span>AUTO_SENSI07_MAX_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AUTO_SENSI07_MAX_&#160;&#160;&#160;240 /* 感度07最大  18.0mm(1.80mV) */</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a86fba289255a7720f707e852670f502f" name="a86fba289255a7720f707e852670f502f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86fba289255a7720f707e852670f502f">&#9670;&#160;</a></span>AUTO_SENSI07_MID_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AUTO_SENSI07_MID_&#160;&#160;&#160;226 /* 感度07中心  17.0mm(1.70mV) */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -603,6 +715,34 @@ AsQrsDetect1.c の依存先関係図:</div>
 
 </div>
 </div>
+<a id="a86fba289255a7720f707e852670f502f" name="a86fba289255a7720f707e852670f502f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86fba289255a7720f707e852670f502f">&#9670;&#160;</a></span>AUTO_SENSI07_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI07_MID_&#160;&#160;&#160;226 /* 感度07中心  17.0mm(1.70mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3d627aaf6a4fed9c38add437e76745b4" name="a3d627aaf6a4fed9c38add437e76745b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d627aaf6a4fed9c38add437e76745b4">&#9670;&#160;</a></span>AUTO_SENSI07_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI07_MAX_&#160;&#160;&#160;240 /* 感度07最大  18.0mm(1.80mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a91a4453ea394c3c715f1bc2385950add" name="a91a4453ea394c3c715f1bc2385950add"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a91a4453ea394c3c715f1bc2385950add">&#9670;&#160;</a></span>AUTO_SENSI08_DIF_</h2>
 
@@ -611,34 +751,6 @@ AsQrsDetect1.c の依存先関係図:</div>
       <table class="memname">
         <tr>
           <td class="memname">#define AUTO_SENSI08_DIF_&#160;&#160;&#160;60  /* 感度08閾値   4.5mm(0.45mV) */</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a93e83aa33448e349c35cf5b23a63fba0" name="a93e83aa33448e349c35cf5b23a63fba0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93e83aa33448e349c35cf5b23a63fba0">&#9670;&#160;</a></span>AUTO_SENSI08_MAX_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AUTO_SENSI08_MAX_&#160;&#160;&#160;266 /* 感度08最大  20.0mm(2.00mV) */</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aaf886041366e0719aaef3d47d8a9e19c" name="aaf886041366e0719aaef3d47d8a9e19c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf886041366e0719aaef3d47d8a9e19c">&#9670;&#160;</a></span>AUTO_SENSI08_MID_</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AUTO_SENSI08_MID_&#160;&#160;&#160;253 /* 感度08中心  19.0mm(1.90mV) */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -659,6 +771,34 @@ AsQrsDetect1.c の依存先関係図:</div>
 
 </div>
 </div>
+<a id="aaf886041366e0719aaef3d47d8a9e19c" name="aaf886041366e0719aaef3d47d8a9e19c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf886041366e0719aaef3d47d8a9e19c">&#9670;&#160;</a></span>AUTO_SENSI08_MID_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI08_MID_&#160;&#160;&#160;253 /* 感度08中心  19.0mm(1.90mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93e83aa33448e349c35cf5b23a63fba0" name="a93e83aa33448e349c35cf5b23a63fba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93e83aa33448e349c35cf5b23a63fba0">&#9670;&#160;</a></span>AUTO_SENSI08_MAX_</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AUTO_SENSI08_MAX_&#160;&#160;&#160;266 /* 感度08最大  20.0mm(2.00mV) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad0d8bf75db20153384418584c67dfc39" name="ad0d8bf75db20153384418584c67dfc39"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad0d8bf75db20153384418584c67dfc39">&#9670;&#160;</a></span>AUTO_SENSI09_DIF_</h2>
 
@@ -673,14 +813,14 @@ AsQrsDetect1.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="aaec8670cdc3b958a3e2484c97c3bddd3" name="aaec8670cdc3b958a3e2484c97c3bddd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaec8670cdc3b958a3e2484c97c3bddd3">&#9670;&#160;</a></span>AUTO_SENSI09_MAX_</h2>
+<a id="a19e41528c99ac1282b35a69e4d588b73" name="a19e41528c99ac1282b35a69e4d588b73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19e41528c99ac1282b35a69e4d588b73">&#9670;&#160;</a></span>AUTO_SENSI09_MIN_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define AUTO_SENSI09_MAX_&#160;&#160;&#160;293 /* 感度09最大  22.0mm(2.20mV) */</td>
+          <td class="memname">#define AUTO_SENSI09_MIN_&#160;&#160;&#160;266 /* 感度09最小  20.0mm(2.00mV) */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -701,14 +841,14 @@ AsQrsDetect1.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a19e41528c99ac1282b35a69e4d588b73" name="a19e41528c99ac1282b35a69e4d588b73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19e41528c99ac1282b35a69e4d588b73">&#9670;&#160;</a></span>AUTO_SENSI09_MIN_</h2>
+<a id="aaec8670cdc3b958a3e2484c97c3bddd3" name="aaec8670cdc3b958a3e2484c97c3bddd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaec8670cdc3b958a3e2484c97c3bddd3">&#9670;&#160;</a></span>AUTO_SENSI09_MAX_</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define AUTO_SENSI09_MIN_&#160;&#160;&#160;266 /* 感度09最小  20.0mm(2.00mV) */</td>
+          <td class="memname">#define AUTO_SENSI09_MAX_&#160;&#160;&#160;293 /* 感度09最大  22.0mm(2.20mV) */</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -747,49 +887,78 @@ AsQrsDetect1.c の依存先関係図:</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ac2eeadc7688b0dbf73e832209cb81874" name="ac2eeadc7688b0dbf73e832209cb81874"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2eeadc7688b0dbf73e832209cb81874">&#9670;&#160;</a></span>QRS_MARK</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define QRS_MARK&#160;&#160;&#160;0x1000</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aba02e731b653668f99454e197efc5698" name="aba02e731b653668f99454e197efc5698"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aba02e731b653668f99454e197efc5698">&#9670;&#160;</a></span>T_MASK_012__</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define T_MASK_012__</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="ad2bb21b9de701a8d6ae65c3ba3c4669d" name="ad2bb21b9de701a8d6ae65c3ba3c4669d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2bb21b9de701a8d6ae65c3ba3c4669d">&#9670;&#160;</a></span>AsGetQrsSensi_1()</h2>
+<a id="a53d2f042e7ed50b7372743b273794126" name="a53d2f042e7ed50b7372743b273794126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d2f042e7ed50b7372743b273794126">&#9670;&#160;</a></span>set_qrs_sensi1()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">short AsGetQrsSensi_1 </td>
+          <td class="memname">void set_qrs_sensi1 </td>
+          <td>(</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>Dt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_a53d2f042e7ed50b7372743b273794126_icgraph.svg" width="459" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a99690bb31891ce37a2a8bbaf41132312" name="a99690bb31891ce37a2a8bbaf41132312"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99690bb31891ce37a2a8bbaf41132312">&#9670;&#160;</a></span>AsPvcDetInitial_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AsPvcDetInitial_1 </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_a99690bb31891ce37a2a8bbaf41132312_icgraph.svg" width="351" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab20604a610886e6b2b999a71ffb393a4" name="ab20604a610886e6b2b999a71ffb393a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab20604a610886e6b2b999a71ffb393a4">&#9670;&#160;</a></span>AsComputeQrs1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void AsComputeQrs1 </td>
+          <td>(</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>QrsTopPos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_ab20604a610886e6b2b999a71ffb393a4_icgraph.svg" width="466" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 
 </div>
 </div>
@@ -820,50 +989,41 @@ AsQrsDetect1.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="a99690bb31891ce37a2a8bbaf41132312" name="a99690bb31891ce37a2a8bbaf41132312"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99690bb31891ce37a2a8bbaf41132312">&#9670;&#160;</a></span>AsPvcDetInitial_1()</h2>
+<a id="ad2bb21b9de701a8d6ae65c3ba3c4669d" name="ad2bb21b9de701a8d6ae65c3ba3c4669d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2bb21b9de701a8d6ae65c3ba3c4669d">&#9670;&#160;</a></span>AsGetQrsSensi_1()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AsPvcDetInitial_1 </td>
+          <td class="memname">short AsGetQrsSensi_1 </td>
           <td>(</td>
           <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_a99690bb31891ce37a2a8bbaf41132312_icgraph.svg" width="351" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
 
 </div>
 </div>
-<a id="a37a99c3cddc3c90cb48284d338eceefa" name="a37a99c3cddc3c90cb48284d338eceefa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37a99c3cddc3c90cb48284d338eceefa">&#9670;&#160;</a></span>AsQrsDetection_1()</h2>
+<a id="ab093f47b8e81aa16facff6f8d0483b09" name="ab093f47b8e81aa16facff6f8d0483b09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab093f47b8e81aa16facff6f8d0483b09">&#9670;&#160;</a></span>AsSetOptNO1()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">long AsQrsDetection_1 </td>
+          <td class="memname">void AsSetOptNO1 </td>
           <td>(</td>
-          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>Dt</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>Dt</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>sts_flag</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_a37a99c3cddc3c90cb48284d338eceefa_icgraph.svg" width="484" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_ab093f47b8e81aa16facff6f8d0483b09_icgraph.svg" width="447" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -914,47 +1074,1180 @@ AsQrsDetect1.c の依存先関係図:</div>
 
 </div>
 </div>
-<a id="ab093f47b8e81aa16facff6f8d0483b09" name="ab093f47b8e81aa16facff6f8d0483b09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab093f47b8e81aa16facff6f8d0483b09">&#9670;&#160;</a></span>AsSetOptNO1()</h2>
+<a id="a37a99c3cddc3c90cb48284d338eceefa" name="a37a99c3cddc3c90cb48284d338eceefa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37a99c3cddc3c90cb48284d338eceefa">&#9670;&#160;</a></span>AsQrsDetection_1()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void AsSetOptNO1 </td>
+          <td class="memname">long AsQrsDetection_1 </td>
           <td>(</td>
-          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>Dt</em></span></td><td>)</td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>Dt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>sts_flag</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>AM140 → AM150: 分岐の条件を変更 フィルタのオフはできないため、コメントも変更</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_a37a99c3cddc3c90cb48284d338eceefa_cgraph.svg" width="306" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_ab093f47b8e81aa16facff6f8d0483b09_icgraph.svg" width="447" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_a37a99c3cddc3c90cb48284d338eceefa_icgraph.svg" width="484" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
 </div>
-<a id="a53d2f042e7ed50b7372743b273794126" name="a53d2f042e7ed50b7372743b273794126"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53d2f042e7ed50b7372743b273794126">&#9670;&#160;</a></span>set_qrs_sensi1()</h2>
+<h2 class="groupheader">変数詳解</h2>
+<a id="a6b6aafacf7b2db8404daf2323df8003e" name="a6b6aafacf7b2db8404daf2323df8003e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b6aafacf7b2db8404daf2323df8003e">&#9670;&#160;</a></span>SEARCH_WIDTH</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void set_qrs_sensi1 </td>
-          <td>(</td>
-          <td class="paramtype">short</td>          <td class="paramname"><span class="paramname"><em>Dt</em></span></td><td>)</td>
-          <td></td>
+          <td class="memname">short SEARCH_WIDTH</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-<div class="dynheader">
-被呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_as_qrs_detect1_8c_a53d2f042e7ed50b7372743b273794126_icgraph.svg" width="459" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+
 </div>
+</div>
+<a id="a6abd3c1807259762dbee4e0dae555acc" name="a6abd3c1807259762dbee4e0dae555acc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6abd3c1807259762dbee4e0dae555acc">&#9670;&#160;</a></span>QRSDetWide</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QRSDetWide</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2dbc153a50845c322544fd653c3c885f" name="a2dbc153a50845c322544fd653c3c885f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dbc153a50845c322544fd653c3c885f">&#9670;&#160;</a></span>QRSMaskTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QRSMaskTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a120a6eebddcefc34783cd9b667196b14" name="a120a6eebddcefc34783cd9b667196b14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a120a6eebddcefc34783cd9b667196b14">&#9670;&#160;</a></span>QRSSearchTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QRSSearchTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2c32ca750026a6c1f09eec055653642b" name="a2c32ca750026a6c1f09eec055653642b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c32ca750026a6c1f09eec055653642b">&#9670;&#160;</a></span>MaskTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short MaskTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa064bd6bbdb64cfb6f48b4c349cd4a7f" name="aa064bd6bbdb64cfb6f48b4c349cd4a7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa064bd6bbdb64cfb6f48b4c349cd4a7f">&#9670;&#160;</a></span>SearchTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short SearchTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a578704866655b311e4ed5ac2309fded9" name="a578704866655b311e4ed5ac2309fded9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a578704866655b311e4ed5ac2309fded9">&#9670;&#160;</a></span>QRSsensi</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QRSsensi</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1fbb3b6161067774c06da92680c54be3" name="a1fbb3b6161067774c06da92680c54be3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fbb3b6161067774c06da92680c54be3">&#9670;&#160;</a></span>OptionNO</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short OptionNO</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e65d001fd1d1bda38ad019a4ca158d3" name="a1e65d001fd1d1bda38ad019a4ca158d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e65d001fd1d1bda38ad019a4ca158d3">&#9670;&#160;</a></span>EcgLoopBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short EcgLoopBuf[<a class="el" href="#a966ec510b401f76bb5a9c0288640a02c">BUF_LENGTH_</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a340ba6133af9624abd9b4f193162cb4a" name="a340ba6133af9624abd9b4f193162cb4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a340ba6133af9624abd9b4f193162cb4a">&#9670;&#160;</a></span>QrsLoopFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short QrsLoopFlag[<a class="el" href="#a966ec510b401f76bb5a9c0288640a02c">BUF_LENGTH_</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9965a4520d44938254585e6d7f8f81a0" name="a9965a4520d44938254585e6d7f8f81a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9965a4520d44938254585e6d7f8f81a0">&#9670;&#160;</a></span>TelStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short TelStatus[<a class="el" href="#a966ec510b401f76bb5a9c0288640a02c">BUF_LENGTH_</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a11a8e0cd01828f9cee43e4b08de78e9e" name="a11a8e0cd01828f9cee43e4b08de78e9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11a8e0cd01828f9cee43e4b08de78e9e">&#9670;&#160;</a></span>iPos1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short iPos1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5ddd90a10d160701b3f66e5852932ac" name="ab5ddd90a10d160701b3f66e5852932ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5ddd90a10d160701b3f66e5852932ac">&#9670;&#160;</a></span>iPos2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short iPos2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6619eccd2d0a00680225c387f282fb64" name="a6619eccd2d0a00680225c387f282fb64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6619eccd2d0a00680225c387f282fb64">&#9670;&#160;</a></span>iPos3</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short iPos3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a7c670c586395f5f1720b7fd9e97782" name="a2a7c670c586395f5f1720b7fd9e97782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a7c670c586395f5f1720b7fd9e97782">&#9670;&#160;</a></span>iPosA</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short iPosA</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac74749656b3c87ce62e6af69a1feca3f" name="ac74749656b3c87ce62e6af69a1feca3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac74749656b3c87ce62e6af69a1feca3f">&#9670;&#160;</a></span>iPosB</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short iPosB</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaacca1bb4eb246e915a35ce295d006bb" name="aaacca1bb4eb246e915a35ce295d006bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaacca1bb4eb246e915a35ce295d006bb">&#9670;&#160;</a></span>iPosIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short iPosIO</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab22ecd9dbd47183da82e28eee246d05b" name="ab22ecd9dbd47183da82e28eee246d05b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22ecd9dbd47183da82e28eee246d05b">&#9670;&#160;</a></span>MaskPos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short MaskPos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a766e7c923729a9ef4291ffb1c6e99b88" name="a766e7c923729a9ef4291ffb1c6e99b88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a766e7c923729a9ef4291ffb1c6e99b88">&#9670;&#160;</a></span>BlockCnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short BlockCnt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f1ac016678824eeab7056a28402da0a" name="a6f1ac016678824eeab7056a28402da0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f1ac016678824eeab7056a28402da0a">&#9670;&#160;</a></span>DifP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short DifP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f2d2a72fc0036108ac4baab3e2013fe" name="a6f2d2a72fc0036108ac4baab3e2013fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2d2a72fc0036108ac4baab3e2013fe">&#9670;&#160;</a></span>DifN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short DifN</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac512a3053e1e14ee5e5780eaf1a5db30" name="ac512a3053e1e14ee5e5780eaf1a5db30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac512a3053e1e14ee5e5780eaf1a5db30">&#9670;&#160;</a></span>TopLevP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short TopLevP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ea25adbe8c64ad6854cf7bbfc86e4da" name="a3ea25adbe8c64ad6854cf7bbfc86e4da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ea25adbe8c64ad6854cf7bbfc86e4da">&#9670;&#160;</a></span>TopLevN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short TopLevN</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa014f51d06bb9d50f7343ad0875a9dae" name="aa014f51d06bb9d50f7343ad0875a9dae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa014f51d06bb9d50f7343ad0875a9dae">&#9670;&#160;</a></span>TopPosP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long TopPosP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8c882c13204c46b1651fe9e65b2cef9" name="af8c882c13204c46b1651fe9e65b2cef9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8c882c13204c46b1651fe9e65b2cef9">&#9670;&#160;</a></span>TopPosN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long TopPosN</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec45f01fe3807c718292ef1e5bf1cc79" name="aec45f01fe3807c718292ef1e5bf1cc79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec45f01fe3807c718292ef1e5bf1cc79">&#9670;&#160;</a></span>Wide_L</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Wide_L</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7cd71be8831c7e4e107b552ac6bc338b" name="a7cd71be8831c7e4e107b552ac6bc338b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cd71be8831c7e4e107b552ac6bc338b">&#9670;&#160;</a></span>Wide_N</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short Wide_N</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20c8ce034fc7a40675a73022618811e1" name="a20c8ce034fc7a40675a73022618811e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20c8ce034fc7a40675a73022618811e1">&#9670;&#160;</a></span>DifLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short DifLevel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a529886a3fe97b8627b15a651bd31760e" name="a529886a3fe97b8627b15a651bd31760e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a529886a3fe97b8627b15a651bd31760e">&#9670;&#160;</a></span>AutoSensiFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short AutoSensiFlag</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf69069b6898c00fc48c66b6f3386c73" name="aaf69069b6898c00fc48c66b6f3386c73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf69069b6898c00fc48c66b6f3386c73">&#9670;&#160;</a></span>PastQrsLev</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short PastQrsLev[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e47d5222c66ec666727997b39f37c76" name="a5e47d5222c66ec666727997b39f37c76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e47d5222c66ec666727997b39f37c76">&#9670;&#160;</a></span>PastQrsFlg</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char PastQrsFlg[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a933bd9b95e35c110aa2cc69a0333cb3d" name="a933bd9b95e35c110aa2cc69a0333cb3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a933bd9b95e35c110aa2cc69a0333cb3d">&#9670;&#160;</a></span>PastQrsCnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short PastQrsCnt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a685956557126b5114622427744c46d5c" name="a685956557126b5114622427744c46d5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a685956557126b5114622427744c46d5c">&#9670;&#160;</a></span>LevData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short LevData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4ad74ff600a7269cd96d509ad8fb4f5" name="af4ad74ff600a7269cd96d509ad8fb4f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4ad74ff600a7269cd96d509ad8fb4f5">&#9670;&#160;</a></span>NoQrsCnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short NoQrsCnt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a3f8dcb1a791702dc1bc396cd3226c9" name="a0a3f8dcb1a791702dc1bc396cd3226c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a3f8dcb1a791702dc1bc396cd3226c9">&#9670;&#160;</a></span>iPosN13</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short iPosN13</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd7b029676a7eea0cc459a52f09245dc" name="afd7b029676a7eea0cc459a52f09245dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd7b029676a7eea0cc459a52f09245dc">&#9670;&#160;</a></span>iPosP13</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short iPosP13</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47d1dc85275df080608a477e982cec51" name="a47d1dc85275df080608a477e982cec51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47d1dc85275df080608a477e982cec51">&#9670;&#160;</a></span>iPosN20</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short iPosN20</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62fdb53e2f7da6226826cd0cc547997b" name="a62fdb53e2f7da6226826cd0cc547997b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62fdb53e2f7da6226826cd0cc547997b">&#9670;&#160;</a></span>iPosP20</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short iPosP20</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01484be4e813d7ae3ec8a7191533d4b3" name="a01484be4e813d7ae3ec8a7191533d4b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01484be4e813d7ae3ec8a7191533d4b3">&#9670;&#160;</a></span>iPosN60</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short iPosN60</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ccc120ef32ac9cb61383c66871bdac7" name="a5ccc120ef32ac9cb61383c66871bdac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ccc120ef32ac9cb61383c66871bdac7">&#9670;&#160;</a></span>iPosP60</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short iPosP60</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a35cf66ee5db6370d7b1a41b095d0d6" name="a7a35cf66ee5db6370d7b1a41b095d0d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a35cf66ee5db6370d7b1a41b095d0d6">&#9670;&#160;</a></span>iPosN80</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short iPosN80</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0a5c8658ddf1f71a478c11ec1a08e59" name="ad0a5c8658ddf1f71a478c11ec1a08e59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0a5c8658ddf1f71a478c11ec1a08e59">&#9670;&#160;</a></span>iPosP80</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short iPosP80</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a84fe90bf501a145697702a743da2aa" name="a1a84fe90bf501a145697702a743da2aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a84fe90bf501a145697702a743da2aa">&#9670;&#160;</a></span>OldSum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long OldSum</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c15906b3f7f6f173724e815a84b3132" name="a4c15906b3f7f6f173724e815a84b3132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c15906b3f7f6f173724e815a84b3132">&#9670;&#160;</a></span>NowSum</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long NowSum</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af95005d582685a400838dbaea972b44a" name="af95005d582685a400838dbaea972b44a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af95005d582685a400838dbaea972b44a">&#9670;&#160;</a></span>RRbuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long RRbuf[16]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76c158b38dfe1b1f1ea21a1f0b781d3d" name="a76c158b38dfe1b1f1ea21a1f0b781d3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76c158b38dfe1b1f1ea21a1f0b781d3d">&#9670;&#160;</a></span>PreRR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long PreRR</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3449fd00923c6313b22abe642f940b23" name="a3449fd00923c6313b22abe642f940b23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3449fd00923c6313b22abe642f940b23">&#9670;&#160;</a></span>RRbufCnt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short RRbufCnt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb185c37e0e0de9c694cb1377192ee0f" name="aeb185c37e0e0de9c694cb1377192ee0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb185c37e0e0de9c694cb1377192ee0f">&#9670;&#160;</a></span>RepCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">short RepCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1996e515f5428cef37b272caaeba2002" name="a1996e515f5428cef37b272caaeba2002"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1996e515f5428cef37b272caaeba2002">&#9670;&#160;</a></span>OldRR1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long OldRR1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a521d38a24a240983f6ce7132171d7da9" name="a521d38a24a240983f6ce7132171d7da9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a521d38a24a240983f6ce7132171d7da9">&#9670;&#160;</a></span>OldRR2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long OldRR2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa61d887ab4892ecddfa77e4aebfef1e" name="aaa61d887ab4892ecddfa77e4aebfef1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa61d887ab4892ecddfa77e4aebfef1e">&#9670;&#160;</a></span>OldRR3</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long OldRR3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5b0b4920bb609b38efdd490c996920cf" name="a5b0b4920bb609b38efdd490c996920cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b0b4920bb609b38efdd490c996920cf">&#9670;&#160;</a></span>OldRR4</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long OldRR4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

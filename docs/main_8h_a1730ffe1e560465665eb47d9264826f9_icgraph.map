@@ -1,9 +1,19 @@
 <map id="Error_Handler" name="Error_Handler">
-<area shape="rect" id="Node000001" title="This function is executed in case of error occurrence." alt="" coords="296,31,397,57"/>
-<area shape="rect" id="Node000002" href="$stm32l4xx__hal__msp_8c.html#a0e553b32211877322f949b14801bbfa7" title="UART MSP Initialization This function configures the hardware resources used in this example" alt="" coords="105,5,246,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="280,37,246,32,246,26,281,32"/>
-<area shape="rect" id="Node000003" href="$main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration" alt="" coords="103,56,248,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="281,56,249,61,248,56,280,51"/>
-<area shape="rect" id="Node000004" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,56,55,83"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,72,55,72,55,67,87,67"/>
+<area shape="rect" id="Node000001" title="This function is executed in case of error occurrence." alt="" coords="319,107,420,133"/>
+<area shape="rect" id="Node000002" href="$main_8c.html#a28dbf2494083ac5f39daa87bf09e4eb3" title="SPI1 Initialization Function" alt="" coords="136,5,238,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="342,98,309,71,270,46,237,33,239,28,272,42,312,67,345,94"/>
+<area shape="rect" id="Node000004" href="$main_8c.html#ac9b592ca8ef85a0898f4e6540524aa38" title="TIM15 Initialization Function" alt="" coords="132,56,242,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="303,104,237,86,238,81,305,99"/>
+<area shape="rect" id="Node000005" href="$main_8c.html#a62f4b77e20bccafe98a183771749c20c" title="USART1 Initialization Function" alt="" coords="103,107,271,133"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="303,123,272,123,272,117,303,117"/>
+<area shape="rect" id="Node000006" href="$main_8c.html#a6db1014d713f6f5c0f52a13299ee0733" title="USART2 Initialization Function" alt="" coords="103,157,271,184"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="305,141,238,159,237,154,303,136"/>
+<area shape="rect" id="Node000007" href="$main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration" alt="" coords="114,208,260,235"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="345,146,312,173,272,198,245,210,243,205,270,194,309,169,342,142"/>
+<area shape="rect" id="Node000003" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,107,55,133"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="122,37,104,46,68,77,43,108,39,104,65,73,101,42,120,32"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="125,90,104,97,56,114,54,109,102,92,123,85"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="87,123,55,123,55,117,87,117"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="123,155,102,148,54,131,56,126,104,143,125,150"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="111,204,101,198,65,167,39,136,43,132,68,163,104,194,114,199"/>
 </map>
