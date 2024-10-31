@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['autoqrsststs_0',['autoQrsStSts',['../common_8h.html#a048cc4b913c45184d9fefb91686c3a60',1,'common.h']]]
+  ['bufname_0',['bufName',['../spi__receive_8h.html#aa269bfcd18f8beee611836a28f82b0fa',1,'spi_receive.h']]]
 ];

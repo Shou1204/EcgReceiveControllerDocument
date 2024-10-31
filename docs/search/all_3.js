@@ -5,7 +5,7 @@ var searchData=
   ['ch2_5fhum_5ffilter60_2',['ch2_hum_filter60',['../_hum2_8c.html#a09b98bf1c605e68664634671c0844823',1,'Hum2.c']]],
   ['ch2_5fhum_5ffilter_5fini_3',['ch2_hum_filter_ini',['../_hum2_8c.html#a78fd00e81aa7c49998ecf6a95bbb22a7',1,'Hum2.c']]],
   ['changeqrsborder_4',['ChangeQrsBorder',['../_qrs2_8c.html#ad0cbc5efd76289a55bb57b17eff1803f',1,'Qrs2.c']]],
-  ['channel_5',['CHANNEL',['../common_8h.html#a80e3abfdceb5f0f2ef6e0e50ab2fd1aaad9d3e3b5dc628d73e5ec4da418f2a6dd',1,'common.h']]],
+  ['channel_5',['CHANNEL',['../group___xE3_x83_x97_xE3_x83_xAD_xE3_x83_x91_xE3_x83_x86_xE3_x82_xA3.html#gga4d213d3f61040d0dc0ba90578e1cbe92ad9d3e3b5dc628d73e5ec4da418f2a6dd',1,'common.h']]],
   ['channel_5flength_6',['CHANNEL_LENGTH',['../host__in_8c.html#a18429ec44c22b0d671f6bd03142ab2bc',1,'host_in.c']]],
   ['check_5fetx_5for_5fnew_5finitial_7',['CHECK_ETX_OR_NEW_INITIAL',['../host__in_8c.html#abeddbc508b4b93dd7a0ccc8b7534d622aba4b9b08ad765c0d2cfa784de7b1ab86',1,'host_in.c']]],
   ['check_5fsignal_8',['CHECK_SIGNAL',['../handshake__receiver_8c.html#aade5f30e83cb8f870301ad138bba07cda2627b8f1aaeb77e7248311f5635c56eb',1,'handshake_receiver.c']]],

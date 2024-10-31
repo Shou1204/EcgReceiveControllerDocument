@@ -120,9 +120,6 @@ $(function(){initNavTree('host__in_8h.html',''); initResizable(true); });
 <tr class="memitem:struct_rx_tmp_status" id="r_struct_rx_tmp_status"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#struct_rx_tmp_status">RxTmpStatus</a></td></tr>
 <tr class="memdesc:struct_rx_tmp_status"><td class="mdescLeft">&#160;</td><td class="mdescRight">UART入力のプロパティ設定値を管理するためのひな形  <a href="#struct_rx_tmp_status">[詳解]</a><br /></td></tr>
 <tr class="separator:struct_rx_tmp_status"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:struct_setting_meta" id="r_struct_setting_meta"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#struct_setting_meta">SettingMeta</a></td></tr>
-<tr class="memdesc:struct_setting_meta"><td class="mdescLeft">&#160;</td><td class="mdescRight">各種プロパティのバリデーションデータのひな形  <a href="#struct_setting_meta">[詳解]</a><br /></td></tr>
-<tr class="separator:struct_setting_meta"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 列挙型</h2></td></tr>
@@ -148,13 +145,13 @@ $(function(){initNavTree('host__in_8h.html',''); initResizable(true); });
       </table>
 </div><div class="memdoc">
 <div class="textblock"><p>UART入力のプロパティ設定値を管理するためのひな形 </p>
-<p>現在値に反映する前に一時的に保存し、 更新が必要かどうかを確認するために使用します </p>
+<p>現在値に反映する前に一時的に保持し、 更新が必要かどうかを確認するために使用します </p>
 </div><table class="fieldtable">
 <tr><th colspan="3">データフィールド</th></tr>
 <tr><td class="fieldtype">
-<a id="a2fe566f16f67544a89647e16d6d936b2" name="a2fe566f16f67544a89647e16d6d936b2"></a>const uint8_t</td>
+<a id="a4f71cd648aa323421cfd52ca240e34f3" name="a4f71cd648aa323421cfd52ca240e34f3"></a>const <a class="el" href="group___xE3_x83_x97_xE3_x83_xAD_xE3_x83_x91_xE3_x83_x86_xE3_x82_xA3.html#ga4d213d3f61040d0dc0ba90578e1cbe92">PropertyID</a></td>
 <td class="fieldname">
-property</td>
+id</td>
 <td class="fielddoc">
 プロパティコード </td></tr>
 <tr><td class="fieldtype">
@@ -169,53 +166,6 @@ tmpValue</td>
 isUpdated</td>
 <td class="fielddoc">
 更新のフラグ </td></tr>
-</table>
-
-</div>
-</div>
-<a name="struct_setting_meta" id="struct_setting_meta"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#struct_setting_meta">&#9670;&#160;</a></span>SettingMeta</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">struct SettingMeta</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="textblock"><p>各種プロパティのバリデーションデータのひな形 </p>
-<p>各プロパティのUART入力値の抽出とバリデーションのために使用します </p>
-</div><table class="fieldtable">
-<tr><th colspan="3">データフィールド</th></tr>
-<tr><td class="fieldtype">
-<a id="a52a3c125faf2fe7bc49717259b14d143" name="a52a3c125faf2fe7bc49717259b14d143"></a>const uint8_t</td>
-<td class="fieldname">
-property</td>
-<td class="fielddoc">
-<p>プロパティコード </p>
-</td></tr>
-<tr><td class="fieldtype">
-<a id="afbbdb22bfb34f3e9fb06793649178262" name="afbbdb22bfb34f3e9fb06793649178262"></a>const uint8_t</td>
-<td class="fieldname">
-initial</td>
-<td class="fielddoc">
-<p>UART受信フォーマットの記号 </p>
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a41bfda3d801e5fde3b863b5e95c582c4" name="a41bfda3d801e5fde3b863b5e95c582c4"></a>const uint8_t</td>
-<td class="fieldname">
-rangeStart</td>
-<td class="fielddoc">
-<p>設定値の範囲下限 </p>
-</td></tr>
-<tr><td class="fieldtype">
-<a id="a6d840dfa8eeae0a3d572b2f12f196b50" name="a6d840dfa8eeae0a3d572b2f12f196b50"></a>const uint8_t</td>
-<td class="fieldname">
-rangeEnd</td>
-<td class="fielddoc">
-<p>上限 </p>
-</td></tr>
 </table>
 
 </div>

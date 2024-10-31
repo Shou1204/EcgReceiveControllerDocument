@@ -178,33 +178,34 @@ $(function(){initNavTree('spi__receive_8h_source.html',''); initResizable(true);
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>extern int db_manual_qrs_cnt;</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>extern int test_write_idx;</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>extern int test_mode;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>int Get_writeIdx();</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>int Get_readIdx();</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>int test_spi_receive( int roop, uint8_t *array, int array_size, short *ch );</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>int test_QRS_catche( int roop, uint8_t *array, int array_size, short *ch, char *st );</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>void test_spi_receive_init();</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>short get_ecg_1();</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>short get_ecg_2();</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>short get_parity_error_cnt();</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>short get_ch_error_cnt();</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>short get_chCode();</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>void set_syncSearchStatus( short state );</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>short test_pickTranmitterState( uint8_t *PrePic_ );</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>void set_bitPosition( int value );</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>void test_transmitterCnt( short status );</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>void test_StoreEcg( long no_fBilter, long qrs_auto, long qrs_manual );</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>void set_writeIndex( short idx );</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>void set_readIndex( short idx );</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>short T_pickEcgFromLong( long long_data );</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>short T_pickStsFromLong( long long_data );</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>Buf get_qrsAuto();</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>Buf get_qrsManual();</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>#endif</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>#ifdef __cplusplus</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>}</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>#endif</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>#endif // SPI_RECEIVE_H</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>extern int debug_cnt;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>int Get_writeIdx();</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>int Get_readIdx();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>int test_spi_receive( int roop, uint8_t *array, int array_size, short *ch );</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>int test_QRS_catche( int roop, uint8_t *array, int array_size, short *ch, char *st );</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>void test_spi_receive_init();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>short get_ecg_1();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>short get_ecg_2();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>short get_parity_error_cnt();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>short get_ch_error_cnt();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>short get_chCode();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>void set_syncSearchStatus( short state );</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>short test_pickTranmitterState( uint8_t *PrePic_ );</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>void set_bitPosition( int value );</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>void test_transmitterCnt( short status );</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>void test_StoreEcg( long no_fBilter, long qrs_auto, long qrs_manual );</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>void set_writeIndex( short idx );</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>void set_readIndex( short idx );</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>short T_pickEcgFromLong( long long_data );</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>short T_pickStsFromLong( long long_data );</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>Buf get_qrsAuto();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>Buf get_qrsManual();</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>#endif</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>#ifdef __cplusplus</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>#endif</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>#endif // SPI_RECEIVE_H</div>
 <div class="ttc" id="aecg__data_8h_html"><div class="ttname"><a href="ecg__data_8h.html">ecg_data.h</a></div><div class="ttdoc">現在のプロパティの設定値を管理</div></div>
 <div class="ttc" id="afilter_8h_html"><div class="ttname"><a href="filter_8h.html">filter.h</a></div><div class="ttdoc">ECGデータの各種フィルタ処理</div></div>
 <div class="ttc" id="aspi__receive_8c_html_a08cdb9963e3ed6e4ea6e25c95a53f25d"><div class="ttname"><a href="spi__receive_8c.html#a08cdb9963e3ed6e4ea6e25c95a53f25d">ReadIdxAdd</a></div><div class="ttdeci">void ReadIdxAdd()</div><div class="ttdef"><b>Definition</b> spi_receive.c:531</div></div>

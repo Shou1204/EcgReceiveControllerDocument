@@ -1,6 +1,10 @@
 var main_8c =
 [
     [ "TX_FRAME_SIZE", "main_8c.html#a0936f38e0f2f62df4266a7233887c5f9", null ],
+    [ "e_flashInterval", "main_8c.html#a4dfb85735c6dfa312130ff20eab8be74", [
+      [ "INTERVAL_YET_HANDSHAKE", "main_8c.html#a4dfb85735c6dfa312130ff20eab8be74acaa6c2a5d1ad55fa11ba113211b5592d", null ],
+      [ "INTERVAL_SUCCESS_HANDSHAKE", "main_8c.html#a4dfb85735c6dfa312130ff20eab8be74abe78c5ccac8cb0581d0f819ae6363ad3", null ]
+    ] ],
     [ "SystemClock_Config", "main_8c.html#a70af21c671abfcc773614a9a4f63d920", null ],
     [ "MX_GPIO_Init", "main_8c.html#ae89fdd15729ad41a66911190fcbab23a", null ],
     [ "MX_USART2_UART_Init", "main_8c.html#a6db1014d713f6f5c0f52a13299ee0733", null ],

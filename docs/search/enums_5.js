@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['musfiltersts_0',['musfilterSts',['../common_8h.html#a03f02104d8a98df4bd933e52c9df85e0',1,'common.h']]],
-  ['musststs_1',['musStSts',['../common_8h.html#a581d54c48e531217b631e1b7e41d8c21',1,'common.h']]]
+  ['storerxframestep_0',['storeRxFrameStep',['../host__in_8c.html#abeddbc508b4b93dd7a0ccc8b7534d622',1,'host_in.c']]],
+  ['syncsts_1',['syncSts',['../spi__receive_8c.html#aef69abc84f2e68e1c3c754a72d56d544',1,'spi_receive.c']]]
 ];

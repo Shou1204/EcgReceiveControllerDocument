@@ -24,6 +24,7 @@
 */
 var menudata={children:[
 {text:"総合概要",url:"index.html"},
+{text:"Topics",url:"topics.html"},
 {text:"データ構造",url:"annotated.html",children:[
 {text:"データ構造",url:"annotated.html"},
 {text:"データ構造索引",url:"classes.html"},

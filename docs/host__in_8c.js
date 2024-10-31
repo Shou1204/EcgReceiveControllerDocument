@@ -24,7 +24,6 @@ var host__in_8c =
     [ "Get_tmpValue", "host__in_8c.html#afe005c613143dc94e368fb9c124603e6", null ],
     [ "Get_isUpdated", "host__in_8c.html#a7982534a1f252104992a8a52bdc8b21e", null ],
     [ "UpdateCurrentState", "host__in_8c.html#a2a55a6444b571ec802eccc95d8e0f109", null ],
-    [ "settings", "host__in_8c.html#a37efc17700ffddb5208f8545bf7f3c0b", null ],
     [ "rxProperty", "host__in_8c.html#a9c0169356487eac36dbec58600db8c31", null ],
     [ "step", "host__in_8c.html#abc16e65f240ed0c8f3e876e8732c0a33", null ],
     [ "idxTmpChannel", "host__in_8c.html#a36afe13c1fbd3f8f70ba3c3b18111fd7", null ],

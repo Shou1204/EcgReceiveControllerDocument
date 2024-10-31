@@ -26,6 +26,7 @@ var NAVTREE =
 [
   [ "EcgReceiveController", "index.html", [
     [ "AM150受信ユニット", "index.html", "index" ],
+    [ "Topics", "topics.html", "topics" ],
     [ "データ構造", "annotated.html", [
       [ "データ構造", "annotated.html", "annotated_dup" ],
       [ "データ構造索引", "classes.html", null ],
@@ -52,7 +53,7 @@ var NAVTREEINDEX =
 [
 "_as_qrs_detect1_8c.html",
 "_qrs2_8c.html#adcf63d7b33bbf69ed9e3d649449cacc3",
-"led_pattern_8c.html"
+"led_pattern_8h.html"
 ];
 
 var SYNCONMSG = 'クリックで同期表示が無効になります';

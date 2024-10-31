@@ -8,7 +8,7 @@ var searchData=
   ['anatime_5',['AnaTime',['../_qrs2_8c.html#a089f0ed685e6a442ef50d90928ca8f57',1,'Qrs2.c']]],
   ['ans_5f1_6',['ANS_1',['../_qrs2_8c.html#a239771a0f9e599e929c19116c0113ea3',1,'Qrs2.c']]],
   ['ans_5fqrs_7',['ans_qrs',['../_qrs2_8c.html#a140e24b575583e522ee0e2587f9d72d0',1,'Qrs2.c']]],
-  ['antenna_8',['ANTENNA',['../common_8h.html#a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa4ea7e54dbcf7940210e62765f5d3f6b4',1,'common.h']]],
+  ['antenna_8',['ANTENNA',['../group___xE3_x83_x97_xE3_x83_xAD_xE3_x83_x91_xE3_x83_x86_xE3_x82_xA3.html#gga4d213d3f61040d0dc0ba90578e1cbe92a4ea7e54dbcf7940210e62765f5d3f6b4',1,'common.h']]],
   ['ascomputeqrs1_9',['AsComputeQrs1',['../_as_qrs_detect1_8c.html#ab20604a610886e6b2b999a71ffb393a4',1,'AsQrsDetect1.c']]],
   ['asgetqrssensi_5f1_10',['AsGetQrsSensi_1',['../_as_qrs_detect1_8c.html#ad2bb21b9de701a8d6ae65c3ba3c4669d',1,'AsQrsDetect1.c']]],
   ['aspvcdetection_5f1_11',['AsPvcDetection_1',['../_as_qrs_detect1_8c.html#a4bfbc342aa0d7299478a21427ae5b691',1,'AsPvcDetection_1(long EcgDt):&#160;AsQrsDetect1.c'],['../_as_qrs_detect1_8h.html#a4bfbc342aa0d7299478a21427ae5b691',1,'AsPvcDetection_1(long EcgDt):&#160;AsQrsDetect1.c']]],
@@ -19,9 +19,9 @@ var searchData=
   ['asqrsdetinitial_5f1_16',['AsQrsDetInitial_1',['../_as_qrs_detect1_8c.html#aab9afe948f58fa51a2c77ca62b847b9a',1,'AsQrsDetInitial_1(short d1, short d2, short d3, short d4, short d5):&#160;AsQrsDetect1.c'],['../_as_qrs_detect1_8h.html#aab9afe948f58fa51a2c77ca62b847b9a',1,'AsQrsDetInitial_1(short d1, short d2, short d3, short d4, short d5):&#160;AsQrsDetect1.c']]],
   ['assetoptno1_17',['AsSetOptNO1',['../_as_qrs_detect1_8c.html#ab093f47b8e81aa16facff6f8d0483b09',1,'AsSetOptNO1(short Dt):&#160;AsQrsDetect1.c'],['../_as_qrs_detect1_8h.html#ab093f47b8e81aa16facff6f8d0483b09',1,'AsSetOptNO1(short Dt):&#160;AsQrsDetect1.c']]],
   ['auto_5fmanual_5fbetween_18',['AUTO_MANUAL_BETWEEN',['../spi__receive_8c.html#a90be9d892f7785715fb5927bd36eeb50',1,'spi_receive.c']]],
-  ['auto_5fqrs_5fst_19',['AUTO_QRS_ST',['../common_8h.html#a80e3abfdceb5f0f2ef6e0e50ab2fd1aaa66a36d1e2d2fa42aa1bf2ae3656b4966',1,'common.h']]],
-  ['auto_5fqrs_5fst_5fhigh_20',['AUTO_QRS_ST_HIGH',['../common_8h.html#a048cc4b913c45184d9fefb91686c3a60a4c488d4e9fa0f169d28d49822cf5abe3',1,'common.h']]],
-  ['auto_5fqrs_5fst_5flow_21',['AUTO_QRS_ST_LOW',['../common_8h.html#a048cc4b913c45184d9fefb91686c3a60aa7695f6a3cdb9973e68cc3f412f39b0d',1,'common.h']]],
+  ['auto_5fqrs_5fst_19',['AUTO_QRS_ST',['../group___xE3_x83_x97_xE3_x83_xAD_xE3_x83_x91_xE3_x83_x86_xE3_x82_xA3.html#gga4d213d3f61040d0dc0ba90578e1cbe92a66a36d1e2d2fa42aa1bf2ae3656b4966',1,'common.h']]],
+  ['auto_5fqrs_5fst_5fhigh_20',['AUTO_QRS_ST_HIGH',['../group___xE3_x83_x97_xE3_x83_xAD_xE3_x83_x91_xE3_x83_x86_xE3_x82_xA3.html#gga6b2a480a4f4945524703bb042f9805a1a4c488d4e9fa0f169d28d49822cf5abe3',1,'common.h']]],
+  ['auto_5fqrs_5fst_5flow_21',['AUTO_QRS_ST_LOW',['../group___xE3_x83_x97_xE3_x83_xAD_xE3_x83_x91_xE3_x83_x86_xE3_x82_xA3.html#gga6b2a480a4f4945524703bb042f9805a1aa7695f6a3cdb9973e68cc3f412f39b0d',1,'common.h']]],
   ['auto_5fsensi01_5fdif_5f_22',['AUTO_SENSI01_DIF_',['../_as_qrs_detect1_8c.html#a6ced1eb0b483220b2b2ad98337b2595c',1,'AsQrsDetect1.c']]],
   ['auto_5fsensi01_5fmax_5f_23',['AUTO_SENSI01_MAX_',['../_as_qrs_detect1_8c.html#a888f0599770da5ed013886e67181a7e2',1,'AsQrsDetect1.c']]],
   ['auto_5fsensi01_5fmid_5f_24',['AUTO_SENSI01_MID_',['../_as_qrs_detect1_8c.html#a7f7b77588340296e9d3a79094b9e3b5b',1,'AsQrsDetect1.c']]],
@@ -59,6 +59,5 @@ var searchData=
   ['auto_5fsensi09_5fmid_5f_56',['AUTO_SENSI09_MID_',['../_as_qrs_detect1_8c.html#a81a2f84b2fecd46aa42ec0352b9ee8f0',1,'AsQrsDetect1.c']]],
   ['auto_5fsensi09_5fmin_5f_57',['AUTO_SENSI09_MIN_',['../_as_qrs_detect1_8c.html#a19e41528c99ac1282b35a69e4d588b73',1,'AsQrsDetect1.c']]],
   ['autoqrshandler_58',['autoQrsHandler',['../filter_controller_8c.html#a76758580e95080e34f69ff2c640c49e5',1,'filterController.c']]],
-  ['autoqrsststs_59',['autoQrsStSts',['../common_8h.html#a048cc4b913c45184d9fefb91686c3a60',1,'common.h']]],
-  ['autosensiflag_60',['AutoSensiFlag',['../_as_qrs_detect1_8c.html#a529886a3fe97b8627b15a651bd31760e',1,'AsQrsDetect1.c']]]
+  ['autosensiflag_59',['AutoSensiFlag',['../_as_qrs_detect1_8c.html#a529886a3fe97b8627b15a651bd31760e',1,'AsQrsDetect1.c']]]
 ];

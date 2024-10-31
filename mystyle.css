@@ -4,7 +4,7 @@ table,
 div,
 p,
 dl {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 /* 
@@ -17,12 +17,6 @@ dl {
 */
 h2.groupheader {
     font-size: 130%
-}
-
-.memberdecls td,
-.fieldtable tr {
-    /* font-size: 100%; */
-    /* line-height: 100%; */
 }
 
 .mdescLeft,
@@ -56,4 +50,11 @@ p {
     margin-block-end: 0.2em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+}
+
+.params .paramname,
+.retval .paramname,
+.tparams .paramname,
+.exception .paramname {
+    padding-right: 10px;
 }

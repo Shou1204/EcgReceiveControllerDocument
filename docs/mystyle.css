@@ -1,97 +1,60 @@
-/* body, table, div, p, dl {
-	font-family: Consolas, 'Meiryo UI', monospace;
-	font-size: 98%;
-} */
-
-プロジェクト名 #projectname {
-	font-size: 200%;
+/* 全フォント変更 */
+body,
+table,
+div,
+p,
+dl {
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
-/* 左のツリー構造のナビ */
-#nav-tree .label {
-	font-family: Consolas, 'Meiryo UI', monospace;
-	font-size: 100%;
+/* 
+    定義タイトル
+
+    - マクロ定義
+    - 列挙型
+    - 関数
+    などのタイトル文字列
+*/
+h2.groupheader {
+    font-size: 130%
 }
 
-/* ページタイトル */
-.title {
-	font-family: Consolas, 'Meiryo UI', monospace;
-	font-size: 160%;
-	font-weight: normal;
+.mdescLeft,
+.mdescRight {
+    padding: 0px 8px 0px 8px;
 }
 
-h1 {
-	border-bottom: 1px solid #879ECB;
-	color: #354C7B;
-	font-size: 140%;
-	font-weight: normal;
-	margin-top: 40px;
-	padding-bottom: 4px;
+/*
+    ミニタイトル
+
+    関数名、変数名の見出し文字列
+*/
+.memtitle {
+    font-size: 110%;
+    line-height: 110%;
+    margin-top: 0px;
+    padding: 4px 8px 4px 8px;
 }
 
-h2.memtitle {
-	font-family: Consolas, 'Meiryo UI', monospace;
-	font-size: 120%;
-	line-height: 100%;
-}
-
-/* 目次 */
-div.toc h3 {
-	font-family: Consolas, 'Meiryo UI', monospace;
-	font-size: 100%;
-	line-height: 100%;
-}
-
-div.toc li {
-	font-family: Consolas, 'Meiryo UI', monospace;
-	font-size: 100%;
-	line-height: 100%;
+/*
+    ミニタイトル下のオブジェクト名
+*/
+.memproto,
+dl.reflist dt {
+    padding: 1px 0px 1px 0px;
 }
 
 /* 本文 */
-.textblock {
-	line-height: 150%;
+p {
+    margin-block-start: 0.2em;
+    margin-block-end: 0.2em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
-table.directory {
-	font-family: Consolas, 'Meiryo UI', monospace;
-}
-
-div.summary {
-	font-size: 100%;
-}
-
-/* 関数プロトコル */
-.memproto {
-	padding: 2px;
-}
-
-/* ソースコード */
-div.line {
-	font-family: Consolas, 'Meiryo UI', monospace;
-	font-size: 100%;
-	line-height: 120%;
-}
-
-/* 引数・戻り値 */
-.params,
-.retval,
-.exception,
-.tparams {
-	font-family: Consolas, 'Meiryo UI', monospace;
-}
-
-/* include */
-code {
-	font-family: Consolas, 'Meiryo UI', monospace;
-}
-
-/* extern */
-span.mlabel {
-	font-size: 90%;
-}
-
-/* 表示階層 */
-.directory .levels {
-	font-size: 100%;
+.params .paramname,
+.retval .paramname,
+.tparams .paramname,
+.exception .paramname {
+    padding-right: 10px;
 }

@@ -123,17 +123,17 @@ $(function(){initNavTree('synchro_8c.html',''); initResizable(true); });
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 変数</h2></td></tr>
-<tr class="memitem:ab16ff466bc1777b23d0188ce3691e8ae" id="r_ab16ff466bc1777b23d0188ce3691e8ae"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="synchro_8h.html#struct_mask">Mask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab16ff466bc1777b23d0188ce3691e8ae">maskSet</a> [8]</td></tr>
-<tr class="memdesc:ab16ff466bc1777b23d0188ce3691e8ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">各種の抽出マスク  <br /></td></tr>
-<tr class="separator:ab16ff466bc1777b23d0188ce3691e8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51db0b83c130ceb1290fe2176864f303" id="r_a51db0b83c130ceb1290fe2176864f303"><td class="memItemLeft" align="right" valign="top">static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51db0b83c130ceb1290fe2176864f303">MCL</a> [8] = { -1, -1, -1, -1, -1, 0x80, 0x40, 0x20 }</td></tr>
-<tr class="separator:a51db0b83c130ceb1290fe2176864f303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeab7ade420eb7a29043ea4e99695bfe" id="r_afeab7ade420eb7a29043ea4e99695bfe"><td class="memItemLeft" align="right" valign="top">static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afeab7ade420eb7a29043ea4e99695bfe">MMU</a> [8] = { 0x70, 0x38, 0x1C, 0x0E, 0x07, 0x03, 0x01, 0x00 }</td></tr>
+<tr class="separator:afeab7ade420eb7a29043ea4e99695bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd4ef5a2f79ec34f6f3db505c41fcacd" id="r_acd4ef5a2f79ec34f6f3db505c41fcacd"><td class="memItemLeft" align="right" valign="top">static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd4ef5a2f79ec34f6f3db505c41fcacd">MCU</a> [8] = { 0x10, 0x08, 0x04, 0x02, 0x01, 0x00, 0x00, 0x00 }</td></tr>
 <tr class="separator:acd4ef5a2f79ec34f6f3db505c41fcacd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa710dd7de4f7d1087c31f0ef648a24a4" id="r_aa710dd7de4f7d1087c31f0ef648a24a4"><td class="memItemLeft" align="right" valign="top">static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa710dd7de4f7d1087c31f0ef648a24a4">MML</a> [8] = { -1, -1, -1, -1, -1, 0x80, 0xC0, 0xE0 }</td></tr>
 <tr class="separator:aa710dd7de4f7d1087c31f0ef648a24a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afeab7ade420eb7a29043ea4e99695bfe" id="r_afeab7ade420eb7a29043ea4e99695bfe"><td class="memItemLeft" align="right" valign="top">static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afeab7ade420eb7a29043ea4e99695bfe">MMU</a> [8] = { 0x70, 0x38, 0x1C, 0x0E, 0x07, 0x03, 0x01, 0x00 }</td></tr>
-<tr class="separator:afeab7ade420eb7a29043ea4e99695bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51db0b83c130ceb1290fe2176864f303" id="r_a51db0b83c130ceb1290fe2176864f303"><td class="memItemLeft" align="right" valign="top">static const uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51db0b83c130ceb1290fe2176864f303">MCL</a> [8] = { -1, -1, -1, -1, -1, 0x80, 0x40, 0x20 }</td></tr>
+<tr class="separator:a51db0b83c130ceb1290fe2176864f303"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab16ff466bc1777b23d0188ce3691e8ae" id="r_ab16ff466bc1777b23d0188ce3691e8ae"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="synchro_8h.html#struct_mask">Mask</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab16ff466bc1777b23d0188ce3691e8ae">maskSet</a> [8]</td></tr>
+<tr class="memdesc:ab16ff466bc1777b23d0188ce3691e8ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">各種の抽出マスク  <br /></td></tr>
+<tr class="separator:ab16ff466bc1777b23d0188ce3691e8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>受信機からのデータを同期、抽出するライブラリ </p>
@@ -190,7 +190,8 @@ $(function(){initNavTree('synchro_8c.html',''); initResizable(true); });
 </dl>
 <dl class="section return"><dt>戻り値</dt><dd>short: 同期が見つかったらTRUE、そうでない場合はFALSEを返す</dd></dl>
 <dl class="section note"><dt>覚え書き</dt><dd>AM140 → AM150<br  />
-引数を3つ追加しています。 </dd></dl>
+引数を3つ追加。 <br  />
+ </dd></dl>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
